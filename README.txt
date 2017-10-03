@@ -1,4 +1,4 @@
-COMP 40004
+COMP 4004
 
 Assignment 1: JUnit and Git
 
