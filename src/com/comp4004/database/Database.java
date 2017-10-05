@@ -1,10 +1,12 @@
 package com.comp4004.database;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import com.comp4004.model.User;
+import com.comp4004.utils.Config;
 
 public class Database {
 
@@ -17,6 +19,7 @@ public class Database {
 
 	public void loadUsers() throws IOException {
 
+
 	}
 	
 	public List<User> getUsers() {
@@ -24,14 +27,24 @@ public class Database {
 	}
 	
 	public void addUser(User u) {
-	
+		this.users.add(u);
 	}
 
-	public void delete(String username) {
-		
+	public void deleteUser(String username) {
+		for (User u : this.users) {
+			if (username.equals(u.getUsername())) {
+				this.users.remove(u);
+				break;
+			}
+		}
 	}
 	
 	public User findUser(String username) {
+		for (User u : this.users) {
+			if (username.equals(u.getUsername())) {
+				return u;
+			}
+		}
 		return null;
 	}
 	

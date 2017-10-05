@@ -37,6 +37,7 @@ public class TestDatabase {
 	public void testDelete() {
 		User u1 = new User(8000, "test2", "pass2");
 		db.addUser(u1);
+		db.deleteUser(u1.getUsername());
 		assertNull(db.findUser(u1.getUsername()));
 	}
 
