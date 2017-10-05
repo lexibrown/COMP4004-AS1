@@ -22,6 +22,10 @@ public class Database {
 
 	}
 	
+	private void saveChanges() {
+		
+	}
+	
 	public List<User> getUsers() {
 		return users;
 	}
