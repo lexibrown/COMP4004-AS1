@@ -54,6 +54,10 @@ public class Database {
 			e.printStackTrace();
 		}
 	}
+	
+	public void saveChanges(User u) {
+		
+	}
 
 	public List<User> getUsers() {
 		return users;

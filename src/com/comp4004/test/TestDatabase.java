@@ -59,13 +59,22 @@ public class TestDatabase {
 		int fee2 = 10;
 		u1.addFee(fee1);
 		u1.addFee(fee2);
-		assertEqual(fee1 + fee2, u1.getFees());
+		assertEquals(fee1 + fee2, u1.getFees());
+
+		db.saveChanges(u1);
+		assertEquals(fee1 + fee2, db.findUser(u1.getUsername()).getFees());
 		
 		u1.payFee(fee1);
-		assertEqual(fee2, u1.getFees());
+		assertEquals(fee2, u1.getFees());
+
+		db.saveChanges(u1);
+		assertEquals(fee2, db.findUser(u1.getUsername()).getFees());
 		
 		u1.payFee(fee2 + 10);
-		assertEqual(0, u1.getFees())
+		assertEquals(0, u1.getFees());
+		
+		db.saveChanges(u1);
+		assertEquals(0, db.findUser(u1.getUsername()).getFees());
 	}
 
 	@Test
