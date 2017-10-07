@@ -1,4 +1,4 @@
-package com.comp4004.test;
+package com.comp4004.test.database;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

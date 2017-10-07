@@ -1,4 +1,4 @@
-package com.comp4004.test;
+package com.comp4004.test.database;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
