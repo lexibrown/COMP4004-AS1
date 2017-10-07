@@ -21,7 +21,6 @@ public class UserDatabase {
 
 	public UserDatabase() {
 		users = new ArrayList<User>();
-
 	}
 
 	@SuppressWarnings("unchecked")

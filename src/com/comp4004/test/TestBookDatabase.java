@@ -13,6 +13,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.comp4004.database.BookDatabase;
+import com.comp4004.model.Book;
+import com.comp4004.model.Copy;
 
 public class TestBookDatabase {
 
@@ -49,25 +51,25 @@ public class TestBookDatabase {
 	public void testDelete() {
 		Book b1 = new Book(1002, "book2");
 		db.addBook(b1);
-		db.delete(b1.getISBN());
+		db.deleteBook(b1.getISBN());
 		assertNull(db.findBook(b1.getISBN()));
 	}
-	
+
 	@Test
 	public void testDeleteByTitle() {
 		Book b1 = new Book(10022, "book22");
 		db.addBook(b1);
-		db.delete(b1.getTitle());
+		db.deleteBook(b1.getTitle());
 		assertNull(db.findBook(b1.getTitle()));
 	}
-	
+
 	@Test
 	public void testFindByTitle() {
 		Book b1 = new Book(1003, "book3");
 		Book b2 = new Book(1004, "book4");
 		db.addBook(b1);
 		db.addBook(b2);
-		
+
 		assertNotNull(db.findBook(b1.getTitle()));
 		assertTrue(b1.equals(db.findBook(b1.getTitle())));
 
@@ -82,25 +84,46 @@ public class TestBookDatabase {
 		b1.addCopy(new Copy());
 		b1.addCopy(new Copy());
 		b1.addCopy(new Copy());
-		assertEquals(3, b1.getNumCopies());
+		assertEquals(3, b1.numCopies());
 
+		db.addBook(b1);
 		db.saveChanges(b1);
-		assertEquals(3, db.findBook(b1.getISBN()).getNumCopies());
+		assertEquals(3, db.findBook(b1.getISBN()).numCopies());
 
 		Copy c1 = b1.getCopy(1);
 		assertEquals(1, c1.getCopyNumber());
-		assertTrue(c1.getId() != 0);
 		assertEquals(b1.getISBN(), c1.getISBN());
-		
-		b1.deleteCopy(3);
-		assertEquals(2, b1.getNumCopies);
-		
+
+		b1.deleteCopy(2);
+		assertEquals(2, b1.numCopies());
+
 		db.saveChanges(b1);
-		assertEquals(2, db.findBook(b1.getISBN()).getNumCopies());
-		
-		Copy c2 = b1.getCopy(3);
-		assertNull(c2);
-		assertNull(db.findBook(b1.getISBN()).getCopy(3));
+		assertEquals(2, db.findBook(b1.getISBN()).numCopies());
+
+		assertNull(b1.getCopy(2));
+		assertNull(db.findBook(b1.getISBN()).getCopy(2));
+
+		assertNotNull(b1.getCopy(3));
+		assertNotNull(db.findBook(b1.getISBN()).getCopy(3));
+
+		b1.deleteCopy(2);
+		assertEquals(2, b1.numCopies());
+
+		db.saveChanges(b1);
+		assertEquals(2, db.findBook(b1.getISBN()).numCopies());
+
+		b1.addCopy(new Copy());
+
+		assertEquals(3, b1.numCopies());
+
+		db.saveChanges(b1);
+		assertEquals(3, db.findBook(b1.getISBN()).numCopies());
+
+		assertNull(b1.getCopy(4));
+		assertNull(db.findBook(b1.getISBN()).getCopy(4));
+
+		assertNotNull(b1.getCopy(2));
+		assertNotNull(db.findBook(b1.getISBN()).getCopy(2));
 	}
 
 	@Test
