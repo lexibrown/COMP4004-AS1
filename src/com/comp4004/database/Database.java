@@ -55,8 +55,15 @@ public class Database {
 		}
 	}
 	
-	public void saveChanges(User u) {
-		
+	public void saveChanges(User user) {
+		for (int i = 0; i < this.users.size(); i++) {
+			User u = this.users.get(i);
+			if (user.getUserId() == u.getUserId()) {
+				this.users.set(i, user);
+				saveChanges();
+				return;
+			}
+		}
 	}
 
 	public List<User> getUsers() {
@@ -78,9 +85,28 @@ public class Database {
 		}
 	}
 
+	public void deleteUser(int userId) {
+		for (User u : this.users) {
+			if (userId == u.getUserId()) {
+				this.users.remove(u);
+				saveChanges();
+				break;
+			}
+		}
+	}
+
 	public User findUser(String username) {
 		for (User u : this.users) {
 			if (username.equals(u.getUsername())) {
+				return u;
+			}
+		}
+		return null;
+	}
+	
+	public User findUser(int userId) {
+		for (User u : this.users) {
+			if (userId == u.getUserId()) {
 				return u;
 			}
 		}

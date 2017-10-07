@@ -49,10 +49,32 @@ public class TestDatabase {
 		db.deleteUser(u1.getUsername());
 		assertNull(db.findUser(u1.getUsername()));
 	}
+	
+	@Test
+	public void testDeleteById() {
+		User u1 = new User(80022, "test22", "pass22");
+		db.addUser(u1);
+		db.deleteUser(u1.getUserId());
+		assertNull(db.findUser(u1.getUserId()));
+	}
+	
+	@Test
+	public void testFindById() {
+		User u1 = new User(8003, "test3", "pass3");
+		User u2 = new User(8004, "test4", "pass4");
+		db.addUser(u1);
+		db.addUser(u2);
+		
+		assertNotNull(db.findUser(u1.getUserId()));
+		assertTrue(u1.equals(db.findUser(u1.getUserId())));
+
+		assertNotNull(db.findUser(u2.getUserId()));
+		assertTrue(u2.equals(db.findUser(u2.getUserId())));
+	}
 
 	@Test
 	public void testFees() {
-		User u1 = new User(8004, "test4", "pass4");
+		User u1 = new User(8005, "test5", "pass5");
 		db.addUser(u1);
 
 		int fee1 = 20;
@@ -79,7 +101,7 @@ public class TestDatabase {
 
 	@Test
 	public void testSave() {
-		User u1 = new User(8003, "test3", "pass3");
+		User u1 = new User(8006, "test6", "pass6");
 		db.addUser(u1);
 
 		db = new Database();
