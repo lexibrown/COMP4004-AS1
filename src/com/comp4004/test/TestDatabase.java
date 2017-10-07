@@ -32,7 +32,7 @@ public class TestDatabase {
 		Database db = new Database();
 		db.flush();
 	}
-	
+
 	@Test
 	public void testAdd() {
 		User u1 = new User(8001, "test1", "pass1");
@@ -40,8 +40,8 @@ public class TestDatabase {
 		User u2 = db.findUser(u1.getUsername());
 		assertNotNull(u2);
 		assertTrue(u1.equals(u2));
-	}	
-	
+	}
+
 	@Test
 	public void testDelete() {
 		User u1 = new User(8002, "test2", "pass2");
@@ -51,17 +51,35 @@ public class TestDatabase {
 	}
 
 	@Test
+	public void testFees() {
+		User u1 = new User(8004, "test4", "pass4");
+		db.addUser(u1);
+
+		int fee1 = 20;
+		int fee2 = 10;
+		u1.addFee(fee1);
+		u1.addFee(fee2);
+		assertEqual(fee1 + fee2, u1.getFees());
+		
+		u1.payFee(fee1);
+		assertEqual(fee2, u1.getFees());
+		
+		u1.payFee(fee2 + 10);
+		assertEqual(0, u1.getFees())
+	}
+
+	@Test
 	public void testSave() {
 		User u1 = new User(8003, "test3", "pass3");
 		db.addUser(u1);
-		
+
 		db = new Database();
 		try {
 			db.loadUsers();
 		} catch (IOException e) {
 			fail("Failed to load users");
 		}
-		
+
 		User u2 = db.findUser(u1.getUsername());
 		assertNotNull(u2);
 		assertTrue(u1.equals(u2));
@@ -72,9 +90,9 @@ public class TestDatabase {
 		} catch (IOException e) {
 			fail("Failed to load users");
 		}
-		
+
 		db.deleteUser(u1.getUsername());
 		assertNull(db.findUser(u1.getUsername()));
 	}
-	
+
 }
