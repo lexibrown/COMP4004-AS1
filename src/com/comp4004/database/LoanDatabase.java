@@ -33,7 +33,7 @@ public class LoanDatabase {
 		if (content == null || content.isEmpty()) {
 			this.loans = new ArrayList<Loan>();
 		} else {
-			this.loans = (List<Loan>) JsonUtil.parse(content, Loan.class);
+			this.loans = (List<Loan>) JsonUtil.parseList(content, Loan.class);
 		}
 	}
 

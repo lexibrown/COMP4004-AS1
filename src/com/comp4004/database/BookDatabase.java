@@ -33,7 +33,7 @@ public class BookDatabase {
 		if (content == null || content.isEmpty()) {
 			this.books = new ArrayList<Book>();
 		} else {
-			this.books = (List<Book>) JsonUtil.parse(content, Book.class);
+			this.books = (List<Book>) JsonUtil.parseList(content, Book.class);
 		}
 	}
 

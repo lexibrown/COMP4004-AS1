@@ -33,7 +33,7 @@ public class UserDatabase {
 		if (content == null || content.isEmpty()) {
 			this.users = new ArrayList<User>();
 		} else {
-			this.users = (List<User>) JsonUtil.parse(content, User.class);
+			this.users = (List<User>) JsonUtil.parseList(content, User.class);
 		}
 	}
 

@@ -27,11 +27,19 @@ public class JsonUtil {
 		return sw.toString();
 	}
 
-	public static <O> O parse(String json, Class<?> objectClass) throws JsonParseException, IOException {
+	public static <O> O parseList(String json, Class<?> objectClass) throws JsonParseException, IOException {
 		if (json == null) {
 			return null;
 		}
 		return objectMapper.readValue(json, objectMapper.getTypeFactory().constructCollectionType(List.class, objectClass));
+	}
+	
+	public static <O> O parse(String json, Class<O> objectClass) throws JsonParseException, IOException {
+		if (json == null) {
+			return null;
+		}
+		JsonParser jp = factory.createParser(json);
+		return jp.readValueAs(objectClass);
 	}
 	
 }
