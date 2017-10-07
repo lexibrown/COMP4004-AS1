@@ -1,5 +1,6 @@
 package com.comp4004.test;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
@@ -54,6 +55,23 @@ public class TestLoanDatabase {
 		assertNull(db.findLoan(l1.getISBN(), l1.getCopyNumber()));
 	}
 
+	@Test
+	public void testUpdate() {
+		Loan l1 = new Loan(1001, 2001, 3, new Date());
+		db.addLoan(l1);
+		
+		assertEquals(1001, l1.getUserId());
+		assertEquals(2001, l1.getISBN());
+		assertEquals(3, l1.getCopyNumber());
+		assertEquals(0, l1.getRenewed());
+
+		l1.renew();
+		assertEquals(1, l1.getRenewed());
+		
+		db.saveChanges(l1);
+		assertEquals(1, db.findLoan(l1.getISBN(), l1.getCopyNumber()).getRenewed());
+	}
+	
 	@Test
 	public void testSave() {
 		Loan l1 = new Loan(1001, 2001, 2, new Date());

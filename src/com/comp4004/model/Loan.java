@@ -49,7 +49,7 @@ public class Loan implements Serializable {
 	public int getRenewed() {
 		return this.renewed;
 	}
-	
+
 	public void renew() {
 		this.renewed++;
 	}
@@ -57,11 +57,21 @@ public class Loan implements Serializable {
 	public void updateDate(Date date) {
 		this.date = date;
 	}
-	
+
 	public String toString() {
 		DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd hh:mm");
 		return this.isbn + " [" + this.copyNumber + "] Date: " + formatter.format(this.date) + " User: " + this.userId
 				+ " Renewed: " + this.renewed;
+	}
+
+	public boolean equals(Object obj) {
+		if ((obj == null) || (getClass() != obj.getClass())) {
+			return false;
+		}
+		Loan other = (Loan) obj;
+		return this.userId == other.getUserId() && this.isbn == other.getISBN()
+				&& this.copyNumber == other.getCopyNumber() && this.date.equals(other.getDate())
+				&& this.renewed == other.getRenewed();
 	}
 
 }
