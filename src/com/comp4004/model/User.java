@@ -1,18 +1,27 @@
 package com.comp4004.model;
 
-public class User {
+import java.io.Serializable;
 
-	private int userId;
-	private String username = null;
-	private String password = null;
+public class User implements Serializable {
 
+	private static final long serialVersionUID = -4128122965977874048L;
+	private int userId = 0;
+	private String username = "";
+	private String password = "";
+
+	public User() {
+		userId = 0;
+		username = "";
+		password = "";
+	}
+	
 	public User(int id, String username, String password) {
 		this.userId = id;
 		this.username = username;
 		this.password = password;
 	}
 
-	public int getId() {
+	public int getUserId() {
 		return this.userId;
 	}
 
@@ -33,7 +42,7 @@ public class User {
 			return false;
 		}
 		User other = (User) obj;
-		return this.getId() == other.getId() && this.getUsername().equals(other.getUsername())
+		return this.getUserId() == other.getUserId() && this.getUsername().equals(other.getUsername())
 				&& this.getPassword().equals(other.getPassword());
 	}
 

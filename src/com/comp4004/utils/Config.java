@@ -10,6 +10,6 @@ public class Config {
 	public static final int OVERDUE = 5;
 	public static final String CLERK_PASSWORD = "admin";
 
-	public static final String DATABASE_USERS = System.getProperty("user.dir") + "db/users.txt";
+	public static final String DATABASE_USERS = System.getProperty("user.dir") + "/db/users.txt";
 
 }

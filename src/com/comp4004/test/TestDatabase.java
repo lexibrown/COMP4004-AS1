@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import java.io.IOException;
 
+import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -20,11 +21,18 @@ public class TestDatabase {
 		try {
 			db.loadUsers();
 		} catch (IOException e) {
+			e.printStackTrace();
 			fail("Failed to load users");
 		}
 		assertNotNull(db.getUsers());
 	}
 
+	@AfterClass
+	public static void clear() {
+		Database db = new Database();
+		db.flush();
+	}
+	
 	@Test
 	public void testAdd() {
 		User u1 = new User(8001, "test1", "pass1");
