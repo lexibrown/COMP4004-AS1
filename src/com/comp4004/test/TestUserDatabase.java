@@ -8,16 +8,16 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.comp4004.database.Database;
+import com.comp4004.database.UserDatabase;
 import com.comp4004.model.User;
 
-public class TestDatabase {
+public class TestUserDatabase {
 
-	Database db;
+	UserDatabase db;
 
 	@Before
 	public void testLoad() {
-		db = new Database();
+		db = new UserDatabase();
 		try {
 			db.loadUsers();
 		} catch (IOException e) {
@@ -29,7 +29,7 @@ public class TestDatabase {
 
 	@AfterClass
 	public static void clear() {
-		Database db = new Database();
+		UserDatabase db = new UserDatabase();
 		db.flush();
 	}
 
@@ -104,7 +104,7 @@ public class TestDatabase {
 		User u1 = new User(8006, "test6", "pass6");
 		db.addUser(u1);
 
-		db = new Database();
+		db = new UserDatabase();
 		try {
 			db.loadUsers();
 		} catch (IOException e) {
@@ -115,7 +115,7 @@ public class TestDatabase {
 		assertNotNull(u2);
 		assertTrue(u1.equals(u2));
 
-		db = new Database();
+		db = new UserDatabase();
 		try {
 			db.loadUsers();
 		} catch (IOException e) {

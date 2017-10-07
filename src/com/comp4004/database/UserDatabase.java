@@ -15,11 +15,11 @@ import com.comp4004.model.User;
 import com.comp4004.utils.Config;
 import com.comp4004.utils.JsonUtil;
 
-public class Database {
+public class UserDatabase {
 
 	private List<User> users = null;
 
-	public Database() {
+	public UserDatabase() {
 		users = new ArrayList<User>();
 
 	}
