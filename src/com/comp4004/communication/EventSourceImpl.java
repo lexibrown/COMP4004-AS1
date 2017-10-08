@@ -10,6 +10,7 @@ import java.net.Socket;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 import com.comp4004.utils.JsonUtil;
@@ -17,7 +18,7 @@ import com.comp4004.utils.MessageKey;
 
 public class EventSourceImpl implements EventSource {
 
-	private static final Logger log = Logger.getLogger(EventSourceImpl.class);
+	private static final Logger log = LogManager.getLogger(EventSourceImpl.class);
 	
     private Socket socket;
     private LoggingInfo info;
@@ -63,6 +64,7 @@ public class EventSourceImpl implements EventSource {
         this.info = new LoggingInfo(s);
     }
 
+	@SuppressWarnings("unchecked")
 	public Event getEvent() throws IOException, ClassNotFoundException, Exception {
         String line = reader.readLine();
         Map<String, Object> msg;

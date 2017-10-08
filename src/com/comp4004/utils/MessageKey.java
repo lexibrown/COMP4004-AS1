@@ -5,12 +5,13 @@ public class MessageKey {
     public static final String MESSAGE = "MESSAGE";
     
 	public static final String USER = "USER";
+	public static final String ADMIN = "ADMIN";
 
     public static final String LOGOUT = "LOGOUT";
 	public static final String THREAD = "THREAD";    
 
-	public static final String PASSWORD = "PASSWORD";
-	
+	public static final String USERNAME = "USERNAME";
+	public static final String PASSWORD = "PASSWORD";	
 	// server key messages
     public static final String CONNECT_PASS = "CONNECT_PASS";
     public static final String CONNECT_FAIL = "CONNECT_FAIL";

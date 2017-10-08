@@ -1,0 +1,99 @@
+2017-10-07 23:37:02,573 INFO operation_file [main] [/127.0.0.1:51341] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"LOGIN","PASSWORD":"admin","USERNAME":"clerk"} 
+2017-10-07 23:37:02,573 INFO operation_file [main] SENT: 
+ 
+2017-10-07 23:37:02,575 INFO EventSourceImpl [Thread-1] [/127.0.0.1:5050] FROM: 127.0.0.1:51341 RECEIVED: {"MESSAGE":"LOGIN","PASSWORD":"admin","USERNAME":"clerk"} 
+2017-10-07 23:37:02,964 INFO operation_file [Thread-1] [/127.0.0.1:5050] TO: 127.0.0.1:51341 SENT: {"MESSAGE":"CONNECT_PASS"} 
+2017-10-07 23:37:02,964 INFO operation_file [Thread-1] SENT: 
+ 
+2017-10-07 23:37:02,964 INFO EventSourceImpl [Thread-0] [/127.0.0.1:51341] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"CONNECT_PASS"} 
+2017-10-07 23:40:25,144 FATAL ThreadWithReactor [Thread-0] IOException, closing connection. 
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.io.InputStreamReader.read(Unknown Source)
+	at java.io.BufferedReader.fill(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at com.comp4004.communication.EventSourceImpl.getEvent(EventSourceImpl.java:69)
+	at com.comp4004.communication.ThreadWithReactor.run(ThreadWithReactor.java:56)
+2017-10-08 01:34:50,299 INFO BufferedLoggingWriter [main] [/127.0.0.1:62907] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"LOGIN","PASSWORD":"admin","USERNAME":"clerk"} 
+2017-10-08 01:34:50,299 INFO BufferedLoggingWriter [main] SENT: 
+ 
+2017-10-08 01:34:50,300 INFO EventSourceImpl [Thread-1] [/127.0.0.1:5050] FROM: 127.0.0.1:62907 RECEIVED: {"MESSAGE":"LOGIN","PASSWORD":"admin","USERNAME":"clerk"} 
+2017-10-08 01:34:50,619 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:5050] TO: 127.0.0.1:62907 SENT: {"MESSAGE":"CONNECT_PASS"} 
+2017-10-08 01:34:50,619 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-08 01:34:50,619 INFO EventSourceImpl [Thread-0] [/127.0.0.1:62907] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"CONNECT_PASS"} 
+2017-10-08 01:37:20,298 FATAL ThreadWithReactor [Thread-0] IOException, closing connection. 
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.io.InputStreamReader.read(Unknown Source)
+	at java.io.BufferedReader.fill(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at com.comp4004.communication.EventSourceImpl.getEvent(EventSourceImpl.java:69)
+	at com.comp4004.communication.ThreadWithReactor.run(ThreadWithReactor.java:56)
+2017-10-08 01:38:05,923 INFO BufferedLoggingWriter [main] [/127.0.0.1:62935] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"LOGIN","PASSWORD":"test1","USERNAME":"test"} 
+2017-10-08 01:38:05,924 INFO BufferedLoggingWriter [main] SENT: 
+ 
+2017-10-08 01:38:05,925 INFO EventSourceImpl [Thread-1] [/127.0.0.1:5050] FROM: 127.0.0.1:62935 RECEIVED: {"MESSAGE":"LOGIN","PASSWORD":"test1","USERNAME":"test"} 
+2017-10-08 01:38:06,238 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:5050] TO: 127.0.0.1:62935 SENT: {"MESSAGE":"CONNECT_FAIL","FAIL_REASON":"Username or password is unvalid."} 
+2017-10-08 01:38:06,238 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-08 01:38:06,239 INFO EventSourceImpl [Thread-0] [/127.0.0.1:62935] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"CONNECT_FAIL","FAIL_REASON":"Username or password is unvalid."} 
+2017-10-08 01:38:43,525 INFO BufferedLoggingWriter [Thread-0] [/127.0.0.1:62935] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"LOGIN","PASSWORD":"admin","USERNAME":"clerk"} 
+2017-10-08 01:38:43,526 INFO BufferedLoggingWriter [Thread-0] SENT: 
+ 
+2017-10-08 01:38:43,526 INFO EventSourceImpl [Thread-1] [/127.0.0.1:5050] FROM: 127.0.0.1:62935 RECEIVED: {"MESSAGE":"LOGIN","PASSWORD":"admin","USERNAME":"clerk"} 
+2017-10-08 01:38:43,527 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:5050] TO: 127.0.0.1:62935 SENT: {"MESSAGE":"CONNECT_PASS","ADMIN":""} 
+2017-10-08 01:38:43,527 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-08 01:38:43,527 INFO EventSourceImpl [Thread-0] [/127.0.0.1:62935] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"CONNECT_PASS","ADMIN":""} 
+2017-10-08 01:39:04,715 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:62935] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"LOGOUT","USER":"clerk"} 
+2017-10-08 01:39:04,715 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-08 01:39:04,716 INFO EventSourceImpl [Thread-1] [/127.0.0.1:5050] FROM: 127.0.0.1:62935 RECEIVED: {"MESSAGE":"LOGOUT","USER":"clerk"} 
+2017-10-08 01:39:04,716 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:5050] TO: 127.0.0.1:62935 SENT: {"MESSAGE":"LOGOUT"} 
+2017-10-08 01:39:04,716 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-08 01:39:04,716 INFO EventSourceImpl [Thread-0] [/127.0.0.1:62935] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"LOGOUT"} 
+2017-10-08 01:39:05,043 FATAL ThreadWithReactor [Thread-1] IOException, closing connection. 
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.io.InputStreamReader.read(Unknown Source)
+	at java.io.BufferedReader.fill(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at com.comp4004.communication.EventSourceImpl.getEvent(EventSourceImpl.java:69)
+	at com.comp4004.communication.ThreadWithReactor.run(ThreadWithReactor.java:56)
+2017-10-08 01:39:05,046 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:5050] TO: 127.0.0.1:62935 SENT: {"MESSAGE":"LOGOUT"} 
+2017-10-08 01:39:05,046 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-08 01:39:05,046 FATAL Server [Thread-1] Something went wrong 
+java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(Unknown Source)
+	at java.net.SocketOutputStream.write(Unknown Source)
+	at sun.nio.cs.StreamEncoder.writeBytes(Unknown Source)
+	at sun.nio.cs.StreamEncoder.implFlushBuffer(Unknown Source)
+	at sun.nio.cs.StreamEncoder.implFlush(Unknown Source)
+	at sun.nio.cs.StreamEncoder.flush(Unknown Source)
+	at java.io.OutputStreamWriter.flush(Unknown Source)
+	at java.io.BufferedWriter.flush(Unknown Source)
+	at com.comp4004.communication.EventSourceImpl.write(EventSourceImpl.java:93)
+	at com.comp4004.server.Server$Logout.handleEvent(Server.java:160)
+	at com.comp4004.communication.Reactor.dispatch(Reactor.java:25)
+	at com.comp4004.communication.ThreadWithReactor.dispatch(ThreadWithReactor.java:92)
+	at com.comp4004.communication.ThreadWithReactor.quit(ThreadWithReactor.java:41)
+	at com.comp4004.communication.ThreadWithReactor.run(ThreadWithReactor.java:75)
