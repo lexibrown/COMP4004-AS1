@@ -1,6 +1,7 @@
 package com.comp4004.server;
 
 import java.io.IOException;
+import java.util.List;
 
 import com.comp4004.database.BookDatabase;
 import com.comp4004.database.LoanDatabase;
@@ -8,6 +9,7 @@ import com.comp4004.database.ReservationDatabase;
 import com.comp4004.database.UserDatabase;
 import com.comp4004.model.Book;
 import com.comp4004.model.Copy;
+import com.comp4004.model.Loan;
 import com.comp4004.model.Reservation;
 import com.comp4004.model.User;
 import com.comp4004.server.tools.ActionResult;
@@ -78,9 +80,11 @@ public class ServerController {
 	}
 
 	public synchronized boolean removeUser(String username) {
-		if (userDatabase.findUser(username) != null) {
+		User u = userDatabase.findUser(username);
+		if (u != null) {
 			userDatabase.deleteUser(username);
-			// TODO delete loans and reservations of user
+			loanDatabase.deleteUserLoan(u.getUserId());
+			reservationDatabase.deleteUserReservation(u.getUserId());
 			return true;
 		}
 		return false;
@@ -103,16 +107,19 @@ public class ServerController {
 	public synchronized boolean removeBook(int iSBN) {
 		if (bookDatabase.findBook(iSBN) != null) {
 			bookDatabase.deleteBook(iSBN);
-			// TODO delete loans and reservations
+			loanDatabase.deleteLoan(iSBN);
+			reservationDatabase.deleteReservation(iSBN);
 			return true;
 		}
 		return false;
 	}
 
 	public synchronized boolean removeBook(String title) {
-		if (bookDatabase.findBook(title) != null) {
+		Book b = bookDatabase.findBook(title);
+		if (b != null) {
 			bookDatabase.deleteBook(title);
-			// TODO delete loans and reservations
+			loanDatabase.deleteLoan(b.getISBN());
+			reservationDatabase.deleteReservation(b.getISBN());
 			return true;
 		}
 		return false;
@@ -141,7 +148,8 @@ public class ServerController {
 		if (b != null && b.getCopy(copyNumber) != null) {
 			b.deleteCopy(copyNumber);
 			bookDatabase.saveChanges(b);
-			// TODO delete loans and reservations
+			loanDatabase.deleteLoan(iSBN, copyNumber);
+			reservationDatabase.deleteReservation(iSBN, copyNumber);
 			return true;
 		}
 		return false;
@@ -152,7 +160,7 @@ public class ServerController {
 		if (u == null) {
 			return ActionResult.NO_SUCH_USER;
 		}
-		
+
 		Book b = bookDatabase.findBook(iSBN);
 		if (b == null) {
 			return ActionResult.NO_SUCH_BOOK;
@@ -174,6 +182,50 @@ public class ServerController {
 			return true;
 		}
 		return false;
+	}
+
+	public String userInfo(User u) {
+		String user = u.toString() + "\n";
+		user += "\tFees: " + u.getFees();
+		
+		user += "\n\tReservations:";
+		List<Reservation> reservations = reservationDatabase.getReservations(u.getUserId());
+		if (reservations.isEmpty()) {
+			user += "\n\t\tUser has no reservations";
+		} else {
+			for (Reservation r : reservations) {
+				user += "\n\t\t" + r.toString();
+			}
+		}
+		
+		user += "\n\tLoans:";
+		List<Loan> loans = loanDatabase.getLoans(u.getUserId());
+		if (loans.isEmpty()) {
+			user += "\n\t\tUser has no loans";
+		} else {
+			for (Loan l : loans) {
+				user += "\n\t\t" + l.toString();
+			}
+		}
+		
+		return user;
+	}
+
+	public String bookInfo(Book b) {
+		String book = b.toString() + "\n";
+
+		for (int i = 1; i <= b.numCopies(); i++) {
+			book += "\t" + b.getCopy(i).toString();
+			if (loanDatabase.findLoan(b.getISBN(), i) != null) {
+				book += "[LOANED] ";
+			}
+			if (reservationDatabase.findReservation(b.getISBN(), i) != null) {
+				book += "[RESERVED]";
+			}
+			book += "\n";
+		}
+				
+		return book;
 	}
 
 }

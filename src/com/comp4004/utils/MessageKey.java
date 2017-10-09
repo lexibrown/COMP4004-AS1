@@ -44,6 +44,7 @@ public class MessageKey {
 	public static final String MONITOR_SYSTEM = "MONITOR_SYSTEM";
 
 	// user keys
+	public static final String SEARCH_USER = "SEARCH_USER";
 	public static final String SEARCH_BOOK = "SEARCH_BOOK";
 	public static final String BORROW = "BORROW";
 	public static final String MAKE_RESERVATION = "MAKE_RESERVATION";

@@ -16,6 +16,7 @@ import com.comp4004.communication.EventSourceImpl;
 import com.comp4004.communication.Reactor;
 import com.comp4004.communication.ThreadWithReactor;
 import com.comp4004.model.Book;
+import com.comp4004.model.User;
 import com.comp4004.server.tools.ActionResult;
 import com.comp4004.utils.Config;
 import com.comp4004.utils.JsonUtil;
@@ -89,6 +90,7 @@ public class Server implements Runnable {
 			reactor.register(MessageKey.LOGIN, new Login());
 			reactor.register(MessageKey.LOGOUT, new Logout());
 
+			reactor.register(MessageKey.SEARCH_USER, new SearchUser());
 			reactor.register(MessageKey.ADD_USER, new AddUser());
 			reactor.register(MessageKey.REMOVE_USER, new RemoveUser());
 
@@ -178,6 +180,34 @@ public class Server implements Runnable {
 
 				Map<String, Object> response = new HashMap<String, Object>();
 				response.put(MessageKey.MESSAGE, MessageKey.LOGOUT);
+				event.getSource().write(twr.getEventSource().getLoggingInfo(), JsonUtil.stringify(response));
+			} catch (Exception e) {
+				log.fatal("Something went wrong", e);
+			}
+		}
+	}
+
+	private class SearchUser implements EventHandler {
+		public void handleEvent(Event event) {
+			try {
+				ThreadWithReactor twr = (ThreadWithReactor) Thread.currentThread();
+				Map<String, Object> response = new HashMap<String, Object>();
+
+				String username = event.get(MessageKey.USERNAME).toString();
+				if (username == null || username.trim().isEmpty()) {
+					response.put(MessageKey.MESSAGE, MessageKey.FAILED);
+					response.put(MessageKey.FAIL_REASON, "No username provided.");
+				} else {
+					User u = controller.searchUser(username);
+					if (u != null) {
+						response.put(MessageKey.MESSAGE, MessageKey.SUCCESS);
+						response.put(MessageKey.REASON, controller.userInfo(u));
+					} else {
+						response.put(MessageKey.MESSAGE, MessageKey.FAILED);
+						response.put(MessageKey.FAIL_REASON, "User does not exist.");
+					}
+				}
+
 				event.getSource().write(twr.getEventSource().getLoggingInfo(), JsonUtil.stringify(response));
 			} catch (Exception e) {
 				log.fatal("Something went wrong", e);
@@ -346,7 +376,7 @@ public class Server implements Runnable {
 				int copyNumber = Integer.valueOf(event.get(MessageKey.COPYNUMBER).toString());
 				if (controller.removeCopy(ISBN, copyNumber)) {
 					response.put(MessageKey.MESSAGE, MessageKey.SUCCESS);
-					response.put(MessageKey.REASON, "Successfully removed copy " + copyNumber + "from book " + ISBN);
+					response.put(MessageKey.REASON, "Successfully removed copy " + copyNumber + " from book " + ISBN);
 				} else {
 					response.put(MessageKey.MESSAGE, MessageKey.FAILED);
 					response.put(MessageKey.FAIL_REASON, "Copy does not exist.");
@@ -371,7 +401,7 @@ public class Server implements Runnable {
 					Book b = controller.searchBook(ISBN);
 					if (b != null) {
 						response.put(MessageKey.MESSAGE, MessageKey.SUCCESS);
-						response.put(MessageKey.REASON, b.toString());
+						response.put(MessageKey.REASON, controller.bookInfo(b));
 					} else {
 						response.put(MessageKey.MESSAGE, MessageKey.FAILED);
 						response.put(MessageKey.FAIL_REASON, "Book does not exist.");
@@ -385,7 +415,7 @@ public class Server implements Runnable {
 						Book b = controller.searchBook(title);
 						if (b != null) {
 							response.put(MessageKey.MESSAGE, MessageKey.SUCCESS);
-							response.put(MessageKey.REASON, b.toString());
+							response.put(MessageKey.REASON, controller.bookInfo(b));
 						} else {
 							response.put(MessageKey.MESSAGE, MessageKey.FAILED);
 							response.put(MessageKey.FAIL_REASON, "Book does not exist.");
@@ -461,7 +491,7 @@ public class Server implements Runnable {
 				
 				if (controller.removeReservation(ISBN, copyNumber, username)) {
 					response.put(MessageKey.MESSAGE, MessageKey.SUCCESS);
-					response.put(MessageKey.REASON, "Successfully removed reservation of copy " + copyNumber + "of book " + ISBN);
+					response.put(MessageKey.REASON, "Successfully removed reservation of copy " + copyNumber + " of book " + ISBN);
 				} else {
 					response.put(MessageKey.MESSAGE, MessageKey.FAILED);
 					response.put(MessageKey.FAIL_REASON, "You do not have this book reserved.");

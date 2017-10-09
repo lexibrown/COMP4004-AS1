@@ -91,9 +91,11 @@ public class ClientController {
 						System.out.println("=====Main Menu==== (Type in the command you'd like to perform)");
 						System.out.println();
 
+						System.out.println("User Info");
 						System.out.println("Search Book");
 						System.out.println("Borrow");
 						System.out.println("Make Reservation");
+						System.out.println("Remove Reservation");
 						System.out.println("Renew Loan");
 						System.out.println("Return Loan");
 						System.out.println("Logout");
@@ -101,6 +103,7 @@ public class ClientController {
 						if (admin) {
 							System.out.println();
 							System.out.println("=====Admin Tools=====");
+							System.out.println("Search User");
 							System.out.println("Create User");
 							System.out.println("Remove User");
 							System.out.println("Add Book");
@@ -116,17 +119,24 @@ public class ClientController {
 						String answer = c.readLine();
 
 						if (admin) {
-							if ("CREATE USER".equalsIgnoreCase(answer)) {
+							if ("SEARCH USER".equalsIgnoreCase(answer)) {
 								System.out.println();
 								System.out.print("Enter username: ");
 								String username = c.readLine();
 
-								System.out.println();
-								System.out.print("Enter users password: ");
-								String password = c.readLine();
-
-								client.createUser(username, password);
+								client.searchUser(username);
 								return;
+							} else if ("CREATE USER".equalsIgnoreCase(answer)) {
+									System.out.println();
+									System.out.print("Enter username: ");
+									String username = c.readLine();
+
+									System.out.println();
+									System.out.print("Enter users password: ");
+									String password = c.readLine();
+
+									client.createUser(username, password);
+									return;
 							} else if ("REMOVE USER".equalsIgnoreCase(answer)) {
 								System.out.println();
 								System.out.print("Enter username: ");
@@ -137,7 +147,7 @@ public class ClientController {
 							} else if ("ADD BOOK".equalsIgnoreCase(answer)) {
 								System.out.println();
 								System.out.print("Enter ISBN: ");
-								int ISBN = Integer.valueOf(c.readLine());
+								int ISBN = Integer.parseInt(c.readLine());
 
 								System.out.println();
 								System.out.print("Enter title: ");
@@ -151,7 +161,7 @@ public class ClientController {
 								String content = c.readLine();
 
 								try {
-									client.removeBook(Integer.valueOf(content));
+									client.removeBook(Integer.parseInt(content));
 								} catch (NumberFormatException e) {
 									client.removeBook(content);
 								}
@@ -159,25 +169,25 @@ public class ClientController {
 							} else if ("ADD COPY".equalsIgnoreCase(answer)) {
 								System.out.println();
 								System.out.print("Enter ISBN: ");
-								int ISBN = Integer.valueOf(c.readLine());
+								int ISBN = Integer.parseInt(c.readLine());
 
 								client.addCopy(ISBN);
 								return;
 							} else if ("DELETE COPY".equalsIgnoreCase(answer)) {
 								System.out.println();
 								System.out.print("Enter ISBN: ");
-								int ISBN = Integer.valueOf(c.readLine());
+								int ISBN = Integer.parseInt(c.readLine());
 
 								System.out.println();
 								System.out.print("Enter copy number: ");
-								int copyNumber = Integer.valueOf(c.readLine());
+								int copyNumber = Integer.parseInt(c.readLine());
 
 								client.removeCopy(ISBN, copyNumber);
 								return;
 							} else if ("COLLECT FINE".equalsIgnoreCase(answer)) {
 								System.out.println();
 								System.out.print("Enter amount to pay: ");
-								int fee = Integer.valueOf(c.readLine());
+								int fee = Integer.parseInt(c.readLine());
 
 								client.collectFine(fee);
 								return;
@@ -187,13 +197,16 @@ public class ClientController {
 							}
 						}
 
-						if ("SEARCH BOOK".equalsIgnoreCase(answer)) {
+						if ("USER INFO".equalsIgnoreCase(answer)) {
+							client.searchUser(client.getUsername());
+							return;
+						} else if ("SEARCH BOOK".equalsIgnoreCase(answer)) {
 							System.out.println();
 							System.out.print("Enter ISBN or Title: ");
 							String content = c.readLine();
 
 							try {
-								client.searchBook(Integer.valueOf(content));
+								client.searchBook(Integer.parseInt(content));
 							} catch (NumberFormatException e) {
 								client.searchBook(content);
 							}
@@ -201,55 +214,55 @@ public class ClientController {
 						} else if ("BORROW".equalsIgnoreCase(answer)) {
 							System.out.println();
 							System.out.print("Enter ISBN: ");
-							int ISBN = Integer.valueOf(c.readLine());
+							int ISBN = Integer.parseInt(c.readLine());
 
 							System.out.println();
 							System.out.print("Enter copy number: ");
-							int copyNumber = Integer.valueOf(c.readLine());
+							int copyNumber = Integer.parseInt(c.readLine());
 
 							client.borrow(ISBN, copyNumber);
 							return;
 						} else if ("MAKE RESERVATION".equalsIgnoreCase(answer)) {
 							System.out.println();
 							System.out.print("Enter ISBN: ");
-							int ISBN = Integer.valueOf(c.readLine());
+							int ISBN = Integer.parseInt(c.readLine());
 
 							System.out.println();
 							System.out.print("Enter copy number: ");
-							int copyNumber = Integer.valueOf(c.readLine());
+							int copyNumber = Integer.parseInt(c.readLine());
 
 							client.makeReservation(ISBN, copyNumber);
 							return;
 						} else if ("REMOVE RESERVATION".equalsIgnoreCase(answer)) {
 							System.out.println();
 							System.out.print("Enter ISBN: ");
-							int ISBN = Integer.valueOf(c.readLine());
+							int ISBN = Integer.parseInt(c.readLine());
 
 							System.out.println();
 							System.out.print("Enter copy number: ");
-							int copyNumber = Integer.valueOf(c.readLine());
+							int copyNumber = Integer.parseInt(c.readLine());
 
 							client.removeReservation(ISBN, copyNumber);
 							return;
 						} else if ("RENEW LOAN".equalsIgnoreCase(answer)) {
 							System.out.println();
 							System.out.print("Enter ISBN: ");
-							int ISBN = Integer.valueOf(c.readLine());
+							int ISBN = Integer.parseInt(c.readLine());
 
 							System.out.println();
 							System.out.print("Enter copy number: ");
-							int copyNumber = Integer.valueOf(c.readLine());
+							int copyNumber = Integer.parseInt(c.readLine());
 
 							client.renewLoan(ISBN, copyNumber);
 							return;
 						} else if ("RETURN LOAN".equalsIgnoreCase(answer)) {
 							System.out.println();
 							System.out.print("Enter ISBN: ");
-							int ISBN = Integer.valueOf(c.readLine());
+							int ISBN = Integer.parseInt(c.readLine());
 
 							System.out.println();
 							System.out.print("Enter copy number: ");
-							int copyNumber = Integer.valueOf(c.readLine());
+							int copyNumber = Integer.parseInt(c.readLine());
 
 							client.returnLoan(ISBN, copyNumber);
 							return;

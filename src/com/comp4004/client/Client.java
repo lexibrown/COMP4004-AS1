@@ -39,6 +39,10 @@ public class Client {
 		this.controller = controller;
 		clientReactor = new Reactor();
 	}
+	
+	public String getUsername() {
+		return this.username;
+	}
 
 	public void connectToServer() {
 		System.out.println("Connecting to Server...");
@@ -154,6 +158,18 @@ public class Client {
 		try {
 			Map<String, Object> message = new HashMap<String, Object>();
 			message.put(MessageKey.MESSAGE, MessageKey.LOGOUT);
+			message.put(MessageKey.USERNAME, username);
+
+			source.write(JsonUtil.stringify(message));
+		} catch (Exception e) {
+			log.fatal("Something went wrong", e);
+		}
+	}
+
+	public void searchUser(String username) {
+		try {
+			Map<String, Object> message = new HashMap<String, Object>();
+			message.put(MessageKey.MESSAGE, MessageKey.SEARCH_USER);
 			message.put(MessageKey.USERNAME, username);
 
 			source.write(JsonUtil.stringify(message));
