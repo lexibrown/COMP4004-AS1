@@ -1370,3 +1370,56 @@ java.net.SocketException: Connection reset by peer: socket write error
 	at com.comp4004.communication.ThreadWithReactor.dispatch(ThreadWithReactor.java:92)
 	at com.comp4004.communication.ThreadWithReactor.quit(ThreadWithReactor.java:41)
 	at com.comp4004.communication.ThreadWithReactor.run(ThreadWithReactor.java:75)
+2017-10-09 14:06:52,294 INFO BufferedLoggingWriter [main] [/127.0.0.1:56175] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"LOGIN","PASSWORD":"admin","USERNAME":"clerk"} 
+2017-10-09 14:06:52,295 INFO BufferedLoggingWriter [main] SENT: 
+ 
+2017-10-09 14:06:52,296 INFO EventSourceImpl [Thread-1] [/127.0.0.1:5050] FROM: 127.0.0.1:56175 RECEIVED: {"MESSAGE":"LOGIN","PASSWORD":"admin","USERNAME":"clerk"} 
+2017-10-09 14:06:52,325 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:5050] TO: 127.0.0.1:56175 SENT: {"MESSAGE":"CONNECT_PASS","ADMIN":""} 
+2017-10-09 14:06:52,325 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-09 14:06:52,325 INFO EventSourceImpl [Thread-0] [/127.0.0.1:56175] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"CONNECT_PASS","ADMIN":""} 
+2017-10-09 14:07:03,910 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:56175] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"COLLECT_FINE","FEE":20,"USERNAME":"clerk"} 
+2017-10-09 14:07:03,910 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-09 14:07:03,910 INFO EventSourceImpl [Thread-1] [/127.0.0.1:5050] FROM: 127.0.0.1:56175 RECEIVED: {"MESSAGE":"COLLECT_FINE","FEE":20,"USERNAME":"clerk"} 
+2017-10-09 14:07:03,911 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:5050] TO: 127.0.0.1:56175 SENT: {"MESSAGE":"FAILED","FAIL_REASON":"User does not exist."} 
+2017-10-09 14:07:03,911 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-09 14:07:03,911 INFO EventSourceImpl [Thread-0] [/127.0.0.1:56175] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"FAILED","FAIL_REASON":"User does not exist."} 
+2017-10-09 14:10:01,357 FATAL ThreadWithReactor [Thread-0] IOException, closing connection. 
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.io.InputStreamReader.read(Unknown Source)
+	at java.io.BufferedReader.fill(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at com.comp4004.communication.EventSourceImpl.getEvent(EventSourceImpl.java:69)
+	at com.comp4004.communication.ThreadWithReactor.run(ThreadWithReactor.java:56)
+2017-10-09 14:10:15,903 INFO BufferedLoggingWriter [main] [/127.0.0.1:56201] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"LOGIN","PASSWORD":"admin","USERNAME":"clerk"} 
+2017-10-09 14:10:15,904 INFO BufferedLoggingWriter [main] SENT: 
+ 
+2017-10-09 14:10:15,905 INFO EventSourceImpl [Thread-1] [/127.0.0.1:5050] FROM: 127.0.0.1:56201 RECEIVED: {"MESSAGE":"LOGIN","PASSWORD":"admin","USERNAME":"clerk"} 
+2017-10-09 14:10:15,932 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:5050] TO: 127.0.0.1:56201 SENT: {"MESSAGE":"CONNECT_PASS","ADMIN":""} 
+2017-10-09 14:10:15,932 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-09 14:10:15,933 INFO EventSourceImpl [Thread-0] [/127.0.0.1:56201] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"CONNECT_PASS","ADMIN":""} 
+2017-10-09 14:10:26,402 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:56201] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"COLLECT_FINE","FEE":20,"USERNAME":"user1"} 
+2017-10-09 14:10:26,402 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-09 14:10:26,403 INFO EventSourceImpl [Thread-1] [/127.0.0.1:5050] FROM: 127.0.0.1:56201 RECEIVED: {"MESSAGE":"COLLECT_FINE","FEE":20,"USERNAME":"user1"} 
+2017-10-09 14:10:26,416 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:5050] TO: 127.0.0.1:56201 SENT: {"MESSAGE":"SUCCESS","REASON":"Successfully collected fee for user: user1"} 
+2017-10-09 14:10:26,416 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-09 14:10:26,416 INFO EventSourceImpl [Thread-0] [/127.0.0.1:56201] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"Successfully collected fee for user: user1"} 
+2017-10-09 14:10:47,100 INFO BufferedLoggingWriter [Thread-2] [/127.0.0.1:56201] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"MONITOR_SYSTEM"} 
+2017-10-09 14:10:47,101 INFO BufferedLoggingWriter [Thread-2] SENT: 
+ 
+2017-10-09 14:10:47,101 INFO EventSourceImpl [Thread-1] [/127.0.0.1:5050] FROM: 127.0.0.1:56201 RECEIVED: {"MESSAGE":"MONITOR_SYSTEM"} 
+2017-10-09 14:10:47,102 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:5050] TO: 127.0.0.1:56201 SENT: {"MESSAGE":"SUCCESS","REASON":"12345, The Book [Copies: 4]\n\t12345 [1]\n\t12345 [2]\n\t12345 [3]\n\t12345 [4]\n[0]: user1, pass1\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\tUser has no loans[0]: user2, pass2\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\tUser has no loans"} 
+2017-10-09 14:10:47,102 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-09 14:10:47,102 INFO EventSourceImpl [Thread-0] [/127.0.0.1:56201] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"12345, The Book [Copies: 4]\n\t12345 [1]\n\t12345 [2]\n\t12345 [3]\n\t12345 [4]\n[0]: user1, pass1\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\tUser has no loans[0]: user2, pass2\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\tUser has no loans"} 

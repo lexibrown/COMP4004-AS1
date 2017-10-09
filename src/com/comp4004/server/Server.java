@@ -100,15 +100,15 @@ public class Server implements Runnable {
 			reactor.register(MessageKey.ADD_COPY, new AddCopy());
 			reactor.register(MessageKey.REMOVE_COPY, new RemoveCopy());
 
-			// reactor.register(MessageKey.COLLECT_FINE, new CollectFine());
-			// reactor.register(MessageKey.MONITOR_SYSTEM, new MonitorSystem());
+			reactor.register(MessageKey.COLLECT_FINE, new CollectFine());
+			reactor.register(MessageKey.MONITOR_SYSTEM, new MonitorSystem());
 
 			reactor.register(MessageKey.SEARCH_BOOK, new SearchBook());
-			// reactor.register(MessageKey.BORROW, new Borrow());
+			reactor.register(MessageKey.BORROW, new Borrow());
 			reactor.register(MessageKey.MAKE_RESERVATION, new MakeReservation());
 			reactor.register(MessageKey.REMOVE_RESERVATION, new RemoveReservation());
-			// reactor.register(MessageKey.RENEW_LOAN, new RenewLoan());
-			// reactor.register(MessageKey.RETURN_LOAN, new ReturnLoan());
+			reactor.register(MessageKey.RENEW_LOAN, new RenewLoan());
+			reactor.register(MessageKey.RETURN_LOAN, new ReturnLoan());
 
 			reactor.start();
 		} catch (Exception e) {
@@ -388,6 +388,51 @@ public class Server implements Runnable {
 			}
 		}
 	}
+	
+	private class CollectFine implements EventHandler {
+		public void handleEvent(Event event) {
+			try {
+				ThreadWithReactor twr = (ThreadWithReactor) Thread.currentThread();
+				Map<String, Object> response = new HashMap<String, Object>();
+
+				String username = event.get(MessageKey.USERNAME).toString();
+				int fee = Integer.valueOf(event.get(MessageKey.FEE).toString());
+				
+				if (fee <= 0) {
+					response.put(MessageKey.MESSAGE, MessageKey.FAILED);
+					response.put(MessageKey.FAIL_REASON, "Invalid fee amount.");
+				} else {
+					if (controller.collectFee(username, fee)) {
+						response.put(MessageKey.MESSAGE, MessageKey.SUCCESS);
+						response.put(MessageKey.REASON, "Successfully collected fee for user: " + username);
+					} else {
+						response.put(MessageKey.MESSAGE, MessageKey.FAILED);
+						response.put(MessageKey.FAIL_REASON, "User does not exist.");
+					}
+				}
+
+				event.getSource().write(twr.getEventSource().getLoggingInfo(), JsonUtil.stringify(response));
+			} catch (Exception e) {
+				log.fatal("Something went wrong", e);
+			}
+		}
+	}
+	
+	private class MonitorSystem implements EventHandler {
+		public void handleEvent(Event event) {
+			try {
+				ThreadWithReactor twr = (ThreadWithReactor) Thread.currentThread();
+				Map<String, Object> response = new HashMap<String, Object>();
+
+				response.put(MessageKey.MESSAGE, MessageKey.SUCCESS);
+				response.put(MessageKey.REASON, controller.monitorSystem());
+
+				event.getSource().write(twr.getEventSource().getLoggingInfo(), JsonUtil.stringify(response));
+			} catch (Exception e) {
+				log.fatal("Something went wrong", e);
+			}
+		}
+	}
 
 	private class SearchBook implements EventHandler {
 		public void handleEvent(Event event) {
@@ -432,6 +477,58 @@ public class Server implements Runnable {
 			}
 		}
 	}
+	
+	private class Borrow implements EventHandler {
+		public void handleEvent(Event event) {
+			try {
+				ThreadWithReactor twr = (ThreadWithReactor) Thread.currentThread();
+				Map<String, Object> response = new HashMap<String, Object>();
+
+				String username = event.get(MessageKey.USERNAME).toString();
+				int ISBN = Integer.valueOf(event.get(MessageKey.ISBN).toString());
+				int copyNumber = Integer.valueOf(event.get(MessageKey.COPYNUMBER).toString());
+
+				if (username == null || username.trim().isEmpty()) {
+					response.put(MessageKey.MESSAGE, MessageKey.FAILED);
+					response.put(MessageKey.FAIL_REASON, "No username provided.");
+				} else {
+					response.put(MessageKey.MESSAGE, MessageKey.FAILED);
+
+					ActionResult ar = controller.borrow(username, ISBN, copyNumber);
+					switch (ar) {
+					case NO_SUCH_USER:
+						response.put(MessageKey.FAIL_REASON, "User does not exists.");
+						break;
+					case NO_SUCH_BOOK:
+						response.put(MessageKey.FAIL_REASON, "Book does not exists.");
+						break;
+					case NO_SUCH_COPY:
+						response.put(MessageKey.FAIL_REASON, "Copy does not exists.");
+						break;
+					case NO_PRIVILEGE:
+						response.put(MessageKey.FAIL_REASON, username + " is not allowed to borrow books.");
+						break;
+					case MAX_LOAN:
+						response.put(MessageKey.FAIL_REASON, username + " has reached the max amount of active loans.");
+						break;
+					case RESERVATION_EXISTS:
+						response.put(MessageKey.FAIL_REASON, "Book is already reserved.");
+						break;
+					case BORROWED:
+						response.put(MessageKey.MESSAGE, MessageKey.SUCCESS);
+						response.put(MessageKey.REASON,
+								"Successfully borrowed copy " + copyNumber + " of book: " + ISBN);
+						break;
+					default:
+						break;
+					}
+				}
+				event.getSource().write(twr.getEventSource().getLoggingInfo(), JsonUtil.stringify(response));
+			} catch (Exception e) {
+				log.fatal("Something went wrong", e);
+			}
+		}
+	}
 
 	private class MakeReservation implements EventHandler {
 		public void handleEvent(Event event) {
@@ -465,7 +562,8 @@ public class Server implements Runnable {
 						break;
 					case RESERVATION_MADE:
 						response.put(MessageKey.MESSAGE, MessageKey.SUCCESS);
-						response.put(MessageKey.REASON, "Successfully reserved copy " + copyNumber + " of book: " + ISBN);
+						response.put(MessageKey.REASON,
+								"Successfully reserved copy " + copyNumber + " of book: " + ISBN);
 						break;
 					default:
 						break;
@@ -488,10 +586,11 @@ public class Server implements Runnable {
 				String username = event.get(MessageKey.USERNAME).toString();
 				int ISBN = Integer.valueOf(event.get(MessageKey.ISBN).toString());
 				int copyNumber = Integer.valueOf(event.get(MessageKey.COPYNUMBER).toString());
-				
+
 				if (controller.removeReservation(ISBN, copyNumber, username)) {
 					response.put(MessageKey.MESSAGE, MessageKey.SUCCESS);
-					response.put(MessageKey.REASON, "Successfully removed reservation of copy " + copyNumber + " of book " + ISBN);
+					response.put(MessageKey.REASON,
+							"Successfully removed reservation of copy " + copyNumber + " of book " + ISBN);
 				} else {
 					response.put(MessageKey.MESSAGE, MessageKey.FAILED);
 					response.put(MessageKey.FAIL_REASON, "You do not have this book reserved.");
@@ -504,6 +603,106 @@ public class Server implements Runnable {
 		}
 	}
 
+	private class RenewLoan implements EventHandler {
+		public void handleEvent(Event event) {
+			try {
+				ThreadWithReactor twr = (ThreadWithReactor) Thread.currentThread();
+				Map<String, Object> response = new HashMap<String, Object>();
+
+				String username = event.get(MessageKey.USERNAME).toString();
+				int ISBN = Integer.valueOf(event.get(MessageKey.ISBN).toString());
+				int copyNumber = Integer.valueOf(event.get(MessageKey.COPYNUMBER).toString());
+
+				if (username == null || username.trim().isEmpty()) {
+					response.put(MessageKey.MESSAGE, MessageKey.FAILED);
+					response.put(MessageKey.FAIL_REASON, "No username provided.");
+				} else {
+					response.put(MessageKey.MESSAGE, MessageKey.FAILED);
+
+					ActionResult ar = controller.renew(username, ISBN, copyNumber);
+					switch (ar) {
+					case NO_SUCH_USER:
+						response.put(MessageKey.FAIL_REASON, "User does not exists.");
+						break;
+					case NO_SUCH_BOOK:
+						response.put(MessageKey.FAIL_REASON, "Book does not exists.");
+						break;
+					case NO_SUCH_COPY:
+						response.put(MessageKey.FAIL_REASON, "Copy does not exists.");
+						break;
+					case NO_PRIVILEGE:
+						response.put(MessageKey.FAIL_REASON, username + " is not allowed to renew books.");
+						break;
+					case MAX_RENEW:
+						response.put(MessageKey.FAIL_REASON, "The max amount of renews for this book has been reached.");
+						break;
+					case RESERVATION_EXISTS:
+						response.put(MessageKey.FAIL_REASON, "Book is reserved.");
+						break;
+					case RENEWED:
+						response.put(MessageKey.MESSAGE, MessageKey.SUCCESS);
+						response.put(MessageKey.REASON,
+								"Successfully renewed loan of copy " + copyNumber + " of book: " + ISBN);
+						break;
+					default:
+						break;
+					}
+				}
+				event.getSource().write(twr.getEventSource().getLoggingInfo(), JsonUtil.stringify(response));
+			} catch (Exception e) {
+				log.fatal("Something went wrong", e);
+			}
+		}
+	}
+
+	private class ReturnLoan implements EventHandler {
+		public void handleEvent(Event event) {
+			try {
+				ThreadWithReactor twr = (ThreadWithReactor) Thread.currentThread();
+				Map<String, Object> response = new HashMap<String, Object>();
+
+				String username = event.get(MessageKey.USERNAME).toString();
+				int ISBN = Integer.valueOf(event.get(MessageKey.ISBN).toString());
+				int copyNumber = Integer.valueOf(event.get(MessageKey.COPYNUMBER).toString());
+
+				if (username == null || username.trim().isEmpty()) {
+					response.put(MessageKey.MESSAGE, MessageKey.FAILED);
+					response.put(MessageKey.FAIL_REASON, "No username provided.");
+				} else {
+					response.put(MessageKey.MESSAGE, MessageKey.FAILED);
+
+					ActionResult ar = controller.returnLoan(username, ISBN, copyNumber);
+					switch (ar) {
+					case NO_SUCH_USER:
+						response.put(MessageKey.FAIL_REASON, "User does not exists.");
+						break;
+					case NO_SUCH_BOOK:
+						response.put(MessageKey.FAIL_REASON, "Book does not exists.");
+						break;
+					case NO_SUCH_COPY:
+						response.put(MessageKey.FAIL_REASON, "Copy does not exists.");
+						break;
+					case FEE_ADDED:
+						response.put(MessageKey.MESSAGE, MessageKey.SUCCESS);
+						response.put(MessageKey.REASON,
+								"Successfully returned copy " + copyNumber + " of book: " + ISBN + "but fee was applied because return was late.");
+						break;
+					case RETURNED:
+						response.put(MessageKey.MESSAGE, MessageKey.SUCCESS);
+						response.put(MessageKey.REASON,
+								"Successfully returned copy " + copyNumber + " of book: " + ISBN);
+						break;
+					default:
+						break;
+					}
+				}
+				event.getSource().write(twr.getEventSource().getLoggingInfo(), JsonUtil.stringify(response));
+			} catch (Exception e) {
+				log.fatal("Something went wrong", e);
+			}
+		}
+	}
+	
 	public static void main(String[] args) {
 		ServerController c = new ServerController(new Server(Config.DEFAULT_PORT));
 		try {

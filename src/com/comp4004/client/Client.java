@@ -369,7 +369,7 @@ public class Client {
 		}
 	}
 
-	public void collectFine(int fee) {
+	public void collectFine(String username, int fee) {
 		try {
 			Map<String, Object> message = new HashMap<String, Object>();
 			message.put(MessageKey.MESSAGE, MessageKey.COLLECT_FINE);

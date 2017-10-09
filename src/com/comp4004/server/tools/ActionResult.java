@@ -15,8 +15,10 @@ public enum ActionResult {
 	
 	MAX_RENEW,
 	MAX_LOAN,
-	RESERVED
+	RESERVED,
 	
-	
+	BORROWED,
+	RENEWED,
+	RETURNED
 	
 }

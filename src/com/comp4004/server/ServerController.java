@@ -184,10 +184,51 @@ public class ServerController {
 		return false;
 	}
 
+	public synchronized boolean collectFee(String username, int fee) {
+		User u = userDatabase.findUser(username);
+		if (u == null) {
+			return false;
+		}
+		u.payFee(fee);
+		userDatabase.saveChanges(u);
+		return true;
+	}
+
+	public Object monitorSystem() {
+		String content = "";
+		List<Book> books = bookDatabase.getBooks();
+		List<User> users = userDatabase.getUsers();
+
+		for (Book b : books) {
+			content += bookInfo(b);
+		}
+		for (User u : users) {
+			content += userInfo(u);
+		}
+
+		return content;
+	}
+
+	public ActionResult borrow(String username, int iSBN, int copyNumber) {
+		// TODO
+		return null;
+	}
+	
+	public ActionResult renew(String username, int iSBN, int copyNumber) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	public ActionResult returnLoan(String username, int iSBN, int copyNumber) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	public String userInfo(User u) {
 		String user = u.toString() + "\n";
 		user += "\tFees: " + u.getFees();
-		
+
 		user += "\n\tReservations:";
 		List<Reservation> reservations = reservationDatabase.getReservations(u.getUserId());
 		if (reservations.isEmpty()) {
@@ -197,7 +238,7 @@ public class ServerController {
 				user += "\n\t\t" + r.toString();
 			}
 		}
-		
+
 		user += "\n\tLoans:";
 		List<Loan> loans = loanDatabase.getLoans(u.getUserId());
 		if (loans.isEmpty()) {
@@ -207,8 +248,8 @@ public class ServerController {
 				user += "\n\t\t" + l.toString();
 			}
 		}
-		
-		return user;
+
+		return user + "\n";
 	}
 
 	public String bookInfo(Book b) {
@@ -224,7 +265,7 @@ public class ServerController {
 			}
 			book += "\n";
 		}
-				
+
 		return book;
 	}
 

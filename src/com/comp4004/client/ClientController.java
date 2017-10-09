@@ -186,10 +186,14 @@ public class ClientController {
 								return;
 							} else if ("COLLECT FINE".equalsIgnoreCase(answer)) {
 								System.out.println();
+								System.out.print("Enter username: ");
+								String username = c.readLine();
+								
+								System.out.println();
 								System.out.print("Enter amount to pay: ");
 								int fee = Integer.parseInt(c.readLine());
 
-								client.collectFine(fee);
+								client.collectFine(username, fee);
 								return;
 							} else if ("MONITOR SYSTEM".equalsIgnoreCase(answer)) {
 								client.monitorSystem();
