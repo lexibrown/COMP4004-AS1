@@ -86,7 +86,26 @@ public class Server implements Runnable {
 
 			reactor.register(MessageKey.LOGIN, new Login());
 			reactor.register(MessageKey.LOGOUT, new Logout());
-
+			
+			reactor.register(MessageKey.ADD_USER, new AddUser());
+//			reactor.register(MessageKey.REMOVE_USER, new RemoveUser());
+//
+//			reactor.register(MessageKey.ADD_BOOK, new AddBook());
+//			reactor.register(MessageKey.REMOVE_BOOK, new RemoveBook());
+//
+//			reactor.register(MessageKey.ADD_COPY, new AddCopy());
+//			reactor.register(MessageKey.REMOVE_COPY, new RemoveCopy());
+//
+//			reactor.register(MessageKey.COLLECT_FINE, new CollectFine());
+//			reactor.register(MessageKey.MONITOR_SYSTEM, new MonitorSystem());
+//
+//			reactor.register(MessageKey.SEARCH_BOOK, new SearchBook());
+//			reactor.register(MessageKey.BORROW, new Borrow());
+//			reactor.register(MessageKey.MAKE_RESERVATION, new MakeReservation());
+//			reactor.register(MessageKey.REMOVE_RESERVATION, new RemoveReservation());
+//			reactor.register(MessageKey.RENEW_LOAN, new RenewLoan());
+//			reactor.register(MessageKey.RETURN_LOAN, new ReturnLoan());
+			
 			reactor.start();
 		} catch (Exception e) {
 			log.fatal("Something went wrong", e);
@@ -157,6 +176,21 @@ public class Server implements Runnable {
 
 				Map<String, Object> response = new HashMap<String, Object>();
 				response.put(MessageKey.MESSAGE, MessageKey.LOGOUT);
+				event.getSource().write(twr.getEventSource().getLoggingInfo(), JsonUtil.stringify(response));
+			} catch (Exception e) {
+				log.fatal("Something went wrong", e);
+			}
+		}
+	}
+	
+	private class AddUser implements EventHandler {
+		public void handleEvent(Event event) {
+			try {
+				ThreadWithReactor twr = (ThreadWithReactor) Thread.currentThread();
+
+
+				Map<String, Object> response = new HashMap<String, Object>();
+				response.put(MessageKey.MESSAGE, MessageKey.ADD_USER);
 				event.getSource().write(twr.getEventSource().getLoggingInfo(), JsonUtil.stringify(response));
 			} catch (Exception e) {
 				log.fatal("Something went wrong", e);

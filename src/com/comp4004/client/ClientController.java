@@ -44,6 +44,26 @@ public class ClientController {
 		}
 	}
 
+	public void success(String message) {
+		System.out.println(message);
+		listen();
+	}
+	
+	public void failed(String message) {
+		System.err.println(message);
+		listen();
+	}
+	
+	public void createUser() {
+		System.out.println("Enter username: ");
+		String username = sc.nextLine();
+		
+		System.out.println("Enter users password: ");
+		String password = sc.nextLine();
+		
+		client.createUser(username, password);
+	}
+
 	public void start() {
 		System.out.println();
 		System.out.println("Welcome to Library Terminal. Please enter your username and password.");
@@ -78,7 +98,7 @@ public class ClientController {
 						System.out.println();
 						System.out.println();
 						System.out.println("=====Main Menu====");
-						System.out.println("Type in the command you'd like to preform");
+						System.out.println("Type in the command you'd like to perform");
 						System.out.println();
 
 						System.out.println("Search Book");
@@ -105,34 +125,35 @@ public class ClientController {
 
 						if (admin) {
 							if ("CREATE USER".equals(answer)) {
-								
+								createUser();
+								return;
 							} else if ("REMOVE USER".equalsIgnoreCase(answer)) {
-								
+
 							} else if ("ADD BOOK".equalsIgnoreCase(answer)) {
-								
+
 							} else if ("DELETE BOOK".equalsIgnoreCase(answer)) {
-								
+
 							} else if ("ADD COPY".equalsIgnoreCase(answer)) {
-								
+
 							} else if ("DELETE COPY".equalsIgnoreCase(answer)) {
-								
+
 							} else if ("COLLECT FINE".equalsIgnoreCase(answer)) {
-								
+
 							} else if ("MONITOR SYSTEM".equalsIgnoreCase(answer)) {
 
 							}
 						}
-						
+
 						if ("SEARCH BOOK".equalsIgnoreCase(answer)) {
-							
+
 						} else if ("BORROW".equalsIgnoreCase(answer)) {
-							
+
 						} else if ("MAKE RESERVATION".equalsIgnoreCase(answer)) {
-							
+
 						} else if ("RENEW LOAN".equalsIgnoreCase(answer)) {
-							
+
 						} else if ("RETURN LOAN".equalsIgnoreCase(answer)) {
-						
+
 						} else if ("LOGOUT".equalsIgnoreCase(answer)) {
 							client.logout();
 						} else {
@@ -148,4 +169,5 @@ public class ClientController {
 		});
 		thread.start();
 	}
+
 }

@@ -72,6 +72,9 @@ public class Client {
 			twr.register(MessageKey.CONNECT_PASS, new Connected());
 			twr.register(MessageKey.CONNECT_FAIL, new ConnectFailed());
 
+			twr.register(MessageKey.SUCCESS, new SuccessResponse());
+			twr.register(MessageKey.FAILED, new FailedResponse());
+
 			twr.register(MessageKey.LOGOUT, new LoggedOut());
 
 			twr.start();
@@ -113,6 +116,26 @@ public class Client {
 		}
 	}
 
+	private class SuccessResponse implements EventHandler {
+		public void handleEvent(Event event) {
+			try {
+				controller.success(event.get(MessageKey.MESSAGE).toString());
+			} catch (Exception e) {
+				log.fatal("Something went wrong", e);
+			}
+		}
+	}
+
+	private class FailedResponse implements EventHandler {
+		public void handleEvent(Event event) {
+			try {
+				controller.success(event.get(MessageKey.MESSAGE).toString());
+			} catch (Exception e) {
+				log.fatal("Something went wrong", e);
+			}
+		}
+	}
+
 	public void login(String username, String password) {
 		try {
 			Map<String, Object> message = new HashMap<String, Object>();
@@ -131,7 +154,188 @@ public class Client {
 		try {
 			Map<String, Object> message = new HashMap<String, Object>();
 			message.put(MessageKey.MESSAGE, MessageKey.LOGOUT);
-			message.put(MessageKey.USER, username);
+			message.put(MessageKey.USERNAME, username);
+
+			source.write(JsonUtil.stringify(message));
+		} catch (Exception e) {
+			log.fatal("Something went wrong", e);
+		}
+	}
+
+	public void createUser(String username, String password) {
+		try {
+			Map<String, Object> message = new HashMap<String, Object>();
+			message.put(MessageKey.MESSAGE, MessageKey.ADD_USER);
+			message.put(MessageKey.USERNAME, username);
+			message.put(MessageKey.PASSWORD, password);
+
+			source.write(JsonUtil.stringify(message));
+		} catch (Exception e) {
+			log.fatal("Something went wrong", e);
+		}
+	}
+
+	public void removeUser(String username) {
+		try {
+			Map<String, Object> message = new HashMap<String, Object>();
+			message.put(MessageKey.MESSAGE, MessageKey.REMOVE_USER);
+			message.put(MessageKey.USERNAME, username);
+
+			source.write(JsonUtil.stringify(message));
+		} catch (Exception e) {
+			log.fatal("Something went wrong", e);
+		}
+	}
+
+	public void addBook(int ISBN, String title) {
+		try {
+			Map<String, Object> message = new HashMap<String, Object>();
+			message.put(MessageKey.MESSAGE, MessageKey.ADD_BOOK);
+			message.put(MessageKey.ISBN, ISBN);
+			message.put(MessageKey.TITLE, title);
+
+			source.write(JsonUtil.stringify(message));
+		} catch (Exception e) {
+			log.fatal("Something went wrong", e);
+		}
+	}
+
+	public void removeBook(String title) {
+		try {
+			Map<String, Object> message = new HashMap<String, Object>();
+			message.put(MessageKey.MESSAGE, MessageKey.REMOVE_BOOK);
+			message.put(MessageKey.TITLE, title);
+
+			source.write(JsonUtil.stringify(message));
+		} catch (Exception e) {
+			log.fatal("Something went wrong", e);
+		}
+	}
+
+	public void removeBook(int ISBN) {
+		try {
+			Map<String, Object> message = new HashMap<String, Object>();
+			message.put(MessageKey.MESSAGE, MessageKey.REMOVE_BOOK);
+			message.put(MessageKey.ISBN, ISBN);
+
+			source.write(JsonUtil.stringify(message));
+		} catch (Exception e) {
+			log.fatal("Something went wrong", e);
+		}
+	}
+
+	public void addCopy(int ISBN) {
+		try {
+			Map<String, Object> message = new HashMap<String, Object>();
+			message.put(MessageKey.MESSAGE, MessageKey.ADD_COPY);
+			message.put(MessageKey.ISBN, ISBN);
+
+			source.write(JsonUtil.stringify(message));
+		} catch (Exception e) {
+			log.fatal("Something went wrong", e);
+		}
+	}
+
+	public void removeCopy(int ISBN, int copyNumber) {
+		try {
+			Map<String, Object> message = new HashMap<String, Object>();
+			message.put(MessageKey.MESSAGE, MessageKey.REMOVE_COPY);
+			message.put(MessageKey.ISBN, ISBN);
+			message.put(MessageKey.COPYNUMBER, copyNumber);
+
+			source.write(JsonUtil.stringify(message));
+		} catch (Exception e) {
+			log.fatal("Something went wrong", e);
+		}
+	}
+
+	public void searchBook(int ISBN) {
+		try {
+			Map<String, Object> message = new HashMap<String, Object>();
+			message.put(MessageKey.MESSAGE, MessageKey.SEARCH_BOOK);
+			message.put(MessageKey.ISBN, ISBN);
+
+			source.write(JsonUtil.stringify(message));
+		} catch (Exception e) {
+			log.fatal("Something went wrong", e);
+		}
+	}
+
+	public void searchBook(String title) {
+		try {
+			Map<String, Object> message = new HashMap<String, Object>();
+			message.put(MessageKey.MESSAGE, MessageKey.SEARCH_BOOK);
+			message.put(MessageKey.TITLE, title);
+
+			source.write(JsonUtil.stringify(message));
+		} catch (Exception e) {
+			log.fatal("Something went wrong", e);
+		}
+	}
+
+	public void borrow(int ISBN, int copyNumber) {
+		try {
+			Map<String, Object> message = new HashMap<String, Object>();
+			message.put(MessageKey.MESSAGE, MessageKey.BORROW);
+			message.put(MessageKey.USERNAME, username);
+			message.put(MessageKey.ISBN, ISBN);
+			message.put(MessageKey.COPYNUMBER, copyNumber);
+
+			source.write(JsonUtil.stringify(message));
+		} catch (Exception e) {
+			log.fatal("Something went wrong", e);
+		}
+	}
+
+	public void makeReservation(int ISBN, int copyNumber) {
+		try {
+			Map<String, Object> message = new HashMap<String, Object>();
+			message.put(MessageKey.MESSAGE, MessageKey.MAKE_RESERVATION);
+			message.put(MessageKey.USERNAME, username);
+			message.put(MessageKey.ISBN, ISBN);
+			message.put(MessageKey.COPYNUMBER, copyNumber);
+
+			source.write(JsonUtil.stringify(message));
+		} catch (Exception e) {
+			log.fatal("Something went wrong", e);
+		}
+	}
+
+	public void removeReservation(int ISBN, int copyNumber) {
+		try {
+			Map<String, Object> message = new HashMap<String, Object>();
+			message.put(MessageKey.MESSAGE, MessageKey.REMOVE_RESERVATION);
+			message.put(MessageKey.USERNAME, username);
+			message.put(MessageKey.ISBN, ISBN);
+			message.put(MessageKey.COPYNUMBER, copyNumber);
+
+			source.write(JsonUtil.stringify(message));
+		} catch (Exception e) {
+			log.fatal("Something went wrong", e);
+		}
+	}
+
+	public void renewLoan(int ISBN, int copyNumber) {
+		try {
+			Map<String, Object> message = new HashMap<String, Object>();
+			message.put(MessageKey.MESSAGE, MessageKey.RENEW_LOAN);
+			message.put(MessageKey.USERNAME, username);
+			message.put(MessageKey.ISBN, ISBN);
+			message.put(MessageKey.COPYNUMBER, copyNumber);
+
+			source.write(JsonUtil.stringify(message));
+		} catch (Exception e) {
+			log.fatal("Something went wrong", e);
+		}
+	}
+
+	public void returnLoan(int ISBN, int copyNumber) {
+		try {
+			Map<String, Object> message = new HashMap<String, Object>();
+			message.put(MessageKey.MESSAGE, MessageKey.RETURN_LOAN);
+			message.put(MessageKey.USERNAME, username);
+			message.put(MessageKey.ISBN, ISBN);
+			message.put(MessageKey.COPYNUMBER, copyNumber);
 
 			source.write(JsonUtil.stringify(message));
 		} catch (Exception e) {
