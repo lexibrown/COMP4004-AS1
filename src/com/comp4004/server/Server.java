@@ -187,10 +187,26 @@ public class Server implements Runnable {
 		public void handleEvent(Event event) {
 			try {
 				ThreadWithReactor twr = (ThreadWithReactor) Thread.currentThread();
-
-
 				Map<String, Object> response = new HashMap<String, Object>();
-				response.put(MessageKey.MESSAGE, MessageKey.ADD_USER);
+				
+				String username = event.get(MessageKey.USERNAME).toString();
+				String password = event.get(MessageKey.PASSWORD).toString();
+				if (username == null || username.trim().isEmpty()) {
+					response.put(MessageKey.MESSAGE, MessageKey.FAILED);
+					response.put(MessageKey.FAIL_REASON, "No username provided.");
+				} else if (password == null || password.trim().isEmpty()) {
+					response.put(MessageKey.MESSAGE, MessageKey.FAILED);
+					response.put(MessageKey.FAIL_REASON, "No password provided.");
+				} else {
+					if (controller.createUser(username, password)) {
+						response.put(MessageKey.MESSAGE, MessageKey.SUCCESS);
+						response.put(MessageKey.REASON, "Successfully added user: " + username);
+					} else {
+						response.put(MessageKey.MESSAGE, MessageKey.FAILED);
+						response.put(MessageKey.FAIL_REASON, "Username is already in use.");
+					}
+				}
+				
 				event.getSource().write(twr.getEventSource().getLoggingInfo(), JsonUtil.stringify(response));
 			} catch (Exception e) {
 				log.fatal("Something went wrong", e);

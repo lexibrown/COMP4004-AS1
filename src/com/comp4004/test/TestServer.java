@@ -31,7 +31,6 @@ public class TestServer {
 
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
-		c.stop();
 		c.clearData();
 		c = null;
 	}
@@ -206,7 +205,7 @@ public class TestServer {
 		assertTrue(c.removeReservation(ISBN, 1, username1));
 
 		assertEquals(ActionResult.RESERVATION_MADE, c.reserve(ISBN, 1, username2));
-		assertEquals(ActionResult.RESERVATION_MADE, c.reserve(ISBN, 1, username1));
+		assertEquals(ActionResult.RESERVATION_EXISTS, c.reserve(ISBN, 1, username1));
 	}
 
 }
