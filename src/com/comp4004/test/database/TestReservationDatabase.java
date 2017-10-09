@@ -40,7 +40,7 @@ public class TestReservationDatabase {
 	public void testAdd() {
 		Reservation r1 = new Reservation(1001, 2001, 1);
 		db.addReservation(r1);
-		Reservation r2 = db.findReservation(r1.getISBN(), r1.getCopyNumber(), r1.getUserId());
+		Reservation r2 = db.findReservation(r1.getISBN(), r1.getCopyNumber());
 		assertNotNull(r2);
 		assertTrue(r1.equals(r2));
 	}
@@ -49,8 +49,8 @@ public class TestReservationDatabase {
 	public void testDelete() {
 		Reservation r1 = new Reservation(1001, 2001, 2);
 		db.addReservation(r1);
-		db.deleteReservation(r1.getISBN(), r1.getCopyNumber(), r1.getUserId());
-		assertNull(db.findReservation(r1.getISBN(), r1.getCopyNumber(), r1.getUserId()));
+		db.deleteReservation(r1.getISBN(), r1.getCopyNumber());
+		assertNull(db.findReservation(r1.getISBN(), r1.getCopyNumber()));
 	}
 
 	@Test
@@ -65,7 +65,7 @@ public class TestReservationDatabase {
 			fail("Failed to load reservations");
 		}
 
-		Reservation r2 = db.findReservation(r1.getISBN(), r1.getCopyNumber(), r1.getUserId());
+		Reservation r2 = db.findReservation(r1.getISBN(), r1.getCopyNumber());
 		assertNotNull(r2);
 		assertTrue(r1.equals(r2));
 
@@ -76,7 +76,7 @@ public class TestReservationDatabase {
 			fail("Failed to load reservations");
 		}
 
-		db.deleteReservation(r1.getISBN(), r1.getCopyNumber(), r1.getUserId());
+		db.deleteReservation(r1.getISBN(), r1.getCopyNumber());
 		assertNull(db.findReservation(r1.getISBN(), r1.getCopyNumber(), r1.getUserId()));
 	}
 	

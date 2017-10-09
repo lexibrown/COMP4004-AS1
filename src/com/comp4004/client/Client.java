@@ -119,7 +119,7 @@ public class Client {
 	private class SuccessResponse implements EventHandler {
 		public void handleEvent(Event event) {
 			try {
-				controller.success(event.get(MessageKey.MESSAGE).toString());
+				controller.success(event.get(MessageKey.REASON).toString());
 			} catch (Exception e) {
 				log.fatal("Something went wrong", e);
 			}
@@ -129,7 +129,7 @@ public class Client {
 	private class FailedResponse implements EventHandler {
 		public void handleEvent(Event event) {
 			try {
-				controller.success(event.get(MessageKey.MESSAGE).toString());
+				controller.success(event.get(MessageKey.FAIL_REASON).toString());
 			} catch (Exception e) {
 				log.fatal("Something went wrong", e);
 			}

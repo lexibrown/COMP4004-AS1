@@ -163,7 +163,7 @@ public class TestServer {
 	}
 
 	@Test
-	public void makeReservation() {
+	public void testMakeReservation() {
 		String username1 = "res1";
 		String password1 = "res1";
 		assertTrue(c.createUser(username1, password1));
@@ -186,7 +186,7 @@ public class TestServer {
 	}
 
 	@Test
-	public void removeReservation() {
+	public void testRemoveReservation() {
 		String username1 = "res3";
 		String password1 = "res3";
 		assertTrue(c.createUser(username1, password1));
@@ -203,7 +203,7 @@ public class TestServer {
 		assertEquals(ActionResult.RESERVATION_MADE, c.reserve(ISBN, 1, username1));
 		assertEquals(ActionResult.RESERVATION_EXISTS, c.reserve(ISBN, 1, username2));
 
-		assertTrue(c.removeReservation(ISBN, 1));
+		assertTrue(c.removeReservation(ISBN, 1, username1));
 
 		assertEquals(ActionResult.RESERVATION_MADE, c.reserve(ISBN, 1, username2));
 		assertEquals(ActionResult.RESERVATION_MADE, c.reserve(ISBN, 1, username1));

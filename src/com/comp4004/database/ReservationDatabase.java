@@ -75,14 +75,23 @@ public class ReservationDatabase {
 		saveChanges();
 	}
 
-	public void deleteReservation(int ISBN, int copyNumber, int userId) {
+	public void deleteReservation(int ISBN, int copyNumber) {
 		for (Reservation r : this.reservations) {
-			if (r.getISBN() == ISBN && r.getCopyNumber() == copyNumber && r.getUserId() == userId) {
+			if (r.getISBN() == ISBN && r.getCopyNumber() == copyNumber) {
 				this.reservations.remove(r);
 				saveChanges();
 				break;
 			}
 		}
+	}
+
+	public Reservation findReservation(int ISBN, int copyNumber) {
+		for (Reservation r : this.reservations) {
+			if (r.getISBN() == ISBN && r.getCopyNumber() == copyNumber) {
+				return r;
+			}
+		}
+		return null;
 	}
 
 	public Reservation findReservation(int ISBN, int copyNumber, int userId) {
