@@ -1,11 +1,14 @@
 package com.comp4004.test.database;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -78,6 +81,97 @@ public class TestReservationDatabase {
 
 		db.deleteReservation(r1.getISBN(), r1.getCopyNumber());
 		assertNull(db.findReservation(r1.getISBN(), r1.getCopyNumber(), r1.getUserId()));
+	}
+	
+	@Test
+	public void testGetUserSpecific() {
+		Reservation r1 = new Reservation(2001, 1, 1);
+		Reservation r2 = new Reservation(2001, 2, 1);
+		Reservation r3 = new Reservation(2001, 2, 2);
+		Reservation r4 = new Reservation(2002, 3, 1);
+		db.addReservation(r1);
+		db.addReservation(r2);
+		db.addReservation(r3);
+		db.addReservation(r4);
+	
+		List<Reservation> res = db.getReservations(2001);
+		assertNotNull(res);
+		assertEquals(3, res.size());
+		assertTrue(res.contains(r1));
+		assertTrue(res.contains(r2));
+		assertTrue(res.contains(r3));
+		assertFalse(res.contains(r4));
+		
+		res = db.getReservations(2002);
+		assertNotNull(res);
+		assertEquals(1, res.size());
+		assertFalse(res.contains(r1));
+		assertFalse(res.contains(r2));
+		assertFalse(res.contains(r3));
+		assertTrue(res.contains(r4));
+	}
+	
+	@Test
+	public void testDeleteUser() {
+		Reservation r1 = new Reservation(3001, 11, 1);
+		Reservation r2 = new Reservation(3001, 22, 1);
+		Reservation r3 = new Reservation(3001, 22, 2);
+		Reservation r4 = new Reservation(3002, 33, 1);
+		db.addReservation(r1);
+		db.addReservation(r2);
+		db.addReservation(r3);
+		db.addReservation(r4);
+	
+		List<Reservation> res = db.getReservations(3001);
+		assertNotNull(res);
+		assertEquals(3, res.size());
+
+		db.deleteUserReservation(3001);;
+		res = db.getReservations(3001);
+		assertNotNull(res);
+		assertEquals(0, res.size());
+		
+		res = db.getReservations(3002);
+		assertNotNull(res);
+		assertEquals(1, res.size());
+		
+		db.deleteUserReservation(2002);
+		res = db.getReservations(2002);
+		assertNotNull(res);
+		assertEquals(0, res.size());
+	}
+	
+	@Test
+	public void testDeleteISBN() {
+		Reservation r1 = new Reservation(4001, 111, 1);
+		Reservation r2 = new Reservation(4001, 222, 1);
+		Reservation r3 = new Reservation(4001, 222, 2);
+		Reservation r4 = new Reservation(4002, 333, 1);
+		db.addReservation(r1);
+		db.addReservation(r2);
+		db.addReservation(r3);
+		db.addReservation(r4);
+	
+		db.deleteReservation(111);
+		
+		assertNull(db.findReservation(111, 1));
+		assertNotNull(db.findReservation(222, 1));
+		assertNotNull(db.findReservation(222, 2));
+		assertNotNull(db.findReservation(333, 1));
+		
+		db.deleteReservation(222);
+		
+		assertNull(db.findReservation(111, 1));
+		assertNull(db.findReservation(222, 1));
+		assertNull(db.findReservation(222, 2));
+		assertNotNull(db.findReservation(333, 1));
+		
+		db.deleteReservation(333);
+		
+		assertNull(db.findReservation(111, 1));
+		assertNull(db.findReservation(222, 1));
+		assertNull(db.findReservation(222, 2));
+		assertNull(db.findReservation(333, 1));
 	}
 	
 }

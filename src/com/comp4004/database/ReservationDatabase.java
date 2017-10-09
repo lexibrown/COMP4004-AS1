@@ -9,6 +9,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import com.comp4004.model.Reservation;
@@ -70,6 +71,16 @@ public class ReservationDatabase {
 		return reservations;
 	}
 
+	public List<Reservation> getReservations(int userId) {
+		List<Reservation> userReservations = new ArrayList<Reservation>();
+		for (Reservation r : this.reservations) {
+			if (userId == r.getUserId()) {
+				userReservations.add(r);
+			}
+		}
+		return userReservations;
+	}
+
 	public void addReservation(Reservation r) {
 		this.reservations.add(r);
 		saveChanges();
@@ -83,6 +94,26 @@ public class ReservationDatabase {
 				break;
 			}
 		}
+	}
+
+	public void deleteReservation(int ISBN) {
+		for (Iterator<Reservation> iterator = this.reservations.iterator(); iterator.hasNext();) {
+			Reservation r = iterator.next();
+			if (ISBN == r.getISBN()) {
+		        iterator.remove();
+		    }
+		}
+		saveChanges();
+	}
+	
+	public void deleteUserReservation(int userId) {
+		for (Iterator<Reservation> iterator = this.reservations.iterator(); iterator.hasNext();) {
+			Reservation r = iterator.next();
+			if (userId == r.getUserId()) {
+		        iterator.remove();
+		    }
+		}
+		saveChanges();
 	}
 
 	public Reservation findReservation(int ISBN, int copyNumber) {

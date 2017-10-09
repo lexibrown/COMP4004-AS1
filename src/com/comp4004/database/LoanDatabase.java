@@ -9,6 +9,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import com.comp4004.model.Loan;
@@ -69,6 +70,16 @@ public class LoanDatabase {
 		return loans;
 	}
 
+	public List<Loan> getLoans(int userId) {
+		List<Loan> userLoans = new ArrayList<Loan>();
+		for (Loan l : this.loans) {
+			if (userId == l.getUserId()) {
+				userLoans.add(l);
+			}
+		}
+		return userLoans;
+	}
+
 	public void addLoan(Loan l) {
 		this.loans.add(l);
 		saveChanges();
@@ -82,6 +93,26 @@ public class LoanDatabase {
 				break;
 			}
 		}
+	}
+
+	public void deleteLoan(int ISBN) {
+		for (Iterator<Loan> iterator = this.loans.iterator(); iterator.hasNext();) {
+			Loan l = iterator.next();
+			if (ISBN == l.getISBN()) {
+		        iterator.remove();
+		    }
+		}
+		saveChanges();
+	}
+	
+	public void deleteUserLoan(int userId) {
+		for (Iterator<Loan> iterator = this.loans.iterator(); iterator.hasNext();) {
+			Loan l = iterator.next();
+		    if (userId == l.getUserId()) {
+		        iterator.remove();
+		    }
+		}
+		saveChanges();
 	}
 
 	public Loan findLoan(int ISBN, int copyNumber) {

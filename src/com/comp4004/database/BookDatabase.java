@@ -105,7 +105,7 @@ public class BookDatabase {
 
 	public Book findBook(String title) {
 		for (Book b : this.books) {
-			if (title.equals(b.getTitle())) {
+			if (title.equalsIgnoreCase(b.getTitle())) {
 				return b;
 			}
 		}
