@@ -514,6 +514,9 @@ public class Server implements Runnable {
 					case RESERVATION_EXISTS:
 						response.put(MessageKey.FAIL_REASON, "Book is already reserved.");
 						break;
+					case LOAN_EXISTS:
+						response.put(MessageKey.FAIL_REASON, "Book is already loaned.");
+						break;
 					case BORROWED:
 						response.put(MessageKey.MESSAGE, MessageKey.SUCCESS);
 						response.put(MessageKey.REASON,
