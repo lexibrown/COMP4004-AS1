@@ -37,9 +37,9 @@ public class Book implements Serializable {
 		return this.copies;
 	}
 
-	public Copy getCopy(int i) {
+	public Copy getCopy(int copyNumber) {
 		for (Copy c : this.copies) {
-			if (c.getCopyNumber() == i) {
+			if (c.getCopyNumber() == copyNumber) {
 				return c;
 			}
 		}
@@ -70,9 +70,9 @@ public class Book implements Serializable {
 		});
 	}
 
-	public void deleteCopy(int i) {
+	public void deleteCopy(int copyNumber) {
 		for (Copy c : this.copies) {
-			if (c.getCopyNumber() == i) {
+			if (c.getCopyNumber() == copyNumber) {
 				this.copies.remove(c);
 			}
 		}

@@ -2,6 +2,8 @@ package com.comp4004.utils;
 
 public class MessageKey {
 
+	public static final String MESSAGE = "MESSAGE";
+	
 	public static final String ADMIN = "ADMIN";
 
 	public static final String LOGOUT = "LOGOUT";
@@ -21,8 +23,6 @@ public class MessageKey {
 	
 	public static final String SUCCESS = "SUCCESS";
 	public static final String FAILED = "FAILED";
-
-	public static final String MESSAGE = "MESSAGE";
 
 	public static final String FAIL_REASON = "FAIL_REASON";
 	public static final String REASON = "REASON";

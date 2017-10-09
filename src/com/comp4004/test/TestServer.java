@@ -23,6 +23,7 @@ public class TestServer {
 		c = new ServerController(new Server(Config.DEFAULT_PORT));
 		try {
 			c.start();
+			c.clearData();
 		} catch (IOException ioe) {
 			fail("Failed to start server");
 		}
@@ -66,7 +67,17 @@ public class TestServer {
 		assertTrue(c.createUser(username, password));
 
 		assertTrue(c.removeUser(username));
-		assertFalse(c.searchUser(username));
+		assertNull(c.searchUser(username));
+	}
+
+	@Test
+	public void testSearchUser() {
+		String username = "test3";
+		String password = "pass3";
+		assertTrue(c.createUser(username, password));
+
+		assertNotNull(c.searchUser(username));
+		assertNull(c.searchUser(username + "3"));
 	}
 
 	@Test
@@ -173,7 +184,7 @@ public class TestServer {
 		assertEquals(ActionResult.RESERVATION_MADE, c.reserve(ISBN, 1, username1));
 		assertEquals(ActionResult.RESERVATION_EXISTS, c.reserve(ISBN, 1, username2));
 	}
-	
+
 	@Test
 	public void removeReservation() {
 		String username1 = "res3";
@@ -193,7 +204,7 @@ public class TestServer {
 		assertEquals(ActionResult.RESERVATION_EXISTS, c.reserve(ISBN, 1, username2));
 
 		assertTrue(c.removeReservation(ISBN, 1));
-		
+
 		assertEquals(ActionResult.RESERVATION_MADE, c.reserve(ISBN, 1, username2));
 		assertEquals(ActionResult.RESERVATION_MADE, c.reserve(ISBN, 1, username1));
 	}

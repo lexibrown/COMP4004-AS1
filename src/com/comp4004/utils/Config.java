@@ -16,5 +16,6 @@ public class Config {
 	public static final String DATABASE_USERS = System.getProperty("user.dir") + "/db/users.txt";
 	public static final String DATABASE_LOANS = System.getProperty("user.dir") + "/db/loans.txt";
 	public static final String DATABASE_BOOKS = System.getProperty("user.dir") + "/db/books.txt";
+	public static final String DATABASE_RESERVE = System.getProperty("user.dir") + "/db/reserve.txt";
 	
 }

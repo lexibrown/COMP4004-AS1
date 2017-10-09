@@ -13,11 +13,6 @@ public class Copy implements Serializable {
 		this.setCopyNumber(0);
 	}
 
-	public Copy(int ISBN, int copyNumber) {
-		this.setISBN(ISBN);
-		this.setCopyNumber(copyNumber);
-	}
-
 	public int getISBN() {
 		return this.isbn;
 	}
