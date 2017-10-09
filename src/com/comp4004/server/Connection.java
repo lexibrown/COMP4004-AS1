@@ -1,18 +1,10 @@
 package com.comp4004.server;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.apache.log4j.Logger;
-
 import com.comp4004.communication.ThreadWithReactor;
-import com.comp4004.utils.JsonUtil;
-import com.comp4004.utils.MessageKey;
 
 public class Connection {
-
-	private static final Logger log = Logger.getLogger(Connection.class);
 	
 	private ConcurrentHashMap<String, ThreadWithReactor> clients;
 
@@ -62,16 +54,4 @@ public class Connection {
 		}
 		return null;
 	}
-
-	public void sendMessage(String client, String content) {
-		try {
-			Map<String, Object> message = new HashMap<String, Object>();
-			message.put(MessageKey.MESSAGE, MessageKey.MESSAGE);
-
-			clients.get(client).getEventSource().write(JsonUtil.stringify(message));
-		} catch (Exception e) {
-			log.error("Something bad happened", e);
-		}
-	}
-
 }

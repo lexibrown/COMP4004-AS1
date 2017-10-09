@@ -1,14 +1,14 @@
 package com.comp4004.client;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.NoSuchElementException;
-import java.util.Scanner;
 
 public class ClientController {
 
 	private Client client;
-	private Scanner sc = new Scanner(System.in);
+	private BufferedReader c = new BufferedReader(new InputStreamReader(System.in));
 
 	private boolean admin = false;
 	private boolean paused = false;
@@ -30,7 +30,8 @@ public class ClientController {
 
 	public void loggedout() {
 		System.out.println("Successfully logged out.");
-		start();
+		System.out.println("Shutting down.");
+		System.exit(0);
 	}
 
 	public void loginResult(boolean result, String message, boolean admin) {
@@ -48,20 +49,10 @@ public class ClientController {
 		System.out.println(message);
 		listen();
 	}
-	
+
 	public void failed(String message) {
 		System.err.println(message);
 		listen();
-	}
-	
-	public void createUser() {
-		System.out.println("Enter username: ");
-		String username = sc.nextLine();
-		
-		System.out.println("Enter users password: ");
-		String password = sc.nextLine();
-		
-		client.createUser(username, password);
 	}
 
 	public void start() {
@@ -70,7 +61,7 @@ public class ClientController {
 
 		String username = "";
 		String password = "";
-		BufferedReader c = new BufferedReader(new InputStreamReader(System.in));
+
 		try {
 			System.out.println();
 			System.out.print("Enter your username: ");
@@ -89,7 +80,7 @@ public class ClientController {
 	public void listen() {
 		thread = new Thread(new Runnable() {
 			public void run() {
-				do {
+				while (true) {
 					try {
 						if (paused) {
 							continue;
@@ -97,8 +88,7 @@ public class ClientController {
 
 						System.out.println();
 						System.out.println();
-						System.out.println("=====Main Menu====");
-						System.out.println("Type in the command you'd like to perform");
+						System.out.println("=====Main Menu==== (Type in the command you'd like to perform)");
 						System.out.println();
 
 						System.out.println("Search Book");
@@ -106,6 +96,7 @@ public class ClientController {
 						System.out.println("Make Reservation");
 						System.out.println("Renew Loan");
 						System.out.println("Return Loan");
+						System.out.println("Logout");
 
 						if (admin) {
 							System.out.println();
@@ -121,50 +112,166 @@ public class ClientController {
 						}
 						System.out.println();
 
-						String answer = sc.nextLine();
+						System.out.print("> ");
+						String answer = c.readLine();
 
 						if (admin) {
-							if ("CREATE USER".equals(answer)) {
-								createUser();
+							if ("CREATE USER".equalsIgnoreCase(answer)) {
+								System.out.println();
+								System.out.print("Enter username: ");
+								String username = c.readLine();
+
+								System.out.println();
+								System.out.print("Enter users password: ");
+								String password = c.readLine();
+
+								client.createUser(username, password);
 								return;
 							} else if ("REMOVE USER".equalsIgnoreCase(answer)) {
+								System.out.println();
+								System.out.print("Enter username: ");
+								String username = c.readLine();
 
+								client.removeUser(username);
+								return;
 							} else if ("ADD BOOK".equalsIgnoreCase(answer)) {
+								System.out.println();
+								System.out.print("Enter ISBN: ");
+								int ISBN = Integer.valueOf(c.readLine());
 
+								System.out.println();
+								System.out.print("Enter title: ");
+								String title = c.readLine();
+
+								client.addBook(ISBN, title);
+								return;
 							} else if ("DELETE BOOK".equalsIgnoreCase(answer)) {
+								System.out.println();
+								System.out.print("Enter ISBN or Title: ");
+								String content = c.readLine();
 
+								try {
+									client.removeBook(Integer.valueOf(content));
+								} catch (NumberFormatException e) {
+									client.removeBook(content);
+								}
+								return;
 							} else if ("ADD COPY".equalsIgnoreCase(answer)) {
+								System.out.println();
+								System.out.print("Enter ISBN: ");
+								int ISBN = Integer.valueOf(c.readLine());
 
+								client.addCopy(ISBN);
+								return;
 							} else if ("DELETE COPY".equalsIgnoreCase(answer)) {
+								System.out.println();
+								System.out.print("Enter ISBN: ");
+								int ISBN = Integer.valueOf(c.readLine());
 
+								System.out.println();
+								System.out.print("Enter copy number: ");
+								int copyNumber = Integer.valueOf(c.readLine());
+
+								client.removeCopy(ISBN, copyNumber);
+								return;
 							} else if ("COLLECT FINE".equalsIgnoreCase(answer)) {
+								System.out.println();
+								System.out.print("Enter amount to pay: ");
+								int fee = Integer.valueOf(c.readLine());
 
+								client.collectFine(fee);
+								return;
 							} else if ("MONITOR SYSTEM".equalsIgnoreCase(answer)) {
-
+								client.monitorSystem();
+								return;
 							}
 						}
 
 						if ("SEARCH BOOK".equalsIgnoreCase(answer)) {
+							System.out.println();
+							System.out.print("Enter ISBN or Title: ");
+							String content = c.readLine();
 
+							try {
+								client.searchBook(Integer.valueOf(content));
+							} catch (NumberFormatException e) {
+								client.searchBook(content);
+							}
+							return;
 						} else if ("BORROW".equalsIgnoreCase(answer)) {
+							System.out.println();
+							System.out.print("Enter ISBN: ");
+							int ISBN = Integer.valueOf(c.readLine());
 
+							System.out.println();
+							System.out.print("Enter copy number: ");
+							int copyNumber = Integer.valueOf(c.readLine());
+
+							client.borrow(ISBN, copyNumber);
+							return;
 						} else if ("MAKE RESERVATION".equalsIgnoreCase(answer)) {
+							System.out.println();
+							System.out.print("Enter ISBN: ");
+							int ISBN = Integer.valueOf(c.readLine());
 
+							System.out.println();
+							System.out.print("Enter copy number: ");
+							int copyNumber = Integer.valueOf(c.readLine());
+
+							client.makeReservation(ISBN, copyNumber);
+							return;
+						} else if ("REMOVE RESERVATION".equalsIgnoreCase(answer)) {
+							System.out.println();
+							System.out.print("Enter ISBN: ");
+							int ISBN = Integer.valueOf(c.readLine());
+
+							System.out.println();
+							System.out.print("Enter copy number: ");
+							int copyNumber = Integer.valueOf(c.readLine());
+
+							client.removeReservation(ISBN, copyNumber);
+							return;
 						} else if ("RENEW LOAN".equalsIgnoreCase(answer)) {
+							System.out.println();
+							System.out.print("Enter ISBN: ");
+							int ISBN = Integer.valueOf(c.readLine());
 
+							System.out.println();
+							System.out.print("Enter copy number: ");
+							int copyNumber = Integer.valueOf(c.readLine());
+
+							client.renewLoan(ISBN, copyNumber);
+							return;
 						} else if ("RETURN LOAN".equalsIgnoreCase(answer)) {
+							System.out.println();
+							System.out.print("Enter ISBN: ");
+							int ISBN = Integer.valueOf(c.readLine());
 
+							System.out.println();
+							System.out.print("Enter copy number: ");
+							int copyNumber = Integer.valueOf(c.readLine());
+
+							client.returnLoan(ISBN, copyNumber);
+							return;
 						} else if ("LOGOUT".equalsIgnoreCase(answer)) {
 							client.logout();
+							return;
 						} else {
 							System.out.println("Unknown command.");
 						}
 					} catch (NoSuchElementException e) {
-						System.out.println("Connection ended unexpectedly. ");
+						System.out.println("Connection ended unexpectedly.");
 						break;
+					} catch (IOException e) {
+						System.out.println("Unable to read input.");
+						e.printStackTrace();
 					}
-				} while (sc.hasNext());
-				sc.close();
+				}
+				try {
+					c.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
 			}
 		});
 		thread.start();

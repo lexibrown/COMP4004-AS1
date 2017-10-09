@@ -343,4 +343,27 @@ public class Client {
 		}
 	}
 
+	public void monitorSystem() {
+		try {
+			Map<String, Object> message = new HashMap<String, Object>();
+			message.put(MessageKey.MESSAGE, MessageKey.MONITOR_SYSTEM);
+			source.write(JsonUtil.stringify(message));
+		} catch (Exception e) {
+			log.fatal("Something went wrong", e);
+		}
+	}
+
+	public void collectFine(int fee) {
+		try {
+			Map<String, Object> message = new HashMap<String, Object>();
+			message.put(MessageKey.MESSAGE, MessageKey.COLLECT_FINE);
+			message.put(MessageKey.USERNAME, username);
+			message.put(MessageKey.FEE, fee);
+			
+			source.write(JsonUtil.stringify(message));
+		} catch (Exception e) {
+			log.fatal("Something went wrong", e);
+		}
+	}
+
 }
