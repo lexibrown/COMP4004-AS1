@@ -636,6 +636,9 @@ public class Server implements Runnable {
 					case NO_PRIVILEGE:
 						response.put(MessageKey.FAIL_REASON, username + " is not allowed to renew books.");
 						break;
+					case NO_SUCH_LOAN:
+						response.put(MessageKey.FAIL_REASON, "Loan does not exists.");
+						break;
 					case MAX_RENEW:
 						response.put(MessageKey.FAIL_REASON, "The max amount of renews for this book has been reached.");
 						break;
@@ -684,6 +687,9 @@ public class Server implements Runnable {
 						break;
 					case NO_SUCH_COPY:
 						response.put(MessageKey.FAIL_REASON, "Copy does not exists.");
+						break;
+					case NO_SUCH_LOAN:
+						response.put(MessageKey.FAIL_REASON, "Loan does not exists.");
 						break;
 					case FEE_ADDED:
 						response.put(MessageKey.MESSAGE, MessageKey.SUCCESS);

@@ -9,6 +9,7 @@ public enum ActionResult {
 	NO_SUCH_BOOK,
 	NO_SUCH_COPY,
 	NO_SUCH_USER,
+	NO_SUCH_LOAN,
 	
 	FEE_ADDED,
 	NO_PRIVILEGE,

@@ -123,6 +123,15 @@ public class LoanDatabase {
 		}
 		return null;
 	}
+	
+	public Loan findLoan(int ISBN, int copyNumber, int userId) {
+		for (Loan l : this.loans) {
+			if (l.getISBN() == ISBN && l.getCopyNumber() == copyNumber && l.getUserId() == userId) {
+				return l;
+			}
+		}
+		return null;
+	}
 
 	public void flush() {
 		File f = new File(Config.DATABASE_LOANS);
