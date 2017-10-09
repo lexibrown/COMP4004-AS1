@@ -10,7 +10,9 @@ public class Config {
 	
 	// 1 minute for 1 day
 	public static final int STIMULATED_DAY = 1 * 60 * 1000;
-	public static final int OVERDUE = 5;
+	public static final int OVERDUE = 3;
+	public static final int OVERDUE_FEE = 1;
+	
 	public static final String CLERK_USERNAME = "clerk";
 	public static final String CLERK_PASSWORD = "admin";
 
