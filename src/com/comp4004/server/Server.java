@@ -321,32 +321,41 @@ public class Server implements Runnable {
 				ThreadWithReactor twr = (ThreadWithReactor) Thread.currentThread();
 				Map<String, Object> response = new HashMap<String, Object>();
 
+				response.put(MessageKey.MESSAGE, MessageKey.FAILED);
+
+				ActionResult ar = null;
+
 				if (event.contains(MessageKey.ISBN)) {
-					int ISBN = Integer.valueOf(event.get(MessageKey.ISBN).toString());
-					if (controller.removeBook(ISBN)) {
-						response.put(MessageKey.MESSAGE, MessageKey.SUCCESS);
-						response.put(MessageKey.REASON, "Successfully removed book: " + ISBN);
-					} else {
-						response.put(MessageKey.MESSAGE, MessageKey.FAILED);
-						response.put(MessageKey.FAIL_REASON, "Book does not exist.");
-					}
+					ar = controller.removeBook(Integer.valueOf(event.get(MessageKey.ISBN).toString()));
 				} else if (event.contains(MessageKey.TITLE)) {
 					String title = event.get(MessageKey.TITLE).toString();
 					if (title == null || title.trim().isEmpty()) {
-						response.put(MessageKey.MESSAGE, MessageKey.FAILED);
 						response.put(MessageKey.FAIL_REASON, "No title provided.");
 					} else {
-						if (controller.removeBook(title)) {
-							response.put(MessageKey.MESSAGE, MessageKey.SUCCESS);
-							response.put(MessageKey.REASON, "Successfully removed book: " + title);
-						} else {
-							response.put(MessageKey.MESSAGE, MessageKey.FAILED);
-							response.put(MessageKey.FAIL_REASON, "Book does not exist.");
-						}
+						ar = controller.removeBook(title);
 					}
 				} else {
-					response.put(MessageKey.MESSAGE, MessageKey.FAILED);
 					response.put(MessageKey.FAIL_REASON, "No search parameters provided.");
+				}
+
+				if (ar != null) {
+					switch (ar) {
+					case NO_SUCH_BOOK:
+						response.put(MessageKey.FAIL_REASON, "Book does not exist.");
+						break;
+					case LOAN_EXISTS:
+						response.put(MessageKey.FAIL_REASON, "Book is currently loaned. Cannot remove book.");
+						break;
+					case RESERVATION_EXISTS:
+						response.put(MessageKey.FAIL_REASON, "Book is being reserved. Cannot remove book.");
+						break;
+					case REMOVED_BOOK:
+						response.put(MessageKey.MESSAGE, MessageKey.SUCCESS);
+						response.put(MessageKey.REASON, "Successfully removed book.");
+						break;
+					default:
+						break;
+					}
 				}
 
 				event.getSource().write(twr.getEventSource().getLoggingInfo(), JsonUtil.stringify(response));
@@ -387,12 +396,30 @@ public class Server implements Runnable {
 
 				int ISBN = Integer.valueOf(event.get(MessageKey.ISBN).toString());
 				int copyNumber = Integer.valueOf(event.get(MessageKey.COPYNUMBER).toString());
-				if (controller.removeCopy(ISBN, copyNumber)) {
+				
+				response.put(MessageKey.MESSAGE, MessageKey.FAILED);
+
+				ActionResult ar = controller.removeCopy(ISBN, copyNumber);
+				
+				switch (ar) {
+				case NO_SUCH_BOOK:
+					response.put(MessageKey.FAIL_REASON, "Book does not exist.");
+					break;
+				case NO_SUCH_COPY:
+					response.put(MessageKey.FAIL_REASON, "Copy does not exist.");
+					break;
+				case LOAN_EXISTS:
+					response.put(MessageKey.FAIL_REASON, "Book copy is currently loaned. Cannot remove book.");
+					break;
+				case RESERVATION_EXISTS:
+					response.put(MessageKey.FAIL_REASON, "Book copy is being reserved. Cannot remove book.");
+					break;
+				case REMOVED_COPY:
 					response.put(MessageKey.MESSAGE, MessageKey.SUCCESS);
 					response.put(MessageKey.REASON, "Successfully removed copy " + copyNumber + " from book " + ISBN);
-				} else {
-					response.put(MessageKey.MESSAGE, MessageKey.FAILED);
-					response.put(MessageKey.FAIL_REASON, "Copy does not exist.");
+					break;
+				default:
+					break;
 				}
 
 				event.getSource().write(twr.getEventSource().getLoggingInfo(), JsonUtil.stringify(response));
@@ -401,7 +428,7 @@ public class Server implements Runnable {
 			}
 		}
 	}
-	
+
 	private class CollectFine implements EventHandler {
 		public void handleEvent(Event event) {
 			try {
@@ -410,7 +437,7 @@ public class Server implements Runnable {
 
 				String username = event.get(MessageKey.USERNAME).toString();
 				int fee = Integer.valueOf(event.get(MessageKey.FEE).toString());
-				
+
 				if (fee <= 0) {
 					response.put(MessageKey.MESSAGE, MessageKey.FAILED);
 					response.put(MessageKey.FAIL_REASON, "Invalid fee amount.");
@@ -430,7 +457,7 @@ public class Server implements Runnable {
 			}
 		}
 	}
-	
+
 	private class MonitorSystem implements EventHandler {
 		public void handleEvent(Event event) {
 			try {
@@ -490,7 +517,7 @@ public class Server implements Runnable {
 			}
 		}
 	}
-	
+
 	private class Borrow implements EventHandler {
 		public void handleEvent(Event event) {
 			try {
@@ -653,7 +680,8 @@ public class Server implements Runnable {
 						response.put(MessageKey.FAIL_REASON, "Loan does not exists.");
 						break;
 					case MAX_RENEW:
-						response.put(MessageKey.FAIL_REASON, "The max amount of renews for this book has been reached.");
+						response.put(MessageKey.FAIL_REASON,
+								"The max amount of renews for this book has been reached.");
 						break;
 					case RESERVATION_EXISTS:
 						response.put(MessageKey.FAIL_REASON, "Book is reserved.");
@@ -706,8 +734,8 @@ public class Server implements Runnable {
 						break;
 					case FEE_ADDED:
 						response.put(MessageKey.MESSAGE, MessageKey.SUCCESS);
-						response.put(MessageKey.REASON,
-								"Successfully returned copy " + copyNumber + " of book: " + ISBN + "but fee was applied because return was late.");
+						response.put(MessageKey.REASON, "Successfully returned copy " + copyNumber + " of book: " + ISBN
+								+ "but fee was applied because return was late.");
 						break;
 					case RETURNED:
 						response.put(MessageKey.MESSAGE, MessageKey.SUCCESS);
@@ -724,7 +752,7 @@ public class Server implements Runnable {
 			}
 		}
 	}
-	
+
 	public static void main(String[] args) {
 		ServerController c = new ServerController(new Server(Config.DEFAULT_PORT));
 		try {
