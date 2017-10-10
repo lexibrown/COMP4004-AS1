@@ -94,7 +94,7 @@ public class LoanDatabase {
 	 * @param userId
 	 * @return
 	 */
-	public List<Loan> getLoans(int userId) {
+	public List<Loan> getUserLoans(int userId) {
 		List<Loan> userLoans = new ArrayList<Loan>();
 		for (Loan l : this.loans) {
 			if (userId == l.getUserId()) {
@@ -104,6 +104,22 @@ public class LoanDatabase {
 		return userLoans;
 	}
 
+	/**
+	 * Returns all loans owned by ISBN
+	 * 
+	 * @param ISBN
+	 * @return
+	 */
+	public List<Loan> getLoans(int ISBN) {
+		List<Loan> iSBNLoans = new ArrayList<Loan>();
+		for (Loan l : this.loans) {
+			if (ISBN == l.getISBN()) {
+				iSBNLoans.add(l);
+			}
+		}
+		return iSBNLoans;
+	}
+	
 	/**
 	 * Adds loan to list and save changes
 	 * 

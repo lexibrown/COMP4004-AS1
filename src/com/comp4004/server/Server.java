@@ -257,12 +257,25 @@ public class Server implements Runnable {
 					response.put(MessageKey.MESSAGE, MessageKey.FAILED);
 					response.put(MessageKey.FAIL_REASON, "No username provided.");
 				} else {
-					if (controller.removeUser(username)) {
+					response.put(MessageKey.MESSAGE, MessageKey.FAILED);
+
+					ActionResult ar = controller.removeUser(username);
+					switch (ar) {
+					case NO_SUCH_USER:
+						response.put(MessageKey.FAIL_REASON, "User does not exists.");
+						break;
+					case NO_PRIVILEGE:
+						response.put(MessageKey.FAIL_REASON, "Users privileges are revoked. Cannot remove user.");
+						break;
+					case HAS_LOANS:
+						response.put(MessageKey.FAIL_REASON, "User has active loans. Cannot remove user.");
+						break;
+					case REMOVED_USER:
 						response.put(MessageKey.MESSAGE, MessageKey.SUCCESS);
 						response.put(MessageKey.REASON, "Successfully removed user: " + username);
-					} else {
-						response.put(MessageKey.MESSAGE, MessageKey.FAILED);
-						response.put(MessageKey.FAIL_REASON, "User does not exist.");
+						break;
+					default:
+						break;
 					}
 				}
 

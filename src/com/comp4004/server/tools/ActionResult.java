@@ -21,6 +21,12 @@ public enum ActionResult {
 	
 	BORROWED,
 	RENEWED,
-	RETURNED
+	RETURNED,
+
+	HAS_LOANS,
+	
+	REMOVED_USER,
+	REMOVED_BOOK,
+	REMOVED_COPY
 	
 }

@@ -94,7 +94,7 @@ public class TestReservationDatabase {
 		db.addReservation(r3);
 		db.addReservation(r4);
 	
-		List<Reservation> res = db.getReservations(2001);
+		List<Reservation> res = db.getUserReservations(2001);
 		assertNotNull(res);
 		assertEquals(3, res.size());
 		assertTrue(res.contains(r1));
@@ -102,7 +102,7 @@ public class TestReservationDatabase {
 		assertTrue(res.contains(r3));
 		assertFalse(res.contains(r4));
 		
-		res = db.getReservations(2002);
+		res = db.getUserReservations(2002);
 		assertNotNull(res);
 		assertEquals(1, res.size());
 		assertFalse(res.contains(r1));
@@ -122,21 +122,21 @@ public class TestReservationDatabase {
 		db.addReservation(r3);
 		db.addReservation(r4);
 	
-		List<Reservation> res = db.getReservations(3001);
+		List<Reservation> res = db.getUserReservations(3001);
 		assertNotNull(res);
 		assertEquals(3, res.size());
 
 		db.deleteUserReservation(3001);;
-		res = db.getReservations(3001);
+		res = db.getUserReservations(3001);
 		assertNotNull(res);
 		assertEquals(0, res.size());
 		
-		res = db.getReservations(3002);
+		res = db.getUserReservations(3002);
 		assertNotNull(res);
 		assertEquals(1, res.size());
 		
 		db.deleteUserReservation(2002);
-		res = db.getReservations(2002);
+		res = db.getUserReservations(2002);
 		assertNotNull(res);
 		assertEquals(0, res.size());
 	}

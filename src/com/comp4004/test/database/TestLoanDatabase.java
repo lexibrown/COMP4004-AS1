@@ -112,7 +112,7 @@ public class TestLoanDatabase {
 		db.addLoan(l3);
 		db.addLoan(l4);
 	
-		List<Loan> loans = db.getLoans(1001);
+		List<Loan> loans = db.getUserLoans(1001);
 		assertNotNull(loans);
 		assertEquals(3, loans.size());
 		assertTrue(loans.contains(l1));
@@ -120,7 +120,7 @@ public class TestLoanDatabase {
 		assertTrue(loans.contains(l3));
 		assertFalse(loans.contains(l4));
 		
-		loans = db.getLoans(1002);
+		loans = db.getUserLoans(1002);
 		assertNotNull(loans);
 		assertEquals(1, loans.size());
 		assertFalse(loans.contains(l1));
@@ -141,21 +141,21 @@ public class TestLoanDatabase {
 		db.addLoan(l3);
 		db.addLoan(l4);
 	
-		List<Loan> loans = db.getLoans(2001);
+		List<Loan> loans = db.getUserLoans(2001);
 		assertNotNull(loans);
 		assertEquals(3, loans.size());
 
 		db.deleteUserLoan(2001);
-		loans = db.getLoans(2001);
+		loans = db.getUserLoans(2001);
 		assertNotNull(loans);
 		assertEquals(0, loans.size());
 		
-		loans = db.getLoans(1002);
+		loans = db.getUserLoans(1002);
 		assertNotNull(loans);
 		assertEquals(1, loans.size());
 		
 		db.deleteUserLoan(2002);
-		loans = db.getLoans(2002);
+		loans = db.getUserLoans(2002);
 		assertNotNull(loans);
 		assertEquals(0, loans.size());
 	}

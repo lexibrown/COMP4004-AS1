@@ -95,7 +95,7 @@ public class ReservationDatabase {
 	 * @param userId
 	 * @return
 	 */
-	public List<Reservation> getReservations(int userId) {
+	public List<Reservation> getUserReservations(int userId) {
 		List<Reservation> userReservations = new ArrayList<Reservation>();
 		for (Reservation r : this.reservations) {
 			if (userId == r.getUserId()) {
@@ -103,6 +103,22 @@ public class ReservationDatabase {
 			}
 		}
 		return userReservations;
+	}
+	
+	/**
+	 * Returns all reservations owned by ISBN
+	 * 
+	 * @param ISBN
+	 * @return
+	 */
+	public List<Reservation> getReservations(int ISBN) {
+		List<Reservation> iSBNReservations = new ArrayList<Reservation>();
+		for (Reservation r : this.reservations) {
+			if (ISBN == r.getISBN()) {
+				iSBNReservations.add(r);
+			}
+		}
+		return iSBNReservations;
 	}
 
 	/**
