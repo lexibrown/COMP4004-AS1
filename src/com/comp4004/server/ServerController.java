@@ -363,13 +363,13 @@ public class ServerController {
 
 	public String bookInfo(Book b) {
 		String book = b.toString() + "\n";
-
-		for (int i = 1; i <= b.numCopies(); i++) {
-			book += "\t" + b.getCopy(i).toString();
-			if (loanDatabase.findLoan(b.getISBN(), i) != null) {
+		
+		for (Copy c : b.getCopies()) {
+			book += "\t" + c.toString();
+			if (loanDatabase.findLoan(b.getISBN(), c.getCopyNumber()) != null) {
 				book += "[LOANED] ";
 			}
-			if (reservationDatabase.findReservation(b.getISBN(), i) != null) {
+			if (reservationDatabase.findReservation(b.getISBN(), c.getCopyNumber()) != null) {
 				book += "[RESERVED]";
 			}
 			book += "\n";

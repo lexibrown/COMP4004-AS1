@@ -1,0 +1,1 @@
+[{"userId":2,"isbn":1234567890,"copyNumber":3,"date":1507677949500,"renewed":1}]

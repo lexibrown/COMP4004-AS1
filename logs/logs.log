@@ -1423,3 +1423,766 @@ java.net.SocketException: Connection reset
 2017-10-09 14:10:47,102 INFO BufferedLoggingWriter [Thread-1] SENT: 
  
 2017-10-09 14:10:47,102 INFO EventSourceImpl [Thread-0] [/127.0.0.1:56201] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"12345, The Book [Copies: 4]\n\t12345 [1]\n\t12345 [2]\n\t12345 [3]\n\t12345 [4]\n[0]: user1, pass1\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\tUser has no loans[0]: user2, pass2\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\tUser has no loans"} 
+2017-10-10 19:17:07,040 INFO BufferedLoggingWriter [main] [/127.0.0.1:50539] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"LOGIN","PASSWORD":"admin","USERNAME":"clerk"} 
+2017-10-10 19:17:07,041 INFO BufferedLoggingWriter [main] SENT: 
+ 
+2017-10-10 19:17:07,042 INFO EventSourceImpl [Thread-1] [/127.0.0.1:5050] FROM: 127.0.0.1:50539 RECEIVED: {"MESSAGE":"LOGIN","PASSWORD":"admin","USERNAME":"clerk"} 
+2017-10-10 19:17:07,370 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:5050] TO: 127.0.0.1:50539 SENT: {"MESSAGE":"CONNECT_PASS","ADMIN":""} 
+2017-10-10 19:17:07,370 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-10 19:17:07,370 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50539] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"CONNECT_PASS","ADMIN":""} 
+2017-10-10 19:17:21,137 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:50539] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"MONITOR_SYSTEM"} 
+2017-10-10 19:17:21,137 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-10 19:17:21,137 INFO EventSourceImpl [Thread-1] [/127.0.0.1:5050] FROM: 127.0.0.1:50539 RECEIVED: {"MESSAGE":"MONITOR_SYSTEM"} 
+2017-10-10 19:17:21,138 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:5050] TO: 127.0.0.1:50539 SENT: {"MESSAGE":"SUCCESS","REASON":""} 
+2017-10-10 19:17:21,138 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-10 19:17:21,138 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50539] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":""} 
+2017-10-10 19:17:56,931 INFO BufferedLoggingWriter [Thread-2] [/127.0.0.1:50539] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"ADD_BOOK","ISBN":1234567890,"TITLE":"Test Book"} 
+2017-10-10 19:17:56,931 INFO BufferedLoggingWriter [Thread-2] SENT: 
+ 
+2017-10-10 19:17:56,931 INFO EventSourceImpl [Thread-1] [/127.0.0.1:5050] FROM: 127.0.0.1:50539 RECEIVED: {"MESSAGE":"ADD_BOOK","ISBN":1234567890,"TITLE":"Test Book"} 
+2017-10-10 19:17:56,968 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:5050] TO: 127.0.0.1:50539 SENT: {"MESSAGE":"SUCCESS","REASON":"Successfully added book: Test Book [1234567890]"} 
+2017-10-10 19:17:56,968 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-10 19:17:56,968 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50539] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"Successfully added book: Test Book [1234567890]"} 
+2017-10-10 19:18:03,863 INFO BufferedLoggingWriter [Thread-3] [/127.0.0.1:50539] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"SEARCH_BOOK","ISBN":1234567890} 
+2017-10-10 19:18:03,863 INFO BufferedLoggingWriter [Thread-3] SENT: 
+ 
+2017-10-10 19:18:03,863 INFO EventSourceImpl [Thread-1] [/127.0.0.1:5050] FROM: 127.0.0.1:50539 RECEIVED: {"MESSAGE":"SEARCH_BOOK","ISBN":1234567890} 
+2017-10-10 19:18:03,864 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:5050] TO: 127.0.0.1:50539 SENT: {"MESSAGE":"SUCCESS","REASON":"1234567890, Test Book [Copies: 0]\n"} 
+2017-10-10 19:18:03,864 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-10 19:18:03,864 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50539] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"1234567890, Test Book [Copies: 0]\n"} 
+2017-10-10 19:18:15,227 INFO BufferedLoggingWriter [Thread-4] [/127.0.0.1:50539] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"SEARCH_BOOK","TITLE":"test book"} 
+2017-10-10 19:18:15,227 INFO BufferedLoggingWriter [Thread-4] SENT: 
+ 
+2017-10-10 19:18:15,228 INFO EventSourceImpl [Thread-1] [/127.0.0.1:5050] FROM: 127.0.0.1:50539 RECEIVED: {"MESSAGE":"SEARCH_BOOK","TITLE":"test book"} 
+2017-10-10 19:18:15,229 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:5050] TO: 127.0.0.1:50539 SENT: {"MESSAGE":"SUCCESS","REASON":"1234567890, Test Book [Copies: 0]\n"} 
+2017-10-10 19:18:15,229 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-10 19:18:15,229 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50539] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"1234567890, Test Book [Copies: 0]\n"} 
+2017-10-10 19:18:21,992 INFO BufferedLoggingWriter [Thread-5] [/127.0.0.1:50539] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"ADD_COPY","ISBN":1234567890} 
+2017-10-10 19:18:21,992 INFO BufferedLoggingWriter [Thread-5] SENT: 
+ 
+2017-10-10 19:18:21,992 INFO EventSourceImpl [Thread-1] [/127.0.0.1:5050] FROM: 127.0.0.1:50539 RECEIVED: {"MESSAGE":"ADD_COPY","ISBN":1234567890} 
+2017-10-10 19:18:22,000 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:5050] TO: 127.0.0.1:50539 SENT: {"MESSAGE":"SUCCESS","REASON":"Successfully added copy to book 1234567890"} 
+2017-10-10 19:18:22,001 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-10 19:18:22,001 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50539] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"Successfully added copy to book 1234567890"} 
+2017-10-10 19:18:29,398 INFO BufferedLoggingWriter [Thread-6] [/127.0.0.1:50539] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"ADD_COPY","ISBN":1234567890} 
+2017-10-10 19:18:29,398 INFO BufferedLoggingWriter [Thread-6] SENT: 
+ 
+2017-10-10 19:18:29,398 INFO EventSourceImpl [Thread-1] [/127.0.0.1:5050] FROM: 127.0.0.1:50539 RECEIVED: {"MESSAGE":"ADD_COPY","ISBN":1234567890} 
+2017-10-10 19:18:29,404 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:5050] TO: 127.0.0.1:50539 SENT: {"MESSAGE":"SUCCESS","REASON":"Successfully added copy to book 1234567890"} 
+2017-10-10 19:18:29,404 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-10 19:18:29,404 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50539] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"Successfully added copy to book 1234567890"} 
+2017-10-10 19:18:35,915 INFO BufferedLoggingWriter [Thread-7] [/127.0.0.1:50539] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"SEARCH_BOOK","TITLE":"test book"} 
+2017-10-10 19:18:35,916 INFO BufferedLoggingWriter [Thread-7] SENT: 
+ 
+2017-10-10 19:18:35,916 INFO EventSourceImpl [Thread-1] [/127.0.0.1:5050] FROM: 127.0.0.1:50539 RECEIVED: {"MESSAGE":"SEARCH_BOOK","TITLE":"test book"} 
+2017-10-10 19:18:35,916 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:5050] TO: 127.0.0.1:50539 SENT: {"MESSAGE":"SUCCESS","REASON":"1234567890, Test Book [Copies: 2]\n\t1234567890 [1]\n\t1234567890 [2]\n"} 
+2017-10-10 19:18:35,916 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-10 19:18:35,917 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50539] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"1234567890, Test Book [Copies: 2]\n\t1234567890 [1]\n\t1234567890 [2]\n"} 
+2017-10-10 19:18:49,172 INFO BufferedLoggingWriter [Thread-8] [/127.0.0.1:50539] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"ADD_USER","PASSWORD":"pass1","USERNAME":"test1"} 
+2017-10-10 19:18:49,172 INFO BufferedLoggingWriter [Thread-8] SENT: 
+ 
+2017-10-10 19:18:49,172 INFO EventSourceImpl [Thread-1] [/127.0.0.1:5050] FROM: 127.0.0.1:50539 RECEIVED: {"MESSAGE":"ADD_USER","PASSWORD":"pass1","USERNAME":"test1"} 
+2017-10-10 19:18:49,184 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:5050] TO: 127.0.0.1:50539 SENT: {"MESSAGE":"SUCCESS","REASON":"Successfully added user: test1"} 
+2017-10-10 19:18:49,184 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-10 19:18:49,185 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50539] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"Successfully added user: test1"} 
+2017-10-10 19:18:54,424 INFO BufferedLoggingWriter [Thread-9] [/127.0.0.1:50539] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"SEARCH_USER","USERNAME":"test1"} 
+2017-10-10 19:18:54,424 INFO BufferedLoggingWriter [Thread-9] SENT: 
+ 
+2017-10-10 19:18:54,424 INFO EventSourceImpl [Thread-1] [/127.0.0.1:5050] FROM: 127.0.0.1:50539 RECEIVED: {"MESSAGE":"SEARCH_USER","USERNAME":"test1"} 
+2017-10-10 19:18:54,425 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:5050] TO: 127.0.0.1:50539 SENT: {"MESSAGE":"SUCCESS","REASON":"[1]: test1, pass1\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\tUser has no loans\n"} 
+2017-10-10 19:18:54,425 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-10 19:18:54,425 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50539] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"[1]: test1, pass1\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\tUser has no loans\n"} 
+2017-10-10 19:19:04,904 INFO BufferedLoggingWriter [Thread-10] [/127.0.0.1:50539] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"ADD_USER","PASSWORD":"pass2","USERNAME":"test2"} 
+2017-10-10 19:19:04,904 INFO BufferedLoggingWriter [Thread-10] SENT: 
+ 
+2017-10-10 19:19:04,904 INFO EventSourceImpl [Thread-1] [/127.0.0.1:5050] FROM: 127.0.0.1:50539 RECEIVED: {"MESSAGE":"ADD_USER","PASSWORD":"pass2","USERNAME":"test2"} 
+2017-10-10 19:19:04,911 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:5050] TO: 127.0.0.1:50539 SENT: {"MESSAGE":"SUCCESS","REASON":"Successfully added user: test2"} 
+2017-10-10 19:19:04,911 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-10 19:19:04,911 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50539] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"Successfully added user: test2"} 
+2017-10-10 19:19:12,136 INFO BufferedLoggingWriter [Thread-11] [/127.0.0.1:50539] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"SEARCH_USER","USERNAME":"test2"} 
+2017-10-10 19:19:12,136 INFO BufferedLoggingWriter [Thread-11] SENT: 
+ 
+2017-10-10 19:19:12,136 INFO EventSourceImpl [Thread-1] [/127.0.0.1:5050] FROM: 127.0.0.1:50539 RECEIVED: {"MESSAGE":"SEARCH_USER","USERNAME":"test2"} 
+2017-10-10 19:19:12,137 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:5050] TO: 127.0.0.1:50539 SENT: {"MESSAGE":"SUCCESS","REASON":"[2]: test2, pass2\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\tUser has no loans\n"} 
+2017-10-10 19:19:12,137 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-10 19:19:12,137 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50539] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"[2]: test2, pass2\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\tUser has no loans\n"} 
+2017-10-10 19:19:18,696 INFO BufferedLoggingWriter [Thread-12] [/127.0.0.1:50539] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"MONITOR_SYSTEM"} 
+2017-10-10 19:19:18,696 INFO BufferedLoggingWriter [Thread-12] SENT: 
+ 
+2017-10-10 19:19:18,696 INFO EventSourceImpl [Thread-1] [/127.0.0.1:5050] FROM: 127.0.0.1:50539 RECEIVED: {"MESSAGE":"MONITOR_SYSTEM"} 
+2017-10-10 19:19:18,697 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:5050] TO: 127.0.0.1:50539 SENT: {"MESSAGE":"SUCCESS","REASON":"1234567890, Test Book [Copies: 2]\n\t1234567890 [1]\n\t1234567890 [2]\n[1]: test1, pass1\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\tUser has no loans\n[2]: test2, pass2\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\tUser has no loans\n"} 
+2017-10-10 19:19:18,697 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-10 19:19:18,697 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50539] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"1234567890, Test Book [Copies: 2]\n\t1234567890 [1]\n\t1234567890 [2]\n[1]: test1, pass1\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\tUser has no loans\n[2]: test2, pass2\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\tUser has no loans\n"} 
+2017-10-10 19:19:33,568 INFO BufferedLoggingWriter [Thread-13] [/127.0.0.1:50539] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"ADD_COPY","ISBN":1234567890} 
+2017-10-10 19:19:33,568 INFO BufferedLoggingWriter [Thread-13] SENT: 
+ 
+2017-10-10 19:19:33,569 INFO EventSourceImpl [Thread-1] [/127.0.0.1:5050] FROM: 127.0.0.1:50539 RECEIVED: {"MESSAGE":"ADD_COPY","ISBN":1234567890} 
+2017-10-10 19:19:33,574 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:5050] TO: 127.0.0.1:50539 SENT: {"MESSAGE":"SUCCESS","REASON":"Successfully added copy to book 1234567890"} 
+2017-10-10 19:19:33,575 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-10 19:19:33,575 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50539] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"Successfully added copy to book 1234567890"} 
+2017-10-10 19:19:44,112 INFO BufferedLoggingWriter [Thread-14] [/127.0.0.1:50539] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"REMOVE_COPY","ISBN":1234567890,"COPYNUMBER":2} 
+2017-10-10 19:19:44,112 INFO BufferedLoggingWriter [Thread-14] SENT: 
+ 
+2017-10-10 19:19:44,113 INFO EventSourceImpl [Thread-1] [/127.0.0.1:5050] FROM: 127.0.0.1:50539 RECEIVED: {"MESSAGE":"REMOVE_COPY","ISBN":1234567890,"COPYNUMBER":2} 
+2017-10-10 19:19:44,121 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:5050] TO: 127.0.0.1:50539 SENT: {"MESSAGE":"SUCCESS","REASON":"Successfully removed copy 2 from book 1234567890"} 
+2017-10-10 19:19:44,121 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-10 19:19:44,121 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50539] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"Successfully removed copy 2 from book 1234567890"} 
+2017-10-10 19:19:49,775 INFO BufferedLoggingWriter [Thread-15] [/127.0.0.1:50539] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"MONITOR_SYSTEM"} 
+2017-10-10 19:19:49,775 INFO BufferedLoggingWriter [Thread-15] SENT: 
+ 
+2017-10-10 19:19:49,776 INFO EventSourceImpl [Thread-1] [/127.0.0.1:5050] FROM: 127.0.0.1:50539 RECEIVED: {"MESSAGE":"MONITOR_SYSTEM"} 
+2017-10-10 19:19:49,777 FATAL Server [Thread-1] Something went wrong 
+java.lang.NullPointerException
+	at com.comp4004.server.ServerController.bookInfo(ServerController.java:368)
+	at com.comp4004.server.ServerController.monitorSystem(ServerController.java:224)
+	at com.comp4004.server.Server$MonitorSystem.handleEvent(Server.java:468)
+	at com.comp4004.communication.Reactor.dispatch(Reactor.java:25)
+	at com.comp4004.communication.ThreadWithReactor.dispatch(ThreadWithReactor.java:92)
+	at com.comp4004.communication.ThreadWithReactor.run(ThreadWithReactor.java:59)
+2017-10-10 19:22:31,866 FATAL ThreadWithReactor [Thread-1] IOException, closing connection. 
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.io.InputStreamReader.read(Unknown Source)
+	at java.io.BufferedReader.fill(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at com.comp4004.communication.EventSourceImpl.getEvent(EventSourceImpl.java:69)
+	at com.comp4004.communication.ThreadWithReactor.run(ThreadWithReactor.java:56)
+2017-10-10 19:22:31,867 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:5050] TO: 127.0.0.1:50539 SENT: {"MESSAGE":"LOGOUT"} 
+2017-10-10 19:22:31,867 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-10 19:22:31,867 FATAL Server [Thread-1] Something went wrong 
+java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(Unknown Source)
+	at java.net.SocketOutputStream.write(Unknown Source)
+	at sun.nio.cs.StreamEncoder.writeBytes(Unknown Source)
+	at sun.nio.cs.StreamEncoder.implFlushBuffer(Unknown Source)
+	at sun.nio.cs.StreamEncoder.implFlush(Unknown Source)
+	at sun.nio.cs.StreamEncoder.flush(Unknown Source)
+	at java.io.OutputStreamWriter.flush(Unknown Source)
+	at java.io.BufferedWriter.flush(Unknown Source)
+	at com.comp4004.communication.EventSourceImpl.write(EventSourceImpl.java:93)
+	at com.comp4004.server.Server$Logout.handleEvent(Server.java:183)
+	at com.comp4004.communication.Reactor.dispatch(Reactor.java:25)
+	at com.comp4004.communication.ThreadWithReactor.dispatch(ThreadWithReactor.java:92)
+	at com.comp4004.communication.ThreadWithReactor.quit(ThreadWithReactor.java:41)
+	at com.comp4004.communication.ThreadWithReactor.run(ThreadWithReactor.java:75)
+2017-10-10 19:22:45,221 INFO BufferedLoggingWriter [main] [/127.0.0.1:50587] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"LOGIN","PASSWORD":"admin","USERNAME":"clerk"} 
+2017-10-10 19:22:45,221 INFO BufferedLoggingWriter [main] SENT: 
+ 
+2017-10-10 19:22:45,222 INFO EventSourceImpl [Thread-1] [/127.0.0.1:5050] FROM: 127.0.0.1:50587 RECEIVED: {"MESSAGE":"LOGIN","PASSWORD":"admin","USERNAME":"clerk"} 
+2017-10-10 19:22:45,236 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:5050] TO: 127.0.0.1:50587 SENT: {"MESSAGE":"CONNECT_PASS","ADMIN":""} 
+2017-10-10 19:22:45,236 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-10 19:22:45,236 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50587] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"CONNECT_PASS","ADMIN":""} 
+2017-10-10 19:22:48,309 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:50587] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"MONITOR_SYSTEM"} 
+2017-10-10 19:22:48,309 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-10 19:22:48,310 INFO EventSourceImpl [Thread-1] [/127.0.0.1:5050] FROM: 127.0.0.1:50587 RECEIVED: {"MESSAGE":"MONITOR_SYSTEM"} 
+2017-10-10 19:22:48,310 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:5050] TO: 127.0.0.1:50587 SENT: {"MESSAGE":"SUCCESS","REASON":"1234567890, Test Book [Copies: 2]\n\t1234567890 [1]\n\t1234567890 [3]\n[1]: test1, pass1\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\tUser has no loans\n[2]: test2, pass2\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\tUser has no loans\n"} 
+2017-10-10 19:22:48,311 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-10 19:22:48,311 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50587] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"1234567890, Test Book [Copies: 2]\n\t1234567890 [1]\n\t1234567890 [3]\n[1]: test1, pass1\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\tUser has no loans\n[2]: test2, pass2\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\tUser has no loans\n"} 
+2017-10-10 19:22:58,879 INFO BufferedLoggingWriter [Thread-2] [/127.0.0.1:50587] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"LOGOUT","USERNAME":"clerk"} 
+2017-10-10 19:22:58,879 INFO BufferedLoggingWriter [Thread-2] SENT: 
+ 
+2017-10-10 19:22:58,879 INFO EventSourceImpl [Thread-1] [/127.0.0.1:5050] FROM: 127.0.0.1:50587 RECEIVED: {"MESSAGE":"LOGOUT","USERNAME":"clerk"} 
+2017-10-10 19:22:58,880 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:5050] TO: 127.0.0.1:50587 SENT: {"MESSAGE":"LOGOUT"} 
+2017-10-10 19:22:58,880 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-10 19:22:58,880 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50587] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"LOGOUT"} 
+2017-10-10 19:22:58,911 FATAL ThreadWithReactor [Thread-1] IOException, closing connection. 
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.io.InputStreamReader.read(Unknown Source)
+	at java.io.BufferedReader.fill(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at com.comp4004.communication.EventSourceImpl.getEvent(EventSourceImpl.java:69)
+	at com.comp4004.communication.ThreadWithReactor.run(ThreadWithReactor.java:56)
+2017-10-10 19:22:58,913 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:5050] TO: 127.0.0.1:50587 SENT: {"MESSAGE":"LOGOUT"} 
+2017-10-10 19:22:58,913 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-10 19:22:58,913 FATAL Server [Thread-1] Something went wrong 
+java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(Unknown Source)
+	at java.net.SocketOutputStream.write(Unknown Source)
+	at sun.nio.cs.StreamEncoder.writeBytes(Unknown Source)
+	at sun.nio.cs.StreamEncoder.implFlushBuffer(Unknown Source)
+	at sun.nio.cs.StreamEncoder.implFlush(Unknown Source)
+	at sun.nio.cs.StreamEncoder.flush(Unknown Source)
+	at java.io.OutputStreamWriter.flush(Unknown Source)
+	at java.io.BufferedWriter.flush(Unknown Source)
+	at com.comp4004.communication.EventSourceImpl.write(EventSourceImpl.java:93)
+	at com.comp4004.server.Server$Logout.handleEvent(Server.java:183)
+	at com.comp4004.communication.Reactor.dispatch(Reactor.java:25)
+	at com.comp4004.communication.ThreadWithReactor.dispatch(ThreadWithReactor.java:92)
+	at com.comp4004.communication.ThreadWithReactor.quit(ThreadWithReactor.java:41)
+	at com.comp4004.communication.ThreadWithReactor.run(ThreadWithReactor.java:75)
+2017-10-10 19:23:06,717 INFO BufferedLoggingWriter [main] [/127.0.0.1:50588] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"LOGIN","PASSWORD":"pass1","USERNAME":"test1"} 
+2017-10-10 19:23:06,717 INFO BufferedLoggingWriter [main] SENT: 
+ 
+2017-10-10 19:23:06,718 INFO EventSourceImpl [Thread-2] [/127.0.0.1:5050] FROM: 127.0.0.1:50588 RECEIVED: {"MESSAGE":"LOGIN","PASSWORD":"pass1","USERNAME":"test1"} 
+2017-10-10 19:23:06,718 INFO BufferedLoggingWriter [Thread-2] [/127.0.0.1:5050] TO: 127.0.0.1:50588 SENT: {"MESSAGE":"CONNECT_PASS"} 
+2017-10-10 19:23:06,718 INFO BufferedLoggingWriter [Thread-2] SENT: 
+ 
+2017-10-10 19:23:06,719 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50588] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"CONNECT_PASS"} 
+2017-10-10 19:23:09,695 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:50588] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"SEARCH_USER","USERNAME":"test1"} 
+2017-10-10 19:23:09,696 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-10 19:23:09,696 INFO EventSourceImpl [Thread-2] [/127.0.0.1:5050] FROM: 127.0.0.1:50588 RECEIVED: {"MESSAGE":"SEARCH_USER","USERNAME":"test1"} 
+2017-10-10 19:23:09,696 INFO BufferedLoggingWriter [Thread-2] [/127.0.0.1:5050] TO: 127.0.0.1:50588 SENT: {"MESSAGE":"SUCCESS","REASON":"[1]: test1, pass1\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\tUser has no loans\n"} 
+2017-10-10 19:23:09,697 INFO BufferedLoggingWriter [Thread-2] SENT: 
+ 
+2017-10-10 19:23:09,697 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50588] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"[1]: test1, pass1\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\tUser has no loans\n"} 
+2017-10-10 19:23:18,180 INFO BufferedLoggingWriter [Thread-2] [/127.0.0.1:50588] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"SEARCH_BOOK","TITLE":"Test book"} 
+2017-10-10 19:23:18,180 INFO BufferedLoggingWriter [Thread-2] SENT: 
+ 
+2017-10-10 19:23:18,181 INFO EventSourceImpl [Thread-2] [/127.0.0.1:5050] FROM: 127.0.0.1:50588 RECEIVED: {"MESSAGE":"SEARCH_BOOK","TITLE":"Test book"} 
+2017-10-10 19:23:18,181 INFO BufferedLoggingWriter [Thread-2] [/127.0.0.1:5050] TO: 127.0.0.1:50588 SENT: {"MESSAGE":"SUCCESS","REASON":"1234567890, Test Book [Copies: 2]\n\t1234567890 [1]\n\t1234567890 [3]\n"} 
+2017-10-10 19:23:18,181 INFO BufferedLoggingWriter [Thread-2] SENT: 
+ 
+2017-10-10 19:23:18,182 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50588] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"1234567890, Test Book [Copies: 2]\n\t1234567890 [1]\n\t1234567890 [3]\n"} 
+2017-10-10 19:23:33,947 INFO BufferedLoggingWriter [Thread-3] [/127.0.0.1:50588] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"MAKE_RESERVATION","ISBN":1234567890,"COPYNUMBER":2,"USERNAME":"test1"} 
+2017-10-10 19:23:33,947 INFO BufferedLoggingWriter [Thread-3] SENT: 
+ 
+2017-10-10 19:23:33,948 INFO EventSourceImpl [Thread-2] [/127.0.0.1:5050] FROM: 127.0.0.1:50588 RECEIVED: {"MESSAGE":"MAKE_RESERVATION","ISBN":1234567890,"COPYNUMBER":2,"USERNAME":"test1"} 
+2017-10-10 19:23:33,949 INFO BufferedLoggingWriter [Thread-2] [/127.0.0.1:5050] TO: 127.0.0.1:50588 SENT: {"MESSAGE":"FAILED","FAIL_REASON":"Copy does not exists."} 
+2017-10-10 19:23:33,949 INFO BufferedLoggingWriter [Thread-2] SENT: 
+ 
+2017-10-10 19:23:33,949 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50588] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"FAILED","FAIL_REASON":"Copy does not exists."} 
+2017-10-10 19:23:44,916 INFO BufferedLoggingWriter [Thread-4] [/127.0.0.1:50588] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"MAKE_RESERVATION","ISBN":1234567890,"COPYNUMBER":1,"USERNAME":"test1"} 
+2017-10-10 19:23:44,916 INFO BufferedLoggingWriter [Thread-4] SENT: 
+ 
+2017-10-10 19:23:44,917 INFO EventSourceImpl [Thread-2] [/127.0.0.1:5050] FROM: 127.0.0.1:50588 RECEIVED: {"MESSAGE":"MAKE_RESERVATION","ISBN":1234567890,"COPYNUMBER":1,"USERNAME":"test1"} 
+2017-10-10 19:23:44,935 INFO BufferedLoggingWriter [Thread-2] [/127.0.0.1:5050] TO: 127.0.0.1:50588 SENT: {"MESSAGE":"SUCCESS","REASON":"Successfully reserved copy 1 of book: 1234567890"} 
+2017-10-10 19:23:44,935 INFO BufferedLoggingWriter [Thread-2] SENT: 
+ 
+2017-10-10 19:23:44,935 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50588] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"Successfully reserved copy 1 of book: 1234567890"} 
+2017-10-10 19:23:49,980 INFO BufferedLoggingWriter [Thread-5] [/127.0.0.1:50588] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"SEARCH_USER","USERNAME":"test1"} 
+2017-10-10 19:23:49,981 INFO BufferedLoggingWriter [Thread-5] SENT: 
+ 
+2017-10-10 19:23:49,981 INFO EventSourceImpl [Thread-2] [/127.0.0.1:5050] FROM: 127.0.0.1:50588 RECEIVED: {"MESSAGE":"SEARCH_USER","USERNAME":"test1"} 
+2017-10-10 19:23:49,981 INFO BufferedLoggingWriter [Thread-2] [/127.0.0.1:5050] TO: 127.0.0.1:50588 SENT: {"MESSAGE":"SUCCESS","REASON":"[1]: test1, pass1\n\tFees: 0\n\tReservations:\n\t\t1 [1234567890] [1]\n\tLoans:\n\t\tUser has no loans\n"} 
+2017-10-10 19:23:49,981 INFO BufferedLoggingWriter [Thread-2] SENT: 
+ 
+2017-10-10 19:23:49,982 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50588] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"[1]: test1, pass1\n\tFees: 0\n\tReservations:\n\t\t1 [1234567890] [1]\n\tLoans:\n\t\tUser has no loans\n"} 
+2017-10-10 19:24:13,734 INFO BufferedLoggingWriter [Thread-6] [/127.0.0.1:50588] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"SEARCH_BOOK","TITLE":"test book"} 
+2017-10-10 19:24:13,734 INFO BufferedLoggingWriter [Thread-6] SENT: 
+ 
+2017-10-10 19:24:13,735 INFO EventSourceImpl [Thread-2] [/127.0.0.1:5050] FROM: 127.0.0.1:50588 RECEIVED: {"MESSAGE":"SEARCH_BOOK","TITLE":"test book"} 
+2017-10-10 19:24:13,735 INFO BufferedLoggingWriter [Thread-2] [/127.0.0.1:5050] TO: 127.0.0.1:50588 SENT: {"MESSAGE":"SUCCESS","REASON":"1234567890, Test Book [Copies: 2]\n\t1234567890 [1][RESERVED]\n\t1234567890 [3]\n"} 
+2017-10-10 19:24:13,735 INFO BufferedLoggingWriter [Thread-2] SENT: 
+ 
+2017-10-10 19:24:13,735 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50588] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"1234567890, Test Book [Copies: 2]\n\t1234567890 [1][RESERVED]\n\t1234567890 [3]\n"} 
+2017-10-10 19:24:31,626 INFO BufferedLoggingWriter [Thread-7] [/127.0.0.1:50588] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"LOGOUT","USERNAME":"test1"} 
+2017-10-10 19:24:31,627 INFO BufferedLoggingWriter [Thread-7] SENT: 
+ 
+2017-10-10 19:24:31,627 INFO EventSourceImpl [Thread-2] [/127.0.0.1:5050] FROM: 127.0.0.1:50588 RECEIVED: {"MESSAGE":"LOGOUT","USERNAME":"test1"} 
+2017-10-10 19:24:31,627 INFO BufferedLoggingWriter [Thread-2] [/127.0.0.1:5050] TO: 127.0.0.1:50588 SENT: {"MESSAGE":"LOGOUT"} 
+2017-10-10 19:24:31,628 INFO BufferedLoggingWriter [Thread-2] SENT: 
+ 
+2017-10-10 19:24:31,628 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50588] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"LOGOUT"} 
+2017-10-10 19:24:31,657 FATAL ThreadWithReactor [Thread-2] IOException, closing connection. 
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.io.InputStreamReader.read(Unknown Source)
+	at java.io.BufferedReader.fill(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at com.comp4004.communication.EventSourceImpl.getEvent(EventSourceImpl.java:69)
+	at com.comp4004.communication.ThreadWithReactor.run(ThreadWithReactor.java:56)
+2017-10-10 19:24:31,658 INFO BufferedLoggingWriter [Thread-2] [/127.0.0.1:5050] TO: 127.0.0.1:50588 SENT: {"MESSAGE":"LOGOUT"} 
+2017-10-10 19:24:31,658 INFO BufferedLoggingWriter [Thread-2] SENT: 
+ 
+2017-10-10 19:24:31,658 FATAL Server [Thread-2] Something went wrong 
+java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(Unknown Source)
+	at java.net.SocketOutputStream.write(Unknown Source)
+	at sun.nio.cs.StreamEncoder.writeBytes(Unknown Source)
+	at sun.nio.cs.StreamEncoder.implFlushBuffer(Unknown Source)
+	at sun.nio.cs.StreamEncoder.implFlush(Unknown Source)
+	at sun.nio.cs.StreamEncoder.flush(Unknown Source)
+	at java.io.OutputStreamWriter.flush(Unknown Source)
+	at java.io.BufferedWriter.flush(Unknown Source)
+	at com.comp4004.communication.EventSourceImpl.write(EventSourceImpl.java:93)
+	at com.comp4004.server.Server$Logout.handleEvent(Server.java:183)
+	at com.comp4004.communication.Reactor.dispatch(Reactor.java:25)
+	at com.comp4004.communication.ThreadWithReactor.dispatch(ThreadWithReactor.java:92)
+	at com.comp4004.communication.ThreadWithReactor.quit(ThreadWithReactor.java:41)
+	at com.comp4004.communication.ThreadWithReactor.run(ThreadWithReactor.java:75)
+2017-10-10 19:24:43,111 INFO BufferedLoggingWriter [main] [/127.0.0.1:50627] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"LOGIN","PASSWORD":"pass2","USERNAME":"test2"} 
+2017-10-10 19:24:43,112 INFO BufferedLoggingWriter [main] SENT: 
+ 
+2017-10-10 19:24:43,112 INFO EventSourceImpl [Thread-3] [/127.0.0.1:5050] FROM: 127.0.0.1:50627 RECEIVED: {"MESSAGE":"LOGIN","PASSWORD":"pass2","USERNAME":"test2"} 
+2017-10-10 19:24:43,113 INFO BufferedLoggingWriter [Thread-3] [/127.0.0.1:5050] TO: 127.0.0.1:50627 SENT: {"MESSAGE":"CONNECT_PASS"} 
+2017-10-10 19:24:43,113 INFO BufferedLoggingWriter [Thread-3] SENT: 
+ 
+2017-10-10 19:24:43,113 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50627] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"CONNECT_PASS"} 
+2017-10-10 19:24:50,412 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:50627] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"SEARCH_USER","USERNAME":"test2"} 
+2017-10-10 19:24:50,412 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-10 19:24:50,413 INFO EventSourceImpl [Thread-3] [/127.0.0.1:5050] FROM: 127.0.0.1:50627 RECEIVED: {"MESSAGE":"SEARCH_USER","USERNAME":"test2"} 
+2017-10-10 19:24:50,413 INFO BufferedLoggingWriter [Thread-3] [/127.0.0.1:5050] TO: 127.0.0.1:50627 SENT: {"MESSAGE":"SUCCESS","REASON":"[2]: test2, pass2\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\tUser has no loans\n"} 
+2017-10-10 19:24:50,413 INFO BufferedLoggingWriter [Thread-3] SENT: 
+ 
+2017-10-10 19:24:50,413 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50627] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"[2]: test2, pass2\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\tUser has no loans\n"} 
+2017-10-10 19:24:57,044 INFO BufferedLoggingWriter [Thread-2] [/127.0.0.1:50627] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"SEARCH_BOOK","TITLE":"test book"} 
+2017-10-10 19:24:57,044 INFO BufferedLoggingWriter [Thread-2] SENT: 
+ 
+2017-10-10 19:24:57,044 INFO EventSourceImpl [Thread-3] [/127.0.0.1:5050] FROM: 127.0.0.1:50627 RECEIVED: {"MESSAGE":"SEARCH_BOOK","TITLE":"test book"} 
+2017-10-10 19:24:57,045 INFO BufferedLoggingWriter [Thread-3] [/127.0.0.1:5050] TO: 127.0.0.1:50627 SENT: {"MESSAGE":"SUCCESS","REASON":"1234567890, Test Book [Copies: 2]\n\t1234567890 [1][RESERVED]\n\t1234567890 [3]\n"} 
+2017-10-10 19:24:57,045 INFO BufferedLoggingWriter [Thread-3] SENT: 
+ 
+2017-10-10 19:24:57,045 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50627] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"1234567890, Test Book [Copies: 2]\n\t1234567890 [1][RESERVED]\n\t1234567890 [3]\n"} 
+2017-10-10 19:25:06,704 INFO BufferedLoggingWriter [Thread-3] [/127.0.0.1:50627] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"BORROW","ISBN":1234567890,"COPYNUMBER":1,"USERNAME":"test2"} 
+2017-10-10 19:25:06,705 INFO BufferedLoggingWriter [Thread-3] SENT: 
+ 
+2017-10-10 19:25:06,705 INFO EventSourceImpl [Thread-3] [/127.0.0.1:5050] FROM: 127.0.0.1:50627 RECEIVED: {"MESSAGE":"BORROW","ISBN":1234567890,"COPYNUMBER":1,"USERNAME":"test2"} 
+2017-10-10 19:25:06,705 INFO BufferedLoggingWriter [Thread-3] [/127.0.0.1:5050] TO: 127.0.0.1:50627 SENT: {"MESSAGE":"FAILED","FAIL_REASON":"Book is already reserved."} 
+2017-10-10 19:25:06,705 INFO BufferedLoggingWriter [Thread-3] SENT: 
+ 
+2017-10-10 19:25:06,706 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50627] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"FAILED","FAIL_REASON":"Book is already reserved."} 
+2017-10-10 19:25:15,351 INFO BufferedLoggingWriter [Thread-4] [/127.0.0.1:50627] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"BORROW","ISBN":1234567890,"COPYNUMBER":3,"USERNAME":"test2"} 
+2017-10-10 19:25:15,351 INFO BufferedLoggingWriter [Thread-4] SENT: 
+ 
+2017-10-10 19:25:15,352 INFO EventSourceImpl [Thread-3] [/127.0.0.1:5050] FROM: 127.0.0.1:50627 RECEIVED: {"MESSAGE":"BORROW","ISBN":1234567890,"COPYNUMBER":3,"USERNAME":"test2"} 
+2017-10-10 19:25:15,377 INFO BufferedLoggingWriter [Thread-3] [/127.0.0.1:5050] TO: 127.0.0.1:50627 SENT: {"MESSAGE":"SUCCESS","REASON":"Successfully borrowed copy 3 of book: 1234567890"} 
+2017-10-10 19:25:15,377 INFO BufferedLoggingWriter [Thread-3] SENT: 
+ 
+2017-10-10 19:25:15,377 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50627] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"Successfully borrowed copy 3 of book: 1234567890"} 
+2017-10-10 19:25:18,089 INFO BufferedLoggingWriter [Thread-5] [/127.0.0.1:50627] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"SEARCH_USER","USERNAME":"test2"} 
+2017-10-10 19:25:18,089 INFO BufferedLoggingWriter [Thread-5] SENT: 
+ 
+2017-10-10 19:25:18,089 INFO EventSourceImpl [Thread-3] [/127.0.0.1:5050] FROM: 127.0.0.1:50627 RECEIVED: {"MESSAGE":"SEARCH_USER","USERNAME":"test2"} 
+2017-10-10 19:25:18,091 INFO BufferedLoggingWriter [Thread-3] [/127.0.0.1:5050] TO: 127.0.0.1:50627 SENT: {"MESSAGE":"SUCCESS","REASON":"[2]: test2, pass2\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\t1234567890 [3] Date: 2017-10-10 07:25 User: 2 Renewed: 0\n"} 
+2017-10-10 19:25:18,091 INFO BufferedLoggingWriter [Thread-3] SENT: 
+ 
+2017-10-10 19:25:18,091 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50627] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"[2]: test2, pass2\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\t1234567890 [3] Date: 2017-10-10 07:25 User: 2 Renewed: 0\n"} 
+2017-10-10 19:25:38,246 INFO BufferedLoggingWriter [Thread-6] [/127.0.0.1:50627] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"SEARCH_BOOK","TITLE":"test book"} 
+2017-10-10 19:25:38,246 INFO BufferedLoggingWriter [Thread-6] SENT: 
+ 
+2017-10-10 19:25:38,246 INFO EventSourceImpl [Thread-3] [/127.0.0.1:5050] FROM: 127.0.0.1:50627 RECEIVED: {"MESSAGE":"SEARCH_BOOK","TITLE":"test book"} 
+2017-10-10 19:25:38,247 INFO BufferedLoggingWriter [Thread-3] [/127.0.0.1:5050] TO: 127.0.0.1:50627 SENT: {"MESSAGE":"SUCCESS","REASON":"1234567890, Test Book [Copies: 2]\n\t1234567890 [1][RESERVED]\n\t1234567890 [3][LOANED] \n"} 
+2017-10-10 19:25:38,247 INFO BufferedLoggingWriter [Thread-3] SENT: 
+ 
+2017-10-10 19:25:38,247 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50627] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"1234567890, Test Book [Copies: 2]\n\t1234567890 [1][RESERVED]\n\t1234567890 [3][LOANED] \n"} 
+2017-10-10 19:25:49,499 INFO BufferedLoggingWriter [Thread-7] [/127.0.0.1:50627] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"RENEW_LOAN","ISBN":1234567890,"COPYNUMBER":3,"USERNAME":"test2"} 
+2017-10-10 19:25:49,499 INFO BufferedLoggingWriter [Thread-7] SENT: 
+ 
+2017-10-10 19:25:49,499 INFO EventSourceImpl [Thread-3] [/127.0.0.1:5050] FROM: 127.0.0.1:50627 RECEIVED: {"MESSAGE":"RENEW_LOAN","ISBN":1234567890,"COPYNUMBER":3,"USERNAME":"test2"} 
+2017-10-10 19:25:49,506 INFO BufferedLoggingWriter [Thread-3] [/127.0.0.1:5050] TO: 127.0.0.1:50627 SENT: {"MESSAGE":"SUCCESS","REASON":"Successfully renewed loan of copy 3 of book: 1234567890"} 
+2017-10-10 19:25:49,506 INFO BufferedLoggingWriter [Thread-3] SENT: 
+ 
+2017-10-10 19:25:49,506 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50627] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"Successfully renewed loan of copy 3 of book: 1234567890"} 
+2017-10-10 19:25:53,598 INFO BufferedLoggingWriter [Thread-8] [/127.0.0.1:50627] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"SEARCH_USER","USERNAME":"test2"} 
+2017-10-10 19:25:53,598 INFO BufferedLoggingWriter [Thread-8] SENT: 
+ 
+2017-10-10 19:25:53,599 INFO EventSourceImpl [Thread-3] [/127.0.0.1:5050] FROM: 127.0.0.1:50627 RECEIVED: {"MESSAGE":"SEARCH_USER","USERNAME":"test2"} 
+2017-10-10 19:25:53,599 INFO BufferedLoggingWriter [Thread-3] [/127.0.0.1:5050] TO: 127.0.0.1:50627 SENT: {"MESSAGE":"SUCCESS","REASON":"[2]: test2, pass2\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\t1234567890 [3] Date: 2017-10-10 07:25 User: 2 Renewed: 1\n"} 
+2017-10-10 19:25:53,600 INFO BufferedLoggingWriter [Thread-3] SENT: 
+ 
+2017-10-10 19:25:53,600 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50627] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"[2]: test2, pass2\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\t1234567890 [3] Date: 2017-10-10 07:25 User: 2 Renewed: 1\n"} 
+2017-10-10 19:26:04,849 INFO BufferedLoggingWriter [Thread-9] [/127.0.0.1:50627] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"SEARCH_BOOK","ISBN":1234567890} 
+2017-10-10 19:26:04,849 INFO BufferedLoggingWriter [Thread-9] SENT: 
+ 
+2017-10-10 19:26:04,849 INFO EventSourceImpl [Thread-3] [/127.0.0.1:5050] FROM: 127.0.0.1:50627 RECEIVED: {"MESSAGE":"SEARCH_BOOK","ISBN":1234567890} 
+2017-10-10 19:26:04,850 INFO BufferedLoggingWriter [Thread-3] [/127.0.0.1:5050] TO: 127.0.0.1:50627 SENT: {"MESSAGE":"SUCCESS","REASON":"1234567890, Test Book [Copies: 2]\n\t1234567890 [1][RESERVED]\n\t1234567890 [3][LOANED] \n"} 
+2017-10-10 19:26:04,850 INFO BufferedLoggingWriter [Thread-3] SENT: 
+ 
+2017-10-10 19:26:04,850 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50627] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"1234567890, Test Book [Copies: 2]\n\t1234567890 [1][RESERVED]\n\t1234567890 [3][LOANED] \n"} 
+2017-10-10 19:26:08,723 INFO BufferedLoggingWriter [Thread-10] [/127.0.0.1:50627] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"LOGOUT","USERNAME":"test2"} 
+2017-10-10 19:26:08,724 INFO BufferedLoggingWriter [Thread-10] SENT: 
+ 
+2017-10-10 19:26:08,724 INFO EventSourceImpl [Thread-3] [/127.0.0.1:5050] FROM: 127.0.0.1:50627 RECEIVED: {"MESSAGE":"LOGOUT","USERNAME":"test2"} 
+2017-10-10 19:26:08,724 INFO BufferedLoggingWriter [Thread-3] [/127.0.0.1:5050] TO: 127.0.0.1:50627 SENT: {"MESSAGE":"LOGOUT"} 
+2017-10-10 19:26:08,724 INFO BufferedLoggingWriter [Thread-3] SENT: 
+ 
+2017-10-10 19:26:08,724 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50627] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"LOGOUT"} 
+2017-10-10 19:26:08,742 FATAL ThreadWithReactor [Thread-3] IOException, closing connection. 
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.io.InputStreamReader.read(Unknown Source)
+	at java.io.BufferedReader.fill(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at com.comp4004.communication.EventSourceImpl.getEvent(EventSourceImpl.java:69)
+	at com.comp4004.communication.ThreadWithReactor.run(ThreadWithReactor.java:56)
+2017-10-10 19:26:08,742 INFO BufferedLoggingWriter [Thread-3] [/127.0.0.1:5050] TO: 127.0.0.1:50627 SENT: {"MESSAGE":"LOGOUT"} 
+2017-10-10 19:26:08,742 INFO BufferedLoggingWriter [Thread-3] SENT: 
+ 
+2017-10-10 19:26:08,742 FATAL Server [Thread-3] Something went wrong 
+java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(Unknown Source)
+	at java.net.SocketOutputStream.write(Unknown Source)
+	at sun.nio.cs.StreamEncoder.writeBytes(Unknown Source)
+	at sun.nio.cs.StreamEncoder.implFlushBuffer(Unknown Source)
+	at sun.nio.cs.StreamEncoder.implFlush(Unknown Source)
+	at sun.nio.cs.StreamEncoder.flush(Unknown Source)
+	at java.io.OutputStreamWriter.flush(Unknown Source)
+	at java.io.BufferedWriter.flush(Unknown Source)
+	at com.comp4004.communication.EventSourceImpl.write(EventSourceImpl.java:93)
+	at com.comp4004.server.Server$Logout.handleEvent(Server.java:183)
+	at com.comp4004.communication.Reactor.dispatch(Reactor.java:25)
+	at com.comp4004.communication.ThreadWithReactor.dispatch(ThreadWithReactor.java:92)
+	at com.comp4004.communication.ThreadWithReactor.quit(ThreadWithReactor.java:41)
+	at com.comp4004.communication.ThreadWithReactor.run(ThreadWithReactor.java:75)
+2017-10-10 19:26:13,508 INFO BufferedLoggingWriter [main] [/127.0.0.1:50633] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"LOGIN","PASSWORD":"admin","USERNAME":"clerk"} 
+2017-10-10 19:26:13,509 INFO BufferedLoggingWriter [main] SENT: 
+ 
+2017-10-10 19:26:13,509 INFO EventSourceImpl [Thread-4] [/127.0.0.1:5050] FROM: 127.0.0.1:50633 RECEIVED: {"MESSAGE":"LOGIN","PASSWORD":"admin","USERNAME":"clerk"} 
+2017-10-10 19:26:13,509 INFO BufferedLoggingWriter [Thread-4] [/127.0.0.1:5050] TO: 127.0.0.1:50633 SENT: {"MESSAGE":"CONNECT_PASS","ADMIN":""} 
+2017-10-10 19:26:13,509 INFO BufferedLoggingWriter [Thread-4] SENT: 
+ 
+2017-10-10 19:26:13,510 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50633] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"CONNECT_PASS","ADMIN":""} 
+2017-10-10 19:26:19,035 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:50633] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"MONITOR_SYSTEM"} 
+2017-10-10 19:26:19,035 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-10 19:26:19,035 INFO EventSourceImpl [Thread-4] [/127.0.0.1:5050] FROM: 127.0.0.1:50633 RECEIVED: {"MESSAGE":"MONITOR_SYSTEM"} 
+2017-10-10 19:26:19,036 INFO BufferedLoggingWriter [Thread-4] [/127.0.0.1:5050] TO: 127.0.0.1:50633 SENT: {"MESSAGE":"SUCCESS","REASON":"1234567890, Test Book [Copies: 2]\n\t1234567890 [1][RESERVED]\n\t1234567890 [3][LOANED] \n[1]: test1, pass1\n\tFees: 0\n\tReservations:\n\t\t1 [1234567890] [1]\n\tLoans:\n\t\tUser has no loans\n[2]: test2, pass2\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\t1234567890 [3] Date: 2017-10-10 07:25 User: 2 Renewed: 1\n"} 
+2017-10-10 19:26:19,036 INFO BufferedLoggingWriter [Thread-4] SENT: 
+ 
+2017-10-10 19:26:19,036 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50633] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"1234567890, Test Book [Copies: 2]\n\t1234567890 [1][RESERVED]\n\t1234567890 [3][LOANED] \n[1]: test1, pass1\n\tFees: 0\n\tReservations:\n\t\t1 [1234567890] [1]\n\tLoans:\n\t\tUser has no loans\n[2]: test2, pass2\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\t1234567890 [3] Date: 2017-10-10 07:25 User: 2 Renewed: 1\n"} 
+2017-10-10 19:26:36,906 INFO BufferedLoggingWriter [Thread-2] [/127.0.0.1:50633] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"LOGOUT","USERNAME":"clerk"} 
+2017-10-10 19:26:36,906 INFO BufferedLoggingWriter [Thread-2] SENT: 
+ 
+2017-10-10 19:26:36,907 INFO EventSourceImpl [Thread-4] [/127.0.0.1:5050] FROM: 127.0.0.1:50633 RECEIVED: {"MESSAGE":"LOGOUT","USERNAME":"clerk"} 
+2017-10-10 19:26:36,907 INFO BufferedLoggingWriter [Thread-4] [/127.0.0.1:5050] TO: 127.0.0.1:50633 SENT: {"MESSAGE":"LOGOUT"} 
+2017-10-10 19:26:36,907 INFO BufferedLoggingWriter [Thread-4] SENT: 
+ 
+2017-10-10 19:26:36,907 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50633] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"LOGOUT"} 
+2017-10-10 19:26:36,923 FATAL ThreadWithReactor [Thread-4] IOException, closing connection. 
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.io.InputStreamReader.read(Unknown Source)
+	at java.io.BufferedReader.fill(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at com.comp4004.communication.EventSourceImpl.getEvent(EventSourceImpl.java:69)
+	at com.comp4004.communication.ThreadWithReactor.run(ThreadWithReactor.java:56)
+2017-10-10 19:26:36,924 INFO BufferedLoggingWriter [Thread-4] [/127.0.0.1:5050] TO: 127.0.0.1:50633 SENT: {"MESSAGE":"LOGOUT"} 
+2017-10-10 19:26:36,924 INFO BufferedLoggingWriter [Thread-4] SENT: 
+ 
+2017-10-10 19:26:36,924 FATAL Server [Thread-4] Something went wrong 
+java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(Unknown Source)
+	at java.net.SocketOutputStream.write(Unknown Source)
+	at sun.nio.cs.StreamEncoder.writeBytes(Unknown Source)
+	at sun.nio.cs.StreamEncoder.implFlushBuffer(Unknown Source)
+	at sun.nio.cs.StreamEncoder.implFlush(Unknown Source)
+	at sun.nio.cs.StreamEncoder.flush(Unknown Source)
+	at java.io.OutputStreamWriter.flush(Unknown Source)
+	at java.io.BufferedWriter.flush(Unknown Source)
+	at com.comp4004.communication.EventSourceImpl.write(EventSourceImpl.java:93)
+	at com.comp4004.server.Server$Logout.handleEvent(Server.java:183)
+	at com.comp4004.communication.Reactor.dispatch(Reactor.java:25)
+	at com.comp4004.communication.ThreadWithReactor.dispatch(ThreadWithReactor.java:92)
+	at com.comp4004.communication.ThreadWithReactor.quit(ThreadWithReactor.java:41)
+	at com.comp4004.communication.ThreadWithReactor.run(ThreadWithReactor.java:75)
+2017-10-10 19:26:41,588 INFO BufferedLoggingWriter [main] [/127.0.0.1:50636] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"LOGIN","PASSWORD":"pass1","USERNAME":"test1"} 
+2017-10-10 19:26:41,589 INFO BufferedLoggingWriter [main] SENT: 
+ 
+2017-10-10 19:26:41,589 INFO EventSourceImpl [Thread-5] [/127.0.0.1:5050] FROM: 127.0.0.1:50636 RECEIVED: {"MESSAGE":"LOGIN","PASSWORD":"pass1","USERNAME":"test1"} 
+2017-10-10 19:26:41,590 INFO BufferedLoggingWriter [Thread-5] [/127.0.0.1:5050] TO: 127.0.0.1:50636 SENT: {"MESSAGE":"CONNECT_PASS"} 
+2017-10-10 19:26:41,590 INFO BufferedLoggingWriter [Thread-5] SENT: 
+ 
+2017-10-10 19:26:41,590 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50636] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"CONNECT_PASS"} 
+2017-10-10 19:26:58,020 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:50636] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"MAKE_RESERVATION","ISBN":1234567890,"COPYNUMBER":3,"USERNAME":"test1"} 
+2017-10-10 19:26:58,020 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-10 19:26:58,020 INFO EventSourceImpl [Thread-5] [/127.0.0.1:5050] FROM: 127.0.0.1:50636 RECEIVED: {"MESSAGE":"MAKE_RESERVATION","ISBN":1234567890,"COPYNUMBER":3,"USERNAME":"test1"} 
+2017-10-10 19:26:58,027 INFO BufferedLoggingWriter [Thread-5] [/127.0.0.1:5050] TO: 127.0.0.1:50636 SENT: {"MESSAGE":"SUCCESS","REASON":"Successfully reserved copy 3 of book: 1234567890"} 
+2017-10-10 19:26:58,027 INFO BufferedLoggingWriter [Thread-5] SENT: 
+ 
+2017-10-10 19:26:58,027 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50636] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"Successfully reserved copy 3 of book: 1234567890"} 
+2017-10-10 19:27:05,497 INFO BufferedLoggingWriter [Thread-2] [/127.0.0.1:50636] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"SEARCH_BOOK","TITLE":"test book"} 
+2017-10-10 19:27:05,497 INFO BufferedLoggingWriter [Thread-2] SENT: 
+ 
+2017-10-10 19:27:05,497 INFO EventSourceImpl [Thread-5] [/127.0.0.1:5050] FROM: 127.0.0.1:50636 RECEIVED: {"MESSAGE":"SEARCH_BOOK","TITLE":"test book"} 
+2017-10-10 19:27:05,498 INFO BufferedLoggingWriter [Thread-5] [/127.0.0.1:5050] TO: 127.0.0.1:50636 SENT: {"MESSAGE":"SUCCESS","REASON":"1234567890, Test Book [Copies: 2]\n\t1234567890 [1][RESERVED]\n\t1234567890 [3][LOANED] [RESERVED]\n"} 
+2017-10-10 19:27:05,498 INFO BufferedLoggingWriter [Thread-5] SENT: 
+ 
+2017-10-10 19:27:05,498 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50636] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"1234567890, Test Book [Copies: 2]\n\t1234567890 [1][RESERVED]\n\t1234567890 [3][LOANED] [RESERVED]\n"} 
+2017-10-10 19:27:26,922 INFO BufferedLoggingWriter [Thread-3] [/127.0.0.1:50636] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"BORROW","ISBN":1234567890,"COPYNUMBER":1,"USERNAME":"test1"} 
+2017-10-10 19:27:26,922 INFO BufferedLoggingWriter [Thread-3] SENT: 
+ 
+2017-10-10 19:27:26,922 INFO EventSourceImpl [Thread-5] [/127.0.0.1:5050] FROM: 127.0.0.1:50636 RECEIVED: {"MESSAGE":"BORROW","ISBN":1234567890,"COPYNUMBER":1,"USERNAME":"test1"} 
+2017-10-10 19:27:26,935 INFO BufferedLoggingWriter [Thread-5] [/127.0.0.1:5050] TO: 127.0.0.1:50636 SENT: {"MESSAGE":"SUCCESS","REASON":"Successfully borrowed copy 1 of book: 1234567890"} 
+2017-10-10 19:27:26,935 INFO BufferedLoggingWriter [Thread-5] SENT: 
+ 
+2017-10-10 19:27:26,935 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50636] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"Successfully borrowed copy 1 of book: 1234567890"} 
+2017-10-10 19:27:35,165 INFO BufferedLoggingWriter [Thread-4] [/127.0.0.1:50636] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"SEARCH_BOOK","ISBN":1234567890} 
+2017-10-10 19:27:35,165 INFO BufferedLoggingWriter [Thread-4] SENT: 
+ 
+2017-10-10 19:27:35,165 INFO EventSourceImpl [Thread-5] [/127.0.0.1:5050] FROM: 127.0.0.1:50636 RECEIVED: {"MESSAGE":"SEARCH_BOOK","ISBN":1234567890} 
+2017-10-10 19:27:35,166 INFO BufferedLoggingWriter [Thread-5] [/127.0.0.1:5050] TO: 127.0.0.1:50636 SENT: {"MESSAGE":"SUCCESS","REASON":"1234567890, Test Book [Copies: 2]\n\t1234567890 [1][LOANED] \n\t1234567890 [3][LOANED] [RESERVED]\n"} 
+2017-10-10 19:27:35,166 INFO BufferedLoggingWriter [Thread-5] SENT: 
+ 
+2017-10-10 19:27:35,166 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50636] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"1234567890, Test Book [Copies: 2]\n\t1234567890 [1][LOANED] \n\t1234567890 [3][LOANED] [RESERVED]\n"} 
+2017-10-10 19:27:55,166 INFO BufferedLoggingWriter [Thread-5] [/127.0.0.1:50636] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"RETURN_LOAN","ISBN":1234567890,"COPYNUMBER":1,"USERNAME":"test1"} 
+2017-10-10 19:27:55,166 INFO BufferedLoggingWriter [Thread-5] SENT: 
+ 
+2017-10-10 19:27:55,166 INFO EventSourceImpl [Thread-5] [/127.0.0.1:5050] FROM: 127.0.0.1:50636 RECEIVED: {"MESSAGE":"RETURN_LOAN","ISBN":1234567890,"COPYNUMBER":1,"USERNAME":"test1"} 
+2017-10-10 19:27:55,170 INFO BufferedLoggingWriter [Thread-5] [/127.0.0.1:5050] TO: 127.0.0.1:50636 SENT: {"MESSAGE":"SUCCESS","REASON":"Successfully returned copy 1 of book: 1234567890"} 
+2017-10-10 19:27:55,170 INFO BufferedLoggingWriter [Thread-5] SENT: 
+ 
+2017-10-10 19:27:55,170 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50636] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"Successfully returned copy 1 of book: 1234567890"} 
+2017-10-10 19:28:04,849 INFO BufferedLoggingWriter [Thread-6] [/127.0.0.1:50636] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"RETURN_LOAN","ISBN":1234567890,"COPYNUMBER":3,"USERNAME":"test1"} 
+2017-10-10 19:28:04,849 INFO BufferedLoggingWriter [Thread-6] SENT: 
+ 
+2017-10-10 19:28:04,849 INFO EventSourceImpl [Thread-5] [/127.0.0.1:5050] FROM: 127.0.0.1:50636 RECEIVED: {"MESSAGE":"RETURN_LOAN","ISBN":1234567890,"COPYNUMBER":3,"USERNAME":"test1"} 
+2017-10-10 19:28:04,849 INFO BufferedLoggingWriter [Thread-5] [/127.0.0.1:5050] TO: 127.0.0.1:50636 SENT: {"MESSAGE":"FAILED","FAIL_REASON":"Loan does not exists."} 
+2017-10-10 19:28:04,850 INFO BufferedLoggingWriter [Thread-5] SENT: 
+ 
+2017-10-10 19:28:04,850 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50636] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"FAILED","FAIL_REASON":"Loan does not exists."} 
+2017-10-10 19:28:10,510 INFO BufferedLoggingWriter [Thread-7] [/127.0.0.1:50636] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"SEARCH_USER","USERNAME":"test1"} 
+2017-10-10 19:28:10,510 INFO BufferedLoggingWriter [Thread-7] SENT: 
+ 
+2017-10-10 19:28:10,510 INFO EventSourceImpl [Thread-5] [/127.0.0.1:5050] FROM: 127.0.0.1:50636 RECEIVED: {"MESSAGE":"SEARCH_USER","USERNAME":"test1"} 
+2017-10-10 19:28:10,510 INFO BufferedLoggingWriter [Thread-5] [/127.0.0.1:5050] TO: 127.0.0.1:50636 SENT: {"MESSAGE":"SUCCESS","REASON":"[1]: test1, pass1\n\tFees: 0\n\tReservations:\n\t\t1 [1234567890] [3]\n\tLoans:\n\t\tUser has no loans\n"} 
+2017-10-10 19:28:10,511 INFO BufferedLoggingWriter [Thread-5] SENT: 
+ 
+2017-10-10 19:28:10,511 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50636] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"[1]: test1, pass1\n\tFees: 0\n\tReservations:\n\t\t1 [1234567890] [3]\n\tLoans:\n\t\tUser has no loans\n"} 
+2017-10-10 19:28:17,165 INFO BufferedLoggingWriter [Thread-8] [/127.0.0.1:50636] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"SEARCH_BOOK","TITLE":"test book"} 
+2017-10-10 19:28:17,165 INFO BufferedLoggingWriter [Thread-8] SENT: 
+ 
+2017-10-10 19:28:17,165 INFO EventSourceImpl [Thread-5] [/127.0.0.1:5050] FROM: 127.0.0.1:50636 RECEIVED: {"MESSAGE":"SEARCH_BOOK","TITLE":"test book"} 
+2017-10-10 19:28:17,166 INFO BufferedLoggingWriter [Thread-5] [/127.0.0.1:5050] TO: 127.0.0.1:50636 SENT: {"MESSAGE":"SUCCESS","REASON":"1234567890, Test Book [Copies: 2]\n\t1234567890 [1]\n\t1234567890 [3][LOANED] [RESERVED]\n"} 
+2017-10-10 19:28:17,166 INFO BufferedLoggingWriter [Thread-5] SENT: 
+ 
+2017-10-10 19:28:17,166 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50636] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"1234567890, Test Book [Copies: 2]\n\t1234567890 [1]\n\t1234567890 [3][LOANED] [RESERVED]\n"} 
+2017-10-10 19:28:19,882 INFO BufferedLoggingWriter [Thread-9] [/127.0.0.1:50636] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"LOGOUT","USERNAME":"test1"} 
+2017-10-10 19:28:19,882 INFO BufferedLoggingWriter [Thread-9] SENT: 
+ 
+2017-10-10 19:28:19,882 INFO EventSourceImpl [Thread-5] [/127.0.0.1:5050] FROM: 127.0.0.1:50636 RECEIVED: {"MESSAGE":"LOGOUT","USERNAME":"test1"} 
+2017-10-10 19:28:19,883 INFO BufferedLoggingWriter [Thread-5] [/127.0.0.1:5050] TO: 127.0.0.1:50636 SENT: {"MESSAGE":"LOGOUT"} 
+2017-10-10 19:28:19,883 INFO BufferedLoggingWriter [Thread-5] SENT: 
+ 
+2017-10-10 19:28:19,883 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50636] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"LOGOUT"} 
+2017-10-10 19:28:19,894 FATAL ThreadWithReactor [Thread-5] IOException, closing connection. 
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.io.InputStreamReader.read(Unknown Source)
+	at java.io.BufferedReader.fill(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at com.comp4004.communication.EventSourceImpl.getEvent(EventSourceImpl.java:69)
+	at com.comp4004.communication.ThreadWithReactor.run(ThreadWithReactor.java:56)
+2017-10-10 19:28:19,894 INFO BufferedLoggingWriter [Thread-5] [/127.0.0.1:5050] TO: 127.0.0.1:50636 SENT: {"MESSAGE":"LOGOUT"} 
+2017-10-10 19:28:19,894 INFO BufferedLoggingWriter [Thread-5] SENT: 
+ 
+2017-10-10 19:28:19,895 FATAL Server [Thread-5] Something went wrong 
+java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(Unknown Source)
+	at java.net.SocketOutputStream.write(Unknown Source)
+	at sun.nio.cs.StreamEncoder.writeBytes(Unknown Source)
+	at sun.nio.cs.StreamEncoder.implFlushBuffer(Unknown Source)
+	at sun.nio.cs.StreamEncoder.implFlush(Unknown Source)
+	at sun.nio.cs.StreamEncoder.flush(Unknown Source)
+	at java.io.OutputStreamWriter.flush(Unknown Source)
+	at java.io.BufferedWriter.flush(Unknown Source)
+	at com.comp4004.communication.EventSourceImpl.write(EventSourceImpl.java:93)
+	at com.comp4004.server.Server$Logout.handleEvent(Server.java:183)
+	at com.comp4004.communication.Reactor.dispatch(Reactor.java:25)
+	at com.comp4004.communication.ThreadWithReactor.dispatch(ThreadWithReactor.java:92)
+	at com.comp4004.communication.ThreadWithReactor.quit(ThreadWithReactor.java:41)
+	at com.comp4004.communication.ThreadWithReactor.run(ThreadWithReactor.java:75)
+2017-10-10 19:28:25,332 INFO BufferedLoggingWriter [main] [/127.0.0.1:50647] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"LOGIN","PASSWORD":"pass2","USERNAME":"test2"} 
+2017-10-10 19:28:25,332 INFO BufferedLoggingWriter [main] SENT: 
+ 
+2017-10-10 19:28:25,333 INFO EventSourceImpl [Thread-6] [/127.0.0.1:5050] FROM: 127.0.0.1:50647 RECEIVED: {"MESSAGE":"LOGIN","PASSWORD":"pass2","USERNAME":"test2"} 
+2017-10-10 19:28:25,333 INFO BufferedLoggingWriter [Thread-6] [/127.0.0.1:5050] TO: 127.0.0.1:50647 SENT: {"MESSAGE":"CONNECT_PASS"} 
+2017-10-10 19:28:25,333 INFO BufferedLoggingWriter [Thread-6] SENT: 
+ 
+2017-10-10 19:28:25,333 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50647] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"CONNECT_PASS"} 
+2017-10-10 19:28:33,422 INFO BufferedLoggingWriter [Thread-1] [/127.0.0.1:50647] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"RENEW_LOAN","ISBN":1234567890,"COPYNUMBER":3,"USERNAME":"test2"} 
+2017-10-10 19:28:33,422 INFO BufferedLoggingWriter [Thread-1] SENT: 
+ 
+2017-10-10 19:28:33,422 INFO EventSourceImpl [Thread-6] [/127.0.0.1:5050] FROM: 127.0.0.1:50647 RECEIVED: {"MESSAGE":"RENEW_LOAN","ISBN":1234567890,"COPYNUMBER":3,"USERNAME":"test2"} 
+2017-10-10 19:28:33,423 INFO BufferedLoggingWriter [Thread-6] [/127.0.0.1:5050] TO: 127.0.0.1:50647 SENT: {"MESSAGE":"FAILED","FAIL_REASON":"Book is reserved."} 
+2017-10-10 19:28:33,423 INFO BufferedLoggingWriter [Thread-6] SENT: 
+ 
+2017-10-10 19:28:33,423 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50647] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"FAILED","FAIL_REASON":"Book is reserved."} 
+2017-10-10 19:28:46,145 INFO BufferedLoggingWriter [Thread-2] [/127.0.0.1:50647] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"RENEW_LOAN","ISBN":1234567890,"COPYNUMBER":3,"USERNAME":"test2"} 
+2017-10-10 19:28:46,145 INFO BufferedLoggingWriter [Thread-2] SENT: 
+ 
+2017-10-10 19:28:46,146 INFO EventSourceImpl [Thread-6] [/127.0.0.1:5050] FROM: 127.0.0.1:50647 RECEIVED: {"MESSAGE":"RENEW_LOAN","ISBN":1234567890,"COPYNUMBER":3,"USERNAME":"test2"} 
+2017-10-10 19:28:46,146 INFO BufferedLoggingWriter [Thread-6] [/127.0.0.1:5050] TO: 127.0.0.1:50647 SENT: {"MESSAGE":"FAILED","FAIL_REASON":"Book is reserved."} 
+2017-10-10 19:28:46,146 INFO BufferedLoggingWriter [Thread-6] SENT: 
+ 
+2017-10-10 19:28:46,147 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50647] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"FAILED","FAIL_REASON":"Book is reserved."} 
+2017-10-10 19:28:49,950 INFO BufferedLoggingWriter [Thread-3] [/127.0.0.1:50647] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"SEARCH_USER","USERNAME":"test2"} 
+2017-10-10 19:28:49,950 INFO BufferedLoggingWriter [Thread-3] SENT: 
+ 
+2017-10-10 19:28:49,950 INFO EventSourceImpl [Thread-6] [/127.0.0.1:5050] FROM: 127.0.0.1:50647 RECEIVED: {"MESSAGE":"SEARCH_USER","USERNAME":"test2"} 
+2017-10-10 19:28:49,951 INFO BufferedLoggingWriter [Thread-6] [/127.0.0.1:5050] TO: 127.0.0.1:50647 SENT: {"MESSAGE":"SUCCESS","REASON":"[2]: test2, pass2\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\t1234567890 [3] Date: 2017-10-10 07:25 User: 2 Renewed: 1\n"} 
+2017-10-10 19:28:49,951 INFO BufferedLoggingWriter [Thread-6] SENT: 
+ 
+2017-10-10 19:28:49,951 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50647] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"[2]: test2, pass2\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\t1234567890 [3] Date: 2017-10-10 07:25 User: 2 Renewed: 1\n"} 
+2017-10-10 19:29:03,827 INFO BufferedLoggingWriter [Thread-4] [/127.0.0.1:50647] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"BORROW","ISBN":1234567890,"COPYNUMBER":1,"USERNAME":"test2"} 
+2017-10-10 19:29:03,827 INFO BufferedLoggingWriter [Thread-4] SENT: 
+ 
+2017-10-10 19:29:03,828 INFO EventSourceImpl [Thread-6] [/127.0.0.1:5050] FROM: 127.0.0.1:50647 RECEIVED: {"MESSAGE":"BORROW","ISBN":1234567890,"COPYNUMBER":1,"USERNAME":"test2"} 
+2017-10-10 19:29:03,833 INFO BufferedLoggingWriter [Thread-6] [/127.0.0.1:5050] TO: 127.0.0.1:50647 SENT: {"MESSAGE":"SUCCESS","REASON":"Successfully borrowed copy 1 of book: 1234567890"} 
+2017-10-10 19:29:03,833 INFO BufferedLoggingWriter [Thread-6] SENT: 
+ 
+2017-10-10 19:29:03,834 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50647] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"Successfully borrowed copy 1 of book: 1234567890"} 
+2017-10-10 19:29:06,317 INFO BufferedLoggingWriter [Thread-5] [/127.0.0.1:50647] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"SEARCH_USER","USERNAME":"test2"} 
+2017-10-10 19:29:06,317 INFO BufferedLoggingWriter [Thread-5] SENT: 
+ 
+2017-10-10 19:29:06,317 INFO EventSourceImpl [Thread-6] [/127.0.0.1:5050] FROM: 127.0.0.1:50647 RECEIVED: {"MESSAGE":"SEARCH_USER","USERNAME":"test2"} 
+2017-10-10 19:29:06,318 INFO BufferedLoggingWriter [Thread-6] [/127.0.0.1:5050] TO: 127.0.0.1:50647 SENT: {"MESSAGE":"SUCCESS","REASON":"[2]: test2, pass2\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\t1234567890 [3] Date: 2017-10-10 07:25 User: 2 Renewed: 1\n\t\t1234567890 [1] Date: 2017-10-10 07:29 User: 2 Renewed: 0\n"} 
+2017-10-10 19:29:06,318 INFO BufferedLoggingWriter [Thread-6] SENT: 
+ 
+2017-10-10 19:29:06,318 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50647] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"[2]: test2, pass2\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\t1234567890 [3] Date: 2017-10-10 07:25 User: 2 Renewed: 1\n\t\t1234567890 [1] Date: 2017-10-10 07:29 User: 2 Renewed: 0\n"} 
+2017-10-10 19:29:16,156 INFO BufferedLoggingWriter [Thread-6] [/127.0.0.1:50647] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"RENEW_LOAN","ISBN":1234567890,"COPYNUMBER":1,"USERNAME":"test2"} 
+2017-10-10 19:29:16,156 INFO BufferedLoggingWriter [Thread-6] SENT: 
+ 
+2017-10-10 19:29:16,157 INFO EventSourceImpl [Thread-6] [/127.0.0.1:5050] FROM: 127.0.0.1:50647 RECEIVED: {"MESSAGE":"RENEW_LOAN","ISBN":1234567890,"COPYNUMBER":1,"USERNAME":"test2"} 
+2017-10-10 19:29:16,164 INFO BufferedLoggingWriter [Thread-6] [/127.0.0.1:5050] TO: 127.0.0.1:50647 SENT: {"MESSAGE":"SUCCESS","REASON":"Successfully renewed loan of copy 1 of book: 1234567890"} 
+2017-10-10 19:29:16,164 INFO BufferedLoggingWriter [Thread-6] SENT: 
+ 
+2017-10-10 19:29:16,164 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50647] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"Successfully renewed loan of copy 1 of book: 1234567890"} 
+2017-10-10 19:29:18,936 INFO BufferedLoggingWriter [Thread-7] [/127.0.0.1:50647] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"SEARCH_USER","USERNAME":"test2"} 
+2017-10-10 19:29:18,936 INFO BufferedLoggingWriter [Thread-7] SENT: 
+ 
+2017-10-10 19:29:18,936 INFO EventSourceImpl [Thread-6] [/127.0.0.1:5050] FROM: 127.0.0.1:50647 RECEIVED: {"MESSAGE":"SEARCH_USER","USERNAME":"test2"} 
+2017-10-10 19:29:18,937 INFO BufferedLoggingWriter [Thread-6] [/127.0.0.1:5050] TO: 127.0.0.1:50647 SENT: {"MESSAGE":"SUCCESS","REASON":"[2]: test2, pass2\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\t1234567890 [3] Date: 2017-10-10 07:25 User: 2 Renewed: 1\n\t\t1234567890 [1] Date: 2017-10-10 07:29 User: 2 Renewed: 1\n"} 
+2017-10-10 19:29:18,937 INFO BufferedLoggingWriter [Thread-6] SENT: 
+ 
+2017-10-10 19:29:18,937 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50647] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"[2]: test2, pass2\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\t1234567890 [3] Date: 2017-10-10 07:25 User: 2 Renewed: 1\n\t\t1234567890 [1] Date: 2017-10-10 07:29 User: 2 Renewed: 1\n"} 
+2017-10-10 19:29:25,943 INFO BufferedLoggingWriter [Thread-8] [/127.0.0.1:50647] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"RENEW_LOAN","ISBN":1234567890,"COPYNUMBER":1,"USERNAME":"test2"} 
+2017-10-10 19:29:25,944 INFO BufferedLoggingWriter [Thread-8] SENT: 
+ 
+2017-10-10 19:29:25,944 INFO EventSourceImpl [Thread-6] [/127.0.0.1:5050] FROM: 127.0.0.1:50647 RECEIVED: {"MESSAGE":"RENEW_LOAN","ISBN":1234567890,"COPYNUMBER":1,"USERNAME":"test2"} 
+2017-10-10 19:29:25,950 INFO BufferedLoggingWriter [Thread-6] [/127.0.0.1:5050] TO: 127.0.0.1:50647 SENT: {"MESSAGE":"SUCCESS","REASON":"Successfully renewed loan of copy 1 of book: 1234567890"} 
+2017-10-10 19:29:25,950 INFO BufferedLoggingWriter [Thread-6] SENT: 
+ 
+2017-10-10 19:29:25,950 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50647] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"Successfully renewed loan of copy 1 of book: 1234567890"} 
+2017-10-10 19:29:31,249 INFO BufferedLoggingWriter [Thread-9] [/127.0.0.1:50647] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"SEARCH_USER","USERNAME":"test2"} 
+2017-10-10 19:29:31,249 INFO BufferedLoggingWriter [Thread-9] SENT: 
+ 
+2017-10-10 19:29:31,250 INFO EventSourceImpl [Thread-6] [/127.0.0.1:5050] FROM: 127.0.0.1:50647 RECEIVED: {"MESSAGE":"SEARCH_USER","USERNAME":"test2"} 
+2017-10-10 19:29:31,250 INFO BufferedLoggingWriter [Thread-6] [/127.0.0.1:5050] TO: 127.0.0.1:50647 SENT: {"MESSAGE":"SUCCESS","REASON":"[2]: test2, pass2\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\t1234567890 [3] Date: 2017-10-10 07:25 User: 2 Renewed: 1\n\t\t1234567890 [1] Date: 2017-10-10 07:29 User: 2 Renewed: 2\n"} 
+2017-10-10 19:29:31,250 INFO BufferedLoggingWriter [Thread-6] SENT: 
+ 
+2017-10-10 19:29:31,250 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50647] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"[2]: test2, pass2\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\t1234567890 [3] Date: 2017-10-10 07:25 User: 2 Renewed: 1\n\t\t1234567890 [1] Date: 2017-10-10 07:29 User: 2 Renewed: 2\n"} 
+2017-10-10 19:29:55,746 INFO BufferedLoggingWriter [Thread-10] [/127.0.0.1:50647] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"RENEW_LOAN","ISBN":1234567890,"COPYNUMBER":1,"USERNAME":"test2"} 
+2017-10-10 19:29:55,746 INFO BufferedLoggingWriter [Thread-10] SENT: 
+ 
+2017-10-10 19:29:55,746 INFO EventSourceImpl [Thread-6] [/127.0.0.1:5050] FROM: 127.0.0.1:50647 RECEIVED: {"MESSAGE":"RENEW_LOAN","ISBN":1234567890,"COPYNUMBER":1,"USERNAME":"test2"} 
+2017-10-10 19:29:55,746 INFO BufferedLoggingWriter [Thread-6] [/127.0.0.1:5050] TO: 127.0.0.1:50647 SENT: {"MESSAGE":"FAILED","FAIL_REASON":"The max amount of renews for this book has been reached."} 
+2017-10-10 19:29:55,747 INFO BufferedLoggingWriter [Thread-6] SENT: 
+ 
+2017-10-10 19:29:55,747 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50647] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"FAILED","FAIL_REASON":"The max amount of renews for this book has been reached."} 
+2017-10-10 19:30:04,709 INFO BufferedLoggingWriter [Thread-11] [/127.0.0.1:50647] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"SEARCH_USER","USERNAME":"test2"} 
+2017-10-10 19:30:04,709 INFO BufferedLoggingWriter [Thread-11] SENT: 
+ 
+2017-10-10 19:30:04,709 INFO EventSourceImpl [Thread-6] [/127.0.0.1:5050] FROM: 127.0.0.1:50647 RECEIVED: {"MESSAGE":"SEARCH_USER","USERNAME":"test2"} 
+2017-10-10 19:30:04,710 INFO BufferedLoggingWriter [Thread-6] [/127.0.0.1:5050] TO: 127.0.0.1:50647 SENT: {"MESSAGE":"SUCCESS","REASON":"[2]: test2, pass2\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\t1234567890 [3] Date: 2017-10-10 07:25 User: 2 Renewed: 1\n\t\t1234567890 [1] Date: 2017-10-10 07:29 User: 2 Renewed: 2\n"} 
+2017-10-10 19:30:04,710 INFO BufferedLoggingWriter [Thread-6] SENT: 
+ 
+2017-10-10 19:30:04,710 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50647] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"[2]: test2, pass2\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\t1234567890 [3] Date: 2017-10-10 07:25 User: 2 Renewed: 1\n\t\t1234567890 [1] Date: 2017-10-10 07:29 User: 2 Renewed: 2\n"} 
+2017-10-10 19:30:15,422 INFO BufferedLoggingWriter [Thread-12] [/127.0.0.1:50647] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"RETURN_LOAN","ISBN":1234567890,"COPYNUMBER":1,"USERNAME":"test2"} 
+2017-10-10 19:30:15,422 INFO BufferedLoggingWriter [Thread-12] SENT: 
+ 
+2017-10-10 19:30:15,422 INFO EventSourceImpl [Thread-6] [/127.0.0.1:5050] FROM: 127.0.0.1:50647 RECEIVED: {"MESSAGE":"RETURN_LOAN","ISBN":1234567890,"COPYNUMBER":1,"USERNAME":"test2"} 
+2017-10-10 19:30:15,424 INFO BufferedLoggingWriter [Thread-6] [/127.0.0.1:5050] TO: 127.0.0.1:50647 SENT: {"MESSAGE":"SUCCESS","REASON":"Successfully returned copy 1 of book: 1234567890"} 
+2017-10-10 19:30:15,424 INFO BufferedLoggingWriter [Thread-6] SENT: 
+ 
+2017-10-10 19:30:15,425 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50647] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"Successfully returned copy 1 of book: 1234567890"} 
+2017-10-10 19:30:20,017 INFO BufferedLoggingWriter [Thread-13] [/127.0.0.1:50647] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"SEARCH_USER","USERNAME":"test2"} 
+2017-10-10 19:30:20,017 INFO BufferedLoggingWriter [Thread-13] SENT: 
+ 
+2017-10-10 19:30:20,017 INFO EventSourceImpl [Thread-6] [/127.0.0.1:5050] FROM: 127.0.0.1:50647 RECEIVED: {"MESSAGE":"SEARCH_USER","USERNAME":"test2"} 
+2017-10-10 19:30:20,017 INFO BufferedLoggingWriter [Thread-6] [/127.0.0.1:5050] TO: 127.0.0.1:50647 SENT: {"MESSAGE":"SUCCESS","REASON":"[2]: test2, pass2\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\t1234567890 [3] Date: 2017-10-10 07:25 User: 2 Renewed: 1\n"} 
+2017-10-10 19:30:20,017 INFO BufferedLoggingWriter [Thread-6] SENT: 
+ 
+2017-10-10 19:30:20,018 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50647] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"SUCCESS","REASON":"[2]: test2, pass2\n\tFees: 0\n\tReservations:\n\t\tUser has no reservations\n\tLoans:\n\t\t1234567890 [3] Date: 2017-10-10 07:25 User: 2 Renewed: 1\n"} 
+2017-10-10 19:30:23,829 INFO BufferedLoggingWriter [Thread-14] [/127.0.0.1:50647] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"LOGOUT","USERNAME":"test2"} 
+2017-10-10 19:30:23,829 INFO BufferedLoggingWriter [Thread-14] SENT: 
+ 
+2017-10-10 19:30:23,829 INFO EventSourceImpl [Thread-6] [/127.0.0.1:5050] FROM: 127.0.0.1:50647 RECEIVED: {"MESSAGE":"LOGOUT","USERNAME":"test2"} 
+2017-10-10 19:30:23,829 INFO BufferedLoggingWriter [Thread-6] [/127.0.0.1:5050] TO: 127.0.0.1:50647 SENT: {"MESSAGE":"LOGOUT"} 
+2017-10-10 19:30:23,829 INFO BufferedLoggingWriter [Thread-6] SENT: 
+ 
+2017-10-10 19:30:23,829 INFO EventSourceImpl [Thread-0] [/127.0.0.1:50647] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"LOGOUT"} 
+2017-10-10 19:30:23,845 FATAL ThreadWithReactor [Thread-6] IOException, closing connection. 
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.io.InputStreamReader.read(Unknown Source)
+	at java.io.BufferedReader.fill(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at com.comp4004.communication.EventSourceImpl.getEvent(EventSourceImpl.java:69)
+	at com.comp4004.communication.ThreadWithReactor.run(ThreadWithReactor.java:56)
+2017-10-10 19:30:23,845 INFO BufferedLoggingWriter [Thread-6] [/127.0.0.1:5050] TO: 127.0.0.1:50647 SENT: {"MESSAGE":"LOGOUT"} 
+2017-10-10 19:30:23,845 INFO BufferedLoggingWriter [Thread-6] SENT: 
+ 
+2017-10-10 19:30:23,845 FATAL Server [Thread-6] Something went wrong 
+java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(Unknown Source)
+	at java.net.SocketOutputStream.write(Unknown Source)
+	at sun.nio.cs.StreamEncoder.writeBytes(Unknown Source)
+	at sun.nio.cs.StreamEncoder.implFlushBuffer(Unknown Source)
+	at sun.nio.cs.StreamEncoder.implFlush(Unknown Source)
+	at sun.nio.cs.StreamEncoder.flush(Unknown Source)
+	at java.io.OutputStreamWriter.flush(Unknown Source)
+	at java.io.BufferedWriter.flush(Unknown Source)
+	at com.comp4004.communication.EventSourceImpl.write(EventSourceImpl.java:93)
+	at com.comp4004.server.Server$Logout.handleEvent(Server.java:183)
+	at com.comp4004.communication.Reactor.dispatch(Reactor.java:25)
+	at com.comp4004.communication.ThreadWithReactor.dispatch(ThreadWithReactor.java:92)
+	at com.comp4004.communication.ThreadWithReactor.quit(ThreadWithReactor.java:41)
+	at com.comp4004.communication.ThreadWithReactor.run(ThreadWithReactor.java:75)

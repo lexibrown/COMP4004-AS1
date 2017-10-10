@@ -1,0 +1,1 @@
+[{"isbn":1234567890,"title":"Test Book","copies":[{"isbn":1234567890,"copyNumber":1},{"isbn":1234567890,"copyNumber":3}]}]
