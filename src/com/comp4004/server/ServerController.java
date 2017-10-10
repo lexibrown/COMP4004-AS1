@@ -1,7 +1,9 @@
 package com.comp4004.server;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import com.comp4004.database.BookDatabase;
 import com.comp4004.database.LoanDatabase;
@@ -72,22 +74,25 @@ public class ServerController {
 		if (username == null || username.trim().isEmpty() || password == null || password.trim().isEmpty()) {
 			return false;
 		} else if (userDatabase.findUser(username) == null) {
-			// TODO userid
-			userDatabase.addUser(new User(0, username, password));
+			userDatabase.addUser(new User(userDatabase.getNextId(), username, password));
 			return true;
 		}
 		return false;
 	}
 
-	public synchronized boolean removeUser(String username) {
+	public synchronized ActionResult removeUser(String username) {
 		User u = userDatabase.findUser(username);
 		if (u != null) {
+			if (!u.hasPrivilege()) {
+				return ActionResult.NO_PRIVILEGE;
+			} else if (!loanDatabase.getLoans(u.getUserId()).isEmpty()) {
+				return ActionResult.HAS_LOANS;
+			}
 			userDatabase.deleteUser(username);
-			loanDatabase.deleteUserLoan(u.getUserId());
 			reservationDatabase.deleteUserReservation(u.getUserId());
-			return true;
+			return ActionResult.REMOVED_USER;
 		}
-		return false;
+		return ActionResult.NO_SUCH_USER;
 	}
 
 	public synchronized User searchUser(String username) {
@@ -104,25 +109,31 @@ public class ServerController {
 		return false;
 	}
 
-	public synchronized boolean removeBook(int iSBN) {
+	public synchronized ActionResult removeBook(int iSBN) {
 		if (bookDatabase.findBook(iSBN) != null) {
+			if (!loanDatabase.getLoans(iSBN).isEmpty()) {
+				return ActionResult.LOAN_EXISTS;
+			} else if (!reservationDatabase.getReservations(iSBN).isEmpty()) {
+				return ActionResult.RESERVATION_EXISTS;
+			}
 			bookDatabase.deleteBook(iSBN);
-			loanDatabase.deleteLoan(iSBN);
-			reservationDatabase.deleteReservation(iSBN);
-			return true;
+			return ActionResult.REMOVED_BOOK;
 		}
-		return false;
+		return ActionResult.NO_SUCH_BOOK;
 	}
 
-	public synchronized boolean removeBook(String title) {
+	public synchronized ActionResult removeBook(String title) {
 		Book b = bookDatabase.findBook(title);
 		if (b != null) {
-			bookDatabase.deleteBook(title);
-			loanDatabase.deleteLoan(b.getISBN());
-			reservationDatabase.deleteReservation(b.getISBN());
-			return true;
+			if (!loanDatabase.getLoans(b.getISBN()).isEmpty()) {
+				return ActionResult.LOAN_EXISTS;
+			} else if (!reservationDatabase.getReservations(b.getISBN()).isEmpty()) {
+				return ActionResult.RESERVATION_EXISTS;
+			}
+			bookDatabase.deleteBook(b.getISBN());
+			return ActionResult.REMOVED_BOOK;
 		}
-		return false;
+		return ActionResult.NO_SUCH_BOOK;
 	}
 
 	public synchronized Book searchBook(int iSBN) {
@@ -143,16 +154,21 @@ public class ServerController {
 		return false;
 	}
 
-	public synchronized boolean removeCopy(int iSBN, int copyNumber) {
+	public synchronized ActionResult removeCopy(int iSBN, int copyNumber) {
 		Book b = bookDatabase.findBook(iSBN);
-		if (b != null && b.getCopy(copyNumber) != null) {
-			b.deleteCopy(copyNumber);
-			bookDatabase.saveChanges(b);
-			loanDatabase.deleteLoan(iSBN, copyNumber);
-			reservationDatabase.deleteReservation(iSBN, copyNumber);
-			return true;
+		if (b == null) {
+			return ActionResult.NO_SUCH_BOOK;
+		} else if (b.getCopy(copyNumber) == null) {
+			return ActionResult.NO_SUCH_COPY;
+		} else if (loanDatabase.findLoan(iSBN, copyNumber) != null) {
+			return ActionResult.LOAN_EXISTS;
+		} else if (reservationDatabase.findReservation(iSBN, copyNumber) != null) {
+			return ActionResult.RESERVATION_EXISTS;
 		}
-		return false;
+
+		b.deleteCopy(copyNumber);
+		bookDatabase.saveChanges(b);
+		return ActionResult.REMOVED_COPY;
 	}
 
 	public synchronized ActionResult reserve(int iSBN, int copyNumber, String username) {
@@ -190,6 +206,11 @@ public class ServerController {
 			return false;
 		}
 		u.payFee(fee);
+
+		if (u.getFees() == 0 && !u.hasPrivilege()) {
+			u.unrevoke();
+		}
+
 		userDatabase.saveChanges(u);
 		return true;
 	}
@@ -210,19 +231,107 @@ public class ServerController {
 	}
 
 	public ActionResult borrow(String username, int iSBN, int copyNumber) {
-		// TODO
-		return null;
-	}
-	
-	public ActionResult renew(String username, int iSBN, int copyNumber) {
-		// TODO Auto-generated method stub
-		return null;
+		User u = userDatabase.findUser(username);
+		if (u == null) {
+			return ActionResult.NO_SUCH_USER;
+		}
+
+		Book b = bookDatabase.findBook(iSBN);
+		if (b == null) {
+			return ActionResult.NO_SUCH_BOOK;
+		} else if (b.getCopy(copyNumber) == null) {
+			return ActionResult.NO_SUCH_COPY;
+		} else if (!u.hasPrivilege()) {
+			return ActionResult.NO_PRIVILEGE;
+		} else if (loanDatabase.getLoans(u.getUserId()).size() >= Config.MAX_BORROWED_ITEMS) {
+			return ActionResult.MAX_LOAN;
+		} else if (loanDatabase.findLoan(iSBN, copyNumber) != null) {
+			return ActionResult.LOAN_EXISTS;
+		} else if (reservationDatabase.findReservation(iSBN, copyNumber) != null) {
+			if (reservationDatabase.findReservation(iSBN, copyNumber, u.getUserId()) != null) {
+				reservationDatabase.deleteReservation(iSBN, copyNumber);
+			} else {
+				return ActionResult.RESERVATION_EXISTS;
+			}
+		}
+
+		loanDatabase.addLoan(new Loan(u.getUserId(), iSBN, copyNumber, new Date()));
+		return ActionResult.BORROWED;
 	}
 
+	public ActionResult renew(String username, int iSBN, int copyNumber) {
+		User u = userDatabase.findUser(username);
+		if (u == null) {
+			return ActionResult.NO_SUCH_USER;
+		}
+
+		Book b = bookDatabase.findBook(iSBN);
+		if (b == null) {
+			return ActionResult.NO_SUCH_BOOK;
+		} else if (b.getCopy(copyNumber) == null) {
+			return ActionResult.NO_SUCH_COPY;
+		} else if (loanDatabase.findLoan(iSBN, copyNumber, u.getUserId()) == null) {
+			return ActionResult.NO_SUCH_LOAN;
+		} else if (!u.hasPrivilege()) {
+			return ActionResult.NO_PRIVILEGE;
+		} else if (loanDatabase.findLoan(iSBN, copyNumber, u.getUserId()).getRenewed() >= Config.MAX_RENEW_ITEMS) {
+			return ActionResult.MAX_RENEW;
+		} else if (reservationDatabase.findReservation(iSBN, copyNumber) != null) {
+			return ActionResult.RESERVATION_EXISTS;
+		}
+
+		Loan l = loanDatabase.findLoan(iSBN, copyNumber, u.getUserId());
+		l.renew();
+		l.updateDate(new Date());
+
+		loanDatabase.saveChanges(l);
+		return ActionResult.RENEWED;
+	}
 
 	public ActionResult returnLoan(String username, int iSBN, int copyNumber) {
-		// TODO Auto-generated method stub
-		return null;
+		return returnLoan(username, iSBN, copyNumber, new Date());
+	}
+
+	public ActionResult returnLoan(String username, int iSBN, int copyNumber, Date now) {
+		User u = userDatabase.findUser(username);
+		if (u == null) {
+			return ActionResult.NO_SUCH_USER;
+		}
+
+		Book b = bookDatabase.findBook(iSBN);
+		if (b == null) {
+			return ActionResult.NO_SUCH_BOOK;
+		} else if (b.getCopy(copyNumber) == null) {
+			return ActionResult.NO_SUCH_COPY;
+		} else if (loanDatabase.findLoan(iSBN, copyNumber, u.getUserId()) == null) {
+			return ActionResult.NO_SUCH_LOAN;
+		}
+
+		Date borrowed = loanDatabase.findLoan(iSBN, copyNumber, u.getUserId()).getDate();
+		long diff = now.getTime() - borrowed.getTime();
+
+		loanDatabase.deleteLoan(iSBN, copyNumber);
+
+		if (TimeUnit.DAYS.convert(diff, TimeUnit.DAYS) > Config.RETURN_DAY_LIMIT) {
+			u.addFee((int) (diff - Config.RETURN_DAY_LIMIT) * Config.OVERDUE_FEE);
+			if (TimeUnit.DAYS.convert(diff, TimeUnit.DAYS) > Config.RETURN_DAY_LIMIT + Config.OVERDUE) {
+				u.revokePrivilege();
+				userDatabase.saveChanges(u);
+				return ActionResult.PRIVILEGE_REVOKED;
+			}
+			userDatabase.saveChanges(u);
+			return ActionResult.FEE_ADDED;
+		}
+		return ActionResult.RETURNED;
+	}
+
+	public void revokePrivilege(String username) {
+		User u = userDatabase.findUser(username);
+		if (u == null) {
+			return;
+		}
+		u.revokePrivilege();
+		userDatabase.saveChanges(u);
 	}
 
 	public String userInfo(User u) {
@@ -230,7 +339,7 @@ public class ServerController {
 		user += "\tFees: " + u.getFees();
 
 		user += "\n\tReservations:";
-		List<Reservation> reservations = reservationDatabase.getReservations(u.getUserId());
+		List<Reservation> reservations = reservationDatabase.getUserReservations(u.getUserId());
 		if (reservations.isEmpty()) {
 			user += "\n\t\tUser has no reservations";
 		} else {

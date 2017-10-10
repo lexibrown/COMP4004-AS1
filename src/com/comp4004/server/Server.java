@@ -396,11 +396,11 @@ public class Server implements Runnable {
 
 				int ISBN = Integer.valueOf(event.get(MessageKey.ISBN).toString());
 				int copyNumber = Integer.valueOf(event.get(MessageKey.COPYNUMBER).toString());
-				
+
 				response.put(MessageKey.MESSAGE, MessageKey.FAILED);
 
 				ActionResult ar = controller.removeCopy(ISBN, copyNumber);
-				
+
 				switch (ar) {
 				case NO_SUCH_BOOK:
 					response.put(MessageKey.FAIL_REASON, "Book does not exist.");
@@ -736,6 +736,13 @@ public class Server implements Runnable {
 						response.put(MessageKey.MESSAGE, MessageKey.SUCCESS);
 						response.put(MessageKey.REASON, "Successfully returned copy " + copyNumber + " of book: " + ISBN
 								+ "but fee was applied because return was late.");
+						break;
+					case PRIVILEGE_REVOKED:
+						response.put(MessageKey.MESSAGE, MessageKey.SUCCESS);
+						response.put(MessageKey.REASON,
+								"Successfully returned copy " + copyNumber + " of book: " + ISBN
+										+ "but book has been overdue for more than " + Config.OVERDUE
+										+ " days. User privileges have been revoked.");
 						break;
 					case RETURNED:
 						response.put(MessageKey.MESSAGE, MessageKey.SUCCESS);

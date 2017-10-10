@@ -9,7 +9,9 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.comp4004.model.User;
 import com.comp4004.utils.Config;
@@ -17,10 +19,15 @@ import com.comp4004.utils.JsonUtil;
 
 public class UserDatabase {
 
+	private static final String USERS_STRING = "users";
+	private static final String ID_STRING = "nextId";
+	
 	private List<User> users = null; // list of all users
-
+	private int nextId = 0; // userID
+	
 	public UserDatabase() {
 		users = new ArrayList<User>();
+		nextId = 0;
 	}
 
 	/**
@@ -37,8 +44,11 @@ public class UserDatabase {
 		String content = new String(Files.readAllBytes(Paths.get(Config.DATABASE_USERS)), StandardCharsets.UTF_8);
 		if (content == null || content.isEmpty()) {
 			this.users = new ArrayList<User>();
+			this.nextId = 0;
 		} else {
-			this.users = (List<User>) JsonUtil.parseList(content, User.class);
+			Map<String, Object> items = JsonUtil.parse(content, Map.class);
+			this.users = (List<User>) items.get(USERS_STRING);
+			this.nextId = Integer.valueOf(items.get(ID_STRING).toString());
 		}
 	}
 
@@ -49,8 +59,12 @@ public class UserDatabase {
 		File file = new File(Config.DATABASE_USERS);
 		DataOutputStream outstream;
 		try {
+			Map<String, Object> items = new HashMap<String, Object>();
+			items.put(USERS_STRING, this.users);
+			items.put(ID_STRING, this.nextId);
+			
 			outstream = new DataOutputStream(new FileOutputStream(file, false));
-			String content = JsonUtil.stringify(this.users);
+			String content = JsonUtil.stringify(items);
 			outstream.write(content.getBytes());
 			outstream.close();
 		} catch (FileNotFoundException e) {
@@ -170,6 +184,11 @@ public class UserDatabase {
 				e.printStackTrace();
 			}
 		}
+	}
+
+	public int getNextId() {
+		nextId++;
+		return nextId;
 	}
 
 }

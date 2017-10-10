@@ -65,7 +65,7 @@ public class TestServer {
 		String password = "pass2";
 		assertTrue(c.createUser(username, password));
 
-		assertTrue(c.removeUser(username));
+		assertEquals(ActionResult.REMOVED_USER, c.removeUser(username));
 		assertNull(c.searchUser(username));
 	}
 
@@ -93,11 +93,11 @@ public class TestServer {
 		String title = "title2";
 		assertTrue(c.addBook(ISBN, title));
 
-		assertTrue(c.removeBook(ISBN));
+		assertEquals(ActionResult.REMOVED_BOOK, c.removeBook(ISBN));
 		assertNull(c.searchBook(ISBN));
 
 		assertTrue(c.addBook(ISBN, title));
-		assertTrue(c.removeBook(title));
+		assertEquals(ActionResult.REMOVED_BOOK, c.removeBook(title));
 		assertNull(c.searchBook(ISBN));
 	}
 
@@ -151,7 +151,7 @@ public class TestServer {
 		assertEquals(3, b.numCopies());
 		assertNotNull(b.getCopy(2));
 
-		assertTrue(c.removeCopy(ISBN, 2));
+		assertEquals(ActionResult.REMOVED_COPY, c.removeCopy(ISBN, 2));
 
 		b = c.searchBook(ISBN);
 		assertNotNull(b);

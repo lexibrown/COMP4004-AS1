@@ -12,6 +12,8 @@ public enum ActionResult {
 	NO_SUCH_LOAN,
 	
 	FEE_ADDED,
+	PRIVILEGE_REVOKED,
+	
 	NO_PRIVILEGE,
 	
 	MAX_RENEW,
