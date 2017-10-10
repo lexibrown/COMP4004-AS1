@@ -59,6 +59,11 @@ public class User implements Serializable {
 		this.fees += fee;
 	}
 
+	/**
+	 * Subtracts fee from user but doesn't allow fee value to go below zero
+	 * 
+	 * @param fee
+	 */
 	public void payFee(int fee) {
 		this.fees = this.fees - fee < 0 ? 0 : this.fees - fee;
 	}

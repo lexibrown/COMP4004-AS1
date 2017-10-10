@@ -23,17 +23,30 @@ public class ClientController {
 		this.client = c;
 	}
 
+	/**
+	 * Display disconnect message and exit program
+	 */
 	public void disconnected() {
 		System.out.println("Disconnected from the server. Shuting down.");
 		System.exit(0);
 	}
 
+	/**
+	 * Display logout message and exit program
+	 */
 	public void loggedout() {
 		System.out.println("Successfully logged out.");
 		System.out.println("Shutting down.");
 		System.exit(0);
 	}
 
+	/**
+	 * Display login results. Go to menu if login is successful
+	 * 
+	 * @param result
+	 * @param message
+	 * @param admin
+	 */
 	public void loginResult(boolean result, String message, boolean admin) {
 		if (result) {
 			this.admin = admin;
@@ -45,16 +58,29 @@ public class ClientController {
 		}
 	}
 
+	/**
+	 * Display success message
+	 * 
+	 * @param message
+	 */
 	public void success(String message) {
 		System.out.println(message);
 		listen();
 	}
 
+	/**
+	 * Display fail message
+	 * 
+	 * @param message
+	 */
 	public void failed(String message) {
 		System.err.println(message);
 		listen();
 	}
 
+	/**
+	 * Ask for clients username and password to login
+	 */
 	public void start() {
 		System.out.println();
 		System.out.println("Welcome to Library Terminal. Please enter your username and password.");
@@ -77,6 +103,9 @@ public class ClientController {
 		}
 	}
 
+	/**
+	 * Listen for main menu input
+	 */
 	public void listen() {
 		thread = new Thread(new Runnable() {
 			public void run() {
@@ -127,16 +156,16 @@ public class ClientController {
 								client.searchUser(username);
 								return;
 							} else if ("CREATE USER".equalsIgnoreCase(answer)) {
-									System.out.println();
-									System.out.print("Enter username: ");
-									String username = c.readLine();
+								System.out.println();
+								System.out.print("Enter username: ");
+								String username = c.readLine();
 
-									System.out.println();
-									System.out.print("Enter users password: ");
-									String password = c.readLine();
+								System.out.println();
+								System.out.print("Enter users password: ");
+								String password = c.readLine();
 
-									client.createUser(username, password);
-									return;
+								client.createUser(username, password);
+								return;
 							} else if ("REMOVE USER".equalsIgnoreCase(answer)) {
 								System.out.println();
 								System.out.print("Enter username: ");
@@ -188,7 +217,7 @@ public class ClientController {
 								System.out.println();
 								System.out.print("Enter username: ");
 								String username = c.readLine();
-								
+
 								System.out.println();
 								System.out.print("Enter amount to pay: ");
 								int fee = Integer.parseInt(c.readLine());

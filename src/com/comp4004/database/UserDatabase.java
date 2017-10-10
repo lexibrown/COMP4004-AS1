@@ -17,12 +17,17 @@ import com.comp4004.utils.JsonUtil;
 
 public class UserDatabase {
 
-	private List<User> users = null;
+	private List<User> users = null; // list of all users
 
 	public UserDatabase() {
 		users = new ArrayList<User>();
 	}
 
+	/**
+	 * Load users from file database
+	 * 
+	 * @throws IOException
+	 */
 	@SuppressWarnings("unchecked")
 	public void loadUsers() throws IOException {
 		File f = new File(Config.DATABASE_USERS);
@@ -37,6 +42,9 @@ public class UserDatabase {
 		}
 	}
 
+	/**
+	 * Save current list of users to file
+	 */
 	private void saveChanges() {
 		File file = new File(Config.DATABASE_USERS);
 		DataOutputStream outstream;
@@ -53,7 +61,12 @@ public class UserDatabase {
 			e.printStackTrace();
 		}
 	}
-	
+
+	/**
+	 * Update inputed user in list and update database file
+	 * 
+	 * @param user
+	 */
 	public void saveChanges(User user) {
 		for (int i = 0; i < this.users.size(); i++) {
 			User u = this.users.get(i);
@@ -65,15 +78,30 @@ public class UserDatabase {
 		}
 	}
 
+	/**
+	 * Returns all users
+	 * 
+	 * @return
+	 */
 	public List<User> getUsers() {
 		return users;
 	}
 
+	/**
+	 * Adds user and saves changes
+	 * 
+	 * @param u
+	 */
 	public void addUser(User u) {
 		this.users.add(u);
 		saveChanges();
 	}
 
+	/**
+	 * Deletes user with username
+	 * 
+	 * @param username
+	 */
 	public void deleteUser(String username) {
 		for (User u : this.users) {
 			if (username.equals(u.getUsername())) {
@@ -84,6 +112,11 @@ public class UserDatabase {
 		}
 	}
 
+	/**
+	 * Deletes user with userId
+	 * 
+	 * @param userId
+	 */
 	public void deleteUser(int userId) {
 		for (User u : this.users) {
 			if (userId == u.getUserId()) {
@@ -94,6 +127,12 @@ public class UserDatabase {
 		}
 	}
 
+	/**
+	 * Finds user by username
+	 * 
+	 * @param username
+	 * @return
+	 */
 	public User findUser(String username) {
 		for (User u : this.users) {
 			if (username.equals(u.getUsername())) {
@@ -102,7 +141,13 @@ public class UserDatabase {
 		}
 		return null;
 	}
-	
+
+	/**
+	 * Finds user by userId
+	 * 
+	 * @param userId
+	 * @return
+	 */
 	public User findUser(int userId) {
 		for (User u : this.users) {
 			if (userId == u.getUserId()) {
@@ -111,7 +156,10 @@ public class UserDatabase {
 		}
 		return null;
 	}
-	
+
+	/**
+	 * Clear database
+	 */
 	public void flush() {
 		File f = new File(Config.DATABASE_USERS);
 		if (f.exists()) {

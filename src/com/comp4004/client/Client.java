@@ -21,14 +21,14 @@ public class Client {
 
 	protected static final Logger log = LogManager.getLogger(Client.class);
 
-	private String username;
+	private String username; // clients username
 
 	private Socket socket;
 	protected Reactor clientReactor;
 	private ThreadWithReactor twr;
 	protected EventSource source;
 
-	private ClientController controller;
+	private ClientController controller; // client controller
 
 	@SuppressWarnings("unused")
 	private Client() {
@@ -39,11 +39,19 @@ public class Client {
 		this.controller = controller;
 		clientReactor = new Reactor();
 	}
-	
+
+	/**
+	 * Return the clients username
+	 * 
+	 * @return client username
+	 */
 	public String getUsername() {
 		return this.username;
 	}
 
+	/**
+	 * Connects to the library server
+	 */
 	public void connectToServer() {
 		System.out.println("Connecting to Server...");
 		try {
@@ -59,6 +67,10 @@ public class Client {
 		}
 	}
 
+	/**
+	 * Disconnects for the library server and stops all working threads and
+	 * listeners
+	 */
 	public void disconnnectFromServer() {
 		if (twr.isRunning()) {
 			twr.quit();
@@ -69,6 +81,11 @@ public class Client {
 		source = null;
 	}
 
+	/**
+	 * Sets up valid messages to listen for
+	 * 
+	 * @param source
+	 */
 	public void setUp(EventSource source) {
 		try {
 			twr = new ThreadWithReactor(source, clientReactor);
@@ -88,6 +105,9 @@ public class Client {
 		}
 	}
 
+	/**
+	 * Handles logic when server logs client out
+	 */
 	private class LoggedOut implements EventHandler {
 		public void handleEvent(Event event) {
 			try {
@@ -100,6 +120,10 @@ public class Client {
 		}
 	}
 
+	/**
+	 * Informs the controller of a successful login and whether the user is an
+	 * admin
+	 */
 	private class Connected implements EventHandler {
 		public void handleEvent(Event event) {
 			try {
@@ -110,6 +134,9 @@ public class Client {
 		}
 	}
 
+	/**
+	 * Informs the controller of an unsuccessful login and provides reason
+	 */
 	private class ConnectFailed implements EventHandler {
 		public void handleEvent(Event event) {
 			try {
@@ -120,6 +147,9 @@ public class Client {
 		}
 	}
 
+	/**
+	 * Handles positive responses
+	 */
 	private class SuccessResponse implements EventHandler {
 		public void handleEvent(Event event) {
 			try {
@@ -130,6 +160,9 @@ public class Client {
 		}
 	}
 
+	/**
+	 * Handles negative responses
+	 */
 	private class FailedResponse implements EventHandler {
 		public void handleEvent(Event event) {
 			try {
@@ -140,6 +173,12 @@ public class Client {
 		}
 	}
 
+	/**
+	 * Sends login request with username and password
+	 * 
+	 * @param username
+	 * @param password
+	 */
 	public void login(String username, String password) {
 		try {
 			Map<String, Object> message = new HashMap<String, Object>();
@@ -154,6 +193,9 @@ public class Client {
 		}
 	}
 
+	/**
+	 * Sends logout request
+	 */
 	public void logout() {
 		try {
 			Map<String, Object> message = new HashMap<String, Object>();
@@ -166,6 +208,11 @@ public class Client {
 		}
 	}
 
+	/**
+	 * Sends search user request
+	 * 
+	 * @param username
+	 */
 	public void searchUser(String username) {
 		try {
 			Map<String, Object> message = new HashMap<String, Object>();
@@ -178,6 +225,12 @@ public class Client {
 		}
 	}
 
+	/**
+	 * Send create user request with all required information
+	 * 
+	 * @param username
+	 * @param password
+	 */
 	public void createUser(String username, String password) {
 		try {
 			Map<String, Object> message = new HashMap<String, Object>();
@@ -191,6 +244,11 @@ public class Client {
 		}
 	}
 
+	/**
+	 * Sends remove user request with username of user to remove
+	 * 
+	 * @param username
+	 */
 	public void removeUser(String username) {
 		try {
 			Map<String, Object> message = new HashMap<String, Object>();
@@ -203,6 +261,12 @@ public class Client {
 		}
 	}
 
+	/**
+	 * Sends add book request with all required information
+	 * 
+	 * @param ISBN
+	 * @param title
+	 */
 	public void addBook(int ISBN, String title) {
 		try {
 			Map<String, Object> message = new HashMap<String, Object>();
@@ -216,6 +280,11 @@ public class Client {
 		}
 	}
 
+	/**
+	 * Sends remove book by title request
+	 * 
+	 * @param title
+	 */
 	public void removeBook(String title) {
 		try {
 			Map<String, Object> message = new HashMap<String, Object>();
@@ -228,6 +297,11 @@ public class Client {
 		}
 	}
 
+	/**
+	 * Sends remove book by ISBN request
+	 * 
+	 * @param ISBN
+	 */
 	public void removeBook(int ISBN) {
 		try {
 			Map<String, Object> message = new HashMap<String, Object>();
@@ -240,6 +314,11 @@ public class Client {
 		}
 	}
 
+	/**
+	 * Sends add book copy request
+	 * 
+	 * @param ISBN
+	 */
 	public void addCopy(int ISBN) {
 		try {
 			Map<String, Object> message = new HashMap<String, Object>();
@@ -252,6 +331,12 @@ public class Client {
 		}
 	}
 
+	/**
+	 * Sends remove book copy request
+	 * 
+	 * @param ISBN
+	 * @param copyNumber
+	 */
 	public void removeCopy(int ISBN, int copyNumber) {
 		try {
 			Map<String, Object> message = new HashMap<String, Object>();
@@ -265,6 +350,11 @@ public class Client {
 		}
 	}
 
+	/**
+	 * Sends search book by ISBN request
+	 * 
+	 * @param ISBN
+	 */
 	public void searchBook(int ISBN) {
 		try {
 			Map<String, Object> message = new HashMap<String, Object>();
@@ -277,6 +367,11 @@ public class Client {
 		}
 	}
 
+	/**
+	 * Sends search book by title request
+	 * 
+	 * @param title
+	 */
 	public void searchBook(String title) {
 		try {
 			Map<String, Object> message = new HashMap<String, Object>();
@@ -289,6 +384,12 @@ public class Client {
 		}
 	}
 
+	/**
+	 * Sends borrow book request
+	 * 
+	 * @param ISBN
+	 * @param copyNumber
+	 */
 	public void borrow(int ISBN, int copyNumber) {
 		try {
 			Map<String, Object> message = new HashMap<String, Object>();
@@ -303,6 +404,12 @@ public class Client {
 		}
 	}
 
+	/**
+	 * Sends makes reservation request
+	 * 
+	 * @param ISBN
+	 * @param copyNumber
+	 */
 	public void makeReservation(int ISBN, int copyNumber) {
 		try {
 			Map<String, Object> message = new HashMap<String, Object>();
@@ -317,6 +424,12 @@ public class Client {
 		}
 	}
 
+	/**
+	 * Sends remove reservation request
+	 * 
+	 * @param ISBN
+	 * @param copyNumber
+	 */
 	public void removeReservation(int ISBN, int copyNumber) {
 		try {
 			Map<String, Object> message = new HashMap<String, Object>();
@@ -331,6 +444,12 @@ public class Client {
 		}
 	}
 
+	/**
+	 * Sends renew loan request
+	 * 
+	 * @param ISBN
+	 * @param copyNumber
+	 */
 	public void renewLoan(int ISBN, int copyNumber) {
 		try {
 			Map<String, Object> message = new HashMap<String, Object>();
@@ -345,6 +464,12 @@ public class Client {
 		}
 	}
 
+	/**
+	 * Sends return loan request
+	 * 
+	 * @param ISBN
+	 * @param copyNumber
+	 */
 	public void returnLoan(int ISBN, int copyNumber) {
 		try {
 			Map<String, Object> message = new HashMap<String, Object>();
@@ -359,6 +484,9 @@ public class Client {
 		}
 	}
 
+	/**
+	 * Sends request for all library information
+	 */
 	public void monitorSystem() {
 		try {
 			Map<String, Object> message = new HashMap<String, Object>();
@@ -369,13 +497,19 @@ public class Client {
 		}
 	}
 
+	/**
+	 * Sends request to update user fees
+	 * 
+	 * @param username
+	 * @param fee
+	 */
 	public void collectFine(String username, int fee) {
 		try {
 			Map<String, Object> message = new HashMap<String, Object>();
 			message.put(MessageKey.MESSAGE, MessageKey.COLLECT_FINE);
 			message.put(MessageKey.USERNAME, username);
 			message.put(MessageKey.FEE, fee);
-			
+
 			source.write(JsonUtil.stringify(message));
 		} catch (Exception e) {
 			log.fatal("Something went wrong", e);

@@ -18,12 +18,17 @@ import com.comp4004.utils.JsonUtil;
 
 public class LoanDatabase {
 
-	private List<Loan> loans = null;
+	private List<Loan> loans = null; // list of all loans
 
 	public LoanDatabase() {
 		loans = new ArrayList<Loan>();
 	}
 
+	/**
+	 * Loads loans from file database
+	 * 
+	 * @throws IOException
+	 */
 	@SuppressWarnings("unchecked")
 	public void loadLoans() throws IOException {
 		File f = new File(Config.DATABASE_LOANS);
@@ -38,6 +43,9 @@ public class LoanDatabase {
 		}
 	}
 
+	/**
+	 * Save current list of loans to file
+	 */
 	private void saveChanges() {
 		File file = new File(Config.DATABASE_LOANS);
 		DataOutputStream outstream;
@@ -55,6 +63,11 @@ public class LoanDatabase {
 		}
 	}
 
+	/**
+	 * Update inputed loan in list and update database file
+	 * 
+	 * @param loan
+	 */
 	public void saveChanges(Loan loan) {
 		for (int i = 0; i < this.loans.size(); i++) {
 			Loan l = this.loans.get(i);
@@ -66,10 +79,21 @@ public class LoanDatabase {
 		}
 	}
 
+	/**
+	 * Returns all loans
+	 * 
+	 * @return
+	 */
 	public List<Loan> getLoans() {
 		return loans;
 	}
 
+	/**
+	 * Returns all loans owned by user
+	 * 
+	 * @param userId
+	 * @return
+	 */
 	public List<Loan> getLoans(int userId) {
 		List<Loan> userLoans = new ArrayList<Loan>();
 		for (Loan l : this.loans) {
@@ -80,11 +104,22 @@ public class LoanDatabase {
 		return userLoans;
 	}
 
+	/**
+	 * Adds loan to list and save changes
+	 * 
+	 * @param l
+	 */
 	public void addLoan(Loan l) {
 		this.loans.add(l);
 		saveChanges();
 	}
 
+	/**
+	 * Deletes loan
+	 * 
+	 * @param ISBN
+	 * @param copyNumber
+	 */
 	public void deleteLoan(int ISBN, int copyNumber) {
 		for (Loan l : this.loans) {
 			if (l.getISBN() == ISBN && l.getCopyNumber() == copyNumber) {
@@ -95,26 +130,43 @@ public class LoanDatabase {
 		}
 	}
 
+	/**
+	 * Deletes all loans with inputed ISBN
+	 * 
+	 * @param ISBN
+	 */
 	public void deleteLoan(int ISBN) {
 		for (Iterator<Loan> iterator = this.loans.iterator(); iterator.hasNext();) {
 			Loan l = iterator.next();
 			if (ISBN == l.getISBN()) {
-		        iterator.remove();
-		    }
-		}
-		saveChanges();
-	}
-	
-	public void deleteUserLoan(int userId) {
-		for (Iterator<Loan> iterator = this.loans.iterator(); iterator.hasNext();) {
-			Loan l = iterator.next();
-		    if (userId == l.getUserId()) {
-		        iterator.remove();
-		    }
+				iterator.remove();
+			}
 		}
 		saveChanges();
 	}
 
+	/**
+	 * Deletes all loans with inputed userId
+	 * 
+	 * @param userId
+	 */
+	public void deleteUserLoan(int userId) {
+		for (Iterator<Loan> iterator = this.loans.iterator(); iterator.hasNext();) {
+			Loan l = iterator.next();
+			if (userId == l.getUserId()) {
+				iterator.remove();
+			}
+		}
+		saveChanges();
+	}
+
+	/**
+	 * Finds loan and returns it
+	 * 
+	 * @param ISBN
+	 * @param copyNumber
+	 * @return
+	 */
 	public Loan findLoan(int ISBN, int copyNumber) {
 		for (Loan l : this.loans) {
 			if (l.getISBN() == ISBN && l.getCopyNumber() == copyNumber) {
@@ -123,7 +175,15 @@ public class LoanDatabase {
 		}
 		return null;
 	}
-	
+
+	/**
+	 * Finds loan and returns it
+	 * 
+	 * @param ISBN
+	 * @param copyNumber
+	 * @param userId
+	 * @return
+	 */
 	public Loan findLoan(int ISBN, int copyNumber, int userId) {
 		for (Loan l : this.loans) {
 			if (l.getISBN() == ISBN && l.getCopyNumber() == copyNumber && l.getUserId() == userId) {
@@ -133,6 +193,9 @@ public class LoanDatabase {
 		return null;
 	}
 
+	/**
+	 * Clears database
+	 */
 	public void flush() {
 		File f = new File(Config.DATABASE_LOANS);
 		if (f.exists()) {

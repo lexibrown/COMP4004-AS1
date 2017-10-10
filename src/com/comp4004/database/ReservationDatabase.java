@@ -18,12 +18,17 @@ import com.comp4004.utils.JsonUtil;
 
 public class ReservationDatabase {
 
-	private List<Reservation> reservations = null;
+	private List<Reservation> reservations = null; // list of all reservations
 
 	public ReservationDatabase() {
 		reservations = new ArrayList<Reservation>();
 	}
 
+	/**
+	 * Load reservations from file database
+	 * 
+	 * @throws IOException
+	 */
 	@SuppressWarnings("unchecked")
 	public void loadReservations() throws IOException {
 		File f = new File(Config.DATABASE_RESERVE);
@@ -38,6 +43,9 @@ public class ReservationDatabase {
 		}
 	}
 
+	/**
+	 * Save current list of reservations to file
+	 */
 	private void saveChanges() {
 		File file = new File(Config.DATABASE_RESERVE);
 		DataOutputStream outstream;
@@ -55,6 +63,11 @@ public class ReservationDatabase {
 		}
 	}
 
+	/**
+	 * Update inputed reservation in list and update database file
+	 * 
+	 * @param reservation
+	 */
 	public void saveChanges(Reservation reservation) {
 		for (int i = 0; i < this.reservations.size(); i++) {
 			Reservation r = this.reservations.get(i);
@@ -67,10 +80,21 @@ public class ReservationDatabase {
 		}
 	}
 
+	/**
+	 * Returns all reservations
+	 * 
+	 * @return
+	 */
 	public List<Reservation> getReservations() {
 		return reservations;
 	}
 
+	/**
+	 * Returns all reservations owned by user
+	 * 
+	 * @param userId
+	 * @return
+	 */
 	public List<Reservation> getReservations(int userId) {
 		List<Reservation> userReservations = new ArrayList<Reservation>();
 		for (Reservation r : this.reservations) {
@@ -81,11 +105,22 @@ public class ReservationDatabase {
 		return userReservations;
 	}
 
+	/**
+	 * Adds reservation and save changes
+	 * 
+	 * @param r
+	 */
 	public void addReservation(Reservation r) {
 		this.reservations.add(r);
 		saveChanges();
 	}
 
+	/**
+	 * Deletes reservation
+	 * 
+	 * @param ISBN
+	 * @param copyNumber
+	 */
 	public void deleteReservation(int ISBN, int copyNumber) {
 		for (Reservation r : this.reservations) {
 			if (r.getISBN() == ISBN && r.getCopyNumber() == copyNumber) {
@@ -96,26 +131,43 @@ public class ReservationDatabase {
 		}
 	}
 
+	/**
+	 * Deletes all reservations with book ISBN
+	 * 
+	 * @param ISBN
+	 */
 	public void deleteReservation(int ISBN) {
 		for (Iterator<Reservation> iterator = this.reservations.iterator(); iterator.hasNext();) {
 			Reservation r = iterator.next();
 			if (ISBN == r.getISBN()) {
-		        iterator.remove();
-		    }
-		}
-		saveChanges();
-	}
-	
-	public void deleteUserReservation(int userId) {
-		for (Iterator<Reservation> iterator = this.reservations.iterator(); iterator.hasNext();) {
-			Reservation r = iterator.next();
-			if (userId == r.getUserId()) {
-		        iterator.remove();
-		    }
+				iterator.remove();
+			}
 		}
 		saveChanges();
 	}
 
+	/**
+	 * Deletes all reservations with userId
+	 * 
+	 * @param userId
+	 */
+	public void deleteUserReservation(int userId) {
+		for (Iterator<Reservation> iterator = this.reservations.iterator(); iterator.hasNext();) {
+			Reservation r = iterator.next();
+			if (userId == r.getUserId()) {
+				iterator.remove();
+			}
+		}
+		saveChanges();
+	}
+
+	/**
+	 * Finds and returns reservation
+	 * 
+	 * @param ISBN
+	 * @param copyNumber
+	 * @return
+	 */
 	public Reservation findReservation(int ISBN, int copyNumber) {
 		for (Reservation r : this.reservations) {
 			if (r.getISBN() == ISBN && r.getCopyNumber() == copyNumber) {
@@ -125,6 +177,14 @@ public class ReservationDatabase {
 		return null;
 	}
 
+	/**
+	 * Finds and returns reservation
+	 * 
+	 * @param ISBN
+	 * @param copyNumber
+	 * @param userId
+	 * @return
+	 */
 	public Reservation findReservation(int ISBN, int copyNumber, int userId) {
 		for (Reservation r : this.reservations) {
 			if (r.getISBN() == ISBN && r.getCopyNumber() == copyNumber && r.getUserId() == userId) {
@@ -134,6 +194,9 @@ public class ReservationDatabase {
 		return null;
 	}
 
+	/**
+	 * Clears database
+	 */
 	public void flush() {
 		File f = new File(Config.DATABASE_RESERVE);
 		if (f.exists()) {

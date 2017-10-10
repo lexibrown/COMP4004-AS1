@@ -37,6 +37,12 @@ public class Book implements Serializable {
 		return this.copies;
 	}
 
+	/**
+	 * Get copy with copy number
+	 * 
+	 * @param copyNumber
+	 * @return
+	 */
 	public Copy getCopy(int copyNumber) {
 		for (Copy c : this.copies) {
 			if (c.getCopyNumber() == copyNumber) {
@@ -50,7 +56,12 @@ public class Book implements Serializable {
 		return this.copies.size();
 	}
 
-	public void addCopy(Copy c) {		
+	/**
+	 * Add copy to book and fill in any holes in copy list
+	 * 
+	 * @param c
+	 */
+	public void addCopy(Copy c) {
 		int n = 1;
 		for (int i = 0; i < this.numCopies(); i++) {
 			if (this.copies.get(i).getCopyNumber() != n) {
@@ -58,10 +69,10 @@ public class Book implements Serializable {
 			}
 			n++;
 		}
-		
+
 		c.setISBN(this.getISBN());
 		c.setCopyNumber(n);
-		
+
 		this.copies.add(c);
 		Collections.sort(this.copies, new Comparator<Copy>() {
 			public int compare(Copy c1, Copy c2) {

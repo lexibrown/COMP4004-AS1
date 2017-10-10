@@ -17,12 +17,17 @@ import com.comp4004.utils.JsonUtil;
 
 public class BookDatabase {
 
-	private List<Book> books = null;
+	private List<Book> books = null; // array of all library books
 
 	public BookDatabase() {
 		books = new ArrayList<Book>();
 	}
 
+	/**
+	 * Load books from file database
+	 * 
+	 * @throws IOException
+	 */
 	@SuppressWarnings("unchecked")
 	public void loadBooks() throws IOException {
 		File f = new File(Config.DATABASE_BOOKS);
@@ -37,6 +42,9 @@ public class BookDatabase {
 		}
 	}
 
+	/**
+	 * Save current list of books to file
+	 */
 	private void saveChanges() {
 		File file = new File(Config.DATABASE_BOOKS);
 		DataOutputStream outstream;
@@ -54,6 +62,11 @@ public class BookDatabase {
 		}
 	}
 
+	/**
+	 * Update inputed book in list and update database file
+	 * 
+	 * @param book
+	 */
 	public void saveChanges(Book book) {
 		for (int i = 0; i < this.books.size(); i++) {
 			Book b = this.books.get(i);
@@ -65,15 +78,30 @@ public class BookDatabase {
 		}
 	}
 
+	/**
+	 * Returns all books
+	 * 
+	 * @return
+	 */
 	public List<Book> getBooks() {
 		return books;
 	}
 
+	/**
+	 * Adds book to list and saves changes
+	 * 
+	 * @param b
+	 */
 	public void addBook(Book b) {
 		this.books.add(b);
 		saveChanges();
 	}
 
+	/**
+	 * Finds book by ISBN and deletes it
+	 * 
+	 * @param ISBN
+	 */
 	public void deleteBook(int ISBN) {
 		for (Book b : this.books) {
 			if (ISBN == b.getISBN()) {
@@ -84,6 +112,11 @@ public class BookDatabase {
 		}
 	}
 
+	/**
+	 * Finds book by title and deletes it
+	 * 
+	 * @param title
+	 */
 	public void deleteBook(String title) {
 		for (Book b : this.books) {
 			if (title.equals(b.getTitle())) {
@@ -94,6 +127,12 @@ public class BookDatabase {
 		}
 	}
 
+	/**
+	 * Finds book by ISBN and returns it
+	 * 
+	 * @param ISBN
+	 * @return
+	 */
 	public Book findBook(int ISBN) {
 		for (Book b : this.books) {
 			if (ISBN == b.getISBN()) {
@@ -103,6 +142,12 @@ public class BookDatabase {
 		return null;
 	}
 
+	/**
+	 * Finds book by title and returns it
+	 * 
+	 * @param title
+	 * @return
+	 */
 	public Book findBook(String title) {
 		for (Book b : this.books) {
 			if (title.equalsIgnoreCase(b.getTitle())) {
@@ -112,6 +157,9 @@ public class BookDatabase {
 		return null;
 	}
 
+	/**
+	 * Clears database
+	 */
 	public void flush() {
 		File f = new File(Config.DATABASE_BOOKS);
 		if (f.exists()) {
