@@ -170,7 +170,6 @@ public class TestRenewStories {
 		String password = "testRenewNegative5Password";
 
 		assertTrue(c.createUser(username, password));
-		c.revokePrivilege(username);
 
 		int ISBN = 1005;
 		String title = "testRenewNegative5";
@@ -182,6 +181,9 @@ public class TestRenewStories {
 		assertNotNull(b.getCopy(1));
 
 		assertEquals(ActionResult.BORROWED, c.borrow(username, ISBN, 1));
+		c.revokePrivilege(username); // assuming user borrowed another book,
+										// returned it late and lost privileges
+
 		assertEquals(ActionResult.NO_PRIVILEGE, c.renew(username, ISBN, 1));
 	}
 

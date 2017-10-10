@@ -77,7 +77,7 @@ public class TestCopyStories {
 		assertNotNull(b);
 		assertNotNull(b.getCopy(1));
 
-		assertEquals(ActionResult.REMOVED_COPY, c.removeCopy(ISBN, 2));
+		assertEquals(ActionResult.REMOVED_COPY, c.removeCopy(ISBN, 1));
 		b = c.searchBook(ISBN);
 		assertNotNull(b);
 		assertNull(b.getCopy(1));

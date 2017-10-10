@@ -85,7 +85,7 @@ public class ServerController {
 		if (u != null) {
 			if (!u.hasPrivilege()) {
 				return ActionResult.NO_PRIVILEGE;
-			} else if (!loanDatabase.getLoans(u.getUserId()).isEmpty()) {
+			} else if (!loanDatabase.getUserLoans(u.getUserId()).isEmpty()) {
 				return ActionResult.HAS_LOANS;
 			}
 			userDatabase.deleteUser(username);
@@ -243,7 +243,7 @@ public class ServerController {
 			return ActionResult.NO_SUCH_COPY;
 		} else if (!u.hasPrivilege()) {
 			return ActionResult.NO_PRIVILEGE;
-		} else if (loanDatabase.getLoans(u.getUserId()).size() >= Config.MAX_BORROWED_ITEMS) {
+		} else if (loanDatabase.getUserLoans(u.getUserId()).size() >= Config.MAX_BORROWED_ITEMS) {
 			return ActionResult.MAX_LOAN;
 		} else if (loanDatabase.findLoan(iSBN, copyNumber) != null) {
 			return ActionResult.LOAN_EXISTS;
@@ -308,13 +308,13 @@ public class ServerController {
 		}
 
 		Date borrowed = loanDatabase.findLoan(iSBN, copyNumber, u.getUserId()).getDate();
-		long diff = now.getTime() - borrowed.getTime();
+		long diff = TimeUnit.DAYS.convert(now.getTime() - borrowed.getTime(), TimeUnit.MILLISECONDS);
 
 		loanDatabase.deleteLoan(iSBN, copyNumber);
 
-		if (TimeUnit.DAYS.convert(diff, TimeUnit.DAYS) > Config.RETURN_DAY_LIMIT) {
+		if (diff > Config.RETURN_DAY_LIMIT) {
 			u.addFee((int) (diff - Config.RETURN_DAY_LIMIT) * Config.OVERDUE_FEE);
-			if (TimeUnit.DAYS.convert(diff, TimeUnit.DAYS) > Config.RETURN_DAY_LIMIT + Config.OVERDUE) {
+			if (diff > Config.RETURN_DAY_LIMIT + Config.OVERDUE) {
 				u.revokePrivilege();
 				userDatabase.saveChanges(u);
 				return ActionResult.PRIVILEGE_REVOKED;
@@ -349,7 +349,7 @@ public class ServerController {
 		}
 
 		user += "\n\tLoans:";
-		List<Loan> loans = loanDatabase.getLoans(u.getUserId());
+		List<Loan> loans = loanDatabase.getUserLoans(u.getUserId());
 		if (loans.isEmpty()) {
 			user += "\n\t\tUser has no loans";
 		} else {

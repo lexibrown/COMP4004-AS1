@@ -85,6 +85,7 @@ public class Book implements Serializable {
 		for (Copy c : this.copies) {
 			if (c.getCopyNumber() == copyNumber) {
 				this.copies.remove(c);
+				return;
 			}
 		}
 	}

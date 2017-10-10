@@ -42,7 +42,7 @@ public class TestUserStories {
 	}
 
 	@Test
-	public void testUserCreationPositive() {
+	public void testUserCreationPositive1() {
 		String username = "testCreation";
 		String password = "testCreationPassword";
 
@@ -51,9 +51,31 @@ public class TestUserStories {
 		assertNotNull(c);
 		assertEquals(username, u.getUsername());
 		assertEquals(password, u.getPassword());
-		assertNotEquals(0, u.getUserId());
 	}
 
+	@Test
+	public void testUserCreationPositive2() {
+		String username1 = "testCreation21";
+		String password1 = "testCreationPassword21";
+		assertTrue(c.createUser(username1, password1));
+
+		String username2 = "testCreation22";
+		String password2 = "testCreationPassword22";
+		assertTrue(c.createUser(username2, password2));
+
+		User u1 = c.searchUser(username1);
+		assertNotNull(u1);
+		assertEquals(username1, u1.getUsername());
+		assertEquals(password1, u1.getPassword());
+		
+		User u2 = c.searchUser(username2);
+		assertNotNull(u2);
+		assertEquals(username2, u2.getUsername());
+		assertEquals(password2, u2.getPassword());
+		
+		assertNotEquals(u1.getUserId(), u2.getUserId());
+	}
+	
 	@Test
 	public void testUserCreationNegative() {
 		String username1 = "testCreationN1";
@@ -65,10 +87,9 @@ public class TestUserStories {
 		assertFalse(c.createUser(username2, password2));
 
 		User u = c.searchUser(username1);
-		assertNotNull(c);
+		assertNotNull(u);
 		assertEquals(username1, u.getUsername());
 		assertEquals(password1, u.getPassword());
-		assertNotEquals(0, u.getUserId());
 	}
 
 	@Test

@@ -201,9 +201,8 @@ public class TestBorrowStories {
 		String username = "testBorrowNegative7";
 		String password = "testBorrowNegative7Password";
 		assertTrue(c.createUser(username, password));
-		c.revokePrivilege(username);
 
-		int ISBN = 888;
+		int ISBN = 999;
 		String title = "testBorrowNegative7";
 		assertTrue(c.addBook(ISBN, title));
 		for (int i = 0; i <= Config.MAX_BORROWED_ITEMS; i++) {
@@ -219,7 +218,7 @@ public class TestBorrowStories {
 		for (int i = 0; i < Config.MAX_BORROWED_ITEMS; i++) {
 			assertEquals(ActionResult.BORROWED, c.borrow(username, ISBN, i + 1));
 		}
-		assertEquals(ActionResult.NO_PRIVILEGE, c.borrow(username, ISBN, Config.MAX_BORROWED_ITEMS + 1));
+		assertEquals(ActionResult.MAX_LOAN, c.borrow(username, ISBN, Config.MAX_BORROWED_ITEMS + 1));
 	}
 
 }

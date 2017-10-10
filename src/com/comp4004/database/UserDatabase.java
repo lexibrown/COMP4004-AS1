@@ -47,7 +47,7 @@ public class UserDatabase {
 			this.nextId = 0;
 		} else {
 			Map<String, Object> items = JsonUtil.parse(content, Map.class);
-			this.users = (List<User>) items.get(USERS_STRING);
+			this.users = (List<User>) JsonUtil.parseList(items.get(USERS_STRING).toString(), User.class);
 			this.nextId = Integer.valueOf(items.get(ID_STRING).toString());
 		}
 	}
@@ -60,7 +60,7 @@ public class UserDatabase {
 		DataOutputStream outstream;
 		try {
 			Map<String, Object> items = new HashMap<String, Object>();
-			items.put(USERS_STRING, this.users);
+			items.put(USERS_STRING, JsonUtil.stringify(this.users));
 			items.put(ID_STRING, this.nextId);
 			
 			outstream = new DataOutputStream(new FileOutputStream(file, false));
