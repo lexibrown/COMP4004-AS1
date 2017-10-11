@@ -9,11 +9,12 @@ import com.comp4004.test.story.TestBorrowStories;
 import com.comp4004.test.story.TestCopyStories;
 import com.comp4004.test.story.TestFeeStories;
 import com.comp4004.test.story.TestRenewStories;
+import com.comp4004.test.story.TestReturnStories;
 import com.comp4004.test.story.TestUserStories;
 
 @RunWith(Suite.class)
 @SuiteClasses({ TestUserStories.class, TestBookStories.class, TestCopyStories.class, TestBorrowStories.class,
-		TestRenewStories.class, TestRenewStories.class, TestFeeStories.class })
+		TestRenewStories.class, TestReturnStories.class, TestFeeStories.class })
 public class TestSuite {
 
 }
