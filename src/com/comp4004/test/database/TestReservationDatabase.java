@@ -19,8 +19,9 @@ import com.comp4004.model.Reservation;
 
 public class TestReservationDatabase {
 
-	ReservationDatabase db;
+	private ReservationDatabase db;
 
+	// tests loading reservations from file
 	@Before
 	public void testLoad() {
 		db = new ReservationDatabase();
@@ -33,12 +34,14 @@ public class TestReservationDatabase {
 		assertNotNull(db.getReservations());
 	}
 
+	// clears test data after tests finish
 	@AfterClass
 	public static void clear() {
 		ReservationDatabase db = new ReservationDatabase();
 		db.flush();
 	}
 
+	// tests adding a reservation
 	@Test
 	public void testAdd() {
 		Reservation r1 = new Reservation(1001, 2001, 1);
@@ -48,6 +51,7 @@ public class TestReservationDatabase {
 		assertTrue(r1.equals(r2));
 	}
 
+	// tests deleting a reservation
 	@Test
 	public void testDelete() {
 		Reservation r1 = new Reservation(1001, 2001, 2);
@@ -56,6 +60,7 @@ public class TestReservationDatabase {
 		assertNull(db.findReservation(r1.getISBN(), r1.getCopyNumber()));
 	}
 
+	// tests saving individual reservations to file
 	@Test
 	public void testSave() {
 		Reservation r1 = new Reservation(1001, 2002, 1);
@@ -82,7 +87,8 @@ public class TestReservationDatabase {
 		db.deleteReservation(r1.getISBN(), r1.getCopyNumber());
 		assertNull(db.findReservation(r1.getISBN(), r1.getCopyNumber(), r1.getUserId()));
 	}
-	
+
+	// tests getting all reservations owned by a user
 	@Test
 	public void testGetUserSpecific() {
 		Reservation r1 = new Reservation(2001, 1, 1);
@@ -93,7 +99,7 @@ public class TestReservationDatabase {
 		db.addReservation(r2);
 		db.addReservation(r3);
 		db.addReservation(r4);
-	
+
 		List<Reservation> res = db.getUserReservations(2001);
 		assertNotNull(res);
 		assertEquals(3, res.size());
@@ -101,7 +107,7 @@ public class TestReservationDatabase {
 		assertTrue(res.contains(r2));
 		assertTrue(res.contains(r3));
 		assertFalse(res.contains(r4));
-		
+
 		res = db.getUserReservations(2002);
 		assertNotNull(res);
 		assertEquals(1, res.size());
@@ -110,7 +116,8 @@ public class TestReservationDatabase {
 		assertFalse(res.contains(r3));
 		assertTrue(res.contains(r4));
 	}
-	
+
+	// tests deleting all reservations owned by a user
 	@Test
 	public void testDeleteUser() {
 		Reservation r1 = new Reservation(3001, 11, 1);
@@ -121,26 +128,28 @@ public class TestReservationDatabase {
 		db.addReservation(r2);
 		db.addReservation(r3);
 		db.addReservation(r4);
-	
+
 		List<Reservation> res = db.getUserReservations(3001);
 		assertNotNull(res);
 		assertEquals(3, res.size());
 
-		db.deleteUserReservation(3001);;
+		db.deleteUserReservation(3001);
+		;
 		res = db.getUserReservations(3001);
 		assertNotNull(res);
 		assertEquals(0, res.size());
-		
+
 		res = db.getUserReservations(3002);
 		assertNotNull(res);
 		assertEquals(1, res.size());
-		
+
 		db.deleteUserReservation(2002);
 		res = db.getUserReservations(2002);
 		assertNotNull(res);
 		assertEquals(0, res.size());
 	}
-	
+
+	// tests deleting all reservations of a given ISBN
 	@Test
 	public void testDeleteISBN() {
 		Reservation r1 = new Reservation(4001, 111, 1);
@@ -151,27 +160,27 @@ public class TestReservationDatabase {
 		db.addReservation(r2);
 		db.addReservation(r3);
 		db.addReservation(r4);
-	
+
 		db.deleteReservation(111);
-		
+
 		assertNull(db.findReservation(111, 1));
 		assertNotNull(db.findReservation(222, 1));
 		assertNotNull(db.findReservation(222, 2));
 		assertNotNull(db.findReservation(333, 1));
-		
+
 		db.deleteReservation(222);
-		
+
 		assertNull(db.findReservation(111, 1));
 		assertNull(db.findReservation(222, 1));
 		assertNull(db.findReservation(222, 2));
 		assertNotNull(db.findReservation(333, 1));
-		
+
 		db.deleteReservation(333);
-		
+
 		assertNull(db.findReservation(111, 1));
 		assertNull(db.findReservation(222, 1));
 		assertNull(db.findReservation(222, 2));
 		assertNull(db.findReservation(333, 1));
 	}
-	
+
 }

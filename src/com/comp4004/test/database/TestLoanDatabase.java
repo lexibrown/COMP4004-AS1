@@ -20,8 +20,9 @@ import com.comp4004.model.Loan;
 
 public class TestLoanDatabase {
 
-	LoanDatabase db;
+	private LoanDatabase db;
 
+	// tests loading loans from file
 	@Before
 	public void testLoad() {
 		db = new LoanDatabase();
@@ -34,12 +35,14 @@ public class TestLoanDatabase {
 		assertNotNull(db.getLoans());
 	}
 
+	// clears test data after tests finish
 	@AfterClass
 	public static void clear() {
 		LoanDatabase db = new LoanDatabase();
 		db.flush();
 	}
 
+	// tests adding a loan
 	@Test
 	public void testAdd() {
 		Loan l1 = new Loan(1001, 2000, 1, new Date());
@@ -49,6 +52,7 @@ public class TestLoanDatabase {
 		assertTrue(l1.equals(l2));
 	}
 
+	// tests deleting a loan
 	@Test
 	public void testDelete() {
 		Loan l1 = new Loan(1001, 2001, 1, new Date());
@@ -57,6 +61,7 @@ public class TestLoanDatabase {
 		assertNull(db.findLoan(l1.getISBN(), l1.getCopyNumber()));
 	}
 
+	// tests updating an existing loan
 	@Test
 	public void testUpdate() {
 		Loan l1 = new Loan(1001, 2001, 3, new Date());
@@ -74,6 +79,7 @@ public class TestLoanDatabase {
 		assertEquals(1, db.findLoan(l1.getISBN(), l1.getCopyNumber()).getRenewed());
 	}
 	
+	// tests saving an individual loan to file
 	@Test
 	public void testSave() {
 		Loan l1 = new Loan(1001, 2001, 2, new Date());
@@ -101,6 +107,7 @@ public class TestLoanDatabase {
 		assertNull(db.findLoan(l1.getISBN(), l1.getCopyNumber()));
 	}
 	
+	// tests getting all loans owned by a user
 	@Test
 	public void testGetUserSpecific() {
 		Loan l1 = new Loan(1001, 3000, 1, new Date());
@@ -130,6 +137,7 @@ public class TestLoanDatabase {
 		
 	}
 	
+	// tests deleting all loans owned by a user
 	@Test
 	public void testDeleteUser() {
 		Loan l1 = new Loan(2001, 4000, 1, new Date());
@@ -160,6 +168,7 @@ public class TestLoanDatabase {
 		assertEquals(0, loans.size());
 	}
 	
+	// tests deleting all loans with a given ISBN
 	@Test
 	public void testDeleteISBN() {
 		Loan l1 = new Loan(3001, 5000, 1, new Date());

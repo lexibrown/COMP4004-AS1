@@ -48,10 +48,18 @@ public class Server implements Runnable {
 		this.port = port;
 	}
 
+	/**
+	 * Set server controller
+	 * 
+	 * @param s
+	 */
 	public void setController(ServerController s) {
 		this.controller = s;
 	}
 
+	/**
+	 * Initialize components for client connections
+	 */
 	public void start() {
 		listening = true;
 		serverReactor = new Reactor();
@@ -62,6 +70,9 @@ public class Server implements Runnable {
 		thread.start();
 	}
 
+	/**
+	 * Stop listening and exit program
+	 */
 	public void shutdown() {
 		reactor.stopListening();
 		listening = false;
@@ -69,6 +80,9 @@ public class Server implements Runnable {
 		System.exit(0);
 	}
 
+	/**
+	 * Listen for clients
+	 */
 	public void run() {
 		try {
 			listener = new ServerSocket(port);
@@ -83,6 +97,11 @@ public class Server implements Runnable {
 		}
 	}
 
+	/**
+	 * Set up messages for reactor to listen for
+	 * 
+	 * @param impl
+	 */
 	public void setUp(EventSource impl) {
 		try {
 			reactor = new ThreadWithReactor(impl, serverReactor);
@@ -116,6 +135,13 @@ public class Server implements Runnable {
 		}
 	}
 
+	/**
+	 * Add client to connection unless maximum clients has been reached
+	 * 
+	 * @param client
+	 * @param twr
+	 * @return
+	 */
 	public String add(String client, ThreadWithReactor twr) {
 		if (connection.getNumClients() >= Config.MAX_CLIENTS) {
 			return "The maxiumum amount of clients have connected.";
@@ -124,14 +150,27 @@ public class Server implements Runnable {
 		return null;
 	}
 
+	/**
+	 * Remove client by name
+	 * 
+	 * @param client
+	 */
 	public void remove(String client) {
 		connection.remove(client);
 	}
 
+	/**
+	 * Remove client by reactor
+	 * 
+	 * @param twr
+	 */
 	public void remove(ThreadWithReactor twr) {
 		connection.remove(twr);
 	}
 
+	/**
+	 * Login event handler
+	 */
 	private class Login implements EventHandler {
 		public void handleEvent(Event event) {
 			Map<String, Object> response = new HashMap<String, Object>();
@@ -168,6 +207,9 @@ public class Server implements Runnable {
 		}
 	}
 
+	/**
+	 * Logout event handler
+	 */
 	private class Logout implements EventHandler {
 		public void handleEvent(Event event) {
 			try {
@@ -187,6 +229,9 @@ public class Server implements Runnable {
 		}
 	}
 
+	/**
+	 * Search user event handler
+	 */
 	private class SearchUser implements EventHandler {
 		public void handleEvent(Event event) {
 			try {
@@ -215,6 +260,9 @@ public class Server implements Runnable {
 		}
 	}
 
+	/**
+	 * Add user event handler
+	 */
 	private class AddUser implements EventHandler {
 		public void handleEvent(Event event) {
 			try {
@@ -246,6 +294,9 @@ public class Server implements Runnable {
 		}
 	}
 
+	/**
+	 * Remove user event handler
+	 */
 	private class RemoveUser implements EventHandler {
 		public void handleEvent(Event event) {
 			try {
@@ -286,6 +337,9 @@ public class Server implements Runnable {
 		}
 	}
 
+	/**
+	 * Add book event handler
+	 */
 	private class AddBook implements EventHandler {
 		public void handleEvent(Event event) {
 			try {
@@ -315,6 +369,9 @@ public class Server implements Runnable {
 		}
 	}
 
+	/**
+	 * Remove book event handler
+	 */
 	private class RemoveBook implements EventHandler {
 		public void handleEvent(Event event) {
 			try {
@@ -365,6 +422,9 @@ public class Server implements Runnable {
 		}
 	}
 
+	/**
+	 * Add copy event handler
+	 */
 	private class AddCopy implements EventHandler {
 		public void handleEvent(Event event) {
 			try {
@@ -388,6 +448,9 @@ public class Server implements Runnable {
 		}
 	}
 
+	/**
+	 * Remove copy event handler
+	 */
 	private class RemoveCopy implements EventHandler {
 		public void handleEvent(Event event) {
 			try {
@@ -429,6 +492,9 @@ public class Server implements Runnable {
 		}
 	}
 
+	/**
+	 * Collect fine event handler
+	 */
 	private class CollectFine implements EventHandler {
 		public void handleEvent(Event event) {
 			try {
@@ -458,6 +524,9 @@ public class Server implements Runnable {
 		}
 	}
 
+	/**
+	 * Monitor system event handler
+	 */
 	private class MonitorSystem implements EventHandler {
 		public void handleEvent(Event event) {
 			try {
@@ -474,6 +543,9 @@ public class Server implements Runnable {
 		}
 	}
 
+	/**
+	 * Search book event handler
+	 */
 	private class SearchBook implements EventHandler {
 		public void handleEvent(Event event) {
 			try {
@@ -518,6 +590,9 @@ public class Server implements Runnable {
 		}
 	}
 
+	/**
+	 * Borrow event handler
+	 */
 	private class Borrow implements EventHandler {
 		public void handleEvent(Event event) {
 			try {
@@ -573,6 +648,9 @@ public class Server implements Runnable {
 		}
 	}
 
+	/**
+	 * Make reservation event handler
+	 */
 	private class MakeReservation implements EventHandler {
 		public void handleEvent(Event event) {
 			try {
@@ -620,6 +698,9 @@ public class Server implements Runnable {
 		}
 	}
 
+	/**
+	 * Remove reservation event handler
+	 */
 	private class RemoveReservation implements EventHandler {
 		public void handleEvent(Event event) {
 			try {
@@ -646,6 +727,9 @@ public class Server implements Runnable {
 		}
 	}
 
+	/**
+	 * Renew loan event handler
+	 */
 	private class RenewLoan implements EventHandler {
 		public void handleEvent(Event event) {
 			try {
@@ -702,6 +786,9 @@ public class Server implements Runnable {
 		}
 	}
 
+	/**
+	 * Return loan event handler
+	 */
 	private class ReturnLoan implements EventHandler {
 		public void handleEvent(Event event) {
 			try {

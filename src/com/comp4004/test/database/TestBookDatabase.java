@@ -18,8 +18,9 @@ import com.comp4004.model.Copy;
 
 public class TestBookDatabase {
 
-	BookDatabase db;
+	private BookDatabase db;
 
+	// tests loading of books from file
 	@Before
 	public void testLoad() {
 		db = new BookDatabase();
@@ -32,12 +33,14 @@ public class TestBookDatabase {
 		assertNotNull(db.getBooks());
 	}
 
+	// clears test data after tests end
 	@AfterClass
 	public static void clear() {
 		BookDatabase db = new BookDatabase();
 		db.flush();
 	}
 
+	// tests adding a book
 	@Test
 	public void testAdd() {
 		Book b1 = new Book(1001, "book1");
@@ -47,6 +50,7 @@ public class TestBookDatabase {
 		assertTrue(b1.equals(b2));
 	}
 
+	// tests removing a book
 	@Test
 	public void testDelete() {
 		Book b1 = new Book(1002, "book2");
@@ -55,6 +59,7 @@ public class TestBookDatabase {
 		assertNull(db.findBook(b1.getISBN()));
 	}
 
+	// tests removing a book by its title
 	@Test
 	public void testDeleteByTitle() {
 		Book b1 = new Book(10022, "book22");
@@ -63,6 +68,7 @@ public class TestBookDatabase {
 		assertNull(db.findBook(b1.getTitle()));
 	}
 
+	// tests finding a book by its title
 	@Test
 	public void testFindByTitle() {
 		Book b1 = new Book(1003, "book3");
@@ -77,6 +83,7 @@ public class TestBookDatabase {
 		assertTrue(b2.equals(db.findBook(b2.getTitle())));
 	}
 
+	// tests adding and removing a copy
 	@Test
 	public void testCopy() {
 		Book b1 = new Book(1005, "book5");
@@ -126,6 +133,7 @@ public class TestBookDatabase {
 		assertNotNull(db.findBook(b1.getISBN()).getCopy(2));
 	}
 
+	// tests saving individual books to file
 	@Test
 	public void testSave() {
 		Book b1 = new Book(1006, "book6");

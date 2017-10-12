@@ -3,7 +3,7 @@ package com.comp4004.utils;
 public class MessageKey {
 
 	public static final String MESSAGE = "MESSAGE";
-	
+
 	public static final String ADMIN = "ADMIN";
 
 	public static final String LOGOUT = "LOGOUT";
@@ -16,11 +16,11 @@ public class MessageKey {
 	public static final String ISBN = "ISBN";
 	public static final String COPYNUMBER = "COPYNUMBER";
 	public static final String FEE = "FEE";
-	
+
 	// server key messages
 	public static final String CONNECT_PASS = "CONNECT_PASS";
 	public static final String CONNECT_FAIL = "CONNECT_FAIL";
-	
+
 	public static final String SUCCESS = "SUCCESS";
 	public static final String FAILED = "FAILED";
 

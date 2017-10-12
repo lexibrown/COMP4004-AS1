@@ -50,6 +50,15 @@ public class Client {
 	}
 
 	/**
+	 * Returns the client socket
+	 * 
+	 * @return
+	 */
+	public Socket getSocket() {
+		return this.socket;
+	}
+
+	/**
 	 * Connects to the library server
 	 */
 	public void connectToServer() {

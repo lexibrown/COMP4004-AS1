@@ -16,6 +16,13 @@ public class JsonUtil {
 			.configure(JsonParser.Feature.ALLOW_COMMENTS, true);
 	static final JsonFactory factory = objectMapper.getFactory();
 
+	/**
+	 * Returns json string of passed in object
+	 * 
+	 * @param object
+	 * @return
+	 * @throws Exception
+	 */
 	public static String stringify(Object object) throws Exception {
 		if (object == null) {
 			return null;
@@ -27,13 +34,32 @@ public class JsonUtil {
 		return sw.toString();
 	}
 
+	/**
+	 * Returns list of object passed in based on json provided
+	 * 
+	 * @param json
+	 * @param objectClass
+	 * @return
+	 * @throws JsonParseException
+	 * @throws IOException
+	 */
 	public static <O> O parseList(String json, Class<?> objectClass) throws JsonParseException, IOException {
 		if (json == null) {
 			return null;
 		}
-		return objectMapper.readValue(json, objectMapper.getTypeFactory().constructCollectionType(List.class, objectClass));
+		return objectMapper.readValue(json,
+				objectMapper.getTypeFactory().constructCollectionType(List.class, objectClass));
 	}
-	
+
+	/**
+	 * Converts json to passed in object type and returns it
+	 * 
+	 * @param json
+	 * @param objectClass
+	 * @return
+	 * @throws JsonParseException
+	 * @throws IOException
+	 */
 	public static <O> O parse(String json, Class<O> objectClass) throws JsonParseException, IOException {
 		if (json == null) {
 			return null;
@@ -41,5 +67,5 @@ public class JsonUtil {
 		JsonParser jp = factory.createParser(json);
 		return jp.readValueAs(objectClass);
 	}
-	
+
 }

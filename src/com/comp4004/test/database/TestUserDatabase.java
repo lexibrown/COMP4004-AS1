@@ -13,8 +13,9 @@ import com.comp4004.model.User;
 
 public class TestUserDatabase {
 
-	UserDatabase db;
+	private UserDatabase db;
 
+	// tests loading users from file
 	@Before
 	public void testLoad() {
 		db = new UserDatabase();
@@ -27,12 +28,14 @@ public class TestUserDatabase {
 		assertNotNull(db.getUsers());
 	}
 
+	// clears test data after tests finish
 	@AfterClass
 	public static void clear() {
 		UserDatabase db = new UserDatabase();
 		db.flush();
 	}
 
+	// tests adding a user
 	@Test
 	public void testAdd() {
 		User u1 = new User(8001, "test1", "pass1");
@@ -42,6 +45,7 @@ public class TestUserDatabase {
 		assertTrue(u1.equals(u2));
 	}
 
+	// tests deleting a user by username
 	@Test
 	public void testDelete() {
 		User u1 = new User(8002, "test2", "pass2");
@@ -50,6 +54,7 @@ public class TestUserDatabase {
 		assertNull(db.findUser(u1.getUsername()));
 	}
 	
+	// tests deleting a user by id 
 	@Test
 	public void testDeleteById() {
 		User u1 = new User(80022, "test22", "pass22");
@@ -58,6 +63,7 @@ public class TestUserDatabase {
 		assertNull(db.findUser(u1.getUserId()));
 	}
 	
+	// tests finding a user by id
 	@Test
 	public void testFindById() {
 		User u1 = new User(8003, "test3", "pass3");
@@ -72,6 +78,8 @@ public class TestUserDatabase {
 		assertTrue(u2.equals(db.findUser(u2.getUserId())));
 	}
 
+	// tests adding and removing fees from user
+	// makes sure user fee is never below zero
 	@Test
 	public void testFees() {
 		User u1 = new User(8005, "test5", "pass5");
@@ -99,6 +107,7 @@ public class TestUserDatabase {
 		assertEquals(0, db.findUser(u1.getUsername()).getFees());
 	}
 
+	// tests saving individual users to file
 	@Test
 	public void testSave() {
 		User u1 = new User(8006, "test6", "pass6");
