@@ -36,7 +36,7 @@ public class TestReturnStories {
 		c.clearData();
 		c = null;
 	}
-	
+
 	private Date generateFakeDate(int days) {
 		Calendar c = Calendar.getInstance();
 		c.setTime(new Date());
@@ -44,6 +44,7 @@ public class TestReturnStories {
 		return c.getTime();
 	}
 
+	// tests successful book return
 	@Test
 	public void testReturnPositive1() {
 		String username = "testReturnPositive1";
@@ -211,12 +212,12 @@ public class TestReturnStories {
 
 		assertEquals(ActionResult.BORROWED, c.borrow(username1, ISBN1, 1));
 
-		assertEquals(ActionResult.NO_SUCH_LOAN, c.returnLoan(username2, ISBN1, 1)); // wrong
-																					// username
-		assertEquals(ActionResult.NO_SUCH_LOAN, c.returnLoan(username1, ISBN2, 1)); // wrong
-																					// ISBN
-		assertEquals(ActionResult.NO_SUCH_LOAN, c.returnLoan(username1, ISBN1, 2)); // wrong
-																					// copy
+		// wrong username
+		assertEquals(ActionResult.NO_SUCH_LOAN, c.returnLoan(username2, ISBN1, 1));
+		// wrong ISBN
+		assertEquals(ActionResult.NO_SUCH_LOAN, c.returnLoan(username1, ISBN2, 1));
+		// wrong copy
+		assertEquals(ActionResult.NO_SUCH_LOAN, c.returnLoan(username1, ISBN1, 2));
 	}
 
 }

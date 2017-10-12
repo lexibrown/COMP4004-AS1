@@ -38,6 +38,7 @@ public class TestRenewStories {
 		c = null;
 	}
 
+	// tests successful renewal
 	@Test
 	public void testRenewPositive() {
 		String username = "testRenewPositive";
@@ -154,13 +155,13 @@ public class TestRenewStories {
 		assertNotNull(b2.getCopy(1));
 
 		assertEquals(ActionResult.BORROWED, c.borrow(username1, ISBN1, 1));
-
-		assertEquals(ActionResult.NO_SUCH_LOAN, c.renew(username2, ISBN1, 1)); // wrong
-																				// username
-		assertEquals(ActionResult.NO_SUCH_LOAN, c.renew(username1, ISBN2, 1)); // wrong
-																				// ISBN
-		assertEquals(ActionResult.NO_SUCH_LOAN, c.renew(username1, ISBN1, 2)); // wrong
-																				// copy
+		
+		// wrong username
+		assertEquals(ActionResult.NO_SUCH_LOAN, c.renew(username2, ISBN1, 1));
+		// wrong ISBN
+		assertEquals(ActionResult.NO_SUCH_LOAN, c.renew(username1, ISBN2, 1));
+		// wrong copy
+		assertEquals(ActionResult.NO_SUCH_LOAN, c.renew(username1, ISBN1, 2));
 	}
 
 	// no privilege

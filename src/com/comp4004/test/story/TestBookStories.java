@@ -17,7 +17,7 @@ import com.comp4004.utils.Config;
 public class TestBookStories {
 
 	private static ServerController c;
-	
+
 	@BeforeClass
 	public static void setUp() throws Exception {
 		c = new ServerController(new Server(Config.DEFAULT_PORT));
@@ -35,6 +35,7 @@ public class TestBookStories {
 		c = null;
 	}
 
+	// tests successfully book addition
 	@Test
 	public void testAddBookPositive() {
 		int ISBN = 99999;
@@ -49,6 +50,7 @@ public class TestBookStories {
 		assertEquals(0, b.numCopies());
 	}
 
+	// tests failure of book addition because ISBN already exists
 	@Test
 	public void testAddBookNegative() {
 		int ISBN = 88888;
@@ -64,8 +66,8 @@ public class TestBookStories {
 		assertEquals(title1, b.getTitle());
 		assertEquals(0, b.numCopies());
 	}
-	
 
+	// tests successfully removing book
 	@Test
 	public void testRemoveBookPositive() {
 		int ISBN = 55555;

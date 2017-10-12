@@ -35,6 +35,7 @@ public class TestCopyStories {
 		c = null;
 	}
 
+	// tests successfully adding copy
 	@Test
 	public void testAddCopyPositive() {
 		int ISBN = 77777;
@@ -57,6 +58,7 @@ public class TestCopyStories {
 		assertNull(b.getCopy(3));
 	}
 
+	// book does not exist
 	@Test
 	public void testAddCopyNegative() {
 		int ISBN = -12345;
@@ -66,6 +68,7 @@ public class TestCopyStories {
 		assertFalse(c.addCopy(ISBN));
 	}
 	
+	// tests successfully removing copy
 	@Test
 	public void testRemoveCopyPositive() {
 		int ISBN = 11111;

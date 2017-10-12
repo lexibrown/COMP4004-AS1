@@ -6,13 +6,13 @@ import java.net.Socket;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 import com.comp4004.communication.Event;
 import com.comp4004.communication.EventHandler;
 import com.comp4004.communication.EventSource;
 import com.comp4004.communication.EventSourceImpl;
+import com.comp4004.communication.LogManager;
 import com.comp4004.communication.Reactor;
 import com.comp4004.communication.ThreadWithReactor;
 import com.comp4004.model.Book;
@@ -24,7 +24,7 @@ import com.comp4004.utils.MessageKey;
 
 public class Server implements Runnable {
 
-	protected static final Logger log = LogManager.getLogger(Server.class);
+	protected static final Logger log = LogManager.getInstance().getLogger(Server.class);
 
 	private int port;
 	private Connection connection;

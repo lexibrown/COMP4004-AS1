@@ -35,12 +35,14 @@ public class TestServer {
 		c = null;
 	}
 
+	// tests verifying admin credentials
 	@Test
 	public void testAdmin() {
 		assertFalse(c.isAdmin("123", "456"));
 		assertTrue(c.isAdmin(Config.CLERK_USERNAME, Config.CLERK_PASSWORD));
 	}
 
+	// tests adding users
 	@Test
 	public void testCreateUser() {
 		String username = "test1";
@@ -49,6 +51,7 @@ public class TestServer {
 		assertFalse(c.createUser(username, password));
 	}
 
+	// tests user verification
 	@Test
 	public void testConfirmUser() {
 		String username = "test123";
@@ -59,6 +62,7 @@ public class TestServer {
 		assertFalse(c.confirmUser(username, password + "4"));
 	}
 
+	// tests user removal
 	@Test
 	public void testRemoveUser() {
 		String username = "test2";
@@ -69,6 +73,7 @@ public class TestServer {
 		assertNull(c.searchUser(username));
 	}
 
+	// tests searching for users
 	@Test
 	public void testSearchUser() {
 		String username = "test3";
@@ -79,6 +84,7 @@ public class TestServer {
 		assertNull(c.searchUser(username + "3"));
 	}
 
+	// tests adding books
 	@Test
 	public void testAddBook() {
 		int ISBN = 12345;
@@ -87,6 +93,7 @@ public class TestServer {
 		assertFalse(c.addBook(ISBN, title));
 	}
 
+	// tests removing books
 	@Test
 	public void testRemoveBook() {
 		int ISBN = 123456;
@@ -101,6 +108,7 @@ public class TestServer {
 		assertNull(c.searchBook(ISBN));
 	}
 
+	// tests searching for books
 	@Test
 	public void testSearchBook() {
 		int ISBN = 1234567;
@@ -119,6 +127,7 @@ public class TestServer {
 		assertTrue(b2.equals(b1));
 	}
 
+	// tests adding copies of books
 	@Test
 	public void testAddCopy() {
 		int ISBN = 123;
@@ -137,6 +146,7 @@ public class TestServer {
 		assertNull(b.getCopy(4));
 	}
 
+	// tests removing copies of books
 	@Test
 	public void testRemoveCopy() {
 		int ISBN = 321;
@@ -161,6 +171,7 @@ public class TestServer {
 		assertNotNull(b.getCopy(3));
 	}
 
+	// tests making reservations
 	@Test
 	public void testMakeReservation() {
 		String username1 = "res1";
@@ -184,6 +195,7 @@ public class TestServer {
 		assertEquals(ActionResult.RESERVATION_EXISTS, c.reserve(ISBN, 1, username2));
 	}
 
+	// tests removing reservations
 	@Test
 	public void testRemoveReservation() {
 		String username1 = "res3";

@@ -4,12 +4,11 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.Writer;
 
-import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public class BufferedLoggingWriter extends BufferedWriter {
 
-	private static final Logger log = LogManager.getLogger(BufferedLoggingWriter.class);
+	private static final Logger log = LogManager.getInstance().getLogger(BufferedLoggingWriter.class);
 
 	public BufferedLoggingWriter(Writer out) {
 		super(out);

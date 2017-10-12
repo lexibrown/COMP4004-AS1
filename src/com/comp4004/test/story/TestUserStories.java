@@ -41,10 +41,11 @@ public class TestUserStories {
 		c = null;
 	}
 
+	// tests successful user creation
 	@Test
 	public void testUserCreationPositive1() {
-		String username = "testCreation";
-		String password = "testCreationPassword";
+		String username = "testUserCreationPositive1";
+		String password = "testUserCreationPositive1Password";
 
 		assertTrue(c.createUser(username, password));
 		User u = c.searchUser(username);
@@ -53,14 +54,15 @@ public class TestUserStories {
 		assertEquals(password, u.getPassword());
 	}
 
+	// tests successful user creation with unique id
 	@Test
 	public void testUserCreationPositive2() {
-		String username1 = "testCreation21";
-		String password1 = "testCreationPassword21";
+		String username1 = "testUserCreationPositive21";
+		String password1 = "testUserCreationPositive21Password21";
 		assertTrue(c.createUser(username1, password1));
 
-		String username2 = "testCreation22";
-		String password2 = "testCreationPassword22";
+		String username2 = "testUserCreationPositive22";
+		String password2 = "testUserCreationPositive22Password22";
 		assertTrue(c.createUser(username2, password2));
 
 		User u1 = c.searchUser(username1);
@@ -76,12 +78,13 @@ public class TestUserStories {
 		assertNotEquals(u1.getUserId(), u2.getUserId());
 	}
 	
+	// username already exists
 	@Test
 	public void testUserCreationNegative() {
-		String username1 = "testCreationN1";
-		String password1 = "testCreationPasswordN1";
-		String username2 = "testCreationN1";
-		String password2 = "testCreationPasswordN2";
+		String username1 = "testUserCreationNegative1";
+		String password1 = "testUserCreationNegativePassword1";
+		String username2 = "testUserCreationNegative2";
+		String password2 = "testUserCreationNegativePassword2";
 
 		assertTrue(c.createUser(username1, password1));
 		assertFalse(c.createUser(username2, password2));
@@ -92,6 +95,7 @@ public class TestUserStories {
 		assertEquals(password1, u.getPassword());
 	}
 
+	// tests successful user deletion
 	@Test
 	public void testUserDeletePositive() {
 		String username = "testUserDeletePositive";

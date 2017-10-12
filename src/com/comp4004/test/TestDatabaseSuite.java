@@ -10,5 +10,6 @@ import com.comp4004.test.database.TestReservationDatabase;
 import com.comp4004.test.database.TestUserDatabase;
 
 @RunWith(Suite.class)
-@SuiteClasses({TestUserDatabase.class, TestBookDatabase.class, TestLoanDatabase.class, TestReservationDatabase.class})
-public class TestDatabaseSuite { }
+@SuiteClasses({ TestUserDatabase.class, TestBookDatabase.class, TestLoanDatabase.class, TestReservationDatabase.class })
+public class TestDatabaseSuite {
+}
