@@ -13,7 +13,7 @@ public class LogManager {
 
 	private LogManager() {
 		String userDir = System.getProperty("user.dir");
-		String configFile = String.format("%s\\%s\\%s\\%s.properties", userDir, "properties", "log4j");
+		String configFile = String.format("%s\\%s\\%s.properties", userDir, "properties", "log4j");
 		PropertyConfigurator.configure(configFile);
 	}
 
