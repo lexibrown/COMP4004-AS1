@@ -23,6 +23,7 @@ public class TestFeeStories {
 	@BeforeClass
 	public static void setUp() throws Exception {
 		c = new ServerController(new Server(Config.DEFAULT_PORT));
+		c.setTag(TestFeeStories.class.getName());
 		try {
 			c.start();
 			c.clearData();

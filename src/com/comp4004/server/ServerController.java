@@ -5,6 +5,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.Logger;
+
+import com.comp4004.communication.LogManager;
 import com.comp4004.database.BookDatabase;
 import com.comp4004.database.LoanDatabase;
 import com.comp4004.database.ReservationDatabase;
@@ -18,6 +21,9 @@ import com.comp4004.server.tools.ActionResult;
 import com.comp4004.utils.Config;
 
 public class ServerController {
+
+	protected static final Logger log = LogManager.getInstance().getLogger(ServerController.class);
+	private String tag = "[CONTROLLER]";
 
 	private Server server;
 
@@ -33,6 +39,7 @@ public class ServerController {
 		loanDatabase = new LoanDatabase();
 		bookDatabase = new BookDatabase();
 		reservationDatabase = new ReservationDatabase();
+		log("Databases initilized");
 	}
 
 	/**
@@ -45,7 +52,9 @@ public class ServerController {
 		loanDatabase.loadLoans();
 		bookDatabase.loadBooks();
 		reservationDatabase.loadReservations();
+		log("Databases loaded");
 		server.start();
+		log("Server started");
 	}
 
 	/**
@@ -57,6 +66,7 @@ public class ServerController {
 		bookDatabase = null;
 		reservationDatabase = null;
 		server.shutdown();
+		log("Server shutdown");
 	}
 
 	/**
@@ -67,6 +77,25 @@ public class ServerController {
 		loanDatabase.flush();
 		bookDatabase.flush();
 		reservationDatabase.flush();
+		log("Cleared database data");
+	}
+
+	/**
+	 * Set logging tag
+	 * 
+	 * @param tag
+	 */
+	public void setTag(String tag) {
+		this.tag += " " + tag + ": ";
+	}
+
+	/**
+	 * Logs message
+	 * 
+	 * @param message
+	 */
+	public void log(String message) {
+		log.info(tag + " " + message);
 	}
 
 	/**
@@ -90,8 +119,10 @@ public class ServerController {
 	public synchronized boolean confirmUser(String username, String password) {
 		User u = userDatabase.findUser(username);
 		if (u == null || !password.equals(u.getPassword())) {
+			log(username + " failed to log in");
 			return false;
 		}
+		log(username + " successfully logged in");
 		return true;
 	}
 
@@ -104,11 +135,14 @@ public class ServerController {
 	 */
 	public synchronized boolean createUser(String username, String password) {
 		if (username == null || username.trim().isEmpty() || password == null || password.trim().isEmpty()) {
+			log("Failed to create user");
 			return false;
 		} else if (userDatabase.findUser(username) == null) {
 			userDatabase.addUser(new User(userDatabase.getNextId(), username, password));
+			log("Successfully added user: " + username);
 			return true;
 		}
+		log("Failed to create user");
 		return false;
 	}
 
@@ -123,14 +157,18 @@ public class ServerController {
 		User u = userDatabase.findUser(username);
 		if (u != null) {
 			if (!u.hasPrivilege()) {
+				log(username + " has no privileges");
 				return ActionResult.NO_PRIVILEGE;
 			} else if (!loanDatabase.getUserLoans(u.getUserId()).isEmpty()) {
+				log(username + " has existing loans");
 				return ActionResult.HAS_LOANS;
 			}
 			userDatabase.deleteUser(username);
 			reservationDatabase.deleteUserReservation(u.getUserId());
+			log("Successfully removed " + username);
 			return ActionResult.REMOVED_USER;
 		}
+		log("User not found");
 		return ActionResult.NO_SUCH_USER;
 	}
 
@@ -153,11 +191,14 @@ public class ServerController {
 	 */
 	public synchronized boolean addBook(int iSBN, String title) {
 		if (title == null || title.trim().isEmpty()) {
+			log("Failed to add book");
 			return false;
 		} else if (bookDatabase.findBook(iSBN) == null) {
 			bookDatabase.addBook(new Book(iSBN, title));
+			log("Successfully added book " + iSBN);
 			return true;
 		}
+		log("Failed to add book");
 		return false;
 	}
 
@@ -170,13 +211,17 @@ public class ServerController {
 	public synchronized ActionResult removeBook(int iSBN) {
 		if (bookDatabase.findBook(iSBN) != null) {
 			if (!loanDatabase.getLoans(iSBN).isEmpty()) {
+				log("Failed to remove book. Loans exists");
 				return ActionResult.LOAN_EXISTS;
 			} else if (!reservationDatabase.getReservations(iSBN).isEmpty()) {
+				log("Failed to remove book. Reservations exists");
 				return ActionResult.RESERVATION_EXISTS;
 			}
 			bookDatabase.deleteBook(iSBN);
+			log("Successfully remove book " + iSBN);
 			return ActionResult.REMOVED_BOOK;
 		}
+		log("Failed to find book");
 		return ActionResult.NO_SUCH_BOOK;
 	}
 
@@ -191,13 +236,17 @@ public class ServerController {
 		Book b = bookDatabase.findBook(title);
 		if (b != null) {
 			if (!loanDatabase.getLoans(b.getISBN()).isEmpty()) {
+				log("Failed to remove book. Loans exists");
 				return ActionResult.LOAN_EXISTS;
 			} else if (!reservationDatabase.getReservations(b.getISBN()).isEmpty()) {
+				log("Failed to remove book. Reservations exists");
 				return ActionResult.RESERVATION_EXISTS;
 			}
 			bookDatabase.deleteBook(b.getISBN());
+			log("Successfully removed book " + title);
 			return ActionResult.REMOVED_BOOK;
 		}
+		log("Failed to find book");
 		return ActionResult.NO_SUCH_BOOK;
 	}
 
@@ -232,8 +281,10 @@ public class ServerController {
 		if (b != null) {
 			b.addCopy(new Copy());
 			bookDatabase.saveChanges(b);
+			log("Successfully added copy to book " + iSBN);
 			return true;
 		}
+		log("Failed to add copy");
 		return false;
 	}
 
@@ -247,17 +298,22 @@ public class ServerController {
 	public synchronized ActionResult removeCopy(int iSBN, int copyNumber) {
 		Book b = bookDatabase.findBook(iSBN);
 		if (b == null) {
+			log("Failed to find book");
 			return ActionResult.NO_SUCH_BOOK;
 		} else if (b.getCopy(copyNumber) == null) {
+			log("Failed to find copy");
 			return ActionResult.NO_SUCH_COPY;
 		} else if (loanDatabase.findLoan(iSBN, copyNumber) != null) {
+			log("Failed to remove copy. Loans exists");
 			return ActionResult.LOAN_EXISTS;
 		} else if (reservationDatabase.findReservation(iSBN, copyNumber) != null) {
+			log("Failed to remove book. Reservations exists");
 			return ActionResult.RESERVATION_EXISTS;
 		}
 
 		b.deleteCopy(copyNumber);
 		bookDatabase.saveChanges(b);
+		log("Successfully removed copy");
 		return ActionResult.REMOVED_COPY;
 	}
 
@@ -273,18 +329,23 @@ public class ServerController {
 	public synchronized ActionResult reserve(int iSBN, int copyNumber, String username) {
 		User u = userDatabase.findUser(username);
 		if (u == null) {
+			log("Failed to find user");
 			return ActionResult.NO_SUCH_USER;
 		}
 
 		Book b = bookDatabase.findBook(iSBN);
 		if (b == null) {
+			log("Failed to find book");
 			return ActionResult.NO_SUCH_BOOK;
 		} else if (b.getCopy(copyNumber) == null) {
+			log("Failed to find copy");
 			return ActionResult.NO_SUCH_COPY;
 		} else if (reservationDatabase.findReservation(iSBN, copyNumber) != null) {
+			log("Failed to reserve book. Reservations exists");
 			return ActionResult.RESERVATION_EXISTS;
 		}
 		reservationDatabase.addReservation(new Reservation(u.getUserId(), b.getISBN(), copyNumber));
+		log("Successfully reserved book " + iSBN);
 		return ActionResult.RESERVATION_MADE;
 	}
 
@@ -299,11 +360,14 @@ public class ServerController {
 	public synchronized boolean removeReservation(int iSBN, int copyNumber, String username) {
 		User u = userDatabase.findUser(username);
 		if (u == null) {
+			log("Failed to remove reservation");
 			return false;
 		} else if (reservationDatabase.findReservation(iSBN, copyNumber, u.getUserId()) != null) {
 			reservationDatabase.deleteReservation(iSBN, copyNumber);
+			log("Successfully removed reservation");
 			return true;
 		}
+		log("Failed to remove reservation");
 		return false;
 	}
 
@@ -317,6 +381,7 @@ public class ServerController {
 	public synchronized boolean collectFee(String username, int fee) {
 		User u = userDatabase.findUser(username);
 		if (u == null) {
+			log("Failed to find user");
 			return false;
 		}
 		u.payFee(fee);
@@ -326,6 +391,7 @@ public class ServerController {
 		}
 
 		userDatabase.saveChanges(u);
+		log("Successfully applied fee of $" + fee + " to user " + username);
 		return true;
 	}
 
@@ -374,29 +440,37 @@ public class ServerController {
 	public ActionResult borrow(String username, int iSBN, int copyNumber) {
 		User u = userDatabase.findUser(username);
 		if (u == null) {
+			log("Failed to find user");
 			return ActionResult.NO_SUCH_USER;
 		}
 
 		Book b = bookDatabase.findBook(iSBN);
 		if (b == null) {
+			log("Failed to find book");
 			return ActionResult.NO_SUCH_BOOK;
 		} else if (b.getCopy(copyNumber) == null) {
+			log("Failed to find copy");
 			return ActionResult.NO_SUCH_COPY;
 		} else if (!u.hasPrivilege()) {
+			log("User has no privileges");
 			return ActionResult.NO_PRIVILEGE;
 		} else if (loanDatabase.getUserLoans(u.getUserId()).size() >= Config.MAX_BORROWED_ITEMS) {
+			log("User has reached max loans");
 			return ActionResult.MAX_LOAN;
 		} else if (loanDatabase.findLoan(iSBN, copyNumber) != null) {
+			log("Loan already exists");
 			return ActionResult.LOAN_EXISTS;
 		} else if (reservationDatabase.findReservation(iSBN, copyNumber) != null) {
 			if (reservationDatabase.findReservation(iSBN, copyNumber, u.getUserId()) != null) {
 				reservationDatabase.deleteReservation(iSBN, copyNumber);
 			} else {
+				log("Reservation already exists");
 				return ActionResult.RESERVATION_EXISTS;
 			}
 		}
 
 		loanDatabase.addLoan(new Loan(u.getUserId(), iSBN, copyNumber, new Date()));
+		log("Successfully borowed book " + iSBN);
 		return ActionResult.BORROWED;
 	}
 
@@ -413,21 +487,28 @@ public class ServerController {
 	public ActionResult renew(String username, int iSBN, int copyNumber) {
 		User u = userDatabase.findUser(username);
 		if (u == null) {
+			log("Failed to find user");
 			return ActionResult.NO_SUCH_USER;
 		}
 
 		Book b = bookDatabase.findBook(iSBN);
 		if (b == null) {
+			log("Failed to find book");
 			return ActionResult.NO_SUCH_BOOK;
 		} else if (b.getCopy(copyNumber) == null) {
+			log("Failed to find copy");
 			return ActionResult.NO_SUCH_COPY;
 		} else if (loanDatabase.findLoan(iSBN, copyNumber, u.getUserId()) == null) {
+			log("Failed to find loan");
 			return ActionResult.NO_SUCH_LOAN;
 		} else if (!u.hasPrivilege()) {
+			log("User has no privileges");
 			return ActionResult.NO_PRIVILEGE;
 		} else if (loanDatabase.findLoan(iSBN, copyNumber, u.getUserId()).getRenewed() >= Config.MAX_RENEW_ITEMS) {
+			log("Loan has reached maximum renewals");
 			return ActionResult.MAX_RENEW;
 		} else if (reservationDatabase.findReservation(iSBN, copyNumber) != null) {
+			log("Failed to rewnew. Reservation exists");
 			return ActionResult.RESERVATION_EXISTS;
 		}
 
@@ -436,6 +517,7 @@ public class ServerController {
 		l.updateDate(new Date());
 
 		loanDatabase.saveChanges(l);
+		log("Successfully renewed book " + iSBN);
 		return ActionResult.RENEWED;
 	}
 
@@ -465,15 +547,19 @@ public class ServerController {
 	public ActionResult returnLoan(String username, int iSBN, int copyNumber, Date now) {
 		User u = userDatabase.findUser(username);
 		if (u == null) {
+			log("Failed to find user");
 			return ActionResult.NO_SUCH_USER;
 		}
 
 		Book b = bookDatabase.findBook(iSBN);
 		if (b == null) {
+			log("Failed to find book");
 			return ActionResult.NO_SUCH_BOOK;
 		} else if (b.getCopy(copyNumber) == null) {
+			log("Failed to find copy");
 			return ActionResult.NO_SUCH_COPY;
 		} else if (loanDatabase.findLoan(iSBN, copyNumber, u.getUserId()) == null) {
+			log("Failed to find loan");
 			return ActionResult.NO_SUCH_LOAN;
 		}
 
@@ -487,11 +573,14 @@ public class ServerController {
 			if (diff > Config.RETURN_DAY_LIMIT + Config.OVERDUE) {
 				u.revokePrivilege();
 				userDatabase.saveChanges(u);
+				log("Successfully returned book but privileges were revoked");
 				return ActionResult.PRIVILEGE_REVOKED;
 			}
 			userDatabase.saveChanges(u);
+			log("Successfully returned book but fees were applied");
 			return ActionResult.FEE_ADDED;
 		}
+		log("Successfully returned book " + iSBN);
 		return ActionResult.RETURNED;
 	}
 
@@ -503,10 +592,12 @@ public class ServerController {
 	public void revokePrivilege(String username) {
 		User u = userDatabase.findUser(username);
 		if (u == null) {
+			log("Failed to find user");
 			return;
 		}
 		u.revokePrivilege();
 		userDatabase.saveChanges(u);
+		log("Successfully revoked users privileges");
 	}
 
 	/**

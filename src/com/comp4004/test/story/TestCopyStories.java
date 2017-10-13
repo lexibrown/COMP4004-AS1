@@ -21,6 +21,7 @@ public class TestCopyStories {
 	@BeforeClass
 	public static void setUp() throws Exception {
 		c = new ServerController(new Server(Config.DEFAULT_PORT));
+		c.setTag(TestCopyStories.class.getName());
 		try {
 			c.start();
 			c.clearData();

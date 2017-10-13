@@ -7346,3 +7346,44 @@ java.net.BindException: Address already in use: JVM_Bind
 	at java.net.ServerSocket.<init>(Unknown Source)
 	at com.comp4004.server.Server.run(Server.java:88)
 	at java.lang.Thread.run(Unknown Source)
+2017-10-12 20:45:52,871 INFO Class [Thread-19] [/127.0.0.1:50392] TO: 127.0.0.1:5050 SENT: {"MESSAGE":"LOGOUT","USERNAME":"clerk"} 
+2017-10-12 20:45:52,871 INFO Class [Thread-19] SENT: 
+ 
+2017-10-12 20:45:52,871 INFO Class [Thread-2] [/127.0.0.1:5050] FROM: 127.0.0.1:50392 RECEIVED: {"MESSAGE":"LOGOUT","USERNAME":"clerk"} 
+2017-10-12 20:45:52,872 INFO Class [Thread-2] [/127.0.0.1:5050] TO: 127.0.0.1:50392 SENT: {"MESSAGE":"LOGOUT"} 
+2017-10-12 20:45:52,872 INFO Class [Thread-2] SENT: 
+ 
+2017-10-12 20:45:52,872 INFO Class [Thread-0] [/127.0.0.1:50392] FROM: 127.0.0.1:5050 RECEIVED: {"MESSAGE":"LOGOUT"} 
+2017-10-12 20:45:52,890 FATAL Class [Thread-2] IOException, closing connection. 
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.io.InputStreamReader.read(Unknown Source)
+	at java.io.BufferedReader.fill(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at com.comp4004.communication.EventSourceImpl.getEvent(EventSourceImpl.java:68)
+	at com.comp4004.communication.ThreadWithReactor.run(ThreadWithReactor.java:55)
+2017-10-12 20:45:52,890 INFO Class [Thread-2] [/127.0.0.1:5050] TO: 127.0.0.1:50392 SENT: {"MESSAGE":"LOGOUT"} 
+2017-10-12 20:45:52,890 INFO Class [Thread-2] SENT: 
+ 
+2017-10-12 20:45:52,890 FATAL Class [Thread-2] Something went wrong 
+java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(Unknown Source)
+	at java.net.SocketOutputStream.write(Unknown Source)
+	at sun.nio.cs.StreamEncoder.writeBytes(Unknown Source)
+	at sun.nio.cs.StreamEncoder.implFlushBuffer(Unknown Source)
+	at sun.nio.cs.StreamEncoder.implFlush(Unknown Source)
+	at sun.nio.cs.StreamEncoder.flush(Unknown Source)
+	at java.io.OutputStreamWriter.flush(Unknown Source)
+	at java.io.BufferedWriter.flush(Unknown Source)
+	at com.comp4004.communication.EventSourceImpl.write(EventSourceImpl.java:92)
+	at com.comp4004.server.Server$Logout.handleEvent(Server.java:225)
+	at com.comp4004.communication.Reactor.dispatch(Reactor.java:25)
+	at com.comp4004.communication.ThreadWithReactor.dispatch(ThreadWithReactor.java:91)
+	at com.comp4004.communication.ThreadWithReactor.quit(ThreadWithReactor.java:40)
+	at com.comp4004.communication.ThreadWithReactor.run(ThreadWithReactor.java:74)

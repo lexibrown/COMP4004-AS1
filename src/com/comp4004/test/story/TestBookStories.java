@@ -21,6 +21,7 @@ public class TestBookStories {
 	@BeforeClass
 	public static void setUp() throws Exception {
 		c = new ServerController(new Server(Config.DEFAULT_PORT));
+		c.setTag(TestBookStories.class.getName());
 		try {
 			c.start();
 			c.clearData();

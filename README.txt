@@ -5,6 +5,8 @@ Assignment 1: JUnit and Git
 Lexi Brown
 GitHub Repo: https://github.com/lexibrown/COMP4004-AS1
 
+PLEASE READ EVERYTHINGs (i tried okay)
+
 TO RUN IN ECLIPSE:
 
 Runnable Class: StartTerminals.java, Server.java
@@ -21,3 +23,12 @@ Logger may not register log4j in properties, if so, follow these steps in Eclips
 6. Check 'Add Folders' and hit OK
 7. Find the 'properties' folder
 8. Hit Apply and Run
+
+
+All documentation is the /resources folder
+
+
+TEST LOGGING
+
+Tests are logged in the same file as running the program. Open any text reader and search for the tag [CONTROLLER].
+Which will then have the class path for the tests. There is a sample of the test logging in the resources folder.

@@ -20,6 +20,7 @@ public class TestMonitorStories {
 	@Before
 	public void setUp() throws Exception {
 		c = new ServerController(new Server(Config.DEFAULT_PORT));
+		c.setTag(TestMonitorStories.class.getName());
 		try {
 			c.start();
 			c.clearData();

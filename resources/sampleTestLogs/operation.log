@@ -1,0 +1,402 @@
+2017-10-12 23:19:57,269 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-10-12 23:19:57,280 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestUserStories:  Databases loaded 
+2017-10-12 23:19:57,281 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestUserStories:  Server started 
+2017-10-12 23:19:57,285 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestUserStories:  Cleared database data 
+2017-10-12 23:19:57,612 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestUserStories:  Successfully added user: testUserCreationPositive1 
+2017-10-12 23:19:57,615 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestUserStories:  Successfully added user: testUserCreationPositive21 
+2017-10-12 23:19:57,618 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestUserStories:  Successfully added user: testUserCreationPositive22 
+2017-10-12 23:19:57,620 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestUserStories:  User not found 
+2017-10-12 23:19:57,622 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestUserStories:  Successfully added user: testUserDeleteNegative2 
+2017-10-12 23:19:57,624 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestUserStories:  Successfully revoked users privileges 
+2017-10-12 23:19:57,624 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestUserStories:  testUserDeleteNegative2 has no privileges 
+2017-10-12 23:19:57,629 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestUserStories:  Successfully added user: testUserDeleteNegative3 
+2017-10-12 23:19:57,633 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestUserStories:  Successfully added book 98765 
+2017-10-12 23:19:57,637 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestUserStories:  Successfully added copy to book 98765 
+2017-10-12 23:19:57,651 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestUserStories:  Successfully borowed book 98765 
+2017-10-12 23:19:57,651 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestUserStories:  testUserDeleteNegative3 has existing loans 
+2017-10-12 23:19:57,654 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestUserStories:  Successfully added user: testUserDeletePositive 
+2017-10-12 23:19:57,658 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestUserStories:  Successfully removed testUserDeletePositive 
+2017-10-12 23:19:57,660 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestUserStories:  Successfully added user: testUserCreationNegative1 
+2017-10-12 23:19:57,660 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestUserStories:  Failed to create user 
+2017-10-12 23:19:57,664 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestUserStories:  Cleared database data 
+2017-10-12 23:19:57,665 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-10-12 23:19:57,666 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBookStories:  Databases loaded 
+2017-10-12 23:19:57,666 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBookStories:  Server started 
+2017-10-12 23:19:57,668 FATAL Class [Thread-1] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-10-12 23:19:57,670 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBookStories:  Cleared database data 
+2017-10-12 23:19:57,672 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBookStories:  Successfully added book 55555 
+2017-10-12 23:19:57,673 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBookStories:  Successfully remove book 55555 
+2017-10-12 23:19:57,673 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBookStories:  Failed to find book 
+2017-10-12 23:19:57,675 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBookStories:  Successfully added user: testRemoveBookNegative2 
+2017-10-12 23:19:57,677 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBookStories:  Successfully added book 33333 
+2017-10-12 23:19:57,682 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBookStories:  Successfully added copy to book 33333 
+2017-10-12 23:19:57,688 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBookStories:  Successfully borowed book 33333 
+2017-10-12 23:19:57,688 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBookStories:  Failed to remove book. Loans exists 
+2017-10-12 23:19:57,694 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBookStories:  Successfully added user: testRemoveBookNegative3 
+2017-10-12 23:19:57,695 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBookStories:  Successfully added book 22222 
+2017-10-12 23:19:57,697 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBookStories:  Successfully added copy to book 22222 
+2017-10-12 23:19:57,700 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBookStories:  Successfully reserved book 22222 
+2017-10-12 23:19:57,700 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBookStories:  Failed to remove book. Reservations exists 
+2017-10-12 23:19:57,702 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBookStories:  Successfully added book 99999 
+2017-10-12 23:19:57,705 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBookStories:  Successfully added book 88888 
+2017-10-12 23:19:57,705 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBookStories:  Failed to add book 
+2017-10-12 23:19:57,710 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBookStories:  Cleared database data 
+2017-10-12 23:19:57,710 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-10-12 23:19:57,711 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestCopyStories:  Databases loaded 
+2017-10-12 23:19:57,712 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestCopyStories:  Server started 
+2017-10-12 23:19:57,712 FATAL Class [Thread-2] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-10-12 23:19:57,715 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestCopyStories:  Cleared database data 
+2017-10-12 23:19:57,717 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestCopyStories:  Successfully added book 11111 
+2017-10-12 23:19:57,719 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestCopyStories:  Successfully added copy to book 11111 
+2017-10-12 23:19:57,721 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestCopyStories:  Successfully removed copy 
+2017-10-12 23:19:57,721 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestCopyStories:  Failed to find book 
+2017-10-12 23:19:57,723 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestCopyStories:  Successfully added book 3333 
+2017-10-12 23:19:57,725 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestCopyStories:  Successfully added copy to book 3333 
+2017-10-12 23:19:57,725 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestCopyStories:  Failed to find copy 
+2017-10-12 23:19:57,727 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestCopyStories:  Successfully added user: testRemoveCopyNegative3 
+2017-10-12 23:19:57,732 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestCopyStories:  Successfully added book 2222 
+2017-10-12 23:19:57,733 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestCopyStories:  Successfully added copy to book 2222 
+2017-10-12 23:19:57,738 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestCopyStories:  Successfully borowed book 2222 
+2017-10-12 23:19:57,738 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestCopyStories:  Failed to remove copy. Loans exists 
+2017-10-12 23:19:57,740 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestCopyStories:  Successfully added user: testRemoveCopyNegative4 
+2017-10-12 23:19:57,743 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestCopyStories:  Successfully added book 1111 
+2017-10-12 23:19:57,745 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestCopyStories:  Successfully added copy to book 1111 
+2017-10-12 23:19:57,750 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestCopyStories:  Successfully reserved book 1111 
+2017-10-12 23:19:57,750 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestCopyStories:  Failed to remove book. Reservations exists 
+2017-10-12 23:19:57,756 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestCopyStories:  Successfully added book 77777 
+2017-10-12 23:19:57,757 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestCopyStories:  Successfully added copy to book 77777 
+2017-10-12 23:19:57,759 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestCopyStories:  Successfully added copy to book 77777 
+2017-10-12 23:19:57,760 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestCopyStories:  Failed to add copy 
+2017-10-12 23:19:57,760 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestCopyStories:  Failed to add copy 
+2017-10-12 23:19:57,764 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestCopyStories:  Cleared database data 
+2017-10-12 23:19:57,764 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-10-12 23:19:57,765 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Databases loaded 
+2017-10-12 23:19:57,765 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Server started 
+2017-10-12 23:19:57,766 FATAL Class [Thread-3] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-10-12 23:19:57,770 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Cleared database data 
+2017-10-12 23:19:57,772 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added user: testBorrowPositive1 
+2017-10-12 23:19:57,774 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added book 111 
+2017-10-12 23:19:57,776 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added copy to book 111 
+2017-10-12 23:19:57,781 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully borowed book 111 
+2017-10-12 23:19:57,787 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added user: testBorrowPositive2 
+2017-10-12 23:19:57,792 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added user: testBorrowPositive2Other 
+2017-10-12 23:19:57,794 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added book 222 
+2017-10-12 23:19:57,796 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added copy to book 222 
+2017-10-12 23:19:57,798 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully reserved book 222 
+2017-10-12 23:19:57,804 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully borowed book 222 
+2017-10-12 23:19:57,806 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully reserved book 222 
+2017-10-12 23:19:57,808 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added book 333 
+2017-10-12 23:19:57,810 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added copy to book 333 
+2017-10-12 23:19:57,810 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Failed to find user 
+2017-10-12 23:19:57,812 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added user: testBorrowNegative2 
+2017-10-12 23:19:57,813 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Failed to find book 
+2017-10-12 23:19:57,815 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added user: testBorrowNegative3 
+2017-10-12 23:19:57,816 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added book 555 
+2017-10-12 23:19:57,818 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added copy to book 555 
+2017-10-12 23:19:57,818 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Failed to find copy 
+2017-10-12 23:19:57,824 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added user: testBorrowNegative4 
+2017-10-12 23:19:57,827 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added user: testBorrowNegative4Other 
+2017-10-12 23:19:57,828 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added book 666 
+2017-10-12 23:19:57,830 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added copy to book 666 
+2017-10-12 23:19:57,836 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully borowed book 666 
+2017-10-12 23:19:57,836 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Loan already exists 
+2017-10-12 23:19:57,839 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added user: testBorrowNegative5 
+2017-10-12 23:19:57,844 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added user: testBorrowNegative5Other 
+2017-10-12 23:19:57,846 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added book 777 
+2017-10-12 23:19:57,848 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added copy to book 777 
+2017-10-12 23:19:57,850 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully reserved book 777 
+2017-10-12 23:19:57,850 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Reservation already exists 
+2017-10-12 23:19:57,852 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added user: testBorrowNegative6 
+2017-10-12 23:19:57,854 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully revoked users privileges 
+2017-10-12 23:19:57,856 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added book 888 
+2017-10-12 23:19:57,858 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added copy to book 888 
+2017-10-12 23:19:57,858 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  User has no privileges 
+2017-10-12 23:19:57,861 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added user: testBorrowNegative7 
+2017-10-12 23:19:57,866 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added book 999 
+2017-10-12 23:19:57,868 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added copy to book 999 
+2017-10-12 23:19:57,870 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added copy to book 999 
+2017-10-12 23:19:57,872 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added copy to book 999 
+2017-10-12 23:19:57,874 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added copy to book 999 
+2017-10-12 23:19:57,879 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added copy to book 999 
+2017-10-12 23:19:57,881 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added copy to book 999 
+2017-10-12 23:19:57,886 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added copy to book 999 
+2017-10-12 23:19:57,889 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added copy to book 999 
+2017-10-12 23:19:57,894 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added copy to book 999 
+2017-10-12 23:19:57,899 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added copy to book 999 
+2017-10-12 23:19:57,900 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully added copy to book 999 
+2017-10-12 23:19:57,905 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully borowed book 999 
+2017-10-12 23:19:57,911 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully borowed book 999 
+2017-10-12 23:19:57,917 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully borowed book 999 
+2017-10-12 23:19:57,921 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully borowed book 999 
+2017-10-12 23:19:57,929 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully borowed book 999 
+2017-10-12 23:19:57,933 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully borowed book 999 
+2017-10-12 23:19:57,937 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully borowed book 999 
+2017-10-12 23:19:57,943 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully borowed book 999 
+2017-10-12 23:19:57,951 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully borowed book 999 
+2017-10-12 23:19:57,957 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Successfully borowed book 999 
+2017-10-12 23:19:57,957 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  User has reached max loans 
+2017-10-12 23:19:57,960 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestBorrowStories:  Cleared database data 
+2017-10-12 23:19:57,960 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-10-12 23:19:57,961 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Databases loaded 
+2017-10-12 23:19:57,961 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Server started 
+2017-10-12 23:19:57,961 FATAL Class [Thread-4] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-10-12 23:19:57,964 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Cleared database data 
+2017-10-12 23:19:57,966 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully added user: testRenewNegative1 
+2017-10-12 23:19:57,968 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully added book 1001 
+2017-10-12 23:19:57,969 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully added copy to book 1001 
+2017-10-12 23:19:57,973 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully borowed book 1001 
+2017-10-12 23:19:57,974 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Failed to find user 
+2017-10-12 23:19:57,976 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully added user: testRenewNegative2 
+2017-10-12 23:19:57,978 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully added book 1002 
+2017-10-12 23:19:57,979 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully added copy to book 1002 
+2017-10-12 23:19:57,984 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully borowed book 1002 
+2017-10-12 23:19:57,985 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Failed to find book 
+2017-10-12 23:19:57,986 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully added user: testRenewNegative3 
+2017-10-12 23:19:57,992 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully added book 1003 
+2017-10-12 23:19:57,993 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully added copy to book 1003 
+2017-10-12 23:19:57,998 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully borowed book 1003 
+2017-10-12 23:19:57,999 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Failed to find copy 
+2017-10-12 23:19:58,000 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully added user: testRenewNegative4 
+2017-10-12 23:19:58,002 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully added user: testRenewNegative4Other 
+2017-10-12 23:19:58,007 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully added book 1004 
+2017-10-12 23:19:58,008 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully added copy to book 1004 
+2017-10-12 23:19:58,010 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully added copy to book 1004 
+2017-10-12 23:19:58,011 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully added book 10042 
+2017-10-12 23:19:58,013 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully added copy to book 10042 
+2017-10-12 23:19:58,018 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully borowed book 1004 
+2017-10-12 23:19:58,019 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Failed to find loan 
+2017-10-12 23:19:58,019 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Failed to find loan 
+2017-10-12 23:19:58,019 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Failed to find loan 
+2017-10-12 23:19:58,024 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully added user: testRenewNegative5 
+2017-10-12 23:19:58,026 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully added book 1005 
+2017-10-12 23:19:58,027 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully added copy to book 1005 
+2017-10-12 23:19:58,032 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully borowed book 1005 
+2017-10-12 23:19:58,033 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully revoked users privileges 
+2017-10-12 23:19:58,033 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  User has no privileges 
+2017-10-12 23:19:58,035 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully added user: testRenewNegative6 
+2017-10-12 23:19:58,036 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully added book 1006 
+2017-10-12 23:19:58,038 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully added copy to book 1006 
+2017-10-12 23:19:58,042 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully borowed book 1006 
+2017-10-12 23:19:58,047 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully renewed book 1006 
+2017-10-12 23:19:58,052 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully renewed book 1006 
+2017-10-12 23:19:58,053 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Loan has reached maximum renewals 
+2017-10-12 23:19:58,057 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully added user: testRenewNegative7 
+2017-10-12 23:19:58,059 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully added user: testRenewNegative7Other 
+2017-10-12 23:19:58,060 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully added book 1007 
+2017-10-12 23:19:58,062 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully added copy to book 1007 
+2017-10-12 23:19:58,067 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully borowed book 1007 
+2017-10-12 23:19:58,068 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully reserved book 1007 
+2017-10-12 23:19:58,068 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Failed to rewnew. Reservation exists 
+2017-10-12 23:19:58,076 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully added user: testRenewPositive 
+2017-10-12 23:19:58,078 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully added book 1000 
+2017-10-12 23:19:58,079 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully added copy to book 1000 
+2017-10-12 23:19:58,085 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully borowed book 1000 
+2017-10-12 23:19:58,091 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Successfully renewed book 1000 
+2017-10-12 23:19:58,095 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestRenewStories:  Cleared database data 
+2017-10-12 23:19:58,095 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-10-12 23:19:58,096 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Databases loaded 
+2017-10-12 23:19:58,096 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Server started 
+2017-10-12 23:19:58,096 FATAL Class [Thread-5] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-10-12 23:19:58,100 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Cleared database data 
+2017-10-12 23:19:58,101 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully added user: testReturnPositive1 
+2017-10-12 23:19:58,103 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully added book 11 
+2017-10-12 23:19:58,105 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully added copy to book 11 
+2017-10-12 23:19:58,110 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully borowed book 11 
+2017-10-12 23:19:58,112 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully returned book 11 
+2017-10-12 23:19:58,114 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully added user: testReturnPositive2 
+2017-10-12 23:19:58,115 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully added book 22 
+2017-10-12 23:19:58,117 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully added copy to book 22 
+2017-10-12 23:19:58,123 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully borowed book 22 
+2017-10-12 23:19:58,125 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully returned book but fees were applied 
+2017-10-12 23:19:58,131 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully borowed book 22 
+2017-10-12 23:19:58,133 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully added user: testReturnPositive3 
+2017-10-12 23:19:58,135 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully added book 221 
+2017-10-12 23:19:58,136 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully added copy to book 221 
+2017-10-12 23:19:58,143 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully borowed book 221 
+2017-10-12 23:19:58,146 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully returned book but privileges were revoked 
+2017-10-12 23:19:58,146 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  User has no privileges 
+2017-10-12 23:19:58,149 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully added user: testReturnNegative1 
+2017-10-12 23:19:58,151 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully added book 33 
+2017-10-12 23:19:58,153 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully added copy to book 33 
+2017-10-12 23:19:58,159 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully borowed book 33 
+2017-10-12 23:19:58,159 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Failed to find user 
+2017-10-12 23:19:58,165 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully added user: testReturnNegative2 
+2017-10-12 23:19:58,171 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully added book 44 
+2017-10-12 23:19:58,173 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully added copy to book 44 
+2017-10-12 23:19:58,179 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully borowed book 44 
+2017-10-12 23:19:58,179 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Failed to find book 
+2017-10-12 23:19:58,186 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully added user: testReturnNegative3 
+2017-10-12 23:19:58,187 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully added book 55 
+2017-10-12 23:19:58,189 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully added copy to book 55 
+2017-10-12 23:19:58,195 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully borowed book 55 
+2017-10-12 23:19:58,195 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Failed to find copy 
+2017-10-12 23:19:58,201 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully added user: testReturnNegative4 
+2017-10-12 23:19:58,203 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully added user: testReturnNegative4Other 
+2017-10-12 23:19:58,205 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully added book 66 
+2017-10-12 23:19:58,209 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully added copy to book 66 
+2017-10-12 23:19:58,211 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully added copy to book 66 
+2017-10-12 23:19:58,213 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully added book 77 
+2017-10-12 23:19:58,215 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully added copy to book 77 
+2017-10-12 23:19:58,219 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Successfully borowed book 66 
+2017-10-12 23:19:58,219 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Failed to find loan 
+2017-10-12 23:19:58,219 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Failed to find loan 
+2017-10-12 23:19:58,219 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Failed to find loan 
+2017-10-12 23:19:58,222 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestReturnStories:  Cleared database data 
+2017-10-12 23:19:58,222 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-10-12 23:19:58,223 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestFeeStories:  Databases loaded 
+2017-10-12 23:19:58,223 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestFeeStories:  Server started 
+2017-10-12 23:19:58,224 FATAL Class [Thread-6] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-10-12 23:19:58,227 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestFeeStories:  Cleared database data 
+2017-10-12 23:19:58,228 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestFeeStories:  Successfully added user: testPayFeePositive1 
+2017-10-12 23:19:58,230 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestFeeStories:  Successfully added book 2000 
+2017-10-12 23:19:58,231 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestFeeStories:  Successfully added copy to book 2000 
+2017-10-12 23:19:58,236 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestFeeStories:  Successfully borowed book 2000 
+2017-10-12 23:19:58,243 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestFeeStories:  Successfully returned book but privileges were revoked 
+2017-10-12 23:19:58,244 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestFeeStories:  Successfully applied fee of $1 to user testPayFeePositive1 
+2017-10-12 23:19:58,244 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestFeeStories:  User has no privileges 
+2017-10-12 23:19:58,246 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestFeeStories:  Successfully added user: testPayFeePositive2 
+2017-10-12 23:19:58,248 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestFeeStories:  Successfully added book 2001 
+2017-10-12 23:19:58,250 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestFeeStories:  Successfully added copy to book 2001 
+2017-10-12 23:19:58,257 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestFeeStories:  Successfully borowed book 2001 
+2017-10-12 23:19:58,262 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestFeeStories:  Successfully returned book but privileges were revoked 
+2017-10-12 23:19:58,263 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestFeeStories:  Successfully applied fee of $5 to user testPayFeePositive2 
+2017-10-12 23:19:58,269 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestFeeStories:  Successfully borowed book 2001 
+2017-10-12 23:19:58,269 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestFeeStories:  Failed to find user 
+2017-10-12 23:19:58,273 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestFeeStories:  Cleared database data 
+2017-10-12 23:19:58,274 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-10-12 23:19:58,274 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Databases loaded 
+2017-10-12 23:19:58,274 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Server started 
+2017-10-12 23:19:58,275 FATAL Class [Thread-7] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-10-12 23:19:58,278 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Cleared database data 
+2017-10-12 23:19:58,279 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Successfully added user: testMonitor1Username1 
+2017-10-12 23:19:58,281 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Successfully added user: testMonitor1Username2 
+2017-10-12 23:19:58,286 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Successfully added user: testMonitor1Username3 
+2017-10-12 23:19:58,291 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Successfully added book 12345 
+2017-10-12 23:19:58,296 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Successfully added copy to book 12345 
+2017-10-12 23:19:58,298 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Successfully added copy to book 12345 
+2017-10-12 23:19:58,300 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Successfully added book 23456 
+2017-10-12 23:19:58,301 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Successfully added copy to book 23456 
+2017-10-12 23:19:58,303 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Successfully added copy to book 23456 
+2017-10-12 23:19:58,305 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Successfully added book 34567 
+2017-10-12 23:19:58,307 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Successfully added copy to book 34567 
+2017-10-12 23:19:58,308 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Successfully added book 45678 
+2017-10-12 23:19:58,310 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Successfully added copy to book 45678 
+2017-10-12 23:19:58,315 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Successfully added copy to book 45678 
+2017-10-12 23:19:58,317 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Successfully added copy to book 45678 
+2017-10-12 23:19:58,319 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Successfully added book 56789 
+2017-10-12 23:19:58,320 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Successfully added copy to book 56789 
+2017-10-12 23:19:58,324 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Cleared database data 
+2017-10-12 23:19:58,324 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-10-12 23:19:58,325 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Databases loaded 
+2017-10-12 23:19:58,325 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Server started 
+2017-10-12 23:19:58,326 FATAL Class [Thread-8] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-10-12 23:19:58,329 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Cleared database data 
+2017-10-12 23:19:58,334 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Successfully added book 1234 
+2017-10-12 23:19:58,336 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Successfully added copy to book 1234 
+2017-10-12 23:19:58,337 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Successfully added book 2345 
+2017-10-12 23:19:58,339 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Successfully added copy to book 2345 
+2017-10-12 23:19:58,341 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Successfully added copy to book 2345 
+2017-10-12 23:19:58,342 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Successfully added book 3456 
+2017-10-12 23:19:58,348 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Successfully added copy to book 3456 
+2017-10-12 23:19:58,349 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Successfully added copy to book 3456 
+2017-10-12 23:19:58,351 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Successfully added copy to book 3456 
+2017-10-12 23:19:58,354 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Cleared database data 
+2017-10-12 23:19:58,355 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-10-12 23:19:58,356 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Databases loaded 
+2017-10-12 23:19:58,356 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Server started 
+2017-10-12 23:19:58,364 FATAL Class [Thread-9] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-10-12 23:19:58,371 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Cleared database data 
+2017-10-12 23:19:58,373 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Successfully added user: testMonitor3User1 
+2017-10-12 23:19:58,375 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Successfully added user: testMonitor3User2 
+2017-10-12 23:19:58,376 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Successfully added user: testMonitor3User3 
+2017-10-12 23:19:58,380 INFO Class [main] [CONTROLLER] com.comp4004.test.story.TestMonitorStories:  Cleared database data 
