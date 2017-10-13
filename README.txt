@@ -10,6 +10,8 @@ TO RUN IN ECLIPSE:
 Runnable Class: StartTerminals.java, Server.java
 Runnable Tests: All tests under com.comp4004.test package
 
+There are two test suites: TestSuite.java and TestDatabaseSuite.java
+
 Logger may not register log4j in properties, if so, follow these steps in Eclipse
 1. Run -> Run Configurations...
 2. Java Application -> <Server or StartTerminals>

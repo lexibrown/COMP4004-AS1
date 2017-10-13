@@ -83,7 +83,7 @@ public class TestUserStories {
 	public void testUserCreationNegative() {
 		String username1 = "testUserCreationNegative1";
 		String password1 = "testUserCreationNegativePassword1";
-		String username2 = "testUserCreationNegative2";
+		String username2 = "testUserCreationNegative1";
 		String password2 = "testUserCreationNegativePassword2";
 
 		assertTrue(c.createUser(username1, password1));

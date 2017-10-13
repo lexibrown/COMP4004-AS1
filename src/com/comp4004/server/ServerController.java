@@ -339,14 +339,25 @@ public class ServerController {
 		List<Book> books = bookDatabase.getBooks();
 		List<User> users = userDatabase.getUsers();
 
-		for (Book b : books) {
-			content += bookInfo(b);
+		content += "Books:\n";
+		if (books.isEmpty()) {
+			content += "\tNo books\n";
+		} else {
+			for (Book b : books) {
+				content += bookInfo(b);
+			}
 		}
-		for (User u : users) {
-			content += userInfo(u);
-		}
+		content += "\n";
 
-		return content;
+		content += "Users:\n";
+		if (users.isEmpty()) {
+			content += "\tNo users\n";
+		} else {
+			for (User u : users) {
+				content += userInfo(u);
+			}
+		}
+		return content += "\n";
 	}
 
 	/**
