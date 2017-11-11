@@ -6954,3 +6954,763 @@ java.net.BindException: Address already in use: JVM_Bind
 2017-11-11 17:46:35,235 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully renewed book 12345678 
 2017-11-11 17:46:35,243 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully renewed book 87654321 
 2017-11-11 17:46:35,247 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:28,742 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:28,753 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:28,754 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:28,758 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:28,859 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,083 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added user: user1 
+2017-11-11 17:50:29,085 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Failed to create user 
+2017-11-11 17:50:29,086 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Failed to create user 
+2017-11-11 17:50:29,089 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,091 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:29,092 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:29,092 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:29,095 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,097 FATAL Class [Thread-1] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at main.java.com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-11 17:50:29,101 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,105 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Failed to add copy 
+2017-11-11 17:50:29,107 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Failed to add copy 
+2017-11-11 17:50:29,110 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,112 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:29,113 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:29,113 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:29,116 FATAL Class [Thread-2] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at main.java.com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-11 17:50:29,117 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,122 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,128 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 12345678 
+2017-11-11 17:50:29,129 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Failed to add book 
+2017-11-11 17:50:29,130 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Failed to add book 
+2017-11-11 17:50:29,134 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,135 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:29,136 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:29,136 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:29,137 FATAL Class [Thread-3] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at main.java.com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-11 17:50:29,139 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,144 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,154 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added user: user1 
+2017-11-11 17:50:29,162 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added user: user2 
+2017-11-11 17:50:29,165 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 12345678 
+2017-11-11 17:50:29,175 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:29,188 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully borowed book 12345678 
+2017-11-11 17:50:29,191 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Loan already exists 
+2017-11-11 17:50:29,195 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,197 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:29,198 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:29,198 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:29,199 FATAL Class [Thread-4] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at main.java.com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-11 17:50:29,201 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,205 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,209 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added user: user1 
+2017-11-11 17:50:29,212 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added user: user2 
+2017-11-11 17:50:29,215 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 12345678 
+2017-11-11 17:50:29,218 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:29,224 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully borowed book 12345678 
+2017-11-11 17:50:29,231 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully renewed book 12345678 
+2017-11-11 17:50:29,232 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Loan already exists 
+2017-11-11 17:50:29,236 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,237 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:29,238 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:29,238 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:29,239 FATAL Class [Thread-5] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at main.java.com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-11 17:50:29,242 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,246 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,250 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added user: user1 
+2017-11-11 17:50:29,252 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added user: user2 
+2017-11-11 17:50:29,254 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 12345678 
+2017-11-11 17:50:29,257 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:29,262 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully borowed book 12345678 
+2017-11-11 17:50:29,265 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully returned book 12345678 
+2017-11-11 17:50:29,270 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully borowed book 12345678 
+2017-11-11 17:50:29,272 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Loan already exists 
+2017-11-11 17:50:29,276 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,278 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:29,279 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:29,279 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:29,282 FATAL Class [Thread-6] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at main.java.com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-11 17:50:29,283 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,287 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,292 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added user: user1 
+2017-11-11 17:50:29,294 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 12345678 
+2017-11-11 17:50:29,297 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 23456781 
+2017-11-11 17:50:29,299 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 34567812 
+2017-11-11 17:50:29,303 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:29,305 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 23456781 
+2017-11-11 17:50:29,307 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 34567812 
+2017-11-11 17:50:29,314 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully borowed book 12345678 
+2017-11-11 17:50:29,320 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully borowed book 23456781 
+2017-11-11 17:50:29,322 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  User has reached max loans 
+2017-11-11 17:50:29,325 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,327 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:29,328 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:29,328 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:29,330 FATAL Class [Thread-7] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at main.java.com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-11 17:50:29,331 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,335 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,340 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added user: user1 
+2017-11-11 17:50:29,342 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 12345678 
+2017-11-11 17:50:29,345 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 23456781 
+2017-11-11 17:50:29,348 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 34567812 
+2017-11-11 17:50:29,350 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:29,355 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 23456781 
+2017-11-11 17:50:29,360 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 34567812 
+2017-11-11 17:50:29,366 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully borowed book 12345678 
+2017-11-11 17:50:29,372 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully borowed book 23456781 
+2017-11-11 17:50:29,375 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully returned book 23456781 
+2017-11-11 17:50:29,381 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully borowed book 34567812 
+2017-11-11 17:50:29,382 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  User has reached max loans 
+2017-11-11 17:50:29,385 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,386 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:29,387 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:29,387 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:29,388 FATAL Class [Thread-8] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at main.java.com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-11 17:50:29,391 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,408 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,411 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 12345678 
+2017-11-11 17:50:29,414 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:29,414 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Failed to find copy 
+2017-11-11 17:50:29,420 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,421 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:29,422 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:29,422 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:29,423 FATAL Class [Thread-9] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at main.java.com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-11 17:50:29,425 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,429 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,433 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added user: user1 
+2017-11-11 17:50:29,435 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 12345678 
+2017-11-11 17:50:29,437 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:29,444 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully borowed book 12345678 
+2017-11-11 17:50:29,445 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Failed to remove copy. Loans exists 
+2017-11-11 17:50:29,452 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,454 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:29,456 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:29,456 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:29,457 FATAL Class [Thread-10] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at main.java.com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-11 17:50:29,474 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,479 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,483 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added user: user1 
+2017-11-11 17:50:29,486 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 12345678 
+2017-11-11 17:50:29,489 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:29,498 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully borowed book 12345678 
+2017-11-11 17:50:29,514 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully renewed book 12345678 
+2017-11-11 17:50:29,516 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Failed to remove copy. Loans exists 
+2017-11-11 17:50:29,525 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,526 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:29,527 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:29,527 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:29,531 FATAL Class [Thread-11] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at main.java.com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-11 17:50:29,539 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,546 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,551 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 12345678 
+2017-11-11 17:50:29,554 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:29,556 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Failed to remove book. Copies exists 
+2017-11-11 17:50:29,562 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,565 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:29,566 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:29,566 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:29,567 FATAL Class [Thread-12] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at main.java.com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-11 17:50:29,572 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,581 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,586 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added user: user1 
+2017-11-11 17:50:29,589 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 12345678 
+2017-11-11 17:50:29,592 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:29,598 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully borowed book 12345678 
+2017-11-11 17:50:29,600 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Failed to remove book. Loans exists 
+2017-11-11 17:50:29,605 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,609 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:29,610 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:29,610 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:29,624 FATAL Class [Thread-13] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at main.java.com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-11 17:50:29,625 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,629 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,635 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added user: user1 
+2017-11-11 17:50:29,639 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 12345678 
+2017-11-11 17:50:29,641 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:29,644 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:29,646 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully removed copy 
+2017-11-11 17:50:29,647 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Failed to remove book. Copies exists 
+2017-11-11 17:50:29,651 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,652 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:29,653 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:29,653 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:29,654 FATAL Class [Thread-14] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at main.java.com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-11 17:50:29,656 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,660 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,661 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  User not found 
+2017-11-11 17:50:29,665 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,666 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:29,667 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:29,667 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:29,670 FATAL Class [Thread-15] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at main.java.com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-11 17:50:29,670 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,674 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,678 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added user: user1 
+2017-11-11 17:50:29,680 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 12345678 
+2017-11-11 17:50:29,683 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:29,690 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully borowed book 12345678 
+2017-11-11 17:50:29,691 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully returned book 12345678 
+2017-11-11 17:50:29,693 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Failed to find loan 
+2017-11-11 17:50:29,698 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,701 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:29,701 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:29,702 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:29,703 FATAL Class [Thread-16] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at main.java.com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-11 17:50:29,704 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,710 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 34567812 
+2017-11-11 17:50:29,715 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 12345678 
+2017-11-11 17:50:29,719 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 34567812 
+2017-11-11 17:50:29,721 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added user: user1 
+2017-11-11 17:50:29,724 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:29,726 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:29,728 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added user: user2 
+2017-11-11 17:50:29,730 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 23456781 
+2017-11-11 17:50:29,733 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 23456781 
+2017-11-11 17:50:29,742 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 34567812 
+2017-11-11 17:50:29,754 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully removed copy 
+2017-11-11 17:50:29,763 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully borowed book 23456781 
+2017-11-11 17:50:29,766 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 23456781 
+2017-11-11 17:50:29,772 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully removed copy 
+2017-11-11 17:50:29,802 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully returned book 23456781 
+2017-11-11 17:50:29,809 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully borowed book 34567812 
+2017-11-11 17:50:29,817 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully removed copy 
+2017-11-11 17:50:29,820 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully removed copy 
+2017-11-11 17:50:29,823 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully remove book 12345678 
+2017-11-11 17:50:29,829 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully removed copy 
+2017-11-11 17:50:29,837 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully removed user1 
+2017-11-11 17:50:29,839 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully returned book 34567812 
+2017-11-11 17:50:29,843 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully removed user2 
+2017-11-11 17:50:29,846 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully removed copy 
+2017-11-11 17:50:29,849 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully remove book 23456781 
+2017-11-11 17:50:29,850 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully remove book 34567812 
+2017-11-11 17:50:29,855 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,861 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:29,862 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:29,862 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:29,865 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,869 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,876 FATAL Class [Thread-17] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at main.java.com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-11 17:50:29,879 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added user: user1 
+2017-11-11 17:50:29,893 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,895 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:29,895 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:29,895 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:29,899 FATAL Class [Thread-18] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at main.java.com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-11 17:50:29,908 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,911 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,914 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added user: user1 
+2017-11-11 17:50:29,919 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully removed user1 
+2017-11-11 17:50:29,924 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added user: user1 
+2017-11-11 17:50:29,928 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,929 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:29,929 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:29,930 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:29,932 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,936 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,939 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 12345678 
+2017-11-11 17:50:29,943 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,946 FATAL Class [Thread-19] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at main.java.com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-11 17:50:29,955 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:29,957 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:29,957 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:29,960 FATAL Class [Thread-20] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at main.java.com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-11 17:50:29,964 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,969 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:29,981 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 12345678 
+2017-11-11 17:50:29,982 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully remove book 12345678 
+2017-11-11 17:50:29,993 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 12345678 
+2017-11-11 17:50:29,998 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,000 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:30,001 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:30,001 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:30,002 FATAL Class [Thread-21] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at main.java.com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-11 17:50:30,008 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,013 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,015 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 12345678 
+2017-11-11 17:50:30,017 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:30,021 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,022 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:30,023 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:30,023 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:30,026 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,028 FATAL Class [Thread-22] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at main.java.com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-11 17:50:30,029 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,032 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 12345678 
+2017-11-11 17:50:30,034 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:30,037 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:30,040 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:30,045 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,046 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:30,048 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:30,048 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:30,052 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,055 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,059 FATAL Class [Thread-23] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at main.java.com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-11 17:50:30,060 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 12345678 
+2017-11-11 17:50:30,062 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:30,066 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:30,068 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:30,071 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully removed copy 
+2017-11-11 17:50:30,075 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:30,079 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:30,082 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,083 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:30,084 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:30,084 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:30,087 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,090 FATAL Class [Thread-24] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at main.java.com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-11 17:50:30,090 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,095 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added user: user1 
+2017-11-11 17:50:30,097 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added user: user2 
+2017-11-11 17:50:30,101 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 12345678 
+2017-11-11 17:50:30,103 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 87654321 
+2017-11-11 17:50:30,106 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:30,118 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:30,126 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:30,129 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 87654321 
+2017-11-11 17:50:30,132 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 87654321 
+2017-11-11 17:50:30,134 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 87654321 
+2017-11-11 17:50:30,142 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully borowed book 12345678 
+2017-11-11 17:50:30,149 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully borowed book 87654321 
+2017-11-11 17:50:30,157 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully borowed book 12345678 
+2017-11-11 17:50:30,165 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully borowed book 87654321 
+2017-11-11 17:50:30,171 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,172 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:30,172 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:30,172 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:30,175 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,179 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,180 FATAL Class [Thread-25] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at main.java.com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-11 17:50:30,184 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 12345678 
+2017-11-11 17:50:30,187 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 87654321 
+2017-11-11 17:50:30,190 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:30,202 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:30,209 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:30,212 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 87654321 
+2017-11-11 17:50:30,216 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 87654321 
+2017-11-11 17:50:30,219 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 87654321 
+2017-11-11 17:50:30,222 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully removed copy 
+2017-11-11 17:50:30,224 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully removed copy 
+2017-11-11 17:50:30,227 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully removed copy 
+2017-11-11 17:50:30,232 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,232 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:30,233 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:30,233 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:30,236 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,240 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,242 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 12345678 
+2017-11-11 17:50:30,243 FATAL Class [Thread-26] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at main.java.com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-11 17:50:30,243 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully remove book 12345678 
+2017-11-11 17:50:30,247 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,248 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:30,249 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:30,249 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:30,251 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,255 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,258 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added user: user1 
+2017-11-11 17:50:30,260 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully removed user1 
+2017-11-11 17:50:30,263 FATAL Class [Thread-27] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at main.java.com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-11 17:50:30,267 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,268 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:30,269 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:30,269 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:30,271 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,275 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,279 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added user: user1 
+2017-11-11 17:50:30,282 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 12345678 
+2017-11-11 17:50:30,284 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:30,291 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully borowed book 12345678 
+2017-11-11 17:50:30,293 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully returned book 12345678 
+2017-11-11 17:50:30,295 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully removed copy 
+2017-11-11 17:50:30,296 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully remove book 12345678 
+2017-11-11 17:50:30,298 FATAL Class [Thread-28] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at main.java.com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-11 17:50:30,300 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,300 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:30,305 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:30,305 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:30,308 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,311 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,320 FATAL Class [Thread-29] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at main.java.com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-11 17:50:30,324 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added user: user1 
+2017-11-11 17:50:30,328 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 12345678 
+2017-11-11 17:50:30,331 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:30,338 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully borowed book 12345678 
+2017-11-11 17:50:30,347 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully renewed book 12345678 
+2017-11-11 17:50:30,352 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,353 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:30,354 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:30,354 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:30,356 FATAL Class [Thread-30] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at main.java.com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-11 17:50:30,357 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,361 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,364 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added user: user1 
+2017-11-11 17:50:30,366 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 12345678 
+2017-11-11 17:50:30,369 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:30,376 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully borowed book 12345678 
+2017-11-11 17:50:30,386 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully renewed book 12345678 
+2017-11-11 17:50:30,388 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully returned book 12345678 
+2017-11-11 17:50:30,392 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,393 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:30,394 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:30,394 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:30,397 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,402 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,407 FATAL Class [Thread-31] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at main.java.com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-11 17:50:30,414 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added user: user1 
+2017-11-11 17:50:30,416 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added user: user2 
+2017-11-11 17:50:30,420 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 12345678 
+2017-11-11 17:50:30,422 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 87654321 
+2017-11-11 17:50:30,425 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:30,428 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:30,431 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:30,434 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 87654321 
+2017-11-11 17:50:30,436 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 87654321 
+2017-11-11 17:50:30,438 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 87654321 
+2017-11-11 17:50:30,445 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully borowed book 12345678 
+2017-11-11 17:50:30,455 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully borowed book 87654321 
+2017-11-11 17:50:30,462 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully borowed book 12345678 
+2017-11-11 17:50:30,472 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully borowed book 87654321 
+2017-11-11 17:50:30,478 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully returned book 12345678 
+2017-11-11 17:50:30,484 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully returned book 87654321 
+2017-11-11 17:50:30,490 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully returned book 12345678 
+2017-11-11 17:50:30,492 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully returned book 87654321 
+2017-11-11 17:50:30,498 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully borowed book 12345678 
+2017-11-11 17:50:30,504 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully borowed book 87654321 
+2017-11-11 17:50:30,508 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,509 INFO Class [main] [CONTROLLER] Databases initilized 
+2017-11-11 17:50:30,509 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Databases loaded 
+2017-11-11 17:50:30,510 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Server started 
+2017-11-11 17:50:30,510 FATAL Class [Thread-32] Something went wrong 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at main.java.com.comp4004.server.Server.run(Server.java:88)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-11 17:50:30,513 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,517 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 
+2017-11-11 17:50:30,520 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added user: user1 
+2017-11-11 17:50:30,522 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 12345678 
+2017-11-11 17:50:30,524 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added book 87654321 
+2017-11-11 17:50:30,526 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:30,528 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 12345678 
+2017-11-11 17:50:30,530 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 87654321 
+2017-11-11 17:50:30,532 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully added copy to book 87654321 
+2017-11-11 17:50:30,537 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully borowed book 12345678 
+2017-11-11 17:50:30,543 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully borowed book 87654321 
+2017-11-11 17:50:30,548 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully renewed book 12345678 
+2017-11-11 17:50:30,553 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Successfully renewed book 87654321 
+2017-11-11 17:50:30,557 INFO Class [main] [CONTROLLER] main.java.com.comp4004.test.cucumber.StepDefinitions:  Cleared database data 

@@ -7,11 +7,11 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 391505,
+  "duration": 208592,
   "status": "passed"
 });
 formatter.before({
-  "duration": 112352963,
+  "duration": 85938398,
   "status": "passed"
 });
 formatter.background({
@@ -30,7 +30,7 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 103459351,
+  "duration": 97378178,
   "status": "passed"
 });
 formatter.scenario({
@@ -66,7 +66,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 259693314,
+  "duration": 219263961,
   "status": "passed"
 });
 formatter.match({
@@ -79,7 +79,7 @@ formatter.match({
   "location": "StepDefinitions.addUser(String)"
 });
 formatter.result({
-  "duration": 269431,
+  "duration": 144593,
   "status": "passed"
 });
 formatter.match({
@@ -92,23 +92,23 @@ formatter.match({
   "location": "StepDefinitions.failedToAddUser(String)"
 });
 formatter.result({
-  "duration": 185679,
+  "duration": 130370,
   "status": "passed"
 });
 formatter.after({
-  "duration": 5865469,
+  "duration": 3043550,
   "status": "passed"
 });
 formatter.after({
-  "duration": 203061,
+  "duration": 53728,
   "status": "passed"
 });
 formatter.before({
-  "duration": 159605,
+  "duration": 66370,
   "status": "passed"
 });
 formatter.before({
-  "duration": 4898361,
+  "duration": 4327893,
   "status": "passed"
 });
 formatter.background({
@@ -127,7 +127,7 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 3394759,
+  "duration": 3467055,
   "status": "passed"
 });
 formatter.scenario({
@@ -163,7 +163,7 @@ formatter.match({
   "location": "StepDefinitions.noSuchBookExists(int)"
 });
 formatter.result({
-  "duration": 840295,
+  "duration": 759307,
   "status": "passed"
 });
 formatter.match({
@@ -180,7 +180,7 @@ formatter.match({
   "location": "StepDefinitions.addCopy(int,int)"
 });
 formatter.result({
-  "duration": 246123,
+  "duration": 293530,
   "status": "passed"
 });
 formatter.match({
@@ -193,23 +193,23 @@ formatter.match({
   "location": "StepDefinitions.failedToAddCopy(int)"
 });
 formatter.result({
-  "duration": 222419,
+  "duration": 196741,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3942313,
+  "duration": 3151401,
   "status": "passed"
 });
 formatter.after({
-  "duration": 197530,
+  "duration": 62419,
   "status": "passed"
 });
 formatter.before({
-  "duration": 73876,
+  "duration": 79407,
   "status": "passed"
 });
 formatter.before({
-  "duration": 11784668,
+  "duration": 5054409,
   "status": "passed"
 });
 formatter.background({
@@ -228,7 +228,7 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 3063698,
+  "duration": 3098463,
   "status": "passed"
 });
 formatter.scenario({
@@ -268,7 +268,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 13020419,
+  "duration": 3968388,
   "status": "passed"
 });
 formatter.match({
@@ -285,7 +285,7 @@ formatter.match({
   "location": "StepDefinitions.addBook(String,int)"
 });
 formatter.result({
-  "duration": 1165035,
+  "duration": 140642,
   "status": "passed"
 });
 formatter.match({
@@ -302,23 +302,23 @@ formatter.match({
   "location": "StepDefinitions.failedToAddBook(String,int)"
 });
 formatter.result({
-  "duration": 233481,
+  "duration": 173827,
   "status": "passed"
 });
 formatter.after({
-  "duration": 14220219,
+  "duration": 4090461,
   "status": "passed"
 });
 formatter.after({
-  "duration": 138272,
+  "duration": 42667,
   "status": "passed"
 });
 formatter.before({
-  "duration": 62025,
+  "duration": 124444,
   "status": "passed"
 });
 formatter.before({
-  "duration": 4080189,
+  "duration": 3885819,
   "status": "passed"
 });
 formatter.background({
@@ -337,7 +337,7 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 9821215,
+  "duration": 3120982,
   "status": "passed"
 });
 formatter.scenario({
@@ -398,7 +398,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 5645816,
+  "duration": 6618851,
   "status": "passed"
 });
 formatter.match({
@@ -411,7 +411,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 2970858,
+  "duration": 6770554,
   "status": "passed"
 });
 formatter.match({
@@ -428,7 +428,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 4127202,
+  "duration": 2173626,
   "status": "passed"
 });
 formatter.match({
@@ -449,7 +449,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 7559097,
+  "duration": 9598006,
   "status": "passed"
 });
 formatter.match({
@@ -470,7 +470,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 12457062,
+  "duration": 12581111,
   "status": "passed"
 });
 formatter.match({
@@ -491,7 +491,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 193975,
+  "duration": 152889,
   "status": "passed"
 });
 formatter.match({
@@ -512,7 +512,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 209382,
+  "duration": 246123,
   "status": "passed"
 });
 formatter.match({
@@ -529,23 +529,23 @@ formatter.match({
   "location": "StepDefinitions.failedToBorrowBook(int,int)"
 });
 formatter.result({
-  "duration": 89284,
+  "duration": 115753,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3313771,
+  "duration": 3019846,
   "status": "passed"
 });
 formatter.after({
-  "duration": 41086,
+  "duration": 40297,
   "status": "passed"
 });
 formatter.before({
-  "duration": 109432,
+  "duration": 173431,
   "status": "passed"
 });
 formatter.before({
-  "duration": 4028831,
+  "duration": 4228732,
   "status": "passed"
 });
 formatter.background({
@@ -564,7 +564,7 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 3126513,
+  "duration": 3028142,
   "status": "passed"
 });
 formatter.scenario({
@@ -635,7 +635,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 1983996,
+  "duration": 1948836,
   "status": "passed"
 });
 formatter.match({
@@ -648,7 +648,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 2788340,
+  "duration": 1780144,
   "status": "passed"
 });
 formatter.match({
@@ -665,7 +665,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 1588145,
+  "duration": 2374317,
   "status": "passed"
 });
 formatter.match({
@@ -686,7 +686,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 2035354,
+  "duration": 1856392,
   "status": "passed"
 });
 formatter.match({
@@ -707,7 +707,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 5603149,
+  "duration": 6356925,
   "status": "passed"
 });
 formatter.match({
@@ -728,7 +728,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 163160,
+  "duration": 122863,
   "status": "passed"
 });
 formatter.match({
@@ -749,7 +749,7 @@ formatter.match({
   "location": "StepDefinitions.renew(String,int,int)"
 });
 formatter.result({
-  "duration": 5969766,
+  "duration": 5052040,
   "status": "passed"
 });
 formatter.match({
@@ -770,7 +770,7 @@ formatter.match({
   "location": "StepDefinitions.successfulRenewal(int,int,String)"
 });
 formatter.result({
-  "duration": 115358,
+  "duration": 130765,
   "status": "passed"
 });
 formatter.match({
@@ -791,7 +791,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 150123,
+  "duration": 195950,
   "status": "passed"
 });
 formatter.match({
@@ -808,23 +808,23 @@ formatter.match({
   "location": "StepDefinitions.failedToBorrowBook(int,int)"
 });
 formatter.result({
-  "duration": 105482,
+  "duration": 99555,
   "status": "passed"
 });
 formatter.after({
-  "duration": 4360682,
+  "duration": 2963353,
   "status": "passed"
 });
 formatter.after({
-  "duration": 50962,
+  "duration": 39901,
   "status": "passed"
 });
 formatter.before({
-  "duration": 90864,
+  "duration": 99556,
   "status": "passed"
 });
 formatter.before({
-  "duration": 4169869,
+  "duration": 5047298,
   "status": "passed"
 });
 formatter.background({
@@ -843,7 +843,7 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 3048290,
+  "duration": 3105574,
   "status": "passed"
 });
 formatter.scenario({
@@ -924,7 +924,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 2319403,
+  "duration": 1783306,
   "status": "passed"
 });
 formatter.match({
@@ -937,7 +937,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 2335600,
+  "duration": 1677034,
   "status": "passed"
 });
 formatter.match({
@@ -954,7 +954,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 1482268,
+  "duration": 1711404,
   "status": "passed"
 });
 formatter.match({
@@ -975,7 +975,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 2220638,
+  "duration": 1637922,
   "status": "passed"
 });
 formatter.match({
@@ -996,7 +996,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 5733915,
+  "duration": 5024780,
   "status": "passed"
 });
 formatter.match({
@@ -1017,7 +1017,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 138666,
+  "duration": 127210,
   "status": "passed"
 });
 formatter.match({
@@ -1038,7 +1038,7 @@ formatter.match({
   "location": "StepDefinitions.returnBook(String,int,int)"
 });
 formatter.result({
-  "duration": 1610663,
+  "duration": 1161479,
   "status": "passed"
 });
 formatter.match({
@@ -1059,7 +1059,7 @@ formatter.match({
   "location": "StepDefinitions.successfulReturn(int,int,String)"
 });
 formatter.result({
-  "duration": 145778,
+  "duration": 134321,
   "status": "passed"
 });
 formatter.match({
@@ -1080,7 +1080,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 4661719,
+  "duration": 4455892,
   "status": "passed"
 });
 formatter.match({
@@ -1101,7 +1101,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 1003850,
+  "duration": 113382,
   "status": "passed"
 });
 formatter.match({
@@ -1122,7 +1122,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 811851,
+  "duration": 753381,
   "status": "passed"
 });
 formatter.match({
@@ -1139,23 +1139,23 @@ formatter.match({
   "location": "StepDefinitions.failedToBorrowBook(int,int)"
 });
 formatter.result({
-  "duration": 130370,
+  "duration": 408493,
   "status": "passed"
 });
 formatter.after({
-  "duration": 4105078,
+  "duration": 3449672,
   "status": "passed"
 });
 formatter.after({
-  "duration": 195950,
+  "duration": 140246,
   "status": "passed"
 });
 formatter.before({
-  "duration": 69136,
+  "duration": 156049,
   "status": "passed"
 });
 formatter.before({
-  "duration": 5588927,
+  "duration": 4726904,
   "status": "passed"
 });
 formatter.background({
@@ -1174,7 +1174,7 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 3920189,
+  "duration": 3280981,
   "status": "passed"
 });
 formatter.scenario({
@@ -1260,7 +1260,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 1760391,
+  "duration": 1869824,
   "status": "passed"
 });
 formatter.match({
@@ -1277,7 +1277,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 1727997,
+  "duration": 1419059,
   "status": "passed"
 });
 formatter.match({
@@ -1294,7 +1294,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 2751995,
+  "duration": 2635847,
   "status": "passed"
 });
 formatter.match({
@@ -1311,7 +1311,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 1959503,
+  "duration": 2053527,
   "status": "passed"
 });
 formatter.match({
@@ -1332,7 +1332,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 2689970,
+  "duration": 2867352,
   "status": "passed"
 });
 formatter.match({
@@ -1353,7 +1353,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 1699947,
+  "duration": 1603947,
   "status": "passed"
 });
 formatter.match({
@@ -1374,7 +1374,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 1502812,
+  "duration": 1510713,
   "status": "passed"
 });
 formatter.match({
@@ -1395,7 +1395,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 6278704,
+  "duration": 6382604,
   "status": "passed"
 });
 formatter.match({
@@ -1416,7 +1416,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 201086,
+  "duration": 133530,
   "status": "passed"
 });
 formatter.match({
@@ -1437,7 +1437,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 4714657,
+  "duration": 4911792,
   "status": "passed"
 });
 formatter.match({
@@ -1458,7 +1458,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 160790,
+  "duration": 102321,
   "status": "passed"
 });
 formatter.match({
@@ -1479,7 +1479,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 201876,
+  "duration": 142222,
   "status": "passed"
 });
 formatter.match({
@@ -1496,23 +1496,23 @@ formatter.match({
   "location": "StepDefinitions.failedToBorrowBookMax(int,int)"
 });
 formatter.result({
-  "duration": 93235,
+  "duration": 102715,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3617178,
+  "duration": 3065278,
   "status": "passed"
 });
 formatter.after({
-  "duration": 39901,
+  "duration": 35161,
   "status": "passed"
 });
 formatter.before({
-  "duration": 69531,
+  "duration": 54518,
   "status": "passed"
 });
 formatter.before({
-  "duration": 4221226,
+  "duration": 3882264,
   "status": "passed"
 });
 formatter.background({
@@ -1531,7 +1531,7 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 3563450,
+  "duration": 3435845,
   "status": "passed"
 });
 formatter.scenario({
@@ -1637,7 +1637,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 1871008,
+  "duration": 1935009,
   "status": "passed"
 });
 formatter.match({
@@ -1654,7 +1654,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 1907354,
+  "duration": 1759206,
   "status": "passed"
 });
 formatter.match({
@@ -1671,7 +1671,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 9340821,
+  "duration": 1826762,
   "status": "passed"
 });
 formatter.match({
@@ -1688,7 +1688,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 1507553,
+  "duration": 2192589,
   "status": "passed"
 });
 formatter.match({
@@ -1709,7 +1709,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 1561281,
+  "duration": 2051551,
   "status": "passed"
 });
 formatter.match({
@@ -1730,7 +1730,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 2742514,
+  "duration": 4463399,
   "status": "passed"
 });
 formatter.match({
@@ -1751,7 +1751,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 2015601,
+  "duration": 2957821,
   "status": "passed"
 });
 formatter.match({
@@ -1772,7 +1772,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 5469619,
+  "duration": 5752877,
   "status": "passed"
 });
 formatter.match({
@@ -1793,7 +1793,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 139456,
+  "duration": 170271,
   "status": "passed"
 });
 formatter.match({
@@ -1814,7 +1814,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 6022704,
+  "duration": 4773916,
   "status": "passed"
 });
 formatter.match({
@@ -1835,7 +1835,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 111803,
+  "duration": 94025,
   "status": "passed"
 });
 formatter.match({
@@ -1856,7 +1856,7 @@ formatter.match({
   "location": "StepDefinitions.returnBook(String,int,int)"
 });
 formatter.result({
-  "duration": 1587750,
+  "duration": 1541923,
   "status": "passed"
 });
 formatter.match({
@@ -1877,7 +1877,7 @@ formatter.match({
   "location": "StepDefinitions.successfulReturn(int,int,String)"
 });
 formatter.result({
-  "duration": 155259,
+  "duration": 97975,
   "status": "passed"
 });
 formatter.match({
@@ -1898,7 +1898,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 5888384,
+  "duration": 5033472,
   "status": "passed"
 });
 formatter.match({
@@ -1919,7 +1919,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 89679,
+  "duration": 116938,
   "status": "passed"
 });
 formatter.match({
@@ -1940,7 +1940,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 102716,
+  "duration": 139062,
   "status": "passed"
 });
 formatter.match({
@@ -1957,23 +1957,23 @@ formatter.match({
   "location": "StepDefinitions.failedToBorrowBookMax(int,int)"
 });
 formatter.result({
-  "duration": 54123,
+  "duration": 88889,
   "status": "passed"
 });
 formatter.after({
-  "duration": 4790509,
+  "duration": 2637032,
   "status": "passed"
 });
 formatter.after({
-  "duration": 32790,
+  "duration": 34370,
   "status": "passed"
 });
 formatter.before({
-  "duration": 46617,
+  "duration": 55309,
   "status": "passed"
 });
 formatter.before({
-  "duration": 4981719,
+  "duration": 4503300,
   "status": "passed"
 });
 formatter.background({
@@ -1992,7 +1992,7 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 3608092,
+  "duration": 14684810,
   "status": "passed"
 });
 formatter.scenario({
@@ -2037,7 +2037,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 5408779,
+  "duration": 1829132,
   "status": "passed"
 });
 formatter.match({
@@ -2058,7 +2058,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 3808783,
+  "duration": 2226958,
   "status": "passed"
 });
 formatter.match({
@@ -2075,7 +2075,7 @@ formatter.match({
   "location": "StepDefinitions.removeCopy(int,int)"
 });
 formatter.result({
-  "duration": 196345,
+  "duration": 144197,
   "status": "passed"
 });
 formatter.match({
@@ -2096,19 +2096,19 @@ formatter.result({
   "status": "passed"
 });
 formatter.after({
-  "duration": 3115055,
+  "duration": 4772336,
   "status": "passed"
 });
 formatter.after({
-  "duration": 44247,
+  "duration": 51753,
   "status": "passed"
 });
 formatter.before({
-  "duration": 76246,
+  "duration": 163950,
   "status": "passed"
 });
 formatter.before({
-  "duration": 5095101,
+  "duration": 4276930,
   "status": "passed"
 });
 formatter.background({
@@ -2127,7 +2127,7 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 3251352,
+  "duration": 3516833,
   "status": "passed"
 });
 formatter.scenario({
@@ -2183,7 +2183,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 11732125,
+  "duration": 1816095,
   "status": "passed"
 });
 formatter.match({
@@ -2200,7 +2200,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 2175206,
+  "duration": 1659256,
   "status": "passed"
 });
 formatter.match({
@@ -2221,7 +2221,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 1830317,
+  "duration": 1731552,
   "status": "passed"
 });
 formatter.match({
@@ -2242,7 +2242,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 6706554,
+  "duration": 6180333,
   "status": "passed"
 });
 formatter.match({
@@ -2263,7 +2263,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 269827,
+  "duration": 146172,
   "status": "passed"
 });
 formatter.match({
@@ -2280,7 +2280,7 @@ formatter.match({
   "location": "StepDefinitions.removeCopy(int,int)"
 });
 formatter.result({
-  "duration": 178568,
+  "duration": 192000,
   "status": "passed"
 });
 formatter.match({
@@ -2297,23 +2297,23 @@ formatter.match({
   "location": "StepDefinitions.failedToRemoveCopyLoan(int,int)"
 });
 formatter.result({
-  "duration": 118123,
+  "duration": 110222,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3762560,
+  "duration": 5995445,
   "status": "passed"
 });
 formatter.after({
-  "duration": 59260,
+  "duration": 119308,
   "status": "passed"
 });
 formatter.before({
-  "duration": 111407,
+  "duration": 81382,
   "status": "passed"
 });
 formatter.before({
-  "duration": 4337374,
+  "duration": 19650727,
   "status": "passed"
 });
 formatter.background({
@@ -2332,7 +2332,7 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 3322067,
+  "duration": 4729670,
   "status": "passed"
 });
 formatter.scenario({
@@ -2398,7 +2398,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 5247595,
+  "duration": 2365230,
   "status": "passed"
 });
 formatter.match({
@@ -2415,7 +2415,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 6440679,
+  "duration": 1983996,
   "status": "passed"
 });
 formatter.match({
@@ -2436,7 +2436,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 11952174,
+  "duration": 2319402,
   "status": "passed"
 });
 formatter.match({
@@ -2457,7 +2457,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 20570428,
+  "duration": 9212821,
   "status": "passed"
 });
 formatter.match({
@@ -2478,7 +2478,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 119308,
+  "duration": 139851,
   "status": "passed"
 });
 formatter.match({
@@ -2499,7 +2499,7 @@ formatter.match({
   "location": "StepDefinitions.renew(String,int,int)"
 });
 formatter.result({
-  "duration": 9125908,
+  "duration": 14106441,
   "status": "passed"
 });
 formatter.match({
@@ -2520,7 +2520,7 @@ formatter.match({
   "location": "StepDefinitions.successfulRenewal(int,int,String)"
 });
 formatter.result({
-  "duration": 113777,
+  "duration": 116938,
   "status": "passed"
 });
 formatter.match({
@@ -2537,7 +2537,7 @@ formatter.match({
   "location": "StepDefinitions.removeCopy(int,int)"
 });
 formatter.result({
-  "duration": 197531,
+  "duration": 460246,
   "status": "passed"
 });
 formatter.match({
@@ -2554,23 +2554,23 @@ formatter.match({
   "location": "StepDefinitions.failedToRemoveCopyLoan(int,int)"
 });
 formatter.result({
-  "duration": 84938,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 10143980,
-  "status": "passed"
-});
-formatter.after({
   "duration": 103901,
   "status": "passed"
 });
-formatter.before({
-  "duration": 97975,
+formatter.after({
+  "duration": 7098850,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 158814,
   "status": "passed"
 });
 formatter.before({
-  "duration": 18829395,
+  "duration": 89284,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 12793653,
   "status": "passed"
 });
 formatter.background({
@@ -2589,7 +2589,7 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 5721667,
+  "duration": 6143988,
   "status": "passed"
 });
 formatter.scenario({
@@ -2634,7 +2634,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 2185477,
+  "duration": 3170759,
   "status": "passed"
 });
 formatter.match({
@@ -2655,7 +2655,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 2455304,
+  "duration": 2349822,
   "status": "passed"
 });
 formatter.match({
@@ -2672,7 +2672,7 @@ formatter.match({
   "location": "StepDefinitions.removeBook(String,int)"
 });
 formatter.result({
-  "duration": 188839,
+  "duration": 443259,
   "status": "passed"
 });
 formatter.match({
@@ -2685,23 +2685,23 @@ formatter.match({
   "location": "StepDefinitions.failedToRemoveBook(int)"
 });
 formatter.result({
-  "duration": 1544688,
+  "duration": 77432,
   "status": "passed"
 });
 formatter.after({
-  "duration": 8293119,
+  "duration": 5110509,
   "status": "passed"
 });
 formatter.after({
-  "duration": 107061,
+  "duration": 43851,
   "status": "passed"
 });
 formatter.before({
-  "duration": 101926,
+  "duration": 137481,
   "status": "passed"
 });
 formatter.before({
-  "duration": 19032061,
+  "duration": 8354749,
   "status": "passed"
 });
 formatter.background({
@@ -2720,7 +2720,7 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 6122655,
+  "duration": 6120679,
   "status": "passed"
 });
 formatter.scenario({
@@ -2776,7 +2776,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 2975204,
+  "duration": 3666166,
   "status": "passed"
 });
 formatter.match({
@@ -2793,7 +2793,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 2209576,
+  "duration": 2266070,
   "status": "passed"
 });
 formatter.match({
@@ -2814,7 +2814,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 3484043,
+  "duration": 3105574,
   "status": "passed"
 });
 formatter.match({
@@ -2835,7 +2835,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 8551094,
+  "duration": 5611445,
   "status": "passed"
 });
 formatter.match({
@@ -2856,7 +2856,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 138272,
+  "duration": 385975,
   "status": "passed"
 });
 formatter.match({
@@ -2873,7 +2873,7 @@ formatter.match({
   "location": "StepDefinitions.removeBook(String,int)"
 });
 formatter.result({
-  "duration": 147752,
+  "duration": 161185,
   "status": "passed"
 });
 formatter.match({
@@ -2886,23 +2886,23 @@ formatter.match({
   "location": "StepDefinitions.failedToRemoveBookLoan(int)"
 });
 formatter.result({
-  "duration": 78617,
+  "duration": 65186,
   "status": "passed"
 });
 formatter.after({
-  "duration": 5793174,
+  "duration": 4492633,
   "status": "passed"
 });
 formatter.after({
-  "duration": 36345,
+  "duration": 156839,
   "status": "passed"
 });
 formatter.before({
-  "duration": 169086,
+  "duration": 129975,
   "status": "passed"
 });
 formatter.before({
-  "duration": 6026655,
+  "duration": 17032657,
   "status": "passed"
 });
 formatter.background({
@@ -2921,7 +2921,7 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 19605690,
+  "duration": 3266364,
   "status": "passed"
 });
 formatter.scenario({
@@ -2982,7 +2982,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 6874851,
+  "duration": 5035052,
   "status": "passed"
 });
 formatter.match({
@@ -2999,7 +2999,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 2166909,
+  "duration": 2352193,
   "status": "passed"
 });
 formatter.match({
@@ -3020,7 +3020,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 1843749,
+  "duration": 1874169,
   "status": "passed"
 });
 formatter.match({
@@ -3041,7 +3041,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 4994755,
+  "duration": 2289773,
   "status": "passed"
 });
 formatter.match({
@@ -3058,7 +3058,7 @@ formatter.match({
   "location": "StepDefinitions.removeCopy(int,int)"
 });
 formatter.result({
-  "duration": 2448587,
+  "duration": 1667552,
   "status": "passed"
 });
 formatter.match({
@@ -3075,7 +3075,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyRemovedCopy(int,int)"
 });
 formatter.result({
-  "duration": 123259,
+  "duration": 112988,
   "status": "passed"
 });
 formatter.match({
@@ -3092,7 +3092,7 @@ formatter.match({
   "location": "StepDefinitions.removeBook(String,int)"
 });
 formatter.result({
-  "duration": 166321,
+  "duration": 126814,
   "status": "passed"
 });
 formatter.match({
@@ -3105,23 +3105,23 @@ formatter.match({
   "location": "StepDefinitions.failedToRemoveBook(int)"
 });
 formatter.result({
-  "duration": 89284,
+  "duration": 44247,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3939548,
+  "duration": 3272290,
   "status": "passed"
 });
 formatter.after({
-  "duration": 40692,
+  "duration": 31209,
   "status": "passed"
 });
 formatter.before({
-  "duration": 207802,
+  "duration": 97975,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3945078,
+  "duration": 4561374,
   "status": "passed"
 });
 formatter.background({
@@ -3140,7 +3140,7 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 2976785,
+  "duration": 2890265,
   "status": "passed"
 });
 formatter.scenario({
@@ -3171,7 +3171,7 @@ formatter.match({
   "location": "StepDefinitions.removeUser(String)"
 });
 formatter.result({
-  "duration": 137481,
+  "duration": 139456,
   "status": "passed"
 });
 formatter.match({
@@ -3184,23 +3184,23 @@ formatter.match({
   "location": "StepDefinitions.failedToRemoveUser(String)"
 });
 formatter.result({
-  "duration": 67555,
+  "duration": 49778,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3480882,
+  "duration": 3307056,
   "status": "passed"
 });
 formatter.after({
-  "duration": 97975,
+  "duration": 35555,
   "status": "passed"
 });
 formatter.before({
-  "duration": 550319,
+  "duration": 539258,
   "status": "passed"
 });
 formatter.before({
-  "duration": 4436930,
+  "duration": 4152880,
   "status": "passed"
 });
 formatter.background({
@@ -3219,7 +3219,7 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 4597324,
+  "duration": 3255302,
   "status": "passed"
 });
 formatter.scenario({
@@ -3285,7 +3285,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 1887601,
+  "duration": 2190218,
   "status": "passed"
 });
 formatter.match({
@@ -3302,7 +3302,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 4560584,
+  "duration": 1988737,
   "status": "passed"
 });
 formatter.match({
@@ -3323,7 +3323,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 5855594,
+  "duration": 2298069,
   "status": "passed"
 });
 formatter.match({
@@ -3344,7 +3344,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 11730545,
+  "duration": 6603838,
   "status": "passed"
 });
 formatter.match({
@@ -3365,7 +3365,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 149333,
+  "duration": 158814,
   "status": "passed"
 });
 formatter.match({
@@ -3386,7 +3386,7 @@ formatter.match({
   "location": "StepDefinitions.returnBook(String,int,int)"
 });
 formatter.result({
-  "duration": 730863,
+  "duration": 625381,
   "status": "passed"
 });
 formatter.match({
@@ -3407,7 +3407,7 @@ formatter.match({
   "location": "StepDefinitions.successfulReturn(int,int,String)"
 });
 formatter.result({
-  "duration": 109037,
+  "duration": 180543,
   "status": "passed"
 });
 formatter.match({
@@ -3428,7 +3428,7 @@ formatter.match({
   "location": "StepDefinitions.renew(String,int,int)"
 });
 formatter.result({
-  "duration": 148938,
+  "duration": 143802,
   "status": "passed"
 });
 formatter.match({
@@ -3449,15 +3449,15 @@ formatter.match({
   "location": "StepDefinitions.failedToRenewBook(int,int,String)"
 });
 formatter.result({
-  "duration": 118518,
+  "duration": 116938,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3439006,
+  "duration": 4670015,
   "status": "passed"
 });
 formatter.after({
-  "duration": 382815,
+  "duration": 263505,
   "status": "passed"
 });
 formatter.uri("main/java/com/comp4004/test/cucumber/UseCaseDependencies.feature");
@@ -3469,11 +3469,11 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 157234,
+  "duration": 119703,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3576091,
+  "duration": 3897672,
   "status": "passed"
 });
 formatter.scenario({
@@ -3758,7 +3758,7 @@ formatter.match({
   "location": "StepDefinitions.addBook(String,int)"
 });
 formatter.result({
-  "duration": 2984290,
+  "duration": 1481873,
   "status": "passed"
 });
 formatter.match({
@@ -3771,7 +3771,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedBook(int)"
 });
 formatter.result({
-  "duration": 95605,
+  "duration": 96394,
   "status": "passed"
 });
 formatter.match({
@@ -3788,7 +3788,7 @@ formatter.match({
   "location": "StepDefinitions.addBook(String,int)"
 });
 formatter.result({
-  "duration": 10494004,
+  "duration": 4379251,
   "status": "passed"
 });
 formatter.match({
@@ -3801,7 +3801,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedBook(int)"
 });
 formatter.result({
-  "duration": 76247,
+  "duration": 86124,
   "status": "passed"
 });
 formatter.match({
@@ -3818,7 +3818,7 @@ formatter.match({
   "location": "StepDefinitions.addCopy(int,int)"
 });
 formatter.result({
-  "duration": 1761577,
+  "duration": 1771454,
   "status": "passed"
 });
 formatter.match({
@@ -3835,7 +3835,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedCopy(int,int)"
 });
 formatter.result({
-  "duration": 109827,
+  "duration": 101925,
   "status": "passed"
 });
 formatter.match({
@@ -3848,7 +3848,7 @@ formatter.match({
   "location": "StepDefinitions.addUser(String)"
 });
 formatter.result({
-  "duration": 1703898,
+  "duration": 1786070,
   "status": "passed"
 });
 formatter.match({
@@ -3861,7 +3861,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedUser(String)"
 });
 formatter.result({
-  "duration": 62419,
+  "duration": 62025,
   "status": "passed"
 });
 formatter.match({
@@ -3878,7 +3878,7 @@ formatter.match({
   "location": "StepDefinitions.addCopy(int,int)"
 });
 formatter.result({
-  "duration": 1646614,
+  "duration": 1366911,
   "status": "passed"
 });
 formatter.match({
@@ -3895,7 +3895,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedCopy(int,int)"
 });
 formatter.result({
-  "duration": 103901,
+  "duration": 77827,
   "status": "passed"
 });
 formatter.match({
@@ -3912,7 +3912,7 @@ formatter.match({
   "location": "StepDefinitions.addCopy(int,int)"
 });
 formatter.result({
-  "duration": 1821626,
+  "duration": 1493726,
   "status": "passed"
 });
 formatter.match({
@@ -3929,7 +3929,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedCopy(int,int)"
 });
 formatter.result({
-  "duration": 92840,
+  "duration": 79012,
   "status": "passed"
 });
 formatter.match({
@@ -3942,7 +3942,7 @@ formatter.match({
   "location": "StepDefinitions.addUser(String)"
 });
 formatter.result({
-  "duration": 1734318,
+  "duration": 1676638,
   "status": "passed"
 });
 formatter.match({
@@ -3955,7 +3955,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedUser(String)"
 });
 formatter.result({
-  "duration": 52544,
+  "duration": 42272,
   "status": "passed"
 });
 formatter.match({
@@ -3972,7 +3972,7 @@ formatter.match({
   "location": "StepDefinitions.addBook(String,int)"
 });
 formatter.result({
-  "duration": 2061033,
+  "duration": 1610268,
   "status": "passed"
 });
 formatter.match({
@@ -3985,7 +3985,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedBook(int)"
 });
 formatter.result({
-  "duration": 109037,
+  "duration": 62814,
   "status": "passed"
 });
 formatter.match({
@@ -4002,7 +4002,7 @@ formatter.match({
   "location": "StepDefinitions.addCopy(int,int)"
 });
 formatter.result({
-  "duration": 4188436,
+  "duration": 1499651,
   "status": "passed"
 });
 formatter.match({
@@ -4019,7 +4019,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedCopy(int,int)"
 });
 formatter.result({
-  "duration": 106271,
+  "duration": 77432,
   "status": "passed"
 });
 formatter.match({
@@ -4036,7 +4036,7 @@ formatter.match({
   "location": "StepDefinitions.addCopy(int,int)"
 });
 formatter.result({
-  "duration": 8757316,
+  "duration": 7824577,
   "status": "passed"
 });
 formatter.match({
@@ -4053,7 +4053,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedCopy(int,int)"
 });
 formatter.result({
-  "duration": 109431,
+  "duration": 111407,
   "status": "passed"
 });
 formatter.match({
@@ -4070,7 +4070,7 @@ formatter.match({
   "location": "StepDefinitions.removeCopy(int,int)"
 });
 formatter.result({
-  "duration": 19072753,
+  "duration": 11106743,
   "status": "passed"
 });
 formatter.match({
@@ -4087,7 +4087,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyRemovedCopy(int,int)"
 });
 formatter.result({
-  "duration": 137481,
+  "duration": 438123,
   "status": "passed"
 });
 formatter.match({
@@ -4108,7 +4108,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 6179938,
+  "duration": 7363936,
   "status": "passed"
 });
 formatter.match({
@@ -4129,7 +4129,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 111012,
+  "duration": 92445,
   "status": "passed"
 });
 formatter.match({
@@ -4146,7 +4146,7 @@ formatter.match({
   "location": "StepDefinitions.addCopy(int,int)"
 });
 formatter.result({
-  "duration": 6576579,
+  "duration": 1581429,
   "status": "passed"
 });
 formatter.match({
@@ -4163,7 +4163,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedCopy(int,int)"
 });
 formatter.result({
-  "duration": 96790,
+  "duration": 114173,
   "status": "passed"
 });
 formatter.match({
@@ -4180,7 +4180,7 @@ formatter.match({
   "location": "StepDefinitions.removeCopy(int,int)"
 });
 formatter.result({
-  "duration": 2396044,
+  "duration": 2776883,
   "status": "passed"
 });
 formatter.match({
@@ -4197,7 +4197,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyRemovedCopy(int,int)"
 });
 formatter.result({
-  "duration": 96790,
+  "duration": 95210,
   "status": "passed"
 });
 formatter.match({
@@ -4218,7 +4218,7 @@ formatter.match({
   "location": "StepDefinitions.returnBook(String,int,int)"
 });
 formatter.result({
-  "duration": 684245,
+  "duration": 964344,
   "status": "passed"
 });
 formatter.match({
@@ -4239,7 +4239,7 @@ formatter.match({
   "location": "StepDefinitions.successfulReturn(int,int,String)"
 });
 formatter.result({
-  "duration": 121679,
+  "duration": 113382,
   "status": "passed"
 });
 formatter.match({
@@ -4260,7 +4260,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 41389350,
+  "duration": 6777666,
   "status": "passed"
 });
 formatter.match({
@@ -4281,7 +4281,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 112592,
+  "duration": 105481,
   "status": "passed"
 });
 formatter.match({
@@ -4298,7 +4298,7 @@ formatter.match({
   "location": "StepDefinitions.removeCopy(int,int)"
 });
 formatter.result({
-  "duration": 4969077,
+  "duration": 6528382,
   "status": "passed"
 });
 formatter.match({
@@ -4315,7 +4315,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyRemovedCopy(int,int)"
 });
 formatter.result({
-  "duration": 96394,
+  "duration": 85728,
   "status": "passed"
 });
 formatter.match({
@@ -4332,7 +4332,7 @@ formatter.match({
   "location": "StepDefinitions.removeCopy(int,int)"
 });
 formatter.result({
-  "duration": 1791996,
+  "duration": 1793182,
   "status": "passed"
 });
 formatter.match({
@@ -4349,7 +4349,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyRemovedCopy(int,int)"
 });
 formatter.result({
-  "duration": 73876,
+  "duration": 99556,
   "status": "passed"
 });
 formatter.match({
@@ -4366,7 +4366,7 @@ formatter.match({
   "location": "StepDefinitions.removeBook(String,int)"
 });
 formatter.result({
-  "duration": 2030613,
+  "duration": 1842170,
   "status": "passed"
 });
 formatter.match({
@@ -4379,7 +4379,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyRemovedBook(int)"
 });
 formatter.result({
-  "duration": 74271,
+  "duration": 85334,
   "status": "passed"
 });
 formatter.match({
@@ -4396,7 +4396,7 @@ formatter.match({
   "location": "StepDefinitions.removeCopy(int,int)"
 });
 formatter.result({
-  "duration": 2043256,
+  "duration": 5855989,
   "status": "passed"
 });
 formatter.match({
@@ -4407,6 +4407,134 @@ formatter.match({
     },
     {
       "val": "23456781",
+      "offset": 54
+    }
+  ],
+  "location": "StepDefinitions.successfullyRemovedCopy(int,int)"
+});
+formatter.result({
+  "duration": 74272,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 28
+    }
+  ],
+  "location": "StepDefinitions.removeUser(String)"
+});
+formatter.result({
+  "duration": 7038010,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 35
+    }
+  ],
+  "location": "StepDefinitions.successfullyRemovedUser(String)"
+});
+formatter.result({
+  "duration": 61630,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user2",
+      "offset": 6
+    },
+    {
+      "val": "2",
+      "offset": 37
+    },
+    {
+      "val": "34567812",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.returnBook(String,int,int)"
+});
+formatter.result({
+  "duration": 818962,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 34
+    },
+    {
+      "val": "34567812",
+      "offset": 54
+    },
+    {
+      "val": "user2",
+      "offset": 74
+    }
+  ],
+  "location": "StepDefinitions.successfulReturn(int,int,String)"
+});
+formatter.result({
+  "duration": 105086,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user2",
+      "offset": 28
+    }
+  ],
+  "location": "StepDefinitions.removeUser(String)"
+});
+formatter.result({
+  "duration": 2725525,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user2",
+      "offset": 35
+    }
+  ],
+  "location": "StepDefinitions.successfullyRemovedUser(String)"
+});
+formatter.result({
+  "duration": 56099,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 26
+    },
+    {
+      "val": "34567812",
+      "offset": 47
+    }
+  ],
+  "location": "StepDefinitions.removeCopy(int,int)"
+});
+formatter.result({
+  "duration": 1776985,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 33
+    },
+    {
+      "val": "34567812",
       "offset": 54
     }
   ],
@@ -4419,134 +4547,6 @@ formatter.result({
 formatter.match({
   "arguments": [
     {
-      "val": "user1",
-      "offset": 28
-    }
-  ],
-  "location": "StepDefinitions.removeUser(String)"
-});
-formatter.result({
-  "duration": 2588439,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user1",
-      "offset": 35
-    }
-  ],
-  "location": "StepDefinitions.successfullyRemovedUser(String)"
-});
-formatter.result({
-  "duration": 64790,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user2",
-      "offset": 6
-    },
-    {
-      "val": "2",
-      "offset": 37
-    },
-    {
-      "val": "34567812",
-      "offset": 58
-    }
-  ],
-  "location": "StepDefinitions.returnBook(String,int,int)"
-});
-formatter.result({
-  "duration": 624592,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 34
-    },
-    {
-      "val": "34567812",
-      "offset": 54
-    },
-    {
-      "val": "user2",
-      "offset": 74
-    }
-  ],
-  "location": "StepDefinitions.successfulReturn(int,int,String)"
-});
-formatter.result({
-  "duration": 108642,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user2",
-      "offset": 28
-    }
-  ],
-  "location": "StepDefinitions.removeUser(String)"
-});
-formatter.result({
-  "duration": 8019342,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user2",
-      "offset": 35
-    }
-  ],
-  "location": "StepDefinitions.successfullyRemovedUser(String)"
-});
-formatter.result({
-  "duration": 57283,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 26
-    },
-    {
-      "val": "34567812",
-      "offset": 47
-    }
-  ],
-  "location": "StepDefinitions.removeCopy(int,int)"
-});
-formatter.result({
-  "duration": 1803453,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 33
-    },
-    {
-      "val": "34567812",
-      "offset": 54
-    }
-  ],
-  "location": "StepDefinitions.successfullyRemovedCopy(int,int)"
-});
-formatter.result({
-  "duration": 93629,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
       "val": "title2",
       "offset": 27
     },
@@ -4558,7 +4558,7 @@ formatter.match({
   "location": "StepDefinitions.removeBook(String,int)"
 });
 formatter.result({
-  "duration": 2648488,
+  "duration": 1625675,
   "status": "passed"
 });
 formatter.match({
@@ -4571,7 +4571,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyRemovedBook(int)"
 });
 formatter.result({
-  "duration": 87308,
+  "duration": 73086,
   "status": "passed"
 });
 formatter.match({
@@ -4588,7 +4588,7 @@ formatter.match({
   "location": "StepDefinitions.removeBook(String,int)"
 });
 formatter.result({
-  "duration": 863208,
+  "duration": 705579,
   "status": "passed"
 });
 formatter.match({
@@ -4601,15 +4601,15 @@ formatter.match({
   "location": "StepDefinitions.successfullyRemovedBook(int)"
 });
 formatter.result({
-  "duration": 87308,
+  "duration": 71111,
   "status": "passed"
 });
 formatter.after({
-  "duration": 6329667,
+  "duration": 4128387,
   "status": "passed"
 });
 formatter.after({
-  "duration": 122469,
+  "duration": 155259,
   "status": "passed"
 });
 formatter.uri("main/java/com/comp4004/test/cucumber/ValidPaths.feature");
@@ -4621,11 +4621,11 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 130370,
+  "duration": 203062,
   "status": "passed"
 });
 formatter.before({
-  "duration": 10353757,
+  "duration": 4297077,
   "status": "passed"
 });
 formatter.background({
@@ -4644,7 +4644,7 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 7624677,
+  "duration": 3220931,
   "status": "passed"
 });
 formatter.scenario({
@@ -4675,7 +4675,7 @@ formatter.match({
   "location": "StepDefinitions.addUser(String)"
 });
 formatter.result({
-  "duration": 3853029,
+  "duration": 9302500,
   "status": "passed"
 });
 formatter.match({
@@ -4688,23 +4688,23 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedUser(String)"
 });
 formatter.result({
-  "duration": 59655,
+  "duration": 61630,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3554759,
+  "duration": 13369257,
   "status": "passed"
 });
 formatter.after({
-  "duration": 31210,
+  "duration": 542418,
   "status": "passed"
 });
 formatter.before({
-  "duration": 33580,
+  "duration": 459456,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3630216,
+  "duration": 12674740,
   "status": "passed"
 });
 formatter.background({
@@ -4723,7 +4723,7 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 2757130,
+  "duration": 2732242,
   "status": "passed"
 });
 formatter.scenario({
@@ -4769,7 +4769,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 10350202,
+  "duration": 2457279,
   "status": "passed"
 });
 formatter.match({
@@ -4782,7 +4782,7 @@ formatter.match({
   "location": "StepDefinitions.removeUser(String)"
 });
 formatter.result({
-  "duration": 5165422,
+  "duration": 4305374,
   "status": "passed"
 });
 formatter.match({
@@ -4795,7 +4795,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyRemovedUser(String)"
 });
 formatter.result({
-  "duration": 56889,
+  "duration": 53728,
   "status": "passed"
 });
 formatter.match({
@@ -4808,7 +4808,7 @@ formatter.match({
   "location": "StepDefinitions.addUser(String)"
 });
 formatter.result({
-  "duration": 5146459,
+  "duration": 4837126,
   "status": "passed"
 });
 formatter.match({
@@ -4821,23 +4821,23 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedUser(String)"
 });
 formatter.result({
-  "duration": 56099,
+  "duration": 56494,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3837623,
+  "duration": 2956636,
   "status": "passed"
 });
 formatter.after({
-  "duration": 30420,
+  "duration": 30025,
   "status": "passed"
 });
 formatter.before({
-  "duration": 93235,
+  "duration": 123654,
   "status": "passed"
 });
 formatter.before({
-  "duration": 20819712,
+  "duration": 3727400,
   "status": "passed"
 });
 formatter.background({
@@ -4856,7 +4856,7 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 2951895,
+  "duration": 2872488,
   "status": "passed"
 });
 formatter.scenario({
@@ -4891,7 +4891,7 @@ formatter.match({
   "location": "StepDefinitions.addBook(String,int)"
 });
 formatter.result({
-  "duration": 1912095,
+  "duration": 2138465,
   "status": "passed"
 });
 formatter.match({
@@ -4904,23 +4904,23 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedBook(int)"
 });
 formatter.result({
-  "duration": 76642,
+  "duration": 98370,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3062117,
+  "duration": 3098463,
   "status": "passed"
 });
 formatter.after({
-  "duration": 29234,
+  "duration": 106666,
   "status": "passed"
 });
 formatter.before({
-  "duration": 28444,
+  "duration": 89679,
   "status": "passed"
 });
 formatter.before({
-  "duration": 4277325,
+  "duration": 20264256,
   "status": "passed"
 });
 formatter.background({
@@ -4939,7 +4939,7 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 2875253,
+  "duration": 4884534,
   "status": "passed"
 });
 formatter.scenario({
@@ -4989,7 +4989,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 2102120,
+  "duration": 10760275,
   "status": "passed"
 });
 formatter.match({
@@ -5006,7 +5006,7 @@ formatter.match({
   "location": "StepDefinitions.removeBook(String,int)"
 });
 formatter.result({
-  "duration": 4364239,
+  "duration": 850961,
   "status": "passed"
 });
 formatter.match({
@@ -5019,7 +5019,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyRemovedBook(int)"
 });
 formatter.result({
-  "duration": 167506,
+  "duration": 122074,
   "status": "passed"
 });
 formatter.match({
@@ -5036,7 +5036,7 @@ formatter.match({
   "location": "StepDefinitions.addBook(String,int)"
 });
 formatter.result({
-  "duration": 7128480,
+  "duration": 9634352,
   "status": "passed"
 });
 formatter.match({
@@ -5049,23 +5049,23 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedBook(int)"
 });
 formatter.result({
-  "duration": 91654,
+  "duration": 71506,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3626264,
+  "duration": 3402265,
   "status": "passed"
 });
 formatter.after({
-  "duration": 32395,
+  "duration": 61630,
   "status": "passed"
 });
 formatter.before({
-  "duration": 54518,
+  "duration": 1927897,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3817474,
+  "duration": 7903985,
   "status": "passed"
 });
 formatter.background({
@@ -5084,7 +5084,7 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 4348436,
+  "duration": 3786659,
   "status": "passed"
 });
 formatter.scenario({
@@ -5124,7 +5124,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 3277425,
+  "duration": 1729972,
   "status": "passed"
 });
 formatter.match({
@@ -5141,7 +5141,7 @@ formatter.match({
   "location": "StepDefinitions.addCopy(int,int)"
 });
 formatter.result({
-  "duration": 1980441,
+  "duration": 1900244,
   "status": "passed"
 });
 formatter.match({
@@ -5158,23 +5158,23 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedCopy(int,int)"
 });
 formatter.result({
-  "duration": 122864,
+  "duration": 90864,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3188537,
+  "duration": 3116636,
   "status": "passed"
 });
 formatter.after({
-  "duration": 47803,
+  "duration": 35160,
   "status": "passed"
 });
 formatter.before({
-  "duration": 48593,
+  "duration": 135901,
   "status": "passed"
 });
 formatter.before({
-  "duration": 8376873,
+  "duration": 3769277,
   "status": "passed"
 });
 formatter.background({
@@ -5193,7 +5193,7 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 6819147,
+  "duration": 3073574,
   "status": "passed"
 });
 formatter.scenario({
@@ -5253,7 +5253,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 1828342,
+  "duration": 1788836,
   "status": "passed"
 });
 formatter.match({
@@ -5270,7 +5270,7 @@ formatter.match({
   "location": "StepDefinitions.addCopy(int,int)"
 });
 formatter.result({
-  "duration": 1719701,
+  "duration": 1729577,
   "status": "passed"
 });
 formatter.match({
@@ -5287,7 +5287,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedCopy(int,int)"
 });
 formatter.result({
-  "duration": 83358,
+  "duration": 90074,
   "status": "passed"
 });
 formatter.match({
@@ -5304,7 +5304,7 @@ formatter.match({
   "location": "StepDefinitions.addCopy(int,int)"
 });
 formatter.result({
-  "duration": 1605527,
+  "duration": 1885626,
   "status": "passed"
 });
 formatter.match({
@@ -5321,7 +5321,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedCopy(int,int)"
 });
 formatter.result({
-  "duration": 103111,
+  "duration": 89284,
   "status": "passed"
 });
 formatter.match({
@@ -5338,7 +5338,7 @@ formatter.match({
   "location": "StepDefinitions.addCopy(int,int)"
 });
 formatter.result({
-  "duration": 4238609,
+  "duration": 1643059,
   "status": "passed"
 });
 formatter.match({
@@ -5355,23 +5355,23 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedCopy(int,int)"
 });
 formatter.result({
-  "duration": 94024,
+  "duration": 96000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3584783,
+  "duration": 2993772,
   "status": "passed"
 });
 formatter.after({
-  "duration": 32395,
+  "duration": 28049,
   "status": "passed"
 });
 formatter.before({
-  "duration": 34370,
+  "duration": 32000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 4507250,
+  "duration": 5862704,
   "status": "passed"
 });
 formatter.background({
@@ -5390,7 +5390,7 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 3487203,
+  "duration": 2633476,
   "status": "passed"
 });
 formatter.scenario({
@@ -5480,7 +5480,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 1910120,
+  "duration": 2465180,
   "status": "passed"
 });
 formatter.match({
@@ -5497,7 +5497,7 @@ formatter.match({
   "location": "StepDefinitions.addCopy(int,int)"
 });
 formatter.result({
-  "duration": 2304786,
+  "duration": 1826762,
   "status": "passed"
 });
 formatter.match({
@@ -5514,7 +5514,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedCopy(int,int)"
 });
 formatter.result({
-  "duration": 95209,
+  "duration": 86913,
   "status": "passed"
 });
 formatter.match({
@@ -5531,7 +5531,7 @@ formatter.match({
   "location": "StepDefinitions.addCopy(int,int)"
 });
 formatter.result({
-  "duration": 3004043,
+  "duration": 3043155,
   "status": "passed"
 });
 formatter.match({
@@ -5548,7 +5548,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedCopy(int,int)"
 });
 formatter.result({
-  "duration": 114568,
+  "duration": 96395,
   "status": "passed"
 });
 formatter.match({
@@ -5565,7 +5565,7 @@ formatter.match({
   "location": "StepDefinitions.addCopy(int,int)"
 });
 formatter.result({
-  "duration": 28063944,
+  "duration": 1647799,
   "status": "passed"
 });
 formatter.match({
@@ -5582,7 +5582,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedCopy(int,int)"
 });
 formatter.result({
-  "duration": 87704,
+  "duration": 91654,
   "status": "passed"
 });
 formatter.match({
@@ -5599,7 +5599,7 @@ formatter.match({
   "location": "StepDefinitions.removeCopy(int,int)"
 });
 formatter.result({
-  "duration": 6595147,
+  "duration": 2004540,
   "status": "passed"
 });
 formatter.match({
@@ -5616,7 +5616,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyRemovedCopy(int,int)"
 });
 formatter.result({
-  "duration": 69530,
+  "duration": 85729,
   "status": "passed"
 });
 formatter.match({
@@ -5633,7 +5633,7 @@ formatter.match({
   "location": "StepDefinitions.addCopy(int,int)"
 });
 formatter.result({
-  "duration": 1918021,
+  "duration": 3010364,
   "status": "passed"
 });
 formatter.match({
@@ -5650,7 +5650,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedCopy(int,int)"
 });
 formatter.result({
-  "duration": 79012,
+  "duration": 89679,
   "status": "passed"
 });
 formatter.match({
@@ -5667,7 +5667,7 @@ formatter.match({
   "location": "StepDefinitions.addCopy(int,int)"
 });
 formatter.result({
-  "duration": 2171255,
+  "duration": 2828636,
   "status": "passed"
 });
 formatter.match({
@@ -5684,23 +5684,23 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedCopy(int,int)"
 });
 formatter.result({
-  "duration": 86913,
+  "duration": 89284,
   "status": "passed"
 });
 formatter.after({
-  "duration": 2936093,
+  "duration": 2947550,
   "status": "passed"
 });
 formatter.after({
-  "duration": 52148,
+  "duration": 41482,
   "status": "passed"
 });
 formatter.before({
-  "duration": 108642,
+  "duration": 121283,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3642066,
+  "duration": 3730166,
   "status": "passed"
 });
 formatter.background({
@@ -5719,7 +5719,7 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 3301524,
+  "duration": 3117426,
   "status": "passed"
 });
 formatter.scenario({
@@ -5830,7 +5830,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 2603847,
+  "duration": 2055107,
   "status": "passed"
 });
 formatter.match({
@@ -5843,7 +5843,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 4165127,
+  "duration": 2236835,
   "status": "passed"
 });
 formatter.match({
@@ -5860,7 +5860,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 1688886,
+  "duration": 3323648,
   "status": "passed"
 });
 formatter.match({
@@ -5877,7 +5877,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 6576974,
+  "duration": 1709429,
   "status": "passed"
 });
 formatter.match({
@@ -5898,7 +5898,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 1404442,
+  "duration": 2100539,
   "status": "passed"
 });
 formatter.match({
@@ -5919,7 +5919,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 4897571,
+  "duration": 8551490,
   "status": "passed"
 });
 formatter.match({
@@ -5940,7 +5940,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 5385076,
+  "duration": 7647985,
   "status": "passed"
 });
 formatter.match({
@@ -5961,7 +5961,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 4781818,
+  "duration": 2823106,
   "status": "passed"
 });
 formatter.match({
@@ -5982,7 +5982,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 4901521,
+  "duration": 1972935,
   "status": "passed"
 });
 formatter.match({
@@ -6003,7 +6003,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 1351898,
+  "duration": 1778169,
   "status": "passed"
 });
 formatter.match({
@@ -6024,7 +6024,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 4322757,
+  "duration": 7582405,
   "status": "passed"
 });
 formatter.match({
@@ -6045,7 +6045,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 351209,
+  "duration": 491061,
   "status": "passed"
 });
 formatter.match({
@@ -6066,7 +6066,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 4453917,
+  "duration": 6302408,
   "status": "passed"
 });
 formatter.match({
@@ -6087,7 +6087,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 98370,
+  "duration": 129580,
   "status": "passed"
 });
 formatter.match({
@@ -6108,7 +6108,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 5965420,
+  "duration": 6814407,
   "status": "passed"
 });
 formatter.match({
@@ -6129,7 +6129,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 94024,
+  "duration": 100345,
   "status": "passed"
 });
 formatter.match({
@@ -6150,7 +6150,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 6022705,
+  "duration": 6758703,
   "status": "passed"
 });
 formatter.match({
@@ -6171,23 +6171,23 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 111407,
+  "duration": 121678,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3276636,
+  "duration": 5009372,
   "status": "passed"
 });
 formatter.after({
-  "duration": 27259,
+  "duration": 58074,
   "status": "passed"
 });
 formatter.before({
-  "duration": 341333,
+  "duration": 99950,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3858561,
+  "duration": 3806807,
   "status": "passed"
 });
 formatter.background({
@@ -6206,7 +6206,7 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 3052636,
+  "duration": 3119796,
   "status": "passed"
 });
 formatter.scenario({
@@ -6301,7 +6301,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 2720390,
+  "duration": 2813624,
   "status": "passed"
 });
 formatter.match({
@@ -6318,7 +6318,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 2215897,
+  "duration": 2459650,
   "status": "passed"
 });
 formatter.match({
@@ -6339,7 +6339,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 3890560,
+  "duration": 2313872,
   "status": "passed"
 });
 formatter.match({
@@ -6360,7 +6360,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 3081476,
+  "duration": 12278495,
   "status": "passed"
 });
 formatter.match({
@@ -6381,7 +6381,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 1946465,
+  "duration": 2251847,
   "status": "passed"
 });
 formatter.match({
@@ -6402,7 +6402,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 1808984,
+  "duration": 2651649,
   "status": "passed"
 });
 formatter.match({
@@ -6423,7 +6423,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 2381822,
+  "duration": 2806908,
   "status": "passed"
 });
 formatter.match({
@@ -6444,7 +6444,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 2147947,
+  "duration": 2909624,
   "status": "passed"
 });
 formatter.match({
@@ -6461,7 +6461,7 @@ formatter.match({
   "location": "StepDefinitions.removeCopy(int,int)"
 });
 formatter.result({
-  "duration": 1620540,
+  "duration": 1858367,
   "status": "passed"
 });
 formatter.match({
@@ -6478,7 +6478,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyRemovedCopy(int,int)"
 });
 formatter.result({
-  "duration": 89679,
+  "duration": 80593,
   "status": "passed"
 });
 formatter.match({
@@ -6495,7 +6495,7 @@ formatter.match({
   "location": "StepDefinitions.removeCopy(int,int)"
 });
 formatter.result({
-  "duration": 1454219,
+  "duration": 2050761,
   "status": "passed"
 });
 formatter.match({
@@ -6512,7 +6512,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyRemovedCopy(int,int)"
 });
 formatter.result({
-  "duration": 105086,
+  "duration": 170271,
   "status": "passed"
 });
 formatter.match({
@@ -6529,7 +6529,7 @@ formatter.match({
   "location": "StepDefinitions.removeCopy(int,int)"
 });
 formatter.result({
-  "duration": 5034656,
+  "duration": 2114366,
   "status": "passed"
 });
 formatter.match({
@@ -6546,11 +6546,11 @@ formatter.match({
   "location": "StepDefinitions.successfullyRemovedCopy(int,int)"
 });
 formatter.result({
-  "duration": 178173,
+  "duration": 98370,
   "status": "passed"
 });
 formatter.after({
-  "duration": 4651842,
+  "duration": 3523154,
   "status": "passed"
 });
 formatter.after({
@@ -6558,11 +6558,11 @@ formatter.after({
   "status": "passed"
 });
 formatter.before({
-  "duration": 47012,
+  "duration": 37926,
   "status": "passed"
 });
 formatter.before({
-  "duration": 8553859,
+  "duration": 3740832,
   "status": "passed"
 });
 formatter.background({
@@ -6581,7 +6581,7 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 3047895,
+  "duration": 3021821,
   "status": "passed"
 });
 formatter.scenario({
@@ -6621,7 +6621,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 1565627,
+  "duration": 1884836,
   "status": "passed"
 });
 formatter.match({
@@ -6638,7 +6638,7 @@ formatter.match({
   "location": "StepDefinitions.removeBook(String,int)"
 });
 formatter.result({
-  "duration": 589036,
+  "duration": 1056788,
   "status": "passed"
 });
 formatter.match({
@@ -6651,23 +6651,23 @@ formatter.match({
   "location": "StepDefinitions.successfullyRemovedBook(int)"
 });
 formatter.result({
-  "duration": 49383,
+  "duration": 62025,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3189327,
+  "duration": 2921476,
   "status": "passed"
 });
 formatter.after({
-  "duration": 29234,
+  "duration": 30420,
   "status": "passed"
 });
 formatter.before({
-  "duration": 33185,
+  "duration": 31604,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3766116,
+  "duration": 3554759,
   "status": "passed"
 });
 formatter.background({
@@ -6686,7 +6686,7 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 2803747,
+  "duration": 2975599,
   "status": "passed"
 });
 formatter.scenario({
@@ -6722,7 +6722,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 1925132,
+  "duration": 2111206,
   "status": "passed"
 });
 formatter.match({
@@ -6735,7 +6735,7 @@ formatter.match({
   "location": "StepDefinitions.removeUser(String)"
 });
 formatter.result({
-  "duration": 2488884,
+  "duration": 1965033,
   "status": "passed"
 });
 formatter.match({
@@ -6748,23 +6748,23 @@ formatter.match({
   "location": "StepDefinitions.successfullyRemovedUser(String)"
 });
 formatter.result({
-  "duration": 44247,
+  "duration": 46222,
   "status": "passed"
 });
 formatter.after({
-  "duration": 6243543,
+  "duration": 6416185,
   "status": "passed"
 });
 formatter.after({
-  "duration": 52148,
+  "duration": 57679,
   "status": "passed"
 });
 formatter.before({
-  "duration": 31605,
+  "duration": 35555,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3961276,
+  "duration": 3669326,
   "status": "passed"
 });
 formatter.background({
@@ -6783,7 +6783,7 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 3045920,
+  "duration": 2696291,
   "status": "passed"
 });
 formatter.scenario({
@@ -6859,7 +6859,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 1935799,
+  "duration": 3164439,
   "status": "passed"
 });
 formatter.match({
@@ -6876,7 +6876,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 1997823,
+  "duration": 2351008,
   "status": "passed"
 });
 formatter.match({
@@ -6897,7 +6897,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 1564047,
+  "duration": 1604343,
   "status": "passed"
 });
 formatter.match({
@@ -6918,7 +6918,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 4822904,
+  "duration": 6862604,
   "status": "passed"
 });
 formatter.match({
@@ -6939,7 +6939,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 74271,
+  "duration": 77036,
   "status": "passed"
 });
 formatter.match({
@@ -6960,7 +6960,7 @@ formatter.match({
   "location": "StepDefinitions.returnBook(String,int,int)"
 });
 formatter.result({
-  "duration": 609974,
+  "duration": 601677,
   "status": "passed"
 });
 formatter.match({
@@ -6981,7 +6981,7 @@ formatter.match({
   "location": "StepDefinitions.successfulReturn(int,int,String)"
 });
 formatter.result({
-  "duration": 62815,
+  "duration": 75852,
   "status": "passed"
 });
 formatter.match({
@@ -6998,7 +6998,7 @@ formatter.match({
   "location": "StepDefinitions.removeCopy(int,int)"
 });
 formatter.result({
-  "duration": 1405232,
+  "duration": 1513873,
   "status": "passed"
 });
 formatter.match({
@@ -7015,7 +7015,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyRemovedCopy(int,int)"
 });
 formatter.result({
-  "duration": 53729,
+  "duration": 75062,
   "status": "passed"
 });
 formatter.match({
@@ -7032,7 +7032,7 @@ formatter.match({
   "location": "StepDefinitions.removeBook(String,int)"
 });
 formatter.result({
-  "duration": 597332,
+  "duration": 573233,
   "status": "passed"
 });
 formatter.match({
@@ -7045,23 +7045,23 @@ formatter.match({
   "location": "StepDefinitions.successfullyRemovedBook(int)"
 });
 formatter.result({
-  "duration": 46617,
+  "duration": 62025,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3301920,
+  "duration": 2983500,
   "status": "passed"
 });
 formatter.after({
-  "duration": 30420,
+  "duration": 27654,
   "status": "passed"
 });
 formatter.before({
-  "duration": 88098,
+  "duration": 69531,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3815104,
+  "duration": 7470207,
   "status": "passed"
 });
 formatter.background({
@@ -7080,7 +7080,7 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 3412142,
+  "duration": 2927796,
   "status": "passed"
 });
 formatter.scenario({
@@ -7136,7 +7136,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 1513874,
+  "duration": 11328373,
   "status": "passed"
 });
 formatter.match({
@@ -7153,7 +7153,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 1556936,
+  "duration": 4166313,
   "status": "passed"
 });
 formatter.match({
@@ -7174,7 +7174,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 2290959,
+  "duration": 1915651,
   "status": "passed"
 });
 formatter.match({
@@ -7195,7 +7195,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 7511294,
+  "duration": 6772530,
   "status": "passed"
 });
 formatter.match({
@@ -7216,7 +7216,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 137876,
+  "duration": 159605,
   "status": "passed"
 });
 formatter.match({
@@ -7237,7 +7237,7 @@ formatter.match({
   "location": "StepDefinitions.renew(String,int,int)"
 });
 formatter.result({
-  "duration": 7809960,
+  "duration": 8412823,
   "status": "passed"
 });
 formatter.match({
@@ -7258,23 +7258,23 @@ formatter.match({
   "location": "StepDefinitions.successfulRenewal(int,int,String)"
 });
 formatter.result({
-  "duration": 204247,
+  "duration": 205036,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3805622,
+  "duration": 3843153,
   "status": "passed"
 });
 formatter.after({
-  "duration": 31210,
+  "duration": 28049,
   "status": "passed"
 });
 formatter.before({
-  "duration": 93235,
+  "duration": 33975,
   "status": "passed"
 });
 formatter.before({
-  "duration": 9122352,
+  "duration": 4337374,
   "status": "passed"
 });
 formatter.background({
@@ -7293,7 +7293,7 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 2962562,
+  "duration": 2885131,
   "status": "passed"
 });
 formatter.scenario({
@@ -7359,7 +7359,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 1786861,
+  "duration": 2748439,
   "status": "passed"
 });
 formatter.match({
@@ -7376,7 +7376,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 1729577,
+  "duration": 1660442,
   "status": "passed"
 });
 formatter.match({
@@ -7397,7 +7397,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 2847995,
+  "duration": 2013626,
   "status": "passed"
 });
 formatter.match({
@@ -7418,7 +7418,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 6045223,
+  "duration": 6701419,
   "status": "passed"
 });
 formatter.match({
@@ -7439,7 +7439,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 72691,
+  "duration": 69926,
   "status": "passed"
 });
 formatter.match({
@@ -7460,7 +7460,7 @@ formatter.match({
   "location": "StepDefinitions.renew(String,int,int)"
 });
 formatter.result({
-  "duration": 4905867,
+  "duration": 9223488,
   "status": "passed"
 });
 formatter.match({
@@ -7481,7 +7481,7 @@ formatter.match({
   "location": "StepDefinitions.successfulRenewal(int,int,String)"
 });
 formatter.result({
-  "duration": 77037,
+  "duration": 82172,
   "status": "passed"
 });
 formatter.match({
@@ -7502,7 +7502,7 @@ formatter.match({
   "location": "StepDefinitions.returnBook(String,int,int)"
 });
 formatter.result({
-  "duration": 597332,
+  "duration": 839504,
   "status": "passed"
 });
 formatter.match({
@@ -7523,23 +7523,23 @@ formatter.match({
   "location": "StepDefinitions.successfulReturn(int,int,String)"
 });
 formatter.result({
-  "duration": 74667,
+  "duration": 73481,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3226067,
+  "duration": 3632585,
   "status": "passed"
 });
 formatter.after({
-  "duration": 30419,
+  "duration": 29630,
   "status": "passed"
 });
 formatter.before({
-  "duration": 45036,
+  "duration": 190814,
   "status": "passed"
 });
 formatter.before({
-  "duration": 8325119,
+  "duration": 4065572,
   "status": "passed"
 });
 formatter.background({
@@ -7558,7 +7558,7 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 3625079,
+  "duration": 3863301,
   "status": "passed"
 });
 formatter.scenario({
@@ -7729,7 +7729,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 16481548,
+  "duration": 9480278,
   "status": "passed"
 });
 formatter.match({
@@ -7742,7 +7742,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 9130648,
+  "duration": 1682960,
   "status": "passed"
 });
 formatter.match({
@@ -7759,7 +7759,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 1911305,
+  "duration": 3503400,
   "status": "passed"
 });
 formatter.match({
@@ -7776,7 +7776,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 1822021,
+  "duration": 1873379,
   "status": "passed"
 });
 formatter.match({
@@ -7797,7 +7797,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 1806218,
+  "duration": 3041574,
   "status": "passed"
 });
 formatter.match({
@@ -7818,7 +7818,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 1534811,
+  "duration": 2622809,
   "status": "passed"
 });
 formatter.match({
@@ -7839,7 +7839,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 1741429,
+  "duration": 2139650,
   "status": "passed"
 });
 formatter.match({
@@ -7860,7 +7860,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 1822416,
+  "duration": 2123848,
   "status": "passed"
 });
 formatter.match({
@@ -7881,7 +7881,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 1503997,
+  "duration": 1951601,
   "status": "passed"
 });
 formatter.match({
@@ -7902,7 +7902,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 1788046,
+  "duration": 1770664,
   "status": "passed"
 });
 formatter.match({
@@ -7923,7 +7923,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 4830016,
+  "duration": 6247494,
   "status": "passed"
 });
 formatter.match({
@@ -7944,7 +7944,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 73086,
+  "duration": 73876,
   "status": "passed"
 });
 formatter.match({
@@ -7965,7 +7965,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 5141323,
+  "duration": 9722845,
   "status": "passed"
 });
 formatter.match({
@@ -7986,7 +7986,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 75852,
+  "duration": 101531,
   "status": "passed"
 });
 formatter.match({
@@ -8007,7 +8007,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 5813321,
+  "duration": 5642260,
   "status": "passed"
 });
 formatter.match({
@@ -8028,7 +8028,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 129975,
+  "duration": 135901,
   "status": "passed"
 });
 formatter.match({
@@ -8049,7 +8049,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 5951198,
+  "duration": 8374107,
   "status": "passed"
 });
 formatter.match({
@@ -8070,7 +8070,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 70716,
+  "duration": 67950,
   "status": "passed"
 });
 formatter.match({
@@ -8091,7 +8091,7 @@ formatter.match({
   "location": "StepDefinitions.returnBook(String,int,int)"
 });
 formatter.result({
-  "duration": 5995049,
+  "duration": 5293422,
   "status": "passed"
 });
 formatter.match({
@@ -8112,7 +8112,7 @@ formatter.match({
   "location": "StepDefinitions.successfulReturn(int,int,String)"
 });
 formatter.result({
-  "duration": 77037,
+  "duration": 77827,
   "status": "passed"
 });
 formatter.match({
@@ -8133,7 +8133,7 @@ formatter.match({
   "location": "StepDefinitions.returnBook(String,int,int)"
 });
 formatter.result({
-  "duration": 5741816,
+  "duration": 5887593,
   "status": "passed"
 });
 formatter.match({
@@ -8154,7 +8154,7 @@ formatter.match({
   "location": "StepDefinitions.successfulReturn(int,int,String)"
 });
 formatter.result({
-  "duration": 80592,
+  "duration": 76247,
   "status": "passed"
 });
 formatter.match({
@@ -8175,7 +8175,7 @@ formatter.match({
   "location": "StepDefinitions.returnBook(String,int,int)"
 });
 formatter.result({
-  "duration": 6593567,
+  "duration": 5418260,
   "status": "passed"
 });
 formatter.match({
@@ -8196,7 +8196,7 @@ formatter.match({
   "location": "StepDefinitions.successfulReturn(int,int,String)"
 });
 formatter.result({
-  "duration": 78222,
+  "duration": 76246,
   "status": "passed"
 });
 formatter.match({
@@ -8217,7 +8217,7 @@ formatter.match({
   "location": "StepDefinitions.returnBook(String,int,int)"
 });
 formatter.result({
-  "duration": 695702,
+  "duration": 723752,
   "status": "passed"
 });
 formatter.match({
@@ -8238,7 +8238,7 @@ formatter.match({
   "location": "StepDefinitions.successfulReturn(int,int,String)"
 });
 formatter.result({
-  "duration": 182518,
+  "duration": 69531,
   "status": "passed"
 });
 formatter.match({
@@ -8259,7 +8259,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 7286504,
+  "duration": 5870605,
   "status": "passed"
 });
 formatter.match({
@@ -8280,7 +8280,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 69925,
+  "duration": 66371,
   "status": "passed"
 });
 formatter.match({
@@ -8301,7 +8301,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 18322137,
+  "duration": 5150410,
   "status": "passed"
 });
 formatter.match({
@@ -8322,23 +8322,23 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 71506,
+  "duration": 64395,
   "status": "passed"
 });
 formatter.after({
-  "duration": 4895200,
+  "duration": 3224883,
   "status": "passed"
 });
 formatter.after({
-  "duration": 34370,
+  "duration": 28445,
   "status": "passed"
 });
 formatter.before({
-  "duration": 37531,
+  "duration": 30420,
   "status": "passed"
 });
 formatter.before({
-  "duration": 4057671,
+  "duration": 3983794,
   "status": "passed"
 });
 formatter.background({
@@ -8357,7 +8357,7 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 2841279,
+  "duration": 3347351,
   "status": "passed"
 });
 formatter.scenario({
@@ -8453,7 +8453,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 2791500,
+  "duration": 1593281,
   "status": "passed"
 });
 formatter.match({
@@ -8470,7 +8470,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 2320983,
+  "duration": 1519800,
   "status": "passed"
 });
 formatter.match({
@@ -8487,7 +8487,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 2559600,
+  "duration": 1719305,
   "status": "passed"
 });
 formatter.match({
@@ -8508,7 +8508,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 1632786,
+  "duration": 1663207,
   "status": "passed"
 });
 formatter.match({
@@ -8529,7 +8529,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 2008490,
+  "duration": 1886812,
   "status": "passed"
 });
 formatter.match({
@@ -8550,7 +8550,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 7230800,
+  "duration": 1444343,
   "status": "passed"
 });
 formatter.match({
@@ -8571,7 +8571,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 1718910,
+  "duration": 1739058,
   "status": "passed"
 });
 formatter.match({
@@ -8592,7 +8592,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 7772825,
+  "duration": 5138163,
   "status": "passed"
 });
 formatter.match({
@@ -8613,7 +8613,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 75062,
+  "duration": 51357,
   "status": "passed"
 });
 formatter.match({
@@ -8634,7 +8634,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 7893317,
+  "duration": 4621028,
   "status": "passed"
 });
 formatter.match({
@@ -8655,7 +8655,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 63605,
+  "duration": 59259,
   "status": "passed"
 });
 formatter.match({
@@ -8676,7 +8676,7 @@ formatter.match({
   "location": "StepDefinitions.renew(String,int,int)"
 });
 formatter.result({
-  "duration": 7064875,
+  "duration": 4845027,
   "status": "passed"
 });
 formatter.match({
@@ -8697,7 +8697,7 @@ formatter.match({
   "location": "StepDefinitions.successfulRenewal(int,int,String)"
 });
 formatter.result({
-  "duration": 79802,
+  "duration": 64790,
   "status": "passed"
 });
 formatter.match({
@@ -8718,7 +8718,7 @@ formatter.match({
   "location": "StepDefinitions.renew(String,int,int)"
 });
 formatter.result({
-  "duration": 6900924,
+  "duration": 4612732,
   "status": "passed"
 });
 formatter.match({
@@ -8739,15 +8739,15 @@ formatter.match({
   "location": "StepDefinitions.successfulRenewal(int,int,String)"
 });
 formatter.result({
-  "duration": 72691,
+  "duration": 69531,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3762956,
+  "duration": 2821525,
   "status": "passed"
 });
 formatter.after({
-  "duration": 37135,
+  "duration": 26864,
   "status": "passed"
 });
 });

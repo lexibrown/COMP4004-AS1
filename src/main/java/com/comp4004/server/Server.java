@@ -406,6 +406,9 @@ public class Server implements Runnable {
 					case RESERVATION_EXISTS:
 						response.put(MessageKey.FAIL_REASON, "Book is being reserved. Cannot remove book.");
 						break;
+					case COPIES_EXIST:
+						response.put(MessageKey.FAIL_REASON, "Book has existing copies. Cannout remove book.");
+						break;
 					case REMOVED_BOOK:
 						response.put(MessageKey.MESSAGE, MessageKey.SUCCESS);
 						response.put(MessageKey.REASON, "Successfully removed book.");

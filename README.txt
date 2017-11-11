@@ -5,10 +5,11 @@ Assignment 2: Cucumber
 Lexi Brown
 GitHub Repo: https://github.com/lexibrown/COMP4004-AS1
 
-PLEASE READ EVERYTHINGs (i tried okay)
+PLEASE READ EVERYTHING (i tried okay)
 
 TO RUN IN ECLIPSE:
 
+Run the CucumberSuite.java as a Junit test
 
 All documentation is the /resources folder
 
