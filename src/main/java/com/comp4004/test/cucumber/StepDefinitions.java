@@ -8,8 +8,6 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import java.io.IOException;
-import java.util.Calendar;
-import java.util.Date;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -56,15 +54,8 @@ public class StepDefinitions {
 		c = null;
 	}
 
-	private Date generateFakeDate(int days) {
-		Calendar c = Calendar.getInstance();
-		c.setTime(new Date());
-		c.add(Calendar.DATE, days);
-		return c.getTime();
-	}
-	
 	@Given("^that each test should be independent from one another$")
-	public void independece() throws Throwable {
+	public void background() throws Throwable {
 		result = null;
 		if (c != null) {
 			c.clearData();
@@ -74,7 +65,7 @@ public class StepDefinitions {
 	// user adding and removing
 
 	@Given("^User \"([^\"]*)\" exists$")
-	public void userCreate(String username) throws Throwable {
+	public void userExists(String username) throws Throwable {
 		assertTrue(c.createUser(username, "password1"));
 		assertNotNull(c.searchUser(username));
 	}
@@ -98,7 +89,7 @@ public class StepDefinitions {
 	}
 
 	@Given("^No such book exists with ISBN: (\\d+)$")
-	public void noSuchBookExits(int ISBN) throws Throwable {
+	public void noSuchBookExists(int ISBN) throws Throwable {
 		assertNull(c.searchBook(ISBN));
 	}
 
@@ -187,7 +178,7 @@ public class StepDefinitions {
 		assertEquals(ActionResult.REMOVED_COPY, result);
 		result = null;
 	}
-	
+
 	@Then("^System successfully borrowed copy (\\d+) of book with ISBN (\\d+) to user \"([^\"]*)\"")
 	public void successfulBorrow(int copy, int ISBN, String username) throws Throwable {
 		assertTrue(c.isBorrowed(ISBN, copy, username));
@@ -211,36 +202,78 @@ public class StepDefinitions {
 
 	// negative then results
 
-	// TODO and fix
-
-	@Then("^System failed to add user: \"([^\"]*)\"$")
+	@Then("^System failed to add user: \"([^\"]*)\" because it already exists$")
 	public void failedToAddUser(String username) throws Throwable {
-		assertNull(c.searchUser(username));
-	}
-
-	@Then("^System failed to add book: (\\d+)$")
-	public void failedToAddBook(int ISBN) throws Throwable {
-		assertNull(c.searchBook(ISBN));
-	}
-
-	@Then("^System failed to add copy (\\d+) to book with ISBN: (\\d+)$")
-	public void failedToAddCopy(int copy, int ISBN) throws Throwable {
-		assertNull(c.searchBook(ISBN).getCopy(copy));
-	}
-
-	@Then("^System failed to remove user: \"([^\"]*)\"$")
-	public void failedToRemoveUser(String username) throws Throwable {
 		assertNotNull(c.searchUser(username));
+		assertFalse(c.createUser(username, "password1"));
 	}
 
-	@Then("^System failed to remove book: (\\d+)$")
+	@Then("^System failed to add book \"([^\"]*)\" with ISBN: (\\d+) because it already exists$")
+	public void failedToAddBook(String title, int ISBN) throws Throwable {
+		assertNotNull(c.searchBook(ISBN));
+		assertFalse(c.addBook(ISBN, title));
+	}
+
+	@Then("^System failed to add copy to book with ISBN: (\\d+) because book does not exist$")
+	public void failedToAddCopy(int ISBN) throws Throwable {
+		assertNull(c.searchBook(ISBN));
+		assertFalse(c.addCopy(ISBN));
+	}
+
+	@Then("^System failed to remove user: \"([^\"]*)\" that does not exist$")
+	public void failedToRemoveUser(String username) throws Throwable {
+		assertNull(c.searchUser(username));
+		assertEquals(ActionResult.NO_SUCH_USER, result);
+		result = null;
+	}
+
+	@Then("^System failed to remove book: (\\d+) because copies exist$")
 	public void failedToRemoveBook(int ISBN) throws Throwable {
 		assertNotNull(c.searchBook(ISBN));
+		assertEquals(ActionResult.COPIES_EXIST, result);
+		result = null;
 	}
 
-	@Then("^System failed to remove copy (\\d+) to book with ISBN: (\\d+)$")
+	@Then("^System failed to remove book with ISBN: (\\d+) because book is currently loaned")
+	public void failedToRemoveBookLoan(int ISBN) throws Throwable {
+		assertNotNull(c.searchBook(ISBN));
+		assertEquals(ActionResult.LOAN_EXISTS, result);
+		result = null;
+	}
+	
+	@Then("^System failed to remove copy (\\d+) to book with ISBN: (\\d+) because copy does not exist$")
 	public void failedToRemoveCopy(int copy, int ISBN) throws Throwable {
-		assertNotNull(c.searchBook(ISBN).getCopy(copy));
+		assertNull(c.searchBook(ISBN).getCopy(copy));
+		assertEquals(ActionResult.NO_SUCH_COPY, result);
+		result = null;
 	}
 
+	@Then("^System failed to remove copy (\\d+) to book with ISBN: (\\d+) because copy is currently loaned$")
+	public void failedToRemoveCopyLoan(int copy, int ISBN) throws Throwable {
+		assertNotNull(c.searchBook(ISBN).getCopy(copy));
+		assertEquals(ActionResult.LOAN_EXISTS, result);
+		result = null;
+	}
+	
+	@Then("^System failed to borrow copy (\\d+) of book with ISBN: (\\d+) because book is currently loaned$")
+	public void failedToBorrowBook(int copy, int ISBN) throws Throwable {
+		assertTrue(c.isBorrowed(ISBN, copy));
+		assertEquals(ActionResult.LOAN_EXISTS, result);
+		result = null;
+	}
+
+	@Then("^System failed to borrow copy (\\d+) of book with ISBN: (\\d+) because maximum loans has been reached$")
+	public void failedToBorrowBookMax(int copy, int ISBN) throws Throwable {
+		assertFalse(c.isBorrowed(ISBN, copy));
+		assertEquals(ActionResult.MAX_LOAN, result);
+		result = null;
+	}
+
+	@Then("^System failed to renew loan of copy (\\d+) of book with ISBN: (\\d+) for user \"([^\"]*)\" because loan does not exist$")
+	public void failedToRenewBook(int copy, int ISBN, String username) throws Throwable {
+		assertFalse(c.isBorrowed(ISBN, copy, username));
+		assertEquals(ActionResult.NO_SUCH_LOAN, result);
+		result = null;
+	}
+	
 }

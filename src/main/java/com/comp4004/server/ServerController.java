@@ -216,6 +216,9 @@ public class ServerController {
 			} else if (!reservationDatabase.getReservations(iSBN).isEmpty()) {
 				log("Failed to remove book. Reservations exists");
 				return ActionResult.RESERVATION_EXISTS;
+			} else if (bookDatabase.findBook(iSBN).numCopies() != 0) {
+				log("Failed to remove book. Copies exists");
+				return ActionResult.COPIES_EXIST;
 			}
 			bookDatabase.deleteBook(iSBN);
 			log("Successfully remove book " + iSBN);

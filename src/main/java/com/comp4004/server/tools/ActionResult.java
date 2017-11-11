@@ -20,7 +20,8 @@ public enum ActionResult {
 	MAX_LOAN, // maximum amount of books loaned reached
 
 	LOAN_EXISTS, // loan already exists
-
+	COPIES_EXIST, // copies of book still exist
+	
 	BORROWED, // book successfully borrowed
 	RENEWED, // book successfully renewed
 	RETURNED, // book successfully returned
