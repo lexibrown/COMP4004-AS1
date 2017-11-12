@@ -52,7 +52,7 @@ Feature: Renew Test Cases
 
   Scenario: Ti16 Renew Returned Item
     Given User "user1" exists
-    Given Book "title" with ISBN 12345678 exists
+    And Book "title" with ISBN 12345678 exists
     And Copy 1 of book "title" with ISBN 12345678 exists
     
     When User "user1" attempts to borrow copy 1 of book with ISBN: 12345678
@@ -76,4 +76,16 @@ Feature: Renew Test Cases
     
 		When User "user1" attempts to renew copy 1 of book with ISBN: 12345678
     Then System failed to renew loan of copy 1 of book with ISBN: 12345678 for user "user1" because user privileges are revoked
+    
+	Scenario: Ti24 Renew book loaned by another user
+    Given User "user1" exists
+    And User "user2" exists
+    And Book "title" with ISBN 12345678 exists
+    And Copy 1 of book "title" with ISBN 12345678 exists
+    
+    When User "user1" attempts to borrow copy 1 of book with ISBN: 12345678
+    Then System successfully borrowed copy 1 of book with ISBN 12345678 to user "user1"
+
+    When User "user2" attempts to renew copy 1 of book with ISBN: 12345678
+    Then System failed to renew loan of copy 1 of book with ISBN: 12345678 for user "user2" because loan does not exist
     
