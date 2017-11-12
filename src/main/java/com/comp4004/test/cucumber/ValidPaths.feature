@@ -105,7 +105,7 @@ Feature: Valid Paths
     When Attempting to remove copy 3 of book with ISBN: 87654321
     Then System successfully removed copy 3 of book with ISBN: 87654321
 
-  Scenario: Tv10 Remove title (No copies involved)
+  Scenario: Tv10 Remove title. No copies involved
     Given Book "title1" with ISBN 12345678 exists
     
     When Attempting to remove book "title1" with ISBN: 12345678
