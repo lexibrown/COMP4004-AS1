@@ -11,7 +11,7 @@ public class Config {
 	// maximum amount of books that can be borrowed at a time
 	public static final int MAX_BORROWED_ITEMS = 2;
 	// maximum amount of times a book can be renewed
-	public static final int MAX_RENEW_ITEMS = 1;
+	public static final int MAX_RENEW_ITEMS = 2;
 
 	// 1 minute for 1 day
 	public static final int STIMULATED_DAY = 1 * 60 * 1000;

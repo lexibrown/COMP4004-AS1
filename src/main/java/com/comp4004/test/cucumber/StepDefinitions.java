@@ -8,6 +8,8 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import java.io.IOException;
+import java.util.Calendar;
+import java.util.Date;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -54,6 +56,13 @@ public class StepDefinitions {
 		c = null;
 	}
 
+	private Date generateFakeDate(int days) {
+		Calendar c = Calendar.getInstance();
+		c.setTime(new Date());
+		c.add(Calendar.DATE, days);
+		return c.getTime();
+	}
+
 	@Given("^that each test should be independent from one another$")
 	public void background() throws Throwable {
 		result = null;
@@ -68,6 +77,12 @@ public class StepDefinitions {
 	public void userExists(String username) throws Throwable {
 		assertTrue(c.createUser(username, "password1"));
 		assertNotNull(c.searchUser(username));
+	}
+
+	@Given("^User \"([^\"]*)\" has their privileges are revoked$")
+	public void privilegeRevoked(String username) throws Throwable {
+		assertNotNull(c.searchUser(username));
+		c.revokePrivilege(username);
 	}
 
 	@When("^Attempting to create user: \"([^\"]*)\"$")
@@ -136,9 +151,29 @@ public class StepDefinitions {
 		result = c.returnLoan(username, ISBN, copy);
 	}
 
+	@When("^User \"([^\"]*)\" attempts to return copy (\\d+) of book with ISBN: (\\d+) late$")
+	public void returnBookLate(String username, int copy, int ISBN) throws Throwable {
+		result = c.returnLoan(username, ISBN, copy, generateFakeDate(Config.RETURN_DAY_LIMIT + 1));
+	}
+
+	@When("^User \"([^\"]*)\" attempts to return copy (\\d+) of book with ISBN: (\\d+) overdue$")
+	public void returnBookOverdue(String username, int copy, int ISBN) throws Throwable {
+		result = c.returnLoan(username, ISBN, copy, generateFakeDate(Config.RETURN_DAY_LIMIT + Config.OVERDUE + 1));
+	}
+
 	@When("^User \"([^\"]*)\" attempts to renew copy (\\d+) of book with ISBN: (\\d+)$")
 	public void renew(String username, int copy, int ISBN) throws Throwable {
 		result = c.renew(username, ISBN, copy);
+	}
+
+	@Given("^Collected \"([^\"]*)\" fee for user \"([^\"]*)\"$")
+	public void collectFee(String fee, String username) throws Throwable {
+		assertNotNull(c.searchUser(username));
+		if ("partial".equalsIgnoreCase(fee)) {
+			assertTrue(c.collectFee(username, c.searchUser(username).getFees() / 2));
+		} else if ("full".equalsIgnoreCase(fee)) {
+			assertTrue(c.collectFee(username, c.searchUser(username).getFees()));
+		}
 	}
 
 	// positive then results
@@ -179,21 +214,35 @@ public class StepDefinitions {
 		result = null;
 	}
 
-	@Then("^System successfully borrowed copy (\\d+) of book with ISBN (\\d+) to user \"([^\"]*)\"")
+	@Then("^System successfully borrowed copy (\\d+) of book with ISBN (\\d+) to user \"([^\"]*)\"$")
 	public void successfulBorrow(int copy, int ISBN, String username) throws Throwable {
 		assertTrue(c.isBorrowed(ISBN, copy, username));
 		assertEquals(ActionResult.BORROWED, result);
 		result = null;
 	}
 
-	@Then("^System successfully returned copy (\\d+) of book with ISBN (\\d+) from user \"([^\"]*)\"")
+	@Then("^System successfully returned copy (\\d+) of book with ISBN (\\d+) from user \"([^\"]*)\"$")
 	public void successfulReturn(int copy, int ISBN, String username) throws Throwable {
 		assertFalse(c.isBorrowed(ISBN, copy, username));
 		assertEquals(ActionResult.RETURNED, result);
 		result = null;
 	}
 
-	@Then("^System successfully renewed copy (\\d+) of book with ISBN (\\d+) for user \"([^\"]*)\"")
+	@Then("^System successfully returned copy (\\d+) of book with ISBN (\\d+) from user \"([^\"]*)\" but privileges were revoked$")
+	public void successfulReturnLateRevoke(int copy, int ISBN, String username) throws Throwable {
+		assertFalse(c.isBorrowed(ISBN, copy, username));
+		assertEquals(ActionResult.PRIVILEGE_REVOKED, result);
+		result = null;
+	}
+
+	@Then("^System successfully returned copy (\\d+) of book with ISBN (\\d+) from user \"([^\"]*)\" but fee was applied$")
+	public void successfulReturnLateFee(int copy, int ISBN, String username) throws Throwable {
+		assertFalse(c.isBorrowed(ISBN, copy, username));
+		assertEquals(ActionResult.FEE_ADDED, result);
+		result = null;
+	}
+
+	@Then("^System successfully renewed copy (\\d+) of book with ISBN (\\d+) for user \"([^\"]*)\"$")
 	public void successfulRenewal(int copy, int ISBN, String username) throws Throwable {
 		assertTrue(c.isBorrowed(ISBN, copy, username));
 		assertEquals(ActionResult.RENEWED, result);
@@ -227,8 +276,30 @@ public class StepDefinitions {
 		result = null;
 	}
 
-	@Then("^System failed to remove book: (\\d+) because copies exist$")
+	@Then("^System failed to remove user: \"([^\"]*)\" because their privileges are revoked$")
+	public void failedToRemoveUserRevoke(String username) throws Throwable {
+		assertNotNull(c.searchUser(username));
+		assertFalse(c.searchUser(username).hasPrivilege());
+		assertEquals(ActionResult.NO_PRIVILEGE, result);
+		result = null;
+	}
+
+	@Then("^System failed to remove user: \"([^\"]*)\" because they have existing loans$")
+	public void failedToRemoveUserLoan(String username) throws Throwable {
+		assertNotNull(c.searchUser(username));
+		assertEquals(ActionResult.HAS_LOANS, result);
+		result = null;
+	}
+
+	@Then("^System failed to remove book: (\\d+) because book does not exist$")
 	public void failedToRemoveBook(int ISBN) throws Throwable {
+		assertNull(c.searchBook(ISBN));
+		assertEquals(ActionResult.NO_SUCH_BOOK, result);
+		result = null;
+	}
+
+	@Then("^System failed to remove book: (\\d+) because copies exist$")
+	public void failedToRemoveBookCopies(int ISBN) throws Throwable {
 		assertNotNull(c.searchBook(ISBN));
 		assertEquals(ActionResult.COPIES_EXIST, result);
 		result = null;
@@ -240,11 +311,18 @@ public class StepDefinitions {
 		assertEquals(ActionResult.LOAN_EXISTS, result);
 		result = null;
 	}
-	
+
 	@Then("^System failed to remove copy (\\d+) to book with ISBN: (\\d+) because copy does not exist$")
 	public void failedToRemoveCopy(int copy, int ISBN) throws Throwable {
 		assertNull(c.searchBook(ISBN).getCopy(copy));
 		assertEquals(ActionResult.NO_SUCH_COPY, result);
+		result = null;
+	}
+
+	@Then("^System failed to remove copy (\\d+) to book with ISBN: (\\d+) because book does not exist$")
+	public void failedToRemoveCopyBook(int copy, int ISBN) throws Throwable {
+		assertNull(c.searchBook(ISBN));
+		assertEquals(ActionResult.NO_SUCH_BOOK, result);
 		result = null;
 	}
 
@@ -254,7 +332,7 @@ public class StepDefinitions {
 		assertEquals(ActionResult.LOAN_EXISTS, result);
 		result = null;
 	}
-	
+
 	@Then("^System failed to borrow copy (\\d+) of book with ISBN: (\\d+) because book is currently loaned$")
 	public void failedToBorrowBook(int copy, int ISBN) throws Throwable {
 		assertTrue(c.isBorrowed(ISBN, copy));
@@ -269,11 +347,33 @@ public class StepDefinitions {
 		result = null;
 	}
 
+	@Then("^System failed to borrow copy (\\d+) of book with ISBN: (\\d+) because user privileges are revoked$")
+	public void failedToBorrowBookRevoked(int copy, int ISBN) throws Throwable {
+		assertFalse(c.isBorrowed(ISBN, copy));
+		assertEquals(ActionResult.NO_PRIVILEGE, result);
+		result = null;
+	}
+
 	@Then("^System failed to renew loan of copy (\\d+) of book with ISBN: (\\d+) for user \"([^\"]*)\" because loan does not exist$")
 	public void failedToRenewBook(int copy, int ISBN, String username) throws Throwable {
 		assertFalse(c.isBorrowed(ISBN, copy, username));
 		assertEquals(ActionResult.NO_SUCH_LOAN, result);
 		result = null;
 	}
-	
+
+	@Then("^System failed to renew loan of copy (\\d+) of book with ISBN: (\\d+) for user \"([^\"]*)\" because user privileges are revoked$")
+	public void failedToRenewBookRevoke(int copy, int ISBN, String username) throws Throwable {
+		assertTrue(c.isBorrowed(ISBN, copy, username));
+		assertFalse(c.searchUser(username).hasPrivilege());
+		assertEquals(ActionResult.NO_PRIVILEGE, result);
+		result = null;
+	}
+
+	@Then("^System failed to return loan of copy (\\d+) of book with ISBN: (\\d+) for user \"([^\"]*)\" because loan does not exist$")
+	public void failedToReturnBook(int copy, int ISBN, String username) throws Throwable {
+		assertFalse(c.isBorrowed(ISBN, copy, username));
+		assertEquals(ActionResult.NO_SUCH_LOAN, result);
+		result = null;
+	}
+
 }

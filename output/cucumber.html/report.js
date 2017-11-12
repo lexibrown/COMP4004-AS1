@@ -1,17 +1,17 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("main/java/com/comp4004/test/cucumber/InvalidPaths.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("main/java/com/comp4004/test/cucumber/BorrowTestCases.feature");
 formatter.feature({
   "line": 1,
-  "name": "Invalid Paths",
+  "name": "Borrow Test Cases",
   "description": "",
-  "id": "invalid-paths",
+  "id": "borrow-test-cases",
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 429827,
+  "duration": 159210,
   "status": "passed"
 });
 formatter.before({
-  "duration": 307587586,
+  "duration": 62011235,
   "status": "passed"
 });
 formatter.background({
@@ -30,14 +30,14 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 118266328,
+  "duration": 99050232,
   "status": "passed"
 });
 formatter.scenario({
   "line": 6,
-  "name": "Ti1 Add Redundant User",
+  "name": "Tv8 Borrow",
   "description": "",
-  "id": "invalid-paths;ti1-add-redundant-user",
+  "id": "borrow-test-cases;tv8-borrow",
   "type": "scenario",
   "keyword": "Scenario"
 });
@@ -47,345 +47,88 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.step({
-  "line": 9,
-  "name": "Attempting to create user: \"user1\"",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 10,
-  "name": "System failed to add user: \"user1\" because it already exists",
-  "keyword": "Then "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user1",
-      "offset": 6
-    }
-  ],
-  "location": "StepDefinitions.userExists(String)"
-});
-formatter.result({
-  "duration": 652202684,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user1",
-      "offset": 28
-    }
-  ],
-  "location": "StepDefinitions.addUser(String)"
-});
-formatter.result({
-  "duration": 167506,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user1",
-      "offset": 28
-    }
-  ],
-  "location": "StepDefinitions.failedToAddUser(String)"
-});
-formatter.result({
-  "duration": 158420,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 3531848,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 50173,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 70716,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 4812241,
-  "status": "passed"
-});
-formatter.background({
-  "line": 3,
-  "name": "",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 4,
-  "name": "that each test should be independent from one another",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "StepDefinitions.background()"
-});
-formatter.result({
-  "duration": 3393576,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 12,
-  "name": "Ti2 Add Item to non-existent title",
-  "description": "",
-  "id": "invalid-paths;ti2-add-item-to-non-existent-title",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 13,
-  "name": "No such book exists with ISBN: 12345678",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 15,
-  "name": "Attempting to add copy 1 to book with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 16,
-  "name": "System failed to add copy to book with ISBN: 12345678 because book does not exist",
-  "keyword": "Then "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "12345678",
-      "offset": 31
-    }
-  ],
-  "location": "StepDefinitions.noSuchBookExists(int)"
-});
-formatter.result({
-  "duration": 912197,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 23
-    },
-    {
-      "val": "12345678",
-      "offset": 44
-    }
-  ],
-  "location": "StepDefinitions.addCopy(int,int)"
-});
-formatter.result({
-  "duration": 281283,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "12345678",
-      "offset": 45
-    }
-  ],
-  "location": "StepDefinitions.failedToAddCopy(int)"
-});
-formatter.result({
-  "duration": 185679,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 2776490,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 42667,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 72692,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 4457871,
-  "status": "passed"
-});
-formatter.background({
-  "line": 3,
-  "name": "",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 4,
-  "name": "that each test should be independent from one another",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "StepDefinitions.background()"
-});
-formatter.result({
-  "duration": 2861034,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 18,
-  "name": "Ti3 Add Redundant Title",
-  "description": "",
-  "id": "invalid-paths;ti3-add-redundant-title",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 19,
-  "name": "Book \"title\" with ISBN 12345678 exists",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 21,
-  "name": "Attempting to add book \"title\" with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 22,
-  "name": "System failed to add book \"title\" with ISBN: 12345678 because it already exists",
-  "keyword": "Then "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "title",
-      "offset": 6
-    },
-    {
-      "val": "12345678",
-      "offset": 23
-    }
-  ],
-  "location": "StepDefinitions.bookExists(String,int)"
-});
-formatter.result({
-  "duration": 13656873,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "title",
-      "offset": 24
-    },
-    {
-      "val": "12345678",
-      "offset": 42
-    }
-  ],
-  "location": "StepDefinitions.addBook(String,int)"
-});
-formatter.result({
-  "duration": 222025,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "title",
-      "offset": 27
-    },
-    {
-      "val": "12345678",
-      "offset": 45
-    }
-  ],
-  "location": "StepDefinitions.failedToAddBook(String,int)"
-});
-formatter.result({
-  "duration": 231901,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 10004531,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 409283,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 63209,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 6649672,
-  "status": "passed"
-});
-formatter.background({
-  "line": 3,
-  "name": "",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 4,
-  "name": "that each test should be independent from one another",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "StepDefinitions.background()"
-});
-formatter.result({
-  "duration": 4893624,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 24,
-  "name": "Ti4 Borrow same copy",
-  "description": "",
-  "id": "invalid-paths;ti4-borrow-same-copy",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 25,
-  "name": "User \"user1\" exists",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 26,
+  "line": 8,
   "name": "User \"user2\" exists",
   "keyword": "And "
 });
 formatter.step({
-  "line": 27,
-  "name": "Book \"title\" with ISBN 12345678 exists",
+  "line": 9,
+  "name": "Book \"title1\" with ISBN 12345678 exists",
   "keyword": "And "
 });
 formatter.step({
-  "line": 28,
-  "name": "Copy 1 of book \"title\" with ISBN 12345678 exists",
+  "line": 10,
+  "name": "Book \"title2\" with ISBN 87654321 exists",
   "keyword": "And "
 });
 formatter.step({
-  "line": 30,
+  "line": 11,
+  "name": "Copy 1 of book \"title1\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 12,
+  "name": "Copy 2 of book \"title1\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 13,
+  "name": "Copy 3 of book \"title1\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 14,
+  "name": "Copy 1 of book \"title2\" with ISBN 87654321 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 15,
+  "name": "Copy 2 of book \"title2\" with ISBN 87654321 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 16,
+  "name": "Copy 3 of book \"title2\" with ISBN 87654321 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 18,
   "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
   "keyword": "When "
 });
 formatter.step({
-  "line": 31,
+  "line": 19,
   "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user1\"",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 32,
-  "name": "User \"user2\" attempts to borrow copy 1 of book with ISBN: 12345678",
+  "line": 20,
+  "name": "User \"user1\" attempts to borrow copy 3 of book with ISBN: 87654321",
   "keyword": "When "
 });
 formatter.step({
-  "line": 33,
-  "name": "System failed to borrow copy 1 of book with ISBN: 12345678 because book is currently loaned",
+  "line": 21,
+  "name": "System successfully borrowed copy 3 of book with ISBN 87654321 to user \"user1\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 23,
+  "name": "User \"user2\" attempts to borrow copy 2 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 24,
+  "name": "System successfully borrowed copy 2 of book with ISBN 12345678 to user \"user2\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 25,
+  "name": "User \"user2\" attempts to borrow copy 2 of book with ISBN: 87654321",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 26,
+  "name": "System successfully borrowed copy 2 of book with ISBN 87654321 to user \"user2\"",
   "keyword": "Then "
 });
 formatter.match({
@@ -398,7 +141,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 3541724,
+  "duration": 273054312,
   "status": "passed"
 });
 formatter.match({
@@ -411,24 +154,41 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 7853818,
+  "duration": 2402369,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "title",
+      "val": "title1",
       "offset": 6
     },
     {
       "val": "12345678",
-      "offset": 23
+      "offset": 24
     }
   ],
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 1384690,
+  "duration": 4337776,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title2",
+      "offset": 6
+    },
+    {
+      "val": "87654321",
+      "offset": 24
+    }
+  ],
+  "location": "StepDefinitions.bookExists(String,int)"
+});
+formatter.result({
+  "duration": 1918419,
   "status": "passed"
 });
 formatter.match({
@@ -438,18 +198,123 @@ formatter.match({
       "offset": 5
     },
     {
-      "val": "title",
+      "val": "title1",
       "offset": 16
     },
     {
       "val": "12345678",
-      "offset": 33
+      "offset": 34
     }
   ],
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 7045127,
+  "duration": 2628740,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 5
+    },
+    {
+      "val": "title1",
+      "offset": 16
+    },
+    {
+      "val": "12345678",
+      "offset": 34
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 1781332,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "3",
+      "offset": 5
+    },
+    {
+      "val": "title1",
+      "offset": 16
+    },
+    {
+      "val": "12345678",
+      "offset": 34
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 1897876,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 5
+    },
+    {
+      "val": "title2",
+      "offset": 16
+    },
+    {
+      "val": "87654321",
+      "offset": 34
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 1789234,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 5
+    },
+    {
+      "val": "title2",
+      "offset": 16
+    },
+    {
+      "val": "87654321",
+      "offset": 34
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 1803851,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "3",
+      "offset": 5
+    },
+    {
+      "val": "title2",
+      "offset": 16
+    },
+    {
+      "val": "87654321",
+      "offset": 34
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 2356543,
   "status": "passed"
 });
 formatter.match({
@@ -470,7 +335,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 19162842,
+  "duration": 13358217,
   "status": "passed"
 });
 formatter.match({
@@ -491,7 +356,848 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 233087,
+  "duration": 199111,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "3",
+      "offset": 37
+    },
+    {
+      "val": "87654321",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.borrow(String,int,int)"
+});
+formatter.result({
+  "duration": 6413035,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "3",
+      "offset": 34
+    },
+    {
+      "val": "87654321",
+      "offset": 54
+    },
+    {
+      "val": "user1",
+      "offset": 72
+    }
+  ],
+  "location": "StepDefinitions.successfulBorrow(int,int,String)"
+});
+formatter.result({
+  "duration": 148938,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user2",
+      "offset": 6
+    },
+    {
+      "val": "2",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.borrow(String,int,int)"
+});
+formatter.result({
+  "duration": 4654615,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 34
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    },
+    {
+      "val": "user2",
+      "offset": 72
+    }
+  ],
+  "location": "StepDefinitions.successfulBorrow(int,int,String)"
+});
+formatter.result({
+  "duration": 148148,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user2",
+      "offset": 6
+    },
+    {
+      "val": "2",
+      "offset": 37
+    },
+    {
+      "val": "87654321",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.borrow(String,int,int)"
+});
+formatter.result({
+  "duration": 4995159,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 34
+    },
+    {
+      "val": "87654321",
+      "offset": 54
+    },
+    {
+      "val": "user2",
+      "offset": 72
+    }
+  ],
+  "location": "StepDefinitions.successfulBorrow(int,int,String)"
+});
+formatter.result({
+  "duration": 185283,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 3970764,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 544394,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 79803,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 4690171,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "that each test should be independent from one another",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefinitions.background()"
+});
+formatter.result({
+  "duration": 4843059,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 28,
+  "name": "Tv15 Borrow",
+  "description": "",
+  "id": "borrow-test-cases;tv15-borrow",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 29,
+  "name": "User \"user1\" exists",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 30,
+  "name": "User \"user2\" exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 31,
+  "name": "Book \"title1\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 32,
+  "name": "Book \"title2\" with ISBN 87654321 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 33,
+  "name": "Copy 1 of book \"title1\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 34,
+  "name": "Copy 2 of book \"title1\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 35,
+  "name": "Copy 3 of book \"title1\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 36,
+  "name": "Copy 1 of book \"title2\" with ISBN 87654321 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 37,
+  "name": "Copy 2 of book \"title2\" with ISBN 87654321 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 38,
+  "name": "Copy 3 of book \"title2\" with ISBN 87654321 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 40,
+  "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 41,
+  "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user1\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 42,
+  "name": "User \"user1\" attempts to borrow copy 3 of book with ISBN: 87654321",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 43,
+  "name": "System successfully borrowed copy 3 of book with ISBN 87654321 to user \"user1\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 45,
+  "name": "User \"user2\" attempts to borrow copy 2 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 46,
+  "name": "System successfully borrowed copy 2 of book with ISBN 12345678 to user \"user2\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 47,
+  "name": "User \"user2\" attempts to borrow copy 2 of book with ISBN: 87654321",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 48,
+  "name": "System successfully borrowed copy 2 of book with ISBN 87654321 to user \"user2\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 50,
+  "name": "User \"user1\" attempts to return copy 1 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 51,
+  "name": "System successfully returned copy 1 of book with ISBN 12345678 from user \"user1\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 52,
+  "name": "User \"user1\" attempts to return copy 3 of book with ISBN: 87654321",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 53,
+  "name": "System successfully returned copy 3 of book with ISBN 87654321 from user \"user1\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 55,
+  "name": "User \"user2\" attempts to return copy 2 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 56,
+  "name": "System successfully returned copy 2 of book with ISBN 12345678 from user \"user2\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 57,
+  "name": "User \"user2\" attempts to return copy 2 of book with ISBN: 87654321",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 58,
+  "name": "System successfully returned copy 2 of book with ISBN 87654321 from user \"user2\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 60,
+  "name": "User \"user2\" attempts to borrow copy 1 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 61,
+  "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user2\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 62,
+  "name": "User \"user2\" attempts to borrow copy 3 of book with ISBN: 87654321",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 63,
+  "name": "System successfully borrowed copy 3 of book with ISBN 87654321 to user \"user2\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    }
+  ],
+  "location": "StepDefinitions.userExists(String)"
+});
+formatter.result({
+  "duration": 2159011,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user2",
+      "offset": 6
+    }
+  ],
+  "location": "StepDefinitions.userExists(String)"
+});
+formatter.result({
+  "duration": 1646222,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title1",
+      "offset": 6
+    },
+    {
+      "val": "12345678",
+      "offset": 24
+    }
+  ],
+  "location": "StepDefinitions.bookExists(String,int)"
+});
+formatter.result({
+  "duration": 5232591,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title2",
+      "offset": 6
+    },
+    {
+      "val": "87654321",
+      "offset": 24
+    }
+  ],
+  "location": "StepDefinitions.bookExists(String,int)"
+});
+formatter.result({
+  "duration": 6311108,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 5
+    },
+    {
+      "val": "title1",
+      "offset": 16
+    },
+    {
+      "val": "12345678",
+      "offset": 34
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 1917628,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 5
+    },
+    {
+      "val": "title1",
+      "offset": 16
+    },
+    {
+      "val": "12345678",
+      "offset": 34
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 1648197,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "3",
+      "offset": 5
+    },
+    {
+      "val": "title1",
+      "offset": 16
+    },
+    {
+      "val": "12345678",
+      "offset": 34
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 1867851,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 5
+    },
+    {
+      "val": "title2",
+      "offset": 16
+    },
+    {
+      "val": "87654321",
+      "offset": 34
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 1853628,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 5
+    },
+    {
+      "val": "title2",
+      "offset": 16
+    },
+    {
+      "val": "87654321",
+      "offset": 34
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 2894221,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "3",
+      "offset": 5
+    },
+    {
+      "val": "title2",
+      "offset": 16
+    },
+    {
+      "val": "87654321",
+      "offset": 34
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 1535605,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.borrow(String,int,int)"
+});
+formatter.result({
+  "duration": 4699653,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 34
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    },
+    {
+      "val": "user1",
+      "offset": 72
+    }
+  ],
+  "location": "StepDefinitions.successfulBorrow(int,int,String)"
+});
+formatter.result({
+  "duration": 116149,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "3",
+      "offset": 37
+    },
+    {
+      "val": "87654321",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.borrow(String,int,int)"
+});
+formatter.result({
+  "duration": 4711110,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "3",
+      "offset": 34
+    },
+    {
+      "val": "87654321",
+      "offset": 54
+    },
+    {
+      "val": "user1",
+      "offset": 72
+    }
+  ],
+  "location": "StepDefinitions.successfulBorrow(int,int,String)"
+});
+formatter.result({
+  "duration": 100345,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user2",
+      "offset": 6
+    },
+    {
+      "val": "2",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.borrow(String,int,int)"
+});
+formatter.result({
+  "duration": 6243158,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 34
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    },
+    {
+      "val": "user2",
+      "offset": 72
+    }
+  ],
+  "location": "StepDefinitions.successfulBorrow(int,int,String)"
+});
+formatter.result({
+  "duration": 119309,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user2",
+      "offset": 6
+    },
+    {
+      "val": "2",
+      "offset": 37
+    },
+    {
+      "val": "87654321",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.borrow(String,int,int)"
+});
+formatter.result({
+  "duration": 5788837,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 34
+    },
+    {
+      "val": "87654321",
+      "offset": 54
+    },
+    {
+      "val": "user2",
+      "offset": 72
+    }
+  ],
+  "location": "StepDefinitions.successfulBorrow(int,int,String)"
+});
+formatter.result({
+  "duration": 101926,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.returnBook(String,int,int)"
+});
+formatter.result({
+  "duration": 8390317,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 34
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    },
+    {
+      "val": "user1",
+      "offset": 74
+    }
+  ],
+  "location": "StepDefinitions.successfulReturn(int,int,String)"
+});
+formatter.result({
+  "duration": 167111,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "3",
+      "offset": 37
+    },
+    {
+      "val": "87654321",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.returnBook(String,int,int)"
+});
+formatter.result({
+  "duration": 5354269,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "3",
+      "offset": 34
+    },
+    {
+      "val": "87654321",
+      "offset": 54
+    },
+    {
+      "val": "user1",
+      "offset": 74
+    }
+  ],
+  "location": "StepDefinitions.successfulReturn(int,int,String)"
+});
+formatter.result({
+  "duration": 106271,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user2",
+      "offset": 6
+    },
+    {
+      "val": "2",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.returnBook(String,int,int)"
+});
+formatter.result({
+  "duration": 8540046,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 34
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    },
+    {
+      "val": "user2",
+      "offset": 74
+    }
+  ],
+  "location": "StepDefinitions.successfulReturn(int,int,String)"
+});
+formatter.result({
+  "duration": 158814,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user2",
+      "offset": 6
+    },
+    {
+      "val": "2",
+      "offset": 37
+    },
+    {
+      "val": "87654321",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.returnBook(String,int,int)"
+});
+formatter.result({
+  "duration": 672790,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 34
+    },
+    {
+      "val": "87654321",
+      "offset": 54
+    },
+    {
+      "val": "user2",
+      "offset": 74
+    }
+  ],
+  "location": "StepDefinitions.successfulReturn(int,int,String)"
+});
+formatter.result({
+  "duration": 101531,
   "status": "passed"
 });
 formatter.match({
@@ -512,7 +1218,280 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 334221,
+  "duration": 4939849,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 34
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    },
+    {
+      "val": "user2",
+      "offset": 72
+    }
+  ],
+  "location": "StepDefinitions.successfulBorrow(int,int,String)"
+});
+formatter.result({
+  "duration": 120494,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user2",
+      "offset": 6
+    },
+    {
+      "val": "3",
+      "offset": 37
+    },
+    {
+      "val": "87654321",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.borrow(String,int,int)"
+});
+formatter.result({
+  "duration": 5212442,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "3",
+      "offset": 34
+    },
+    {
+      "val": "87654321",
+      "offset": 54
+    },
+    {
+      "val": "user2",
+      "offset": 72
+    }
+  ],
+  "location": "StepDefinitions.successfulBorrow(int,int,String)"
+});
+formatter.result({
+  "duration": 168296,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2766616,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 29234,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 198321,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 4002369,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "that each test should be independent from one another",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefinitions.background()"
+});
+formatter.result({
+  "duration": 4649875,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 65,
+  "name": "Ti4 Borrow same copy",
+  "description": "",
+  "id": "borrow-test-cases;ti4-borrow-same-copy",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 66,
+  "name": "User \"user1\" exists",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 67,
+  "name": "User \"user2\" exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 68,
+  "name": "Book \"title\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 69,
+  "name": "Copy 1 of book \"title\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 71,
+  "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 72,
+  "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user1\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 73,
+  "name": "User \"user2\" attempts to borrow copy 1 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 74,
+  "name": "System failed to borrow copy 1 of book with ISBN: 12345678 because book is currently loaned",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    }
+  ],
+  "location": "StepDefinitions.userExists(String)"
+});
+formatter.result({
+  "duration": 1485036,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user2",
+      "offset": 6
+    }
+  ],
+  "location": "StepDefinitions.userExists(String)"
+});
+formatter.result({
+  "duration": 1705086,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title",
+      "offset": 6
+    },
+    {
+      "val": "12345678",
+      "offset": 23
+    }
+  ],
+  "location": "StepDefinitions.bookExists(String,int)"
+});
+formatter.result({
+  "duration": 1477135,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 5
+    },
+    {
+      "val": "title",
+      "offset": 16
+    },
+    {
+      "val": "12345678",
+      "offset": 33
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 1594468,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.borrow(String,int,int)"
+});
+formatter.result({
+  "duration": 5278022,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 34
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    },
+    {
+      "val": "user1",
+      "offset": 72
+    }
+  ],
+  "location": "StepDefinitions.successfulBorrow(int,int,String)"
+});
+formatter.result({
+  "duration": 125235,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user2",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.borrow(String,int,int)"
+});
+formatter.result({
+  "duration": 167111,
   "status": "passed"
 });
 formatter.match({
@@ -529,23 +1508,23 @@ formatter.match({
   "location": "StepDefinitions.failedToBorrowBook(int,int)"
 });
 formatter.result({
-  "duration": 110222,
+  "duration": 91259,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3382515,
+  "duration": 3048296,
   "status": "passed"
 });
 formatter.after({
-  "duration": 32000,
+  "duration": 26864,
   "status": "passed"
 });
 formatter.before({
-  "duration": 192395,
+  "duration": 49777,
   "status": "passed"
 });
 formatter.before({
-  "duration": 4645920,
+  "duration": 3866073,
   "status": "passed"
 });
 formatter.background({
@@ -564,64 +1543,64 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 4154464,
+  "duration": 3016295,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 35,
+  "line": 76,
   "name": "Ti5 Borrow renewed copy",
   "description": "",
-  "id": "invalid-paths;ti5-borrow-renewed-copy",
+  "id": "borrow-test-cases;ti5-borrow-renewed-copy",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
-  "line": 36,
+  "line": 77,
   "name": "User \"user1\" exists",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 37,
+  "line": 78,
   "name": "User \"user2\" exists",
   "keyword": "And "
 });
 formatter.step({
-  "line": 38,
+  "line": 79,
   "name": "Book \"title\" with ISBN 12345678 exists",
   "keyword": "And "
 });
 formatter.step({
-  "line": 39,
+  "line": 80,
   "name": "Copy 1 of book \"title\" with ISBN 12345678 exists",
   "keyword": "And "
 });
 formatter.step({
-  "line": 41,
+  "line": 82,
   "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
   "keyword": "When "
 });
 formatter.step({
-  "line": 42,
+  "line": 83,
   "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user1\"",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 44,
+  "line": 85,
   "name": "User \"user1\" attempts to renew copy 1 of book with ISBN: 12345678",
   "keyword": "When "
 });
 formatter.step({
-  "line": 45,
+  "line": 86,
   "name": "System successfully renewed copy 1 of book with ISBN 12345678 for user \"user1\"",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 47,
+  "line": 88,
   "name": "User \"user2\" attempts to borrow copy 1 of book with ISBN: 12345678",
   "keyword": "When "
 });
 formatter.step({
-  "line": 48,
+  "line": 89,
   "name": "System failed to borrow copy 1 of book with ISBN: 12345678 because book is currently loaned",
   "keyword": "Then "
 });
@@ -635,7 +1614,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 2292936,
+  "duration": 1676642,
   "status": "passed"
 });
 formatter.match({
@@ -648,7 +1627,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 3745971,
+  "duration": 1727209,
   "status": "passed"
 });
 formatter.match({
@@ -665,7 +1644,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 1554961,
+  "duration": 1517036,
   "status": "passed"
 });
 formatter.match({
@@ -686,7 +1665,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 1839010,
+  "duration": 1625678,
   "status": "passed"
 });
 formatter.match({
@@ -707,7 +1686,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 6645721,
+  "duration": 4421134,
   "status": "passed"
 });
 formatter.match({
@@ -728,7 +1707,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 180543,
+  "duration": 200691,
   "status": "passed"
 });
 formatter.match({
@@ -749,7 +1728,7 @@ formatter.match({
   "location": "StepDefinitions.renew(String,int,int)"
 });
 formatter.result({
-  "duration": 10187444,
+  "duration": 6642960,
   "status": "passed"
 });
 formatter.match({
@@ -770,7 +1749,7 @@ formatter.match({
   "location": "StepDefinitions.successfulRenewal(int,int,String)"
 });
 formatter.result({
-  "duration": 145778,
+  "duration": 113778,
   "status": "passed"
 });
 formatter.match({
@@ -791,7 +1770,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 175408,
+  "duration": 139457,
   "status": "passed"
 });
 formatter.match({
@@ -808,23 +1787,23 @@ formatter.match({
   "location": "StepDefinitions.failedToBorrowBook(int,int)"
 });
 formatter.result({
-  "duration": 261926,
+  "duration": 50568,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3966020,
+  "duration": 2805332,
   "status": "passed"
 });
 formatter.after({
-  "duration": 39901,
+  "duration": 28050,
   "status": "passed"
 });
 formatter.before({
-  "duration": 367802,
+  "duration": 496592,
   "status": "passed"
 });
 formatter.before({
-  "duration": 9081668,
+  "duration": 5411949,
   "status": "passed"
 });
 formatter.background({
@@ -843,74 +1822,74 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 3086219,
+  "duration": 3492739,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 50,
+  "line": 91,
   "name": "Ti6 Borrow returned copy taken by other user",
   "description": "",
-  "id": "invalid-paths;ti6-borrow-returned-copy-taken-by-other-user",
+  "id": "borrow-test-cases;ti6-borrow-returned-copy-taken-by-other-user",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
-  "line": 51,
+  "line": 92,
   "name": "User \"user1\" exists",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 52,
+  "line": 93,
   "name": "User \"user2\" exists",
   "keyword": "And "
 });
 formatter.step({
-  "line": 53,
+  "line": 94,
   "name": "Book \"title\" with ISBN 12345678 exists",
   "keyword": "And "
 });
 formatter.step({
-  "line": 54,
+  "line": 95,
   "name": "Copy 1 of book \"title\" with ISBN 12345678 exists",
   "keyword": "And "
 });
 formatter.step({
-  "line": 56,
+  "line": 97,
   "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
   "keyword": "When "
 });
 formatter.step({
-  "line": 57,
+  "line": 98,
   "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user1\"",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 59,
+  "line": 100,
   "name": "User \"user1\" attempts to return copy 1 of book with ISBN: 12345678",
   "keyword": "When "
 });
 formatter.step({
-  "line": 60,
+  "line": 101,
   "name": "System successfully returned copy 1 of book with ISBN 12345678 from user \"user1\"",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 62,
+  "line": 103,
   "name": "User \"user2\" attempts to borrow copy 1 of book with ISBN: 12345678",
   "keyword": "When "
 });
 formatter.step({
-  "line": 63,
+  "line": 104,
   "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user2\"",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 65,
+  "line": 106,
   "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
   "keyword": "When "
 });
 formatter.step({
-  "line": 66,
+  "line": 107,
   "name": "System failed to borrow copy 1 of book with ISBN: 12345678 because book is currently loaned",
   "keyword": "Then "
 });
@@ -924,7 +1903,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 1869035,
+  "duration": 4929578,
   "status": "passed"
 });
 formatter.match({
@@ -937,7 +1916,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 4054118,
+  "duration": 4318418,
   "status": "passed"
 });
 formatter.match({
@@ -954,7 +1933,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 4289970,
+  "duration": 1935011,
   "status": "passed"
 });
 formatter.match({
@@ -975,7 +1954,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 1861134,
+  "duration": 1866666,
   "status": "passed"
 });
 formatter.match({
@@ -996,7 +1975,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 5242068,
+  "duration": 5852838,
   "status": "passed"
 });
 formatter.match({
@@ -1017,7 +1996,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 152099,
+  "duration": 143012,
   "status": "passed"
 });
 formatter.match({
@@ -1038,7 +2017,7 @@ formatter.match({
   "location": "StepDefinitions.returnBook(String,int,int)"
 });
 formatter.result({
-  "duration": 2174417,
+  "duration": 2534320,
   "status": "passed"
 });
 formatter.match({
@@ -1059,7 +2038,7 @@ formatter.match({
   "location": "StepDefinitions.successfulReturn(int,int,String)"
 });
 formatter.result({
-  "duration": 154469,
+  "duration": 161580,
   "status": "passed"
 });
 formatter.match({
@@ -1080,7 +2059,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 4995945,
+  "duration": 5598022,
   "status": "passed"
 });
 formatter.match({
@@ -1101,7 +2080,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 129580,
+  "duration": 127605,
   "status": "passed"
 });
 formatter.match({
@@ -1122,7 +2101,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 963160,
+  "duration": 291160,
   "status": "passed"
 });
 formatter.match({
@@ -1139,23 +2118,23 @@ formatter.match({
   "location": "StepDefinitions.failedToBorrowBook(int,int)"
 });
 formatter.result({
-  "duration": 107456,
+  "duration": 192000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3608094,
+  "duration": 5119603,
   "status": "passed"
 });
 formatter.after({
-  "duration": 1784097,
+  "duration": 69926,
   "status": "passed"
 });
 formatter.before({
-  "duration": 473679,
+  "duration": 124444,
   "status": "passed"
 });
 formatter.before({
-  "duration": 8695298,
+  "duration": 5011751,
   "status": "passed"
 });
 formatter.background({
@@ -1174,79 +2153,79 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 5281179,
+  "duration": 3237925,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 68,
+  "line": 109,
   "name": "Ti7 Borrow over max limit",
   "description": "",
-  "id": "invalid-paths;ti7-borrow-over-max-limit",
+  "id": "borrow-test-cases;ti7-borrow-over-max-limit",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
-  "line": 69,
+  "line": 110,
   "name": "User \"user1\" exists",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 70,
+  "line": 111,
   "name": "Book \"title1\" with ISBN 12345678 exists",
   "keyword": "And "
 });
 formatter.step({
-  "line": 71,
+  "line": 112,
   "name": "Book \"title2\" with ISBN 23456781 exists",
   "keyword": "And "
 });
 formatter.step({
-  "line": 72,
+  "line": 113,
   "name": "Book \"title3\" with ISBN 34567812 exists",
   "keyword": "And "
 });
 formatter.step({
-  "line": 73,
+  "line": 114,
   "name": "Copy 1 of book \"title1\" with ISBN 12345678 exists",
   "keyword": "And "
 });
 formatter.step({
-  "line": 74,
+  "line": 115,
   "name": "Copy 1 of book \"title2\" with ISBN 23456781 exists",
   "keyword": "And "
 });
 formatter.step({
-  "line": 75,
+  "line": 116,
   "name": "Copy 1 of book \"title3\" with ISBN 34567812 exists",
   "keyword": "And "
 });
 formatter.step({
-  "line": 77,
+  "line": 118,
   "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
   "keyword": "When "
 });
 formatter.step({
-  "line": 78,
+  "line": 119,
   "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user1\"",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 79,
+  "line": 120,
   "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 23456781",
   "keyword": "When "
 });
 formatter.step({
-  "line": 80,
+  "line": 121,
   "name": "System successfully borrowed copy 1 of book with ISBN 23456781 to user \"user1\"",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 82,
+  "line": 123,
   "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 34567812",
   "keyword": "When "
 });
 formatter.step({
-  "line": 83,
+  "line": 124,
   "name": "System failed to borrow copy 1 of book with ISBN: 34567812 because maximum loans has been reached",
   "keyword": "Then "
 });
@@ -1260,7 +2239,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 3708045,
+  "duration": 5423010,
   "status": "passed"
 });
 formatter.match({
@@ -1277,7 +2256,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 7565818,
+  "duration": 1786468,
   "status": "passed"
 });
 formatter.match({
@@ -1294,7 +2273,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 8531742,
+  "duration": 2280690,
   "status": "passed"
 });
 formatter.match({
@@ -1311,7 +2290,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 4706365,
+  "duration": 2123061,
   "status": "passed"
 });
 formatter.match({
@@ -1332,7 +2311,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 6799400,
+  "duration": 3026962,
   "status": "passed"
 });
 formatter.match({
@@ -1353,7 +2332,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 8969471,
+  "duration": 8386367,
   "status": "passed"
 });
 formatter.match({
@@ -1374,7 +2353,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 11035641,
+  "duration": 3512888,
   "status": "passed"
 });
 formatter.match({
@@ -1395,7 +2374,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 7598213,
+  "duration": 10197725,
   "status": "passed"
 });
 formatter.match({
@@ -1416,7 +2395,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 258370,
+  "duration": 122865,
   "status": "passed"
 });
 formatter.match({
@@ -1437,7 +2416,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 5099056,
+  "duration": 6114763,
   "status": "passed"
 });
 formatter.match({
@@ -1458,7 +2437,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 124445,
+  "duration": 1047308,
   "status": "passed"
 });
 formatter.match({
@@ -1479,7 +2458,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 128395,
+  "duration": 192000,
   "status": "passed"
 });
 formatter.match({
@@ -1496,23 +2475,23 @@ formatter.match({
   "location": "StepDefinitions.failedToBorrowBookMax(int,int)"
 });
 formatter.result({
-  "duration": 81778,
+  "duration": 111802,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3256490,
+  "duration": 3530665,
   "status": "passed"
 });
 formatter.after({
-  "duration": 48197,
+  "duration": 35160,
   "status": "passed"
 });
 formatter.before({
-  "duration": 69926,
+  "duration": 458271,
   "status": "passed"
 });
 formatter.before({
-  "duration": 6377474,
+  "duration": 3933628,
   "status": "passed"
 });
 formatter.background({
@@ -1531,99 +2510,99 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 3182218,
+  "duration": 6145183,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 85,
+  "line": 126,
   "name": "Ti8 Borrow over max limit after return",
   "description": "",
-  "id": "invalid-paths;ti8-borrow-over-max-limit-after-return",
+  "id": "borrow-test-cases;ti8-borrow-over-max-limit-after-return",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
-  "line": 86,
+  "line": 127,
   "name": "User \"user1\" exists",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 87,
+  "line": 128,
   "name": "Book \"title1\" with ISBN 12345678 exists",
   "keyword": "And "
 });
 formatter.step({
-  "line": 88,
+  "line": 129,
   "name": "Book \"title2\" with ISBN 23456781 exists",
   "keyword": "And "
 });
 formatter.step({
-  "line": 89,
+  "line": 130,
   "name": "Book \"title3\" with ISBN 34567812 exists",
   "keyword": "And "
 });
 formatter.step({
-  "line": 90,
+  "line": 131,
   "name": "Copy 1 of book \"title1\" with ISBN 12345678 exists",
   "keyword": "And "
 });
 formatter.step({
-  "line": 91,
+  "line": 132,
   "name": "Copy 1 of book \"title2\" with ISBN 23456781 exists",
   "keyword": "And "
 });
 formatter.step({
-  "line": 92,
+  "line": 133,
   "name": "Copy 1 of book \"title3\" with ISBN 34567812 exists",
   "keyword": "And "
 });
 formatter.step({
-  "line": 94,
+  "line": 135,
   "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
   "keyword": "When "
 });
 formatter.step({
-  "line": 95,
+  "line": 136,
   "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user1\"",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 96,
+  "line": 137,
   "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 23456781",
   "keyword": "When "
 });
 formatter.step({
-  "line": 97,
+  "line": 138,
   "name": "System successfully borrowed copy 1 of book with ISBN 23456781 to user \"user1\"",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 99,
+  "line": 140,
   "name": "User \"user1\" attempts to return copy 1 of book with ISBN: 23456781",
   "keyword": "When "
 });
 formatter.step({
-  "line": 100,
+  "line": 141,
   "name": "System successfully returned copy 1 of book with ISBN 23456781 from user \"user1\"",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 102,
+  "line": 143,
   "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 34567812",
   "keyword": "When "
 });
 formatter.step({
-  "line": 103,
+  "line": 144,
   "name": "System successfully borrowed copy 1 of book with ISBN 34567812 to user \"user1\"",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 105,
+  "line": 146,
   "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 23456781",
   "keyword": "When "
 });
 formatter.step({
-  "line": 106,
+  "line": 147,
   "name": "System failed to borrow copy 1 of book with ISBN: 23456781 because maximum loans has been reached",
   "keyword": "Then "
 });
@@ -1637,7 +2616,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 6546165,
+  "duration": 2036542,
   "status": "passed"
 });
 formatter.match({
@@ -1654,7 +2633,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 21390987,
+  "duration": 1693234,
   "status": "passed"
 });
 formatter.match({
@@ -1671,7 +2650,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 4633674,
+  "duration": 1612246,
   "status": "passed"
 });
 formatter.match({
@@ -1688,7 +2667,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 1628838,
+  "duration": 1610667,
   "status": "passed"
 });
 formatter.match({
@@ -1709,7 +2688,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 2435553,
+  "duration": 4027653,
   "status": "passed"
 });
 formatter.match({
@@ -1730,7 +2709,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 3973526,
+  "duration": 6500344,
   "status": "passed"
 });
 formatter.match({
@@ -1751,7 +2730,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 1844146,
+  "duration": 6185874,
   "status": "passed"
 });
 formatter.match({
@@ -1772,7 +2751,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 5291451,
+  "duration": 5743800,
   "status": "passed"
 });
 formatter.match({
@@ -1793,7 +2772,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 108247,
+  "duration": 281284,
   "status": "passed"
 });
 formatter.match({
@@ -1814,7 +2793,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 4820932,
+  "duration": 5854813,
   "status": "passed"
 });
 formatter.match({
@@ -1835,7 +2814,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 236642,
+  "duration": 88493,
   "status": "passed"
 });
 formatter.match({
@@ -1856,7 +2835,7 @@ formatter.match({
   "location": "StepDefinitions.returnBook(String,int,int)"
 });
 formatter.result({
-  "duration": 1696788,
+  "duration": 1594864,
   "status": "passed"
 });
 formatter.match({
@@ -1877,7 +2856,7 @@ formatter.match({
   "location": "StepDefinitions.successfulReturn(int,int,String)"
 });
 formatter.result({
-  "duration": 151309,
+  "duration": 105086,
   "status": "passed"
 });
 formatter.match({
@@ -1898,7 +2877,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 10870505,
+  "duration": 14040093,
   "status": "passed"
 });
 formatter.match({
@@ -1919,7 +2898,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 99555,
+  "duration": 1661234,
   "status": "passed"
 });
 formatter.match({
@@ -1940,7 +2919,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 242962,
+  "duration": 178568,
   "status": "passed"
 });
 formatter.match({
@@ -1957,23 +2936,23 @@ formatter.match({
   "location": "StepDefinitions.failedToBorrowBookMax(int,int)"
 });
 formatter.result({
-  "duration": 68741,
+  "duration": 90074,
   "status": "passed"
 });
 formatter.after({
-  "duration": 2615700,
+  "duration": 5907356,
   "status": "passed"
 });
 formatter.after({
-  "duration": 31210,
+  "duration": 32000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 40296,
+  "duration": 53728,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3692638,
+  "duration": 6052343,
   "status": "passed"
 });
 formatter.background({
@@ -1992,34 +2971,1906 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 3752292,
+  "duration": 6495603,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 108,
-  "name": "Ti9 Remove Non-existent Item",
+  "line": 149,
+  "name": "Ti22 Borrow book when user privilege is revoked",
   "description": "",
-  "id": "invalid-paths;ti9-remove-non-existent-item",
+  "id": "borrow-test-cases;ti22-borrow-book-when-user-privilege-is-revoked",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
-  "line": 109,
-  "name": "Book \"title\" with ISBN 12345678 exists",
+  "line": 150,
+  "name": "User \"user1\" exists",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 110,
+  "line": 151,
+  "name": "User \"user1\" has their privileges are revoked",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 152,
+  "name": "Book \"title\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 153,
   "name": "Copy 1 of book \"title\" with ISBN 12345678 exists",
   "keyword": "And "
 });
 formatter.step({
-  "line": 112,
+  "line": 155,
+  "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 156,
+  "name": "System failed to borrow copy 1 of book with ISBN: 23456781 because user privileges are revoked",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    }
+  ],
+  "location": "StepDefinitions.userExists(String)"
+});
+formatter.result({
+  "duration": 1803852,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    }
+  ],
+  "location": "StepDefinitions.privilegeRevoked(String)"
+});
+formatter.result({
+  "duration": 4581924,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title",
+      "offset": 6
+    },
+    {
+      "val": "12345678",
+      "offset": 23
+    }
+  ],
+  "location": "StepDefinitions.bookExists(String,int)"
+});
+formatter.result({
+  "duration": 2120690,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 5
+    },
+    {
+      "val": "title",
+      "offset": 16
+    },
+    {
+      "val": "12345678",
+      "offset": 33
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 5654516,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.borrow(String,int,int)"
+});
+formatter.result({
+  "duration": 201481,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 29
+    },
+    {
+      "val": "23456781",
+      "offset": 50
+    }
+  ],
+  "location": "StepDefinitions.failedToBorrowBookRevoked(int,int)"
+});
+formatter.result({
+  "duration": 102716,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 3305875,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 39111,
+  "status": "passed"
+});
+formatter.uri("main/java/com/comp4004/test/cucumber/CollectFeeTestCases.feature");
+formatter.feature({
+  "line": 1,
+  "name": "Collect Fee Test Cases",
+  "description": "",
+  "id": "collect-fee-test-cases",
+  "keyword": "Feature"
+});
+formatter.before({
+  "duration": 133531,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 25227842,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "that each test should be independent from one another",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefinitions.background()"
+});
+formatter.result({
+  "duration": 3171555,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 6,
+  "name": "Ti17 Collect fee but user privileges still revoked",
+  "description": "",
+  "id": "collect-fee-test-cases;ti17-collect-fee-but-user-privileges-still-revoked",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 7,
+  "name": "User \"user1\" exists",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 8,
+  "name": "Book \"title\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 9,
+  "name": "Copy 1 of book \"title\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 11,
+  "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 12,
+  "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user1\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 14,
+  "name": "User \"user1\" attempts to return copy 1 of book with ISBN: 12345678 overdue",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 15,
+  "name": "System successfully returned copy 1 of book with ISBN 12345678 from user \"user1\" but privileges were revoked",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 17,
+  "name": "Collected \"partial\" fee for user \"user1\"",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 18,
+  "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 19,
+  "name": "System failed to borrow copy 1 of book with ISBN: 23456781 because user privileges are revoked",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    }
+  ],
+  "location": "StepDefinitions.userExists(String)"
+});
+formatter.result({
+  "duration": 2048394,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title",
+      "offset": 6
+    },
+    {
+      "val": "12345678",
+      "offset": 23
+    }
+  ],
+  "location": "StepDefinitions.bookExists(String,int)"
+});
+formatter.result({
+  "duration": 2976394,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 5
+    },
+    {
+      "val": "title",
+      "offset": 16
+    },
+    {
+      "val": "12345678",
+      "offset": 33
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 3355258,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.borrow(String,int,int)"
+});
+formatter.result({
+  "duration": 5396541,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 34
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    },
+    {
+      "val": "user1",
+      "offset": 72
+    }
+  ],
+  "location": "StepDefinitions.successfulBorrow(int,int,String)"
+});
+formatter.result({
+  "duration": 151309,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.returnBookOverdue(String,int,int)"
+});
+formatter.result({
+  "duration": 2461629,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 34
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    },
+    {
+      "val": "user1",
+      "offset": 74
+    }
+  ],
+  "location": "StepDefinitions.successfulReturnLateRevoke(int,int,String)"
+});
+formatter.result({
+  "duration": 149728,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "partial",
+      "offset": 11
+    },
+    {
+      "val": "user1",
+      "offset": 34
+    }
+  ],
+  "location": "StepDefinitions.collectFee(String,String)"
+});
+formatter.result({
+  "duration": 6931356,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.borrow(String,int,int)"
+});
+formatter.result({
+  "duration": 122074,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 29
+    },
+    {
+      "val": "23456781",
+      "offset": 50
+    }
+  ],
+  "location": "StepDefinitions.failedToBorrowBookRevoked(int,int)"
+});
+formatter.result({
+  "duration": 65185,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 3785085,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 123654,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 209382,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 8444441,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "that each test should be independent from one another",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefinitions.background()"
+});
+formatter.result({
+  "duration": 4298665,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 21,
+  "name": "Tv17 Collect fee and clear user revoked status",
+  "description": "",
+  "id": "collect-fee-test-cases;tv17-collect-fee-and-clear-user-revoked-status",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 22,
+  "name": "User \"user1\" exists",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 23,
+  "name": "Book \"title\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 24,
+  "name": "Copy 1 of book \"title\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 26,
+  "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 27,
+  "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user1\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 29,
+  "name": "User \"user1\" attempts to return copy 1 of book with ISBN: 12345678 overdue",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 30,
+  "name": "System successfully returned copy 1 of book with ISBN 12345678 from user \"user1\" but privileges were revoked",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 32,
+  "name": "Collected \"full\" fee for user \"user1\"",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 34,
+  "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 35,
+  "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user1\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    }
+  ],
+  "location": "StepDefinitions.userExists(String)"
+});
+formatter.result({
+  "duration": 1726419,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title",
+      "offset": 6
+    },
+    {
+      "val": "12345678",
+      "offset": 23
+    }
+  ],
+  "location": "StepDefinitions.bookExists(String,int)"
+});
+formatter.result({
+  "duration": 5532442,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 5
+    },
+    {
+      "val": "title",
+      "offset": 16
+    },
+    {
+      "val": "12345678",
+      "offset": 33
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 7369873,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.borrow(String,int,int)"
+});
+formatter.result({
+  "duration": 13139353,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 34
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    },
+    {
+      "val": "user1",
+      "offset": 72
+    }
+  ],
+  "location": "StepDefinitions.successfulBorrow(int,int,String)"
+});
+formatter.result({
+  "duration": 114568,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.returnBookOverdue(String,int,int)"
+});
+formatter.result({
+  "duration": 2465974,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 34
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    },
+    {
+      "val": "user1",
+      "offset": 74
+    }
+  ],
+  "location": "StepDefinitions.successfulReturnLateRevoke(int,int,String)"
+});
+formatter.result({
+  "duration": 125234,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "full",
+      "offset": 11
+    },
+    {
+      "val": "user1",
+      "offset": 31
+    }
+  ],
+  "location": "StepDefinitions.collectFee(String,String)"
+});
+formatter.result({
+  "duration": 1878123,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.borrow(String,int,int)"
+});
+formatter.result({
+  "duration": 9750119,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 34
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    },
+    {
+      "val": "user1",
+      "offset": 72
+    }
+  ],
+  "location": "StepDefinitions.successfulBorrow(int,int,String)"
+});
+formatter.result({
+  "duration": 161581,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 4087307,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 125234,
+  "status": "passed"
+});
+formatter.uri("main/java/com/comp4004/test/cucumber/ItemTestCases.feature");
+formatter.feature({
+  "line": 1,
+  "name": "Item Test Cases",
+  "description": "",
+  "id": "item-test-cases",
+  "keyword": "Feature"
+});
+formatter.before({
+  "duration": 82173,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 6917133,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "that each test should be independent from one another",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefinitions.background()"
+});
+formatter.result({
+  "duration": 3638912,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 6,
+  "name": "Tv5 Add Item",
+  "description": "",
+  "id": "item-test-cases;tv5-add-item",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 7,
+  "name": "Book \"title\" with ISBN 12345678 exists",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 9,
+  "name": "Attempting to add copy 1 to book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 10,
+  "name": "System successfully added copy 1 to book with ISBN: 12345678",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title",
+      "offset": 6
+    },
+    {
+      "val": "12345678",
+      "offset": 23
+    }
+  ],
+  "location": "StepDefinitions.bookExists(String,int)"
+});
+formatter.result({
+  "duration": 1685333,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 23
+    },
+    {
+      "val": "12345678",
+      "offset": 44
+    }
+  ],
+  "location": "StepDefinitions.addCopy(int,int)"
+});
+formatter.result({
+  "duration": 2204838,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 31
+    },
+    {
+      "val": "12345678",
+      "offset": 52
+    }
+  ],
+  "location": "StepDefinitions.successfullyAddedCopy(int,int)"
+});
+formatter.result({
+  "duration": 96790,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 3621925,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 30815,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 144197,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3597035,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "that each test should be independent from one another",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefinitions.background()"
+});
+formatter.result({
+  "duration": 4071900,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 12,
+  "name": "Tv6 Add Item",
+  "description": "",
+  "id": "item-test-cases;tv6-add-item",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 13,
+  "name": "Book \"title\" with ISBN 12345678 exists",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 15,
+  "name": "Attempting to add copy 1 to book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 16,
+  "name": "System successfully added copy 1 to book with ISBN: 12345678",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 18,
+  "name": "Attempting to add copy 2 to book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 19,
+  "name": "System successfully added copy 2 to book with ISBN: 12345678",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 21,
+  "name": "Attempting to add copy 3 to book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 22,
+  "name": "System successfully added copy 3 to book with ISBN: 12345678",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title",
+      "offset": 6
+    },
+    {
+      "val": "12345678",
+      "offset": 23
+    }
+  ],
+  "location": "StepDefinitions.bookExists(String,int)"
+});
+formatter.result({
+  "duration": 19014709,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 23
+    },
+    {
+      "val": "12345678",
+      "offset": 44
+    }
+  ],
+  "location": "StepDefinitions.addCopy(int,int)"
+});
+formatter.result({
+  "duration": 1985580,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 31
+    },
+    {
+      "val": "12345678",
+      "offset": 52
+    }
+  ],
+  "location": "StepDefinitions.successfullyAddedCopy(int,int)"
+});
+formatter.result({
+  "duration": 82567,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 23
+    },
+    {
+      "val": "12345678",
+      "offset": 44
+    }
+  ],
+  "location": "StepDefinitions.addCopy(int,int)"
+});
+formatter.result({
+  "duration": 1526123,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 31
+    },
+    {
+      "val": "12345678",
+      "offset": 52
+    }
+  ],
+  "location": "StepDefinitions.successfullyAddedCopy(int,int)"
+});
+formatter.result({
+  "duration": 82568,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "3",
+      "offset": 23
+    },
+    {
+      "val": "12345678",
+      "offset": 44
+    }
+  ],
+  "location": "StepDefinitions.addCopy(int,int)"
+});
+formatter.result({
+  "duration": 1351505,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "3",
+      "offset": 31
+    },
+    {
+      "val": "12345678",
+      "offset": 52
+    }
+  ],
+  "location": "StepDefinitions.successfullyAddedCopy(int,int)"
+});
+formatter.result({
+  "duration": 64395,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2785184,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 27654,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 107061,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 5677035,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "that each test should be independent from one another",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefinitions.background()"
+});
+formatter.result({
+  "duration": 2983900,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 24,
+  "name": "Tv7 Add Item",
+  "description": "",
+  "id": "item-test-cases;tv7-add-item",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 25,
+  "name": "Book \"title\" with ISBN 12345678 exists",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 27,
+  "name": "Attempting to add copy 1 to book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 28,
+  "name": "System successfully added copy 1 to book with ISBN: 12345678",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 29,
+  "name": "Attempting to add copy 2 to book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 30,
+  "name": "System successfully added copy 2 to book with ISBN: 12345678",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 31,
+  "name": "Attempting to add copy 3 to book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 32,
+  "name": "System successfully added copy 3 to book with ISBN: 12345678",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 34,
   "name": "Attempting to remove copy 2 of book with ISBN: 12345678",
   "keyword": "When "
 });
 formatter.step({
-  "line": 113,
+  "line": 35,
+  "name": "System successfully removed copy 2 of book with ISBN: 12345678",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 37,
+  "name": "Attempting to add copy 2 to book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 38,
+  "name": "System successfully added copy 2 to book with ISBN: 12345678",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 39,
+  "name": "Attempting to add copy 4 to book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 40,
+  "name": "System successfully added copy 4 to book with ISBN: 12345678",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title",
+      "offset": 6
+    },
+    {
+      "val": "12345678",
+      "offset": 23
+    }
+  ],
+  "location": "StepDefinitions.bookExists(String,int)"
+});
+formatter.result({
+  "duration": 1915654,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 23
+    },
+    {
+      "val": "12345678",
+      "offset": 44
+    }
+  ],
+  "location": "StepDefinitions.addCopy(int,int)"
+});
+formatter.result({
+  "duration": 2051159,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 31
+    },
+    {
+      "val": "12345678",
+      "offset": 52
+    }
+  ],
+  "location": "StepDefinitions.successfullyAddedCopy(int,int)"
+});
+formatter.result({
+  "duration": 89284,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 23
+    },
+    {
+      "val": "12345678",
+      "offset": 44
+    }
+  ],
+  "location": "StepDefinitions.addCopy(int,int)"
+});
+formatter.result({
+  "duration": 1712987,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 31
+    },
+    {
+      "val": "12345678",
+      "offset": 52
+    }
+  ],
+  "location": "StepDefinitions.successfullyAddedCopy(int,int)"
+});
+formatter.result({
+  "duration": 93629,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "3",
+      "offset": 23
+    },
+    {
+      "val": "12345678",
+      "offset": 44
+    }
+  ],
+  "location": "StepDefinitions.addCopy(int,int)"
+});
+formatter.result({
+  "duration": 3195653,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "3",
+      "offset": 31
+    },
+    {
+      "val": "12345678",
+      "offset": 52
+    }
+  ],
+  "location": "StepDefinitions.successfullyAddedCopy(int,int)"
+});
+formatter.result({
+  "duration": 77432,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 26
+    },
+    {
+      "val": "12345678",
+      "offset": 47
+    }
+  ],
+  "location": "StepDefinitions.removeCopy(int,int)"
+});
+formatter.result({
+  "duration": 2052740,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 33
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    }
+  ],
+  "location": "StepDefinitions.successfullyRemovedCopy(int,int)"
+});
+formatter.result({
+  "duration": 86123,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 23
+    },
+    {
+      "val": "12345678",
+      "offset": 44
+    }
+  ],
+  "location": "StepDefinitions.addCopy(int,int)"
+});
+formatter.result({
+  "duration": 1751308,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 31
+    },
+    {
+      "val": "12345678",
+      "offset": 52
+    }
+  ],
+  "location": "StepDefinitions.successfullyAddedCopy(int,int)"
+});
+formatter.result({
+  "duration": 179358,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "4",
+      "offset": 23
+    },
+    {
+      "val": "12345678",
+      "offset": 44
+    }
+  ],
+  "location": "StepDefinitions.addCopy(int,int)"
+});
+formatter.result({
+  "duration": 1746963,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "4",
+      "offset": 31
+    },
+    {
+      "val": "12345678",
+      "offset": 52
+    }
+  ],
+  "location": "StepDefinitions.successfullyAddedCopy(int,int)"
+});
+formatter.result({
+  "duration": 67951,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 4447603,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 37136,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 210568,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 6184294,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "that each test should be independent from one another",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefinitions.background()"
+});
+formatter.result({
+  "duration": 4116542,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 42,
+  "name": "Tv9 Remove Item",
+  "description": "",
+  "id": "item-test-cases;tv9-remove-item",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 43,
+  "name": "Book \"title1\" with ISBN 12345678 exists",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 44,
+  "name": "Book \"title2\" with ISBN 87654321 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 45,
+  "name": "Copy 1 of book \"title1\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 46,
+  "name": "Copy 2 of book \"title1\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 47,
+  "name": "Copy 3 of book \"title1\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 48,
+  "name": "Copy 1 of book \"title2\" with ISBN 87654321 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 49,
+  "name": "Copy 2 of book \"title2\" with ISBN 87654321 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 50,
+  "name": "Copy 3 of book \"title2\" with ISBN 87654321 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 52,
+  "name": "Attempting to remove copy 2 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 53,
+  "name": "System successfully removed copy 2 of book with ISBN: 12345678",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 55,
+  "name": "Attempting to remove copy 1 of book with ISBN: 87654321",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 56,
+  "name": "System successfully removed copy 1 of book with ISBN: 87654321",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 57,
+  "name": "Attempting to remove copy 3 of book with ISBN: 87654321",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 58,
+  "name": "System successfully removed copy 3 of book with ISBN: 87654321",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title1",
+      "offset": 6
+    },
+    {
+      "val": "12345678",
+      "offset": 24
+    }
+  ],
+  "location": "StepDefinitions.bookExists(String,int)"
+});
+formatter.result({
+  "duration": 2418567,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title2",
+      "offset": 6
+    },
+    {
+      "val": "87654321",
+      "offset": 24
+    }
+  ],
+  "location": "StepDefinitions.bookExists(String,int)"
+});
+formatter.result({
+  "duration": 2308344,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 5
+    },
+    {
+      "val": "title1",
+      "offset": 16
+    },
+    {
+      "val": "12345678",
+      "offset": 34
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 5588541,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 5
+    },
+    {
+      "val": "title1",
+      "offset": 16
+    },
+    {
+      "val": "12345678",
+      "offset": 34
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 1737876,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "3",
+      "offset": 5
+    },
+    {
+      "val": "title1",
+      "offset": 16
+    },
+    {
+      "val": "12345678",
+      "offset": 34
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 3827752,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 5
+    },
+    {
+      "val": "title2",
+      "offset": 16
+    },
+    {
+      "val": "87654321",
+      "offset": 34
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 1753679,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 5
+    },
+    {
+      "val": "title2",
+      "offset": 16
+    },
+    {
+      "val": "87654321",
+      "offset": 34
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 1389827,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "3",
+      "offset": 5
+    },
+    {
+      "val": "title2",
+      "offset": 16
+    },
+    {
+      "val": "87654321",
+      "offset": 34
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 1404444,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 26
+    },
+    {
+      "val": "12345678",
+      "offset": 47
+    }
+  ],
+  "location": "StepDefinitions.removeCopy(int,int)"
+});
+formatter.result({
+  "duration": 858469,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 33
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    }
+  ],
+  "location": "StepDefinitions.successfullyRemovedCopy(int,int)"
+});
+formatter.result({
+  "duration": 67951,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 26
+    },
+    {
+      "val": "87654321",
+      "offset": 47
+    }
+  ],
+  "location": "StepDefinitions.removeCopy(int,int)"
+});
+formatter.result({
+  "duration": 1460148,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 33
+    },
+    {
+      "val": "87654321",
+      "offset": 54
+    }
+  ],
+  "location": "StepDefinitions.successfullyRemovedCopy(int,int)"
+});
+formatter.result({
+  "duration": 71111,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "3",
+      "offset": 26
+    },
+    {
+      "val": "87654321",
+      "offset": 47
+    }
+  ],
+  "location": "StepDefinitions.removeCopy(int,int)"
+});
+formatter.result({
+  "duration": 5129084,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "3",
+      "offset": 33
+    },
+    {
+      "val": "87654321",
+      "offset": 54
+    }
+  ],
+  "location": "StepDefinitions.successfullyRemovedCopy(int,int)"
+});
+formatter.result({
+  "duration": 91259,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 3913085,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 63210,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 67951,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 4997924,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "that each test should be independent from one another",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefinitions.background()"
+});
+formatter.result({
+  "duration": 3466665,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 60,
+  "name": "Ti2 Add Item to non-existent title",
+  "description": "",
+  "id": "item-test-cases;ti2-add-item-to-non-existent-title",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 61,
+  "name": "No such book exists with ISBN: 12345678",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 63,
+  "name": "Attempting to add copy 1 to book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 64,
+  "name": "System failed to add copy to book with ISBN: 12345678 because book does not exist",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "12345678",
+      "offset": 31
+    }
+  ],
+  "location": "StepDefinitions.noSuchBookExists(int)"
+});
+formatter.result({
+  "duration": 77827,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 23
+    },
+    {
+      "val": "12345678",
+      "offset": 44
+    }
+  ],
+  "location": "StepDefinitions.addCopy(int,int)"
+});
+formatter.result({
+  "duration": 458666,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "12345678",
+      "offset": 45
+    }
+  ],
+  "location": "StepDefinitions.failedToAddCopy(int)"
+});
+formatter.result({
+  "duration": 123654,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 3823011,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 37530,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 620246,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 6561577,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "that each test should be independent from one another",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefinitions.background()"
+});
+formatter.result({
+  "duration": 6026270,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 66,
+  "name": "Ti9 Remove Non-existent Item",
+  "description": "",
+  "id": "item-test-cases;ti9-remove-non-existent-item",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 67,
+  "name": "Book \"title\" with ISBN 12345678 exists",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 68,
+  "name": "Copy 1 of book \"title\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 70,
+  "name": "Attempting to remove copy 2 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 71,
   "name": "System failed to remove copy 2 to book with ISBN: 12345678 because copy does not exist",
   "keyword": "Then "
 });
@@ -2037,7 +4888,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 4601278,
+  "duration": 2434765,
   "status": "passed"
 });
 formatter.match({
@@ -2058,7 +4909,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 5487796,
+  "duration": 1936987,
   "status": "passed"
 });
 formatter.match({
@@ -2075,7 +4926,7 @@ formatter.match({
   "location": "StepDefinitions.removeCopy(int,int)"
 });
 formatter.result({
-  "duration": 190815,
+  "duration": 237432,
   "status": "passed"
 });
 formatter.match({
@@ -2092,23 +4943,23 @@ formatter.match({
   "location": "StepDefinitions.failedToRemoveCopy(int,int)"
 });
 formatter.result({
-  "duration": 100346,
+  "duration": 137086,
   "status": "passed"
 });
 formatter.after({
-  "duration": 4954068,
+  "duration": 5844146,
   "status": "passed"
 });
 formatter.after({
-  "duration": 177777,
+  "duration": 439704,
   "status": "passed"
 });
 formatter.before({
-  "duration": 494617,
+  "duration": 58864,
   "status": "passed"
 });
 formatter.before({
-  "duration": 4867155,
+  "duration": 5658862,
   "status": "passed"
 });
 formatter.background({
@@ -2127,49 +4978,49 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 3593873,
+  "duration": 4284443,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 115,
+  "line": 73,
   "name": "Ti10 Remove Borrowed Item",
   "description": "",
-  "id": "invalid-paths;ti10-remove-borrowed-item",
+  "id": "item-test-cases;ti10-remove-borrowed-item",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
-  "line": 116,
+  "line": 74,
   "name": "User \"user1\" exists",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 117,
+  "line": 75,
   "name": "Book \"title\" with ISBN 12345678 exists",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 118,
+  "line": 76,
   "name": "Copy 1 of book \"title\" with ISBN 12345678 exists",
   "keyword": "And "
 });
 formatter.step({
-  "line": 120,
+  "line": 78,
   "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
   "keyword": "When "
 });
 formatter.step({
-  "line": 121,
+  "line": 79,
   "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user1\"",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 123,
+  "line": 81,
   "name": "Attempting to remove copy 1 of book with ISBN: 12345678",
   "keyword": "When "
 });
 formatter.step({
-  "line": 124,
+  "line": 82,
   "name": "System failed to remove copy 1 to book with ISBN: 12345678 because copy is currently loaned",
   "keyword": "Then "
 });
@@ -2183,7 +5034,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 1398912,
+  "duration": 3902023,
   "status": "passed"
 });
 formatter.match({
@@ -2200,7 +5051,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 1191900,
+  "duration": 1949629,
   "status": "passed"
 });
 formatter.match({
@@ -2221,7 +5072,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 1392196,
+  "duration": 1846123,
   "status": "passed"
 });
 formatter.match({
@@ -2242,7 +5093,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 7482856,
+  "duration": 10394860,
   "status": "passed"
 });
 formatter.match({
@@ -2263,7 +5114,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 305383,
+  "duration": 111012,
   "status": "passed"
 });
 formatter.match({
@@ -2280,7 +5131,7 @@ formatter.match({
   "location": "StepDefinitions.removeCopy(int,int)"
 });
 formatter.result({
-  "duration": 220445,
+  "duration": 147358,
   "status": "passed"
 });
 formatter.match({
@@ -2297,23 +5148,23 @@ formatter.match({
   "location": "StepDefinitions.failedToRemoveCopyLoan(int,int)"
 });
 formatter.result({
-  "duration": 108642,
+  "duration": 109827,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3143503,
+  "duration": 3998023,
   "status": "passed"
 });
 formatter.after({
-  "duration": 37531,
+  "duration": 52543,
   "status": "passed"
 });
 formatter.before({
-  "duration": 122864,
+  "duration": 37926,
   "status": "passed"
 });
 formatter.before({
-  "duration": 6191005,
+  "duration": 5287504,
   "status": "passed"
 });
 formatter.background({
@@ -2332,59 +5183,59 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 5196241,
+  "duration": 4404146,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 126,
+  "line": 84,
   "name": "Ti11 Remove borrowed/renewed item",
   "description": "",
-  "id": "invalid-paths;ti11-remove-borrowed/renewed-item",
+  "id": "item-test-cases;ti11-remove-borrowed/renewed-item",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
-  "line": 127,
+  "line": 85,
   "name": "User \"user1\" exists",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 128,
+  "line": 86,
   "name": "Book \"title\" with ISBN 12345678 exists",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 129,
+  "line": 87,
   "name": "Copy 1 of book \"title\" with ISBN 12345678 exists",
   "keyword": "And "
 });
 formatter.step({
-  "line": 131,
+  "line": 89,
   "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
   "keyword": "When "
 });
 formatter.step({
-  "line": 132,
+  "line": 90,
   "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user1\"",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 134,
+  "line": 92,
   "name": "User \"user1\" attempts to renew copy 1 of book with ISBN: 12345678",
   "keyword": "When "
 });
 formatter.step({
-  "line": 135,
+  "line": 93,
   "name": "System successfully renewed copy 1 of book with ISBN 12345678 for user \"user1\"",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 137,
+  "line": 95,
   "name": "Attempting to remove copy 1 of book with ISBN: 12345678",
   "keyword": "When "
 });
 formatter.step({
-  "line": 138,
+  "line": 96,
   "name": "System failed to remove copy 1 to book with ISBN: 12345678 because copy is currently loaned",
   "keyword": "Then "
 });
@@ -2398,7 +5249,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 3565428,
+  "duration": 1852443,
   "status": "passed"
 });
 formatter.match({
@@ -2415,7 +5266,7 @@ formatter.match({
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 1712196,
+  "duration": 1835061,
   "status": "passed"
 });
 formatter.match({
@@ -2436,7 +5287,7 @@ formatter.match({
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 1976886,
+  "duration": 3210270,
   "status": "passed"
 });
 formatter.match({
@@ -2457,7 +5308,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 7766114,
+  "duration": 7390416,
   "status": "passed"
 });
 formatter.match({
@@ -2478,7 +5329,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 143408,
+  "duration": 68741,
   "status": "passed"
 });
 formatter.match({
@@ -2499,7 +5350,7 @@ formatter.match({
   "location": "StepDefinitions.renew(String,int,int)"
 });
 formatter.result({
-  "duration": 8335003,
+  "duration": 5007011,
   "status": "passed"
 });
 formatter.match({
@@ -2520,7 +5371,7 @@ formatter.match({
   "location": "StepDefinitions.successfulRenewal(int,int,String)"
 });
 formatter.result({
-  "duration": 120494,
+  "duration": 96790,
   "status": "passed"
 });
 formatter.match({
@@ -2537,7 +5388,7 @@ formatter.match({
   "location": "StepDefinitions.removeCopy(int,int)"
 });
 formatter.result({
-  "duration": 144197,
+  "duration": 101926,
   "status": "passed"
 });
 formatter.match({
@@ -2554,23 +5405,23 @@ formatter.match({
   "location": "StepDefinitions.failedToRemoveCopyLoan(int,int)"
 });
 formatter.result({
-  "duration": 76247,
+  "duration": 71111,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3412539,
+  "duration": 3227258,
   "status": "passed"
 });
 formatter.after({
-  "duration": 34766,
+  "duration": 165530,
   "status": "passed"
 });
 formatter.before({
-  "duration": 67950,
+  "duration": 35556,
   "status": "passed"
 });
 formatter.before({
-  "duration": 4938661,
+  "duration": 8270614,
   "status": "passed"
 });
 formatter.background({
@@ -2589,465 +5440,49 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 4970266,
+  "duration": 6331652,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 140,
-  "name": "Ti12 Remove title that still has a copy",
+  "line": 98,
+  "name": "Ti21 Remove item from non-existent title",
   "description": "",
-  "id": "invalid-paths;ti12-remove-title-that-still-has-a-copy",
+  "id": "item-test-cases;ti21-remove-item-from-non-existent-title",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
-  "line": 141,
-  "name": "Book \"title\" with ISBN 12345678 exists",
+  "line": 99,
+  "name": "No such book exists with ISBN: 12345678",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 142,
-  "name": "Copy 1 of book \"title\" with ISBN 12345678 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 144,
-  "name": "Attempting to remove book \"title\" with ISBN: 12345678",
+  "line": 101,
+  "name": "Attempting to remove copy 1 of book with ISBN: 12345678",
   "keyword": "When "
 });
 formatter.step({
-  "line": 145,
-  "name": "System failed to remove book: 12345678 because copies exist",
+  "line": 102,
+  "name": "System failed to remove copy 1 to book with ISBN: 12345678 because book does not exist",
   "keyword": "Then "
 });
 formatter.match({
   "arguments": [
     {
-      "val": "title",
-      "offset": 6
-    },
-    {
       "val": "12345678",
-      "offset": 23
+      "offset": 31
     }
   ],
-  "location": "StepDefinitions.bookExists(String,int)"
+  "location": "StepDefinitions.noSuchBookExists(int)"
 });
 formatter.result({
-  "duration": 2600293,
+  "duration": 101136,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
       "val": "1",
-      "offset": 5
-    },
-    {
-      "val": "title",
-      "offset": 16
-    },
-    {
-      "val": "12345678",
-      "offset": 33
-    }
-  ],
-  "location": "StepDefinitions.copyExists(int,String,int)"
-});
-formatter.result({
-  "duration": 1686516,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "title",
-      "offset": 27
-    },
-    {
-      "val": "12345678",
-      "offset": 45
-    }
-  ],
-  "location": "StepDefinitions.removeBook(String,int)"
-});
-formatter.result({
-  "duration": 195161,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "12345678",
-      "offset": 30
-    }
-  ],
-  "location": "StepDefinitions.failedToRemoveBook(int)"
-});
-formatter.result({
-  "duration": 75457,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 3418465,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 226765,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 44642,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 4587451,
-  "status": "passed"
-});
-formatter.background({
-  "line": 3,
-  "name": "",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 4,
-  "name": "that each test should be independent from one another",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "StepDefinitions.background()"
-});
-formatter.result({
-  "duration": 2979947,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 147,
-  "name": "Ti13 Remove title that has borrowed copy",
-  "description": "",
-  "id": "invalid-paths;ti13-remove-title-that-has-borrowed-copy",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 148,
-  "name": "User \"user1\" exists",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 149,
-  "name": "Book \"title\" with ISBN 12345678 exists",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 150,
-  "name": "Copy 1 of book \"title\" with ISBN 12345678 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 152,
-  "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 153,
-  "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user1\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 155,
-  "name": "Attempting to remove book \"title\" with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 156,
-  "name": "System failed to remove book with ISBN: 12345678 because book is currently loaned",
-  "keyword": "Then "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user1",
-      "offset": 6
-    }
-  ],
-  "location": "StepDefinitions.userExists(String)"
-});
-formatter.result({
-  "duration": 1769084,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "title",
-      "offset": 6
-    },
-    {
-      "val": "12345678",
-      "offset": 23
-    }
-  ],
-  "location": "StepDefinitions.bookExists(String,int)"
-});
-formatter.result({
-  "duration": 1516245,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 5
-    },
-    {
-      "val": "title",
-      "offset": 16
-    },
-    {
-      "val": "12345678",
-      "offset": 33
-    }
-  ],
-  "location": "StepDefinitions.copyExists(int,String,int)"
-});
-formatter.result({
-  "duration": 4017378,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user1",
-      "offset": 6
-    },
-    {
-      "val": "1",
-      "offset": 37
-    },
-    {
-      "val": "12345678",
-      "offset": 58
-    }
-  ],
-  "location": "StepDefinitions.borrow(String,int,int)"
-});
-formatter.result({
-  "duration": 9421816,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 34
-    },
-    {
-      "val": "12345678",
-      "offset": 54
-    },
-    {
-      "val": "user1",
-      "offset": 72
-    }
-  ],
-  "location": "StepDefinitions.successfulBorrow(int,int,String)"
-});
-formatter.result({
-  "duration": 579950,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "title",
-      "offset": 27
-    },
-    {
-      "val": "12345678",
-      "offset": 45
-    }
-  ],
-  "location": "StepDefinitions.removeBook(String,int)"
-});
-formatter.result({
-  "duration": 164741,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "12345678",
-      "offset": 40
-    }
-  ],
-  "location": "StepDefinitions.failedToRemoveBookLoan(int)"
-});
-formatter.result({
-  "duration": 80988,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 3126514,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 72691,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 118913,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 4052934,
-  "status": "passed"
-});
-formatter.background({
-  "line": 3,
-  "name": "",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 4,
-  "name": "that each test should be independent from one another",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "StepDefinitions.background()"
-});
-formatter.result({
-  "duration": 3754267,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 158,
-  "name": "Ti14 Remove title that has a copy",
-  "description": "",
-  "id": "invalid-paths;ti14-remove-title-that-has-a-copy",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 159,
-  "name": "User \"user1\" exists",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 160,
-  "name": "Book \"title\" with ISBN 12345678 exists",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 161,
-  "name": "Copy 1 of book \"title\" with ISBN 12345678 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 162,
-  "name": "Copy 2 of book \"title\" with ISBN 12345678 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 164,
-  "name": "Attempting to remove copy 2 of book with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 165,
-  "name": "System successfully removed copy 2 of book with ISBN: 12345678",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 167,
-  "name": "Attempting to remove book \"title\" with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 168,
-  "name": "System failed to remove book: 12345678 because copies exist",
-  "keyword": "Then "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user1",
-      "offset": 6
-    }
-  ],
-  "location": "StepDefinitions.userExists(String)"
-});
-formatter.result({
-  "duration": 26720758,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "title",
-      "offset": 6
-    },
-    {
-      "val": "12345678",
-      "offset": 23
-    }
-  ],
-  "location": "StepDefinitions.bookExists(String,int)"
-});
-formatter.result({
-  "duration": 3722662,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 5
-    },
-    {
-      "val": "title",
-      "offset": 16
-    },
-    {
-      "val": "12345678",
-      "offset": 33
-    }
-  ],
-  "location": "StepDefinitions.copyExists(int,String,int)"
-});
-formatter.result({
-  "duration": 4740340,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 5
-    },
-    {
-      "val": "title",
-      "offset": 16
-    },
-    {
-      "val": "12345678",
-      "offset": 33
-    }
-  ],
-  "location": "StepDefinitions.copyExists(int,String,int)"
-});
-formatter.result({
-  "duration": 11979443,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
       "offset": 26
     },
     {
@@ -3058,70 +5493,48 @@ formatter.match({
   "location": "StepDefinitions.removeCopy(int,int)"
 });
 formatter.result({
-  "duration": 2380639,
+  "duration": 157234,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "2",
-      "offset": 33
+      "val": "1",
+      "offset": 29
     },
     {
       "val": "12345678",
-      "offset": 54
+      "offset": 50
     }
   ],
-  "location": "StepDefinitions.successfullyRemovedCopy(int,int)"
+  "location": "StepDefinitions.failedToRemoveCopyBook(int,int)"
 });
 formatter.result({
-  "duration": 124445,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "title",
-      "offset": 27
-    },
-    {
-      "val": "12345678",
-      "offset": 45
-    }
-  ],
-  "location": "StepDefinitions.removeBook(String,int)"
-});
-formatter.result({
-  "duration": 521481,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "12345678",
-      "offset": 30
-    }
-  ],
-  "location": "StepDefinitions.failedToRemoveBook(int)"
-});
-formatter.result({
-  "duration": 426666,
+  "duration": 173037,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3568983,
+  "duration": 4055702,
   "status": "passed"
 });
 formatter.after({
-  "duration": 41876,
+  "duration": 26074,
+  "status": "passed"
+});
+formatter.uri("main/java/com/comp4004/test/cucumber/RenewTestCases.feature");
+formatter.feature({
+  "line": 1,
+  "name": "Renew Test Cases",
+  "description": "",
+  "id": "renew-test-cases",
+  "keyword": "Feature"
+});
+formatter.before({
+  "duration": 94025,
   "status": "passed"
 });
 formatter.before({
-  "duration": 143013,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 4362267,
+  "duration": 7369084,
   "status": "passed"
 });
 formatter.background({
@@ -3140,139 +5553,50 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 3305083,
+  "duration": 7336688,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 170,
-  "name": "Ti15 Remove Non-existent User",
+  "line": 6,
+  "name": "Tv13 Renew Loan",
   "description": "",
-  "id": "invalid-paths;ti15-remove-non-existent-user",
+  "id": "renew-test-cases;tv13-renew-loan",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
-  "line": 171,
-  "name": "Attempting to remove user: \"user1\"",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 172,
-  "name": "System failed to remove user: \"user1\" that does not exist",
-  "keyword": "Then "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user1",
-      "offset": 28
-    }
-  ],
-  "location": "StepDefinitions.removeUser(String)"
-});
-formatter.result({
-  "duration": 142617,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user1",
-      "offset": 31
-    }
-  ],
-  "location": "StepDefinitions.failedToRemoveUser(String)"
-});
-formatter.result({
-  "duration": 65581,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 6087104,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 37135,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 549925,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 6887893,
-  "status": "passed"
-});
-formatter.background({
-  "line": 3,
-  "name": "",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 4,
-  "name": "that each test should be independent from one another",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "StepDefinitions.background()"
-});
-formatter.result({
-  "duration": 3662218,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 174,
-  "name": "Ti16 Renew Returned Item",
-  "description": "",
-  "id": "invalid-paths;ti16-renew-returned-item",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 175,
+  "line": 7,
   "name": "User \"user1\" exists",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 176,
-  "name": "Book \"title\" with ISBN 12345678 exists",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 177,
-  "name": "Copy 1 of book \"title\" with ISBN 12345678 exists",
+  "line": 8,
+  "name": "Book \"title1\" with ISBN 12345678 exists",
   "keyword": "And "
 });
 formatter.step({
-  "line": 179,
+  "line": 9,
+  "name": "Copy 1 of book \"title1\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 11,
   "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
   "keyword": "When "
 });
 formatter.step({
-  "line": 180,
+  "line": 12,
   "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user1\"",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 182,
-  "name": "User \"user1\" attempts to return copy 1 of book with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 183,
-  "name": "System successfully returned copy 1 of book with ISBN 12345678 from user \"user1\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 185,
+  "line": 14,
   "name": "User \"user1\" attempts to renew copy 1 of book with ISBN: 12345678",
   "keyword": "When "
 });
 formatter.step({
-  "line": 186,
-  "name": "System failed to renew loan of copy 1 of book with ISBN: 12345678 for user \"user1\" because loan does not exist",
+  "line": 15,
+  "name": "System successfully renewed copy 1 of book with ISBN 12345678 for user \"user1\"",
   "keyword": "Then "
 });
 formatter.match({
@@ -3285,24 +5609,24 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 1884047,
+  "duration": 1726419,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "title",
+      "val": "title1",
       "offset": 6
     },
     {
       "val": "12345678",
-      "offset": 23
+      "offset": 24
     }
   ],
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 3620736,
+  "duration": 1583012,
   "status": "passed"
 });
 formatter.match({
@@ -3312,18 +5636,18 @@ formatter.match({
       "offset": 5
     },
     {
-      "val": "title",
+      "val": "title1",
       "offset": 16
     },
     {
       "val": "12345678",
-      "offset": 33
+      "offset": 34
     }
   ],
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 2054714,
+  "duration": 1360197,
   "status": "passed"
 });
 formatter.match({
@@ -3344,7 +5668,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 7827349,
+  "duration": 5741825,
   "status": "passed"
 });
 formatter.match({
@@ -3365,49 +5689,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 141432,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user1",
-      "offset": 6
-    },
-    {
-      "val": "1",
-      "offset": 37
-    },
-    {
-      "val": "12345678",
-      "offset": 58
-    }
-  ],
-  "location": "StepDefinitions.returnBook(String,int,int)"
-});
-formatter.result({
-  "duration": 707555,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 34
-    },
-    {
-      "val": "12345678",
-      "offset": 54
-    },
-    {
-      "val": "user1",
-      "offset": 74
-    }
-  ],
-  "location": "StepDefinitions.successfulReturn(int,int,String)"
-});
-formatter.result({
-  "duration": 111012,
+  "duration": 110617,
   "status": "passed"
 });
 formatter.match({
@@ -3428,7 +5710,1006 @@ formatter.match({
   "location": "StepDefinitions.renew(String,int,int)"
 });
 formatter.result({
-  "duration": 191604,
+  "duration": 4332640,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 33
+    },
+    {
+      "val": "12345678",
+      "offset": 53
+    },
+    {
+      "val": "user1",
+      "offset": 72
+    }
+  ],
+  "location": "StepDefinitions.successfulRenewal(int,int,String)"
+});
+formatter.result({
+  "duration": 74667,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2826666,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 31210,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 105877,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 6321380,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "that each test should be independent from one another",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefinitions.background()"
+});
+formatter.result({
+  "duration": 4586269,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 17,
+  "name": "Tv14 Renew Loan valid max times",
+  "description": "",
+  "id": "renew-test-cases;tv14-renew-loan-valid-max-times",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 18,
+  "name": "User \"user1\" exists",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 19,
+  "name": "Book \"title1\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 20,
+  "name": "Copy 1 of book \"title1\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 22,
+  "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 23,
+  "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user1\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 25,
+  "name": "User \"user1\" attempts to renew copy 1 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 26,
+  "name": "System successfully renewed copy 1 of book with ISBN 12345678 for user \"user1\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 27,
+  "name": "User \"user1\" attempts to renew copy 1 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 28,
+  "name": "System successfully renewed copy 1 of book with ISBN 12345678 for user \"user1\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 30,
+  "name": "User \"user1\" attempts to return copy 1 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 31,
+  "name": "System successfully returned copy 1 of book with ISBN 12345678 from user \"user1\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    }
+  ],
+  "location": "StepDefinitions.userExists(String)"
+});
+formatter.result({
+  "duration": 1779357,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title1",
+      "offset": 6
+    },
+    {
+      "val": "12345678",
+      "offset": 24
+    }
+  ],
+  "location": "StepDefinitions.bookExists(String,int)"
+});
+formatter.result({
+  "duration": 1686123,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 5
+    },
+    {
+      "val": "title1",
+      "offset": 16
+    },
+    {
+      "val": "12345678",
+      "offset": 34
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 1581037,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.borrow(String,int,int)"
+});
+formatter.result({
+  "duration": 5478714,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 34
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    },
+    {
+      "val": "user1",
+      "offset": 72
+    }
+  ],
+  "location": "StepDefinitions.successfulBorrow(int,int,String)"
+});
+formatter.result({
+  "duration": 140247,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 36
+    },
+    {
+      "val": "12345678",
+      "offset": 57
+    }
+  ],
+  "location": "StepDefinitions.renew(String,int,int)"
+});
+formatter.result({
+  "duration": 5716936,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 33
+    },
+    {
+      "val": "12345678",
+      "offset": 53
+    },
+    {
+      "val": "user1",
+      "offset": 72
+    }
+  ],
+  "location": "StepDefinitions.successfulRenewal(int,int,String)"
+});
+formatter.result({
+  "duration": 242568,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 36
+    },
+    {
+      "val": "12345678",
+      "offset": 57
+    }
+  ],
+  "location": "StepDefinitions.renew(String,int,int)"
+});
+formatter.result({
+  "duration": 6471108,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 33
+    },
+    {
+      "val": "12345678",
+      "offset": 53
+    },
+    {
+      "val": "user1",
+      "offset": 72
+    }
+  ],
+  "location": "StepDefinitions.successfulRenewal(int,int,String)"
+});
+formatter.result({
+  "duration": 77037,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.returnBook(String,int,int)"
+});
+formatter.result({
+  "duration": 477235,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 34
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    },
+    {
+      "val": "user1",
+      "offset": 74
+    }
+  ],
+  "location": "StepDefinitions.successfulReturn(int,int,String)"
+});
+formatter.result({
+  "duration": 53729,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2789135,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 23308,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 47407,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 4185282,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "that each test should be independent from one another",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefinitions.background()"
+});
+formatter.result({
+  "duration": 4334615,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 33,
+  "name": "Tv16 Renew when full",
+  "description": "",
+  "id": "renew-test-cases;tv16-renew-when-full",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 34,
+  "name": "User \"user1\" exists",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 35,
+  "name": "Book \"title1\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 36,
+  "name": "Book \"title2\" with ISBN 87654321 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 37,
+  "name": "Copy 1 of book \"title1\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 38,
+  "name": "Copy 2 of book \"title1\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 39,
+  "name": "Copy 1 of book \"title2\" with ISBN 87654321 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 40,
+  "name": "Copy 2 of book \"title2\" with ISBN 87654321 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 42,
+  "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 43,
+  "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user1\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 44,
+  "name": "User \"user1\" attempts to borrow copy 2 of book with ISBN: 87654321",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 45,
+  "name": "System successfully borrowed copy 2 of book with ISBN 87654321 to user \"user1\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 47,
+  "name": "User \"user1\" attempts to renew copy 1 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 48,
+  "name": "System successfully renewed copy 1 of book with ISBN 12345678 for user \"user1\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 50,
+  "name": "User \"user1\" attempts to renew copy 2 of book with ISBN: 87654321",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 51,
+  "name": "System successfully renewed copy 2 of book with ISBN 87654321 for user \"user1\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    }
+  ],
+  "location": "StepDefinitions.userExists(String)"
+});
+formatter.result({
+  "duration": 1588148,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title1",
+      "offset": 6
+    },
+    {
+      "val": "12345678",
+      "offset": 24
+    }
+  ],
+  "location": "StepDefinitions.bookExists(String,int)"
+});
+formatter.result({
+  "duration": 1767901,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title2",
+      "offset": 6
+    },
+    {
+      "val": "87654321",
+      "offset": 24
+    }
+  ],
+  "location": "StepDefinitions.bookExists(String,int)"
+});
+formatter.result({
+  "duration": 1458962,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 5
+    },
+    {
+      "val": "title1",
+      "offset": 16
+    },
+    {
+      "val": "12345678",
+      "offset": 34
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 1432098,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 5
+    },
+    {
+      "val": "title1",
+      "offset": 16
+    },
+    {
+      "val": "12345678",
+      "offset": 34
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 1567209,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 5
+    },
+    {
+      "val": "title2",
+      "offset": 16
+    },
+    {
+      "val": "87654321",
+      "offset": 34
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 6840491,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 5
+    },
+    {
+      "val": "title2",
+      "offset": 16
+    },
+    {
+      "val": "87654321",
+      "offset": 34
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 2424098,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.borrow(String,int,int)"
+});
+formatter.result({
+  "duration": 10403552,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 34
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    },
+    {
+      "val": "user1",
+      "offset": 72
+    }
+  ],
+  "location": "StepDefinitions.successfulBorrow(int,int,String)"
+});
+formatter.result({
+  "duration": 58074,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "2",
+      "offset": 37
+    },
+    {
+      "val": "87654321",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.borrow(String,int,int)"
+});
+formatter.result({
+  "duration": 5436442,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 34
+    },
+    {
+      "val": "87654321",
+      "offset": 54
+    },
+    {
+      "val": "user1",
+      "offset": 72
+    }
+  ],
+  "location": "StepDefinitions.successfulBorrow(int,int,String)"
+});
+formatter.result({
+  "duration": 87308,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 36
+    },
+    {
+      "val": "12345678",
+      "offset": 57
+    }
+  ],
+  "location": "StepDefinitions.renew(String,int,int)"
+});
+formatter.result({
+  "duration": 6231306,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 33
+    },
+    {
+      "val": "12345678",
+      "offset": 53
+    },
+    {
+      "val": "user1",
+      "offset": 72
+    }
+  ],
+  "location": "StepDefinitions.successfulRenewal(int,int,String)"
+});
+formatter.result({
+  "duration": 97975,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "2",
+      "offset": 36
+    },
+    {
+      "val": "87654321",
+      "offset": 57
+    }
+  ],
+  "location": "StepDefinitions.renew(String,int,int)"
+});
+formatter.result({
+  "duration": 6547750,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 33
+    },
+    {
+      "val": "87654321",
+      "offset": 53
+    },
+    {
+      "val": "user1",
+      "offset": 72
+    }
+  ],
+  "location": "StepDefinitions.successfulRenewal(int,int,String)"
+});
+formatter.result({
+  "duration": 101136,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2902518,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 51753,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 131951,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 4758122,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "that each test should be independent from one another",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefinitions.background()"
+});
+formatter.result({
+  "duration": 6915947,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 53,
+  "name": "Ti16 Renew Returned Item",
+  "description": "",
+  "id": "renew-test-cases;ti16-renew-returned-item",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 54,
+  "name": "User \"user1\" exists",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 55,
+  "name": "Book \"title\" with ISBN 12345678 exists",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 56,
+  "name": "Copy 1 of book \"title\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 58,
+  "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 59,
+  "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user1\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 61,
+  "name": "User \"user1\" attempts to return copy 1 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 62,
+  "name": "System successfully returned copy 1 of book with ISBN 12345678 from user \"user1\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 64,
+  "name": "User \"user1\" attempts to renew copy 1 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 65,
+  "name": "System failed to renew loan of copy 1 of book with ISBN: 12345678 for user \"user1\" because loan does not exist",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    }
+  ],
+  "location": "StepDefinitions.userExists(String)"
+});
+formatter.result({
+  "duration": 9852836,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title",
+      "offset": 6
+    },
+    {
+      "val": "12345678",
+      "offset": 23
+    }
+  ],
+  "location": "StepDefinitions.bookExists(String,int)"
+});
+formatter.result({
+  "duration": 2675752,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 5
+    },
+    {
+      "val": "title",
+      "offset": 16
+    },
+    {
+      "val": "12345678",
+      "offset": 33
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 3420838,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.borrow(String,int,int)"
+});
+formatter.result({
+  "duration": 8587848,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 34
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    },
+    {
+      "val": "user1",
+      "offset": 72
+    }
+  ],
+  "location": "StepDefinitions.successfulBorrow(int,int,String)"
+});
+formatter.result({
+  "duration": 58864,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.returnBook(String,int,int)"
+});
+formatter.result({
+  "duration": 805926,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 34
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    },
+    {
+      "val": "user1",
+      "offset": 74
+    }
+  ],
+  "location": "StepDefinitions.successfulReturn(int,int,String)"
+});
+formatter.result({
+  "duration": 75852,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 36
+    },
+    {
+      "val": "12345678",
+      "offset": 57
+    }
+  ],
+  "location": "StepDefinitions.renew(String,int,int)"
+});
+formatter.result({
+  "duration": 137482,
   "status": "passed"
 });
 formatter.match({
@@ -3449,15 +6730,2557 @@ formatter.match({
   "location": "StepDefinitions.failedToRenewBook(int,int,String)"
 });
 formatter.result({
-  "duration": 169876,
+  "duration": 82173,
   "status": "passed"
 });
 formatter.after({
-  "duration": 11048283,
+  "duration": 6148738,
   "status": "passed"
 });
 formatter.after({
-  "duration": 350419,
+  "duration": 32790,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 48987,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3948246,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "that each test should be independent from one another",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefinitions.background()"
+});
+formatter.result({
+  "duration": 4808690,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 67,
+  "name": "Ti23 Renew book when user privilege is revoked",
+  "description": "",
+  "id": "renew-test-cases;ti23-renew-book-when-user-privilege-is-revoked",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 68,
+  "name": "User \"user1\" exists",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 69,
+  "name": "Book \"title\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 70,
+  "name": "Copy 1 of book \"title\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 72,
+  "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 73,
+  "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user1\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 75,
+  "name": "User \"user1\" has their privileges are revoked",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 77,
+  "name": "User \"user1\" attempts to renew copy 1 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 78,
+  "name": "System failed to renew loan of copy 1 of book with ISBN: 12345678 for user \"user1\" because user privileges are revoked",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    }
+  ],
+  "location": "StepDefinitions.userExists(String)"
+});
+formatter.result({
+  "duration": 4326320,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title",
+      "offset": 6
+    },
+    {
+      "val": "12345678",
+      "offset": 23
+    }
+  ],
+  "location": "StepDefinitions.bookExists(String,int)"
+});
+formatter.result({
+  "duration": 1679407,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 5
+    },
+    {
+      "val": "title",
+      "offset": 16
+    },
+    {
+      "val": "12345678",
+      "offset": 33
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 2989035,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.borrow(String,int,int)"
+});
+formatter.result({
+  "duration": 9135009,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 34
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    },
+    {
+      "val": "user1",
+      "offset": 72
+    }
+  ],
+  "location": "StepDefinitions.successfulBorrow(int,int,String)"
+});
+formatter.result({
+  "duration": 79013,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    }
+  ],
+  "location": "StepDefinitions.privilegeRevoked(String)"
+});
+formatter.result({
+  "duration": 1332543,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 36
+    },
+    {
+      "val": "12345678",
+      "offset": 57
+    }
+  ],
+  "location": "StepDefinitions.renew(String,int,int)"
+});
+formatter.result({
+  "duration": 152494,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 36
+    },
+    {
+      "val": "12345678",
+      "offset": 57
+    },
+    {
+      "val": "user1",
+      "offset": 76
+    }
+  ],
+  "location": "StepDefinitions.failedToRenewBookRevoke(int,int,String)"
+});
+formatter.result({
+  "duration": 226371,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 6161775,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 41877,
+  "status": "passed"
+});
+formatter.uri("main/java/com/comp4004/test/cucumber/ReturnTestCases.feature");
+formatter.feature({
+  "line": 1,
+  "name": "Return Test Cases",
+  "description": "",
+  "id": "return-test-cases",
+  "keyword": "Feature"
+});
+formatter.before({
+  "duration": 144592,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 5170961,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "that each test should be independent from one another",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefinitions.background()"
+});
+formatter.result({
+  "duration": 3079110,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 6,
+  "name": "Tv18 Return book",
+  "description": "",
+  "id": "return-test-cases;tv18-return-book",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 7,
+  "name": "User \"user1\" exists",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 8,
+  "name": "Book \"title1\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 9,
+  "name": "Copy 1 of book \"title1\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 11,
+  "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 12,
+  "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user1\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 14,
+  "name": "User \"user1\" attempts to return copy 1 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 15,
+  "name": "System successfully returned copy 1 of book with ISBN 12345678 from user \"user1\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    }
+  ],
+  "location": "StepDefinitions.userExists(String)"
+});
+formatter.result({
+  "duration": 2360888,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title1",
+      "offset": 6
+    },
+    {
+      "val": "12345678",
+      "offset": 24
+    }
+  ],
+  "location": "StepDefinitions.bookExists(String,int)"
+});
+formatter.result({
+  "duration": 1288296,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 5
+    },
+    {
+      "val": "title1",
+      "offset": 16
+    },
+    {
+      "val": "12345678",
+      "offset": 34
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 4427455,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.borrow(String,int,int)"
+});
+formatter.result({
+  "duration": 5590516,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 34
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    },
+    {
+      "val": "user1",
+      "offset": 72
+    }
+  ],
+  "location": "StepDefinitions.successfulBorrow(int,int,String)"
+});
+formatter.result({
+  "duration": 69926,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.returnBook(String,int,int)"
+});
+formatter.result({
+  "duration": 596938,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 34
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    },
+    {
+      "val": "user1",
+      "offset": 74
+    }
+  ],
+  "location": "StepDefinitions.successfulReturn(int,int,String)"
+});
+formatter.result({
+  "duration": 78617,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 3241085,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 28840,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 30815,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 4917726,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "that each test should be independent from one another",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefinitions.background()"
+});
+formatter.result({
+  "duration": 2836937,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 17,
+  "name": "Tv19 Return book but fee added and user privilege not revoked",
+  "description": "",
+  "id": "return-test-cases;tv19-return-book-but-fee-added-and-user-privilege-not-revoked",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 18,
+  "name": "User \"user1\" exists",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 19,
+  "name": "Book \"title\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 20,
+  "name": "Copy 1 of book \"title\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 22,
+  "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 23,
+  "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user1\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 25,
+  "name": "User \"user1\" attempts to return copy 1 of book with ISBN: 12345678 late",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 26,
+  "name": "System successfully returned copy 1 of book with ISBN 12345678 from user \"user1\" but fee was applied",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    }
+  ],
+  "location": "StepDefinitions.userExists(String)"
+});
+formatter.result({
+  "duration": 1343999,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title",
+      "offset": 6
+    },
+    {
+      "val": "12345678",
+      "offset": 23
+    }
+  ],
+  "location": "StepDefinitions.bookExists(String,int)"
+});
+formatter.result({
+  "duration": 1566814,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 5
+    },
+    {
+      "val": "title",
+      "offset": 16
+    },
+    {
+      "val": "12345678",
+      "offset": 33
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 1611061,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.borrow(String,int,int)"
+});
+formatter.result({
+  "duration": 5633973,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 34
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    },
+    {
+      "val": "user1",
+      "offset": 72
+    }
+  ],
+  "location": "StepDefinitions.successfulBorrow(int,int,String)"
+});
+formatter.result({
+  "duration": 72296,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.returnBookLate(String,int,int)"
+});
+formatter.result({
+  "duration": 2148344,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 34
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    },
+    {
+      "val": "user1",
+      "offset": 74
+    }
+  ],
+  "location": "StepDefinitions.successfulReturnLateFee(int,int,String)"
+});
+formatter.result({
+  "duration": 109827,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2780839,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 37530,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 99555,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3525530,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "that each test should be independent from one another",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefinitions.background()"
+});
+formatter.result({
+  "duration": 5950418,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 28,
+  "name": "Tv20 Return book but fee added and user privilege revoked",
+  "description": "",
+  "id": "return-test-cases;tv20-return-book-but-fee-added-and-user-privilege-revoked",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 29,
+  "name": "User \"user1\" exists",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 30,
+  "name": "Book \"title\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 31,
+  "name": "Copy 1 of book \"title\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 33,
+  "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 34,
+  "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user1\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 36,
+  "name": "User \"user1\" attempts to return copy 1 of book with ISBN: 12345678 overdue",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 37,
+  "name": "System successfully returned copy 1 of book with ISBN 12345678 from user \"user1\" but privileges were revoked",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    }
+  ],
+  "location": "StepDefinitions.userExists(String)"
+});
+formatter.result({
+  "duration": 1634765,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title",
+      "offset": 6
+    },
+    {
+      "val": "12345678",
+      "offset": 23
+    }
+  ],
+  "location": "StepDefinitions.bookExists(String,int)"
+});
+formatter.result({
+  "duration": 1415111,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 5
+    },
+    {
+      "val": "title",
+      "offset": 16
+    },
+    {
+      "val": "12345678",
+      "offset": 33
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 1669135,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.borrow(String,int,int)"
+});
+formatter.result({
+  "duration": 7316540,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 34
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    },
+    {
+      "val": "user1",
+      "offset": 72
+    }
+  ],
+  "location": "StepDefinitions.successfulBorrow(int,int,String)"
+});
+formatter.result({
+  "duration": 65580,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.returnBookOverdue(String,int,int)"
+});
+formatter.result({
+  "duration": 1933431,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 34
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    },
+    {
+      "val": "user1",
+      "offset": 74
+    }
+  ],
+  "location": "StepDefinitions.successfulReturnLateRevoke(int,int,String)"
+});
+formatter.result({
+  "duration": 56889,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2721974,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 20938,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 46617,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 4163949,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "that each test should be independent from one another",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefinitions.background()"
+});
+formatter.result({
+  "duration": 4734418,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 39,
+  "name": "Ti24 Return book returned book",
+  "description": "",
+  "id": "return-test-cases;ti24-return-book-returned-book",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 40,
+  "name": "User \"user1\" exists",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 41,
+  "name": "Book \"title1\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 42,
+  "name": "Copy 1 of book \"title1\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 44,
+  "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 45,
+  "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user1\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 47,
+  "name": "User \"user1\" attempts to return copy 1 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 48,
+  "name": "System successfully returned copy 1 of book with ISBN 12345678 from user \"user1\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 50,
+  "name": "User \"user1\" attempts to return copy 1 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 51,
+  "name": "System failed to return loan of copy 1 of book with ISBN: 12345678 for user \"user1\" because loan does not exist",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    }
+  ],
+  "location": "StepDefinitions.userExists(String)"
+});
+formatter.result({
+  "duration": 3925727,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title1",
+      "offset": 6
+    },
+    {
+      "val": "12345678",
+      "offset": 24
+    }
+  ],
+  "location": "StepDefinitions.bookExists(String,int)"
+});
+formatter.result({
+  "duration": 1399703,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 5
+    },
+    {
+      "val": "title1",
+      "offset": 16
+    },
+    {
+      "val": "12345678",
+      "offset": 34
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 1687308,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.borrow(String,int,int)"
+});
+formatter.result({
+  "duration": 4544788,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 34
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    },
+    {
+      "val": "user1",
+      "offset": 72
+    }
+  ],
+  "location": "StepDefinitions.successfulBorrow(int,int,String)"
+});
+formatter.result({
+  "duration": 71507,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.returnBook(String,int,int)"
+});
+formatter.result({
+  "duration": 802766,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 34
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    },
+    {
+      "val": "user1",
+      "offset": 74
+    }
+  ],
+  "location": "StepDefinitions.successfulReturn(int,int,String)"
+});
+formatter.result({
+  "duration": 76641,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.returnBook(String,int,int)"
+});
+formatter.result({
+  "duration": 128000,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    },
+    {
+      "val": "user1",
+      "offset": 77
+    }
+  ],
+  "location": "StepDefinitions.failedToReturnBook(int,int,String)"
+});
+formatter.result({
+  "duration": 39111,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2463604,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 22518,
+  "status": "passed"
+});
+formatter.uri("main/java/com/comp4004/test/cucumber/TitleTestCases.feature");
+formatter.feature({
+  "line": 1,
+  "name": "Title Test Cases",
+  "description": "",
+  "id": "title-test-cases",
+  "keyword": "Feature"
+});
+formatter.before({
+  "duration": 138272,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 4397036,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "that each test should be independent from one another",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefinitions.background()"
+});
+formatter.result({
+  "duration": 3844344,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 6,
+  "name": "Tv3 Add Title",
+  "description": "",
+  "id": "title-test-cases;tv3-add-title",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 7,
+  "name": "Attempting to add book \"title\" with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 8,
+  "name": "System successfully added book: 12345678",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title",
+      "offset": 24
+    },
+    {
+      "val": "12345678",
+      "offset": 42
+    }
+  ],
+  "location": "StepDefinitions.addBook(String,int)"
+});
+formatter.result({
+  "duration": 3018271,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "12345678",
+      "offset": 32
+    }
+  ],
+  "location": "StepDefinitions.successfullyAddedBook(int)"
+});
+formatter.result({
+  "duration": 80197,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 3016690,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 28840,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 28444,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 4808690,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "that each test should be independent from one another",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefinitions.background()"
+});
+formatter.result({
+  "duration": 3444147,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 10,
+  "name": "Tv4 Add Title",
+  "description": "",
+  "id": "title-test-cases;tv4-add-title",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 11,
+  "name": "Book \"title\" with ISBN 12345678 exists",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 13,
+  "name": "Attempting to remove book \"title\" with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 14,
+  "name": "System successfully removed book: 12345678",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 16,
+  "name": "Attempting to add book \"title\" with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 17,
+  "name": "System successfully added book: 12345678",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title",
+      "offset": 6
+    },
+    {
+      "val": "12345678",
+      "offset": 23
+    }
+  ],
+  "location": "StepDefinitions.bookExists(String,int)"
+});
+formatter.result({
+  "duration": 5064294,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title",
+      "offset": 27
+    },
+    {
+      "val": "12345678",
+      "offset": 45
+    }
+  ],
+  "location": "StepDefinitions.removeBook(String,int)"
+});
+formatter.result({
+  "duration": 585086,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "12345678",
+      "offset": 34
+    }
+  ],
+  "location": "StepDefinitions.successfullyRemovedBook(int)"
+});
+formatter.result({
+  "duration": 59259,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title",
+      "offset": 24
+    },
+    {
+      "val": "12345678",
+      "offset": 42
+    }
+  ],
+  "location": "StepDefinitions.addBook(String,int)"
+});
+formatter.result({
+  "duration": 1806222,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "12345678",
+      "offset": 32
+    }
+  ],
+  "location": "StepDefinitions.successfullyAddedBook(int)"
+});
+formatter.result({
+  "duration": 55309,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 3951011,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 27654,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 117729,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 9685330,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "that each test should be independent from one another",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefinitions.background()"
+});
+formatter.result({
+  "duration": 3227653,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 19,
+  "name": "Tv10 Remove title. No copies involved",
+  "description": "",
+  "id": "title-test-cases;tv10-remove-title.-no-copies-involved",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 20,
+  "name": "Book \"title1\" with ISBN 12345678 exists",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 22,
+  "name": "Attempting to remove book \"title1\" with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 23,
+  "name": "System successfully removed book: 12345678",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title1",
+      "offset": 6
+    },
+    {
+      "val": "12345678",
+      "offset": 24
+    }
+  ],
+  "location": "StepDefinitions.bookExists(String,int)"
+});
+formatter.result({
+  "duration": 1697579,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title1",
+      "offset": 27
+    },
+    {
+      "val": "12345678",
+      "offset": 46
+    }
+  ],
+  "location": "StepDefinitions.removeBook(String,int)"
+});
+formatter.result({
+  "duration": 524642,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "12345678",
+      "offset": 34
+    }
+  ],
+  "location": "StepDefinitions.successfullyRemovedBook(int)"
+});
+formatter.result({
+  "duration": 56493,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 3722665,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 28050,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 114963,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 5386269,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "that each test should be independent from one another",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefinitions.background()"
+});
+formatter.result({
+  "duration": 13187946,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 25,
+  "name": "Tv12 Remove Title",
+  "description": "",
+  "id": "title-test-cases;tv12-remove-title",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 26,
+  "name": "User \"user1\" exists",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 27,
+  "name": "Book \"title1\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 28,
+  "name": "Copy 1 of book \"title1\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 30,
+  "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 31,
+  "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user1\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 33,
+  "name": "User \"user1\" attempts to return copy 1 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 34,
+  "name": "System successfully returned copy 1 of book with ISBN 12345678 from user \"user1\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 36,
+  "name": "Attempting to remove copy 1 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 37,
+  "name": "System successfully removed copy 1 of book with ISBN: 12345678",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 39,
+  "name": "Attempting to remove book \"title1\" with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 40,
+  "name": "System successfully removed book: 12345678",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    }
+  ],
+  "location": "StepDefinitions.userExists(String)"
+});
+formatter.result({
+  "duration": 1742617,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title1",
+      "offset": 6
+    },
+    {
+      "val": "12345678",
+      "offset": 24
+    }
+  ],
+  "location": "StepDefinitions.bookExists(String,int)"
+});
+formatter.result({
+  "duration": 1676246,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 5
+    },
+    {
+      "val": "title1",
+      "offset": 16
+    },
+    {
+      "val": "12345678",
+      "offset": 34
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 1670715,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.borrow(String,int,int)"
+});
+formatter.result({
+  "duration": 7357626,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 34
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    },
+    {
+      "val": "user1",
+      "offset": 72
+    }
+  ],
+  "location": "StepDefinitions.successfulBorrow(int,int,String)"
+});
+formatter.result({
+  "duration": 104691,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.returnBook(String,int,int)"
+});
+formatter.result({
+  "duration": 1205333,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 34
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    },
+    {
+      "val": "user1",
+      "offset": 74
+    }
+  ],
+  "location": "StepDefinitions.successfulReturn(int,int,String)"
+});
+formatter.result({
+  "duration": 103506,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 26
+    },
+    {
+      "val": "12345678",
+      "offset": 47
+    }
+  ],
+  "location": "StepDefinitions.removeCopy(int,int)"
+});
+formatter.result({
+  "duration": 2026270,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 33
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    }
+  ],
+  "location": "StepDefinitions.successfullyRemovedCopy(int,int)"
+});
+formatter.result({
+  "duration": 66765,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title1",
+      "offset": 27
+    },
+    {
+      "val": "12345678",
+      "offset": 46
+    }
+  ],
+  "location": "StepDefinitions.removeBook(String,int)"
+});
+formatter.result({
+  "duration": 568889,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "12345678",
+      "offset": 34
+    }
+  ],
+  "location": "StepDefinitions.successfullyRemovedBook(int)"
+});
+formatter.result({
+  "duration": 44247,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 3128493,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 54123,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 33580,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 5197430,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "that each test should be independent from one another",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefinitions.background()"
+});
+formatter.result({
+  "duration": 3272690,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 42,
+  "name": "Ti3 Add Redundant Title",
+  "description": "",
+  "id": "title-test-cases;ti3-add-redundant-title",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 43,
+  "name": "Book \"title\" with ISBN 12345678 exists",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 45,
+  "name": "Attempting to add book \"title\" with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 46,
+  "name": "System failed to add book \"title\" with ISBN: 12345678 because it already exists",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title",
+      "offset": 6
+    },
+    {
+      "val": "12345678",
+      "offset": 23
+    }
+  ],
+  "location": "StepDefinitions.bookExists(String,int)"
+});
+formatter.result({
+  "duration": 2089481,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title",
+      "offset": 24
+    },
+    {
+      "val": "12345678",
+      "offset": 42
+    }
+  ],
+  "location": "StepDefinitions.addBook(String,int)"
+});
+formatter.result({
+  "duration": 105481,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title",
+      "offset": 27
+    },
+    {
+      "val": "12345678",
+      "offset": 45
+    }
+  ],
+  "location": "StepDefinitions.failedToAddBook(String,int)"
+});
+formatter.result({
+  "duration": 86123,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 3482863,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 41876,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 64790,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 7914268,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "that each test should be independent from one another",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefinitions.background()"
+});
+formatter.result({
+  "duration": 3256493,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 48,
+  "name": "Ti12 Remove title that still has a copy",
+  "description": "",
+  "id": "title-test-cases;ti12-remove-title-that-still-has-a-copy",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 49,
+  "name": "Book \"title\" with ISBN 12345678 exists",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 50,
+  "name": "Copy 1 of book \"title\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 52,
+  "name": "Attempting to remove book \"title\" with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 53,
+  "name": "System failed to remove book: 12345678 because copies exist",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title",
+      "offset": 6
+    },
+    {
+      "val": "12345678",
+      "offset": 23
+    }
+  ],
+  "location": "StepDefinitions.bookExists(String,int)"
+});
+formatter.result({
+  "duration": 1658074,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 5
+    },
+    {
+      "val": "title",
+      "offset": 16
+    },
+    {
+      "val": "12345678",
+      "offset": 33
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 1621332,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title",
+      "offset": 27
+    },
+    {
+      "val": "12345678",
+      "offset": 45
+    }
+  ],
+  "location": "StepDefinitions.removeBook(String,int)"
+});
+formatter.result({
+  "duration": 118123,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "12345678",
+      "offset": 30
+    }
+  ],
+  "location": "StepDefinitions.failedToRemoveBookCopies(int)"
+});
+formatter.result({
+  "duration": 60445,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 4524640,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 41087,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 97580,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 6377479,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "that each test should be independent from one another",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefinitions.background()"
+});
+formatter.result({
+  "duration": 3133628,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 55,
+  "name": "Ti13 Remove title that has borrowed copy",
+  "description": "",
+  "id": "title-test-cases;ti13-remove-title-that-has-borrowed-copy",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 56,
+  "name": "User \"user1\" exists",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 57,
+  "name": "Book \"title\" with ISBN 12345678 exists",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 58,
+  "name": "Copy 1 of book \"title\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 60,
+  "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 61,
+  "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user1\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 63,
+  "name": "Attempting to remove book \"title\" with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 64,
+  "name": "System failed to remove book with ISBN: 12345678 because book is currently loaned",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    }
+  ],
+  "location": "StepDefinitions.userExists(String)"
+});
+formatter.result({
+  "duration": 2262913,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title",
+      "offset": 6
+    },
+    {
+      "val": "12345678",
+      "offset": 23
+    }
+  ],
+  "location": "StepDefinitions.bookExists(String,int)"
+});
+formatter.result({
+  "duration": 2160592,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 5
+    },
+    {
+      "val": "title",
+      "offset": 16
+    },
+    {
+      "val": "12345678",
+      "offset": 33
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 1675061,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    },
+    {
+      "val": "1",
+      "offset": 37
+    },
+    {
+      "val": "12345678",
+      "offset": 58
+    }
+  ],
+  "location": "StepDefinitions.borrow(String,int,int)"
+});
+formatter.result({
+  "duration": 6086714,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 34
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    },
+    {
+      "val": "user1",
+      "offset": 72
+    }
+  ],
+  "location": "StepDefinitions.successfulBorrow(int,int,String)"
+});
+formatter.result({
+  "duration": 75061,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title",
+      "offset": 27
+    },
+    {
+      "val": "12345678",
+      "offset": 45
+    }
+  ],
+  "location": "StepDefinitions.removeBook(String,int)"
+});
+formatter.result({
+  "duration": 78222,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "12345678",
+      "offset": 40
+    }
+  ],
+  "location": "StepDefinitions.failedToRemoveBookLoan(int)"
+});
+formatter.result({
+  "duration": 55309,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 3837628,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 31605,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1616987,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 5239306,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "that each test should be independent from one another",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefinitions.background()"
+});
+formatter.result({
+  "duration": 2882369,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 66,
+  "name": "Ti14 Remove title that has a copy",
+  "description": "",
+  "id": "title-test-cases;ti14-remove-title-that-has-a-copy",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 67,
+  "name": "User \"user1\" exists",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 68,
+  "name": "Book \"title\" with ISBN 12345678 exists",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 69,
+  "name": "Copy 1 of book \"title\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 70,
+  "name": "Copy 2 of book \"title\" with ISBN 12345678 exists",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 72,
+  "name": "Attempting to remove copy 2 of book with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 73,
+  "name": "System successfully removed copy 2 of book with ISBN: 12345678",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 75,
+  "name": "Attempting to remove book \"title\" with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 76,
+  "name": "System failed to remove book: 12345678 because copies exist",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 6
+    }
+  ],
+  "location": "StepDefinitions.userExists(String)"
+});
+formatter.result({
+  "duration": 38378257,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title",
+      "offset": 6
+    },
+    {
+      "val": "12345678",
+      "offset": 23
+    }
+  ],
+  "location": "StepDefinitions.bookExists(String,int)"
+});
+formatter.result({
+  "duration": 2482962,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 5
+    },
+    {
+      "val": "title",
+      "offset": 16
+    },
+    {
+      "val": "12345678",
+      "offset": 33
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 1539555,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 5
+    },
+    {
+      "val": "title",
+      "offset": 16
+    },
+    {
+      "val": "12345678",
+      "offset": 33
+    }
+  ],
+  "location": "StepDefinitions.copyExists(int,String,int)"
+});
+formatter.result({
+  "duration": 1315160,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 26
+    },
+    {
+      "val": "12345678",
+      "offset": 47
+    }
+  ],
+  "location": "StepDefinitions.removeCopy(int,int)"
+});
+formatter.result({
+  "duration": 1322666,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 33
+    },
+    {
+      "val": "12345678",
+      "offset": 54
+    }
+  ],
+  "location": "StepDefinitions.successfullyRemovedCopy(int,int)"
+});
+formatter.result({
+  "duration": 64000,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title",
+      "offset": 27
+    },
+    {
+      "val": "12345678",
+      "offset": 45
+    }
+  ],
+  "location": "StepDefinitions.removeBook(String,int)"
+});
+formatter.result({
+  "duration": 51753,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "12345678",
+      "offset": 30
+    }
+  ],
+  "location": "StepDefinitions.failedToRemoveBookCopies(int)"
+});
+formatter.result({
+  "duration": 91655,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2992592,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 27259,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 29235,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 4744295,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "that each test should be independent from one another",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefinitions.background()"
+});
+formatter.result({
+  "duration": 3036838,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 78,
+  "name": "Ti20 Remove non-existent title",
+  "description": "",
+  "id": "title-test-cases;ti20-remove-non-existent-title",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 79,
+  "name": "No such book exists with ISBN: 12345678",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 81,
+  "name": "Attempting to remove book \"title\" with ISBN: 12345678",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 82,
+  "name": "System failed to remove book: 12345678 because book does not exist",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "12345678",
+      "offset": 31
+    }
+  ],
+  "location": "StepDefinitions.noSuchBookExists(int)"
+});
+formatter.result({
+  "duration": 110222,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "title",
+      "offset": 27
+    },
+    {
+      "val": "12345678",
+      "offset": 45
+    }
+  ],
+  "location": "StepDefinitions.removeBook(String,int)"
+});
+formatter.result({
+  "duration": 66371,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "12345678",
+      "offset": 30
+    }
+  ],
+  "location": "StepDefinitions.failedToRemoveBook(int)"
+});
+formatter.result({
+  "duration": 26074,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2169283,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 22519,
   "status": "passed"
 });
 formatter.uri("main/java/com/comp4004/test/cucumber/UseCaseDependencies.feature");
@@ -3469,11 +9292,11 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 159209,
+  "duration": 32000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 7211448,
+  "duration": 3708048,
   "status": "passed"
 });
 formatter.scenario({
@@ -3758,7 +9581,7 @@ formatter.match({
   "location": "StepDefinitions.addBook(String,int)"
 });
 formatter.result({
-  "duration": 8256386,
+  "duration": 1553777,
   "status": "passed"
 });
 formatter.match({
@@ -3771,7 +9594,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedBook(int)"
 });
 formatter.result({
-  "duration": 100346,
+  "duration": 37926,
   "status": "passed"
 });
 formatter.match({
@@ -3788,7 +9611,7 @@ formatter.match({
   "location": "StepDefinitions.addBook(String,int)"
 });
 formatter.result({
-  "duration": 7635349,
+  "duration": 1368494,
   "status": "passed"
 });
 formatter.match({
@@ -3801,7 +9624,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedBook(int)"
 });
 formatter.result({
-  "duration": 131555,
+  "duration": 150519,
   "status": "passed"
 });
 formatter.match({
@@ -3818,7 +9641,7 @@ formatter.match({
   "location": "StepDefinitions.addCopy(int,int)"
 });
 formatter.result({
-  "duration": 9894309,
+  "duration": 1755259,
   "status": "passed"
 });
 formatter.match({
@@ -3835,7 +9658,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedCopy(int,int)"
 });
 formatter.result({
-  "duration": 123654,
+  "duration": 58074,
   "status": "passed"
 });
 formatter.match({
@@ -3848,7 +9671,7 @@ formatter.match({
   "location": "StepDefinitions.addUser(String)"
 });
 formatter.result({
-  "duration": 1609874,
+  "duration": 1382321,
   "status": "passed"
 });
 formatter.match({
@@ -3861,7 +9684,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedUser(String)"
 });
 formatter.result({
-  "duration": 50173,
+  "duration": 43852,
   "status": "passed"
 });
 formatter.match({
@@ -3878,7 +9701,7 @@ formatter.match({
   "location": "StepDefinitions.addCopy(int,int)"
 });
 formatter.result({
-  "duration": 5078118,
+  "duration": 1377580,
   "status": "passed"
 });
 formatter.match({
@@ -3895,7 +9718,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedCopy(int,int)"
 });
 formatter.result({
-  "duration": 77037,
+  "duration": 41086,
   "status": "passed"
 });
 formatter.match({
@@ -3912,7 +9735,7 @@ formatter.match({
   "location": "StepDefinitions.addCopy(int,int)"
 });
 formatter.result({
-  "duration": 17087585,
+  "duration": 1113678,
   "status": "passed"
 });
 formatter.match({
@@ -3929,7 +9752,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedCopy(int,int)"
 });
 formatter.result({
-  "duration": 109828,
+  "duration": 59654,
   "status": "passed"
 });
 formatter.match({
@@ -3942,7 +9765,7 @@ formatter.match({
   "location": "StepDefinitions.addUser(String)"
 });
 formatter.result({
-  "duration": 2326121,
+  "duration": 1509530,
   "status": "passed"
 });
 formatter.match({
@@ -3955,7 +9778,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedUser(String)"
 });
 formatter.result({
-  "duration": 68345,
+  "duration": 34371,
   "status": "passed"
 });
 formatter.match({
@@ -3972,7 +9795,7 @@ formatter.match({
   "location": "StepDefinitions.addBook(String,int)"
 });
 formatter.result({
-  "duration": 5348340,
+  "duration": 6766615,
   "status": "passed"
 });
 formatter.match({
@@ -3985,7 +9808,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedBook(int)"
 });
 formatter.result({
-  "duration": 65185,
+  "duration": 40297,
   "status": "passed"
 });
 formatter.match({
@@ -4002,7 +9825,7 @@ formatter.match({
   "location": "StepDefinitions.addCopy(int,int)"
 });
 formatter.result({
-  "duration": 4360291,
+  "duration": 1499653,
   "status": "passed"
 });
 formatter.match({
@@ -4019,7 +9842,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedCopy(int,int)"
 });
 formatter.result({
-  "duration": 109432,
+  "duration": 86519,
   "status": "passed"
 });
 formatter.match({
@@ -4036,7 +9859,7 @@ formatter.match({
   "location": "StepDefinitions.addCopy(int,int)"
 });
 formatter.result({
-  "duration": 8064781,
+  "duration": 1320691,
   "status": "passed"
 });
 formatter.match({
@@ -4053,7 +9876,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedCopy(int,int)"
 });
 formatter.result({
-  "duration": 107061,
+  "duration": 41086,
   "status": "passed"
 });
 formatter.match({
@@ -4070,7 +9893,7 @@ formatter.match({
   "location": "StepDefinitions.removeCopy(int,int)"
 });
 formatter.result({
-  "duration": 7855793,
+  "duration": 1426962,
   "status": "passed"
 });
 formatter.match({
@@ -4087,7 +9910,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyRemovedCopy(int,int)"
 });
 formatter.result({
-  "duration": 188444,
+  "duration": 59259,
   "status": "passed"
 });
 formatter.match({
@@ -4108,7 +9931,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 10048778,
+  "duration": 5082072,
   "status": "passed"
 });
 formatter.match({
@@ -4129,7 +9952,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 116148,
+  "duration": 71506,
   "status": "passed"
 });
 formatter.match({
@@ -4146,7 +9969,7 @@ formatter.match({
   "location": "StepDefinitions.addCopy(int,int)"
 });
 formatter.result({
-  "duration": 4544389,
+  "duration": 1589333,
   "status": "passed"
 });
 formatter.match({
@@ -4163,7 +9986,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedCopy(int,int)"
 });
 formatter.result({
-  "duration": 96000,
+  "duration": 35951,
   "status": "passed"
 });
 formatter.match({
@@ -4180,7 +10003,7 @@ formatter.match({
   "location": "StepDefinitions.removeCopy(int,int)"
 });
 formatter.result({
-  "duration": 8278904,
+  "duration": 1736296,
   "status": "passed"
 });
 formatter.match({
@@ -4197,7 +10020,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyRemovedCopy(int,int)"
 });
 formatter.result({
-  "duration": 97580,
+  "duration": 37925,
   "status": "passed"
 });
 formatter.match({
@@ -4218,7 +10041,7 @@ formatter.match({
   "location": "StepDefinitions.returnBook(String,int,int)"
 });
 formatter.result({
-  "duration": 779456,
+  "duration": 482765,
   "status": "passed"
 });
 formatter.match({
@@ -4239,7 +10062,7 @@ formatter.match({
   "location": "StepDefinitions.successfulReturn(int,int,String)"
 });
 formatter.result({
-  "duration": 127605,
+  "duration": 36346,
   "status": "passed"
 });
 formatter.match({
@@ -4260,7 +10083,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 5839795,
+  "duration": 3952196,
   "status": "passed"
 });
 formatter.match({
@@ -4281,7 +10104,7 @@ formatter.match({
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
 });
 formatter.result({
-  "duration": 135902,
+  "duration": 51753,
   "status": "passed"
 });
 formatter.match({
@@ -4298,7 +10121,7 @@ formatter.match({
   "location": "StepDefinitions.removeCopy(int,int)"
 });
 formatter.result({
-  "duration": 6805720,
+  "duration": 1473185,
   "status": "passed"
 });
 formatter.match({
@@ -4315,7 +10138,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyRemovedCopy(int,int)"
 });
 formatter.result({
-  "duration": 81382,
+  "duration": 49382,
   "status": "passed"
 });
 formatter.match({
@@ -4332,7 +10155,7 @@ formatter.match({
   "location": "StepDefinitions.removeCopy(int,int)"
 });
 formatter.result({
-  "duration": 9220335,
+  "duration": 1613037,
   "status": "passed"
 });
 formatter.match({
@@ -4349,7 +10172,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyRemovedCopy(int,int)"
 });
 formatter.result({
-  "duration": 189630,
+  "duration": 49382,
   "status": "passed"
 });
 formatter.match({
@@ -4366,7 +10189,7 @@ formatter.match({
   "location": "StepDefinitions.removeBook(String,int)"
 });
 formatter.result({
-  "duration": 6883152,
+  "duration": 2255801,
   "status": "passed"
 });
 formatter.match({
@@ -4379,7 +10202,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyRemovedBook(int)"
 });
 formatter.result({
-  "duration": 80197,
+  "duration": 47407,
   "status": "passed"
 });
 formatter.match({
@@ -4396,7 +10219,7 @@ formatter.match({
   "location": "StepDefinitions.removeCopy(int,int)"
 });
 formatter.result({
-  "duration": 7456386,
+  "duration": 1266172,
   "status": "passed"
 });
 formatter.match({
@@ -4413,7 +10236,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyRemovedCopy(int,int)"
 });
 formatter.result({
-  "duration": 79407,
+  "duration": 43457,
   "status": "passed"
 });
 formatter.match({
@@ -4426,7 +10249,7 @@ formatter.match({
   "location": "StepDefinitions.removeUser(String)"
 });
 formatter.result({
-  "duration": 5349919,
+  "duration": 1767900,
   "status": "passed"
 });
 formatter.match({
@@ -4439,7 +10262,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyRemovedUser(String)"
 });
 formatter.result({
-  "duration": 64395,
+  "duration": 41481,
   "status": "passed"
 });
 formatter.match({
@@ -4460,7 +10283,7 @@ formatter.match({
   "location": "StepDefinitions.returnBook(String,int,int)"
 });
 formatter.result({
-  "duration": 761283,
+  "duration": 404938,
   "status": "passed"
 });
 formatter.match({
@@ -4481,7 +10304,7 @@ formatter.match({
   "location": "StepDefinitions.successfulReturn(int,int,String)"
 });
 formatter.result({
-  "duration": 124839,
+  "duration": 29235,
   "status": "passed"
 });
 formatter.match({
@@ -4494,7 +10317,7 @@ formatter.match({
   "location": "StepDefinitions.removeUser(String)"
 });
 formatter.result({
-  "duration": 6087104,
+  "duration": 1566420,
   "status": "passed"
 });
 formatter.match({
@@ -4507,7 +10330,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyRemovedUser(String)"
 });
 formatter.result({
-  "duration": 43061,
+  "duration": 22913,
   "status": "passed"
 });
 formatter.match({
@@ -4524,7 +10347,7 @@ formatter.match({
   "location": "StepDefinitions.removeCopy(int,int)"
 });
 formatter.result({
-  "duration": 5557722,
+  "duration": 1478320,
   "status": "passed"
 });
 formatter.match({
@@ -4541,7 +10364,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyRemovedCopy(int,int)"
 });
 formatter.result({
-  "duration": 105876,
+  "duration": 41481,
   "status": "passed"
 });
 formatter.match({
@@ -4558,7 +10381,7 @@ formatter.match({
   "location": "StepDefinitions.removeBook(String,int)"
 });
 formatter.result({
-  "duration": 1880886,
+  "duration": 1421432,
   "status": "passed"
 });
 formatter.match({
@@ -4571,7 +10394,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyRemovedBook(int)"
 });
 formatter.result({
-  "duration": 64790,
+  "duration": 41877,
   "status": "passed"
 });
 formatter.match({
@@ -4588,7 +10411,7 @@ formatter.match({
   "location": "StepDefinitions.removeBook(String,int)"
 });
 formatter.result({
-  "duration": 1272097,
+  "duration": 412049,
   "status": "passed"
 });
 formatter.match({
@@ -4601,31 +10424,31 @@ formatter.match({
   "location": "StepDefinitions.successfullyRemovedBook(int)"
 });
 formatter.result({
-  "duration": 64000,
+  "duration": 24889,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3045923,
+  "duration": 4885726,
   "status": "passed"
 });
 formatter.after({
-  "duration": 46222,
+  "duration": 29234,
   "status": "passed"
 });
-formatter.uri("main/java/com/comp4004/test/cucumber/ValidPaths.feature");
+formatter.uri("main/java/com/comp4004/test/cucumber/UserTestCases.feature");
 formatter.feature({
   "line": 1,
-  "name": "Valid Paths",
+  "name": "User Test Cases",
   "description": "",
-  "id": "valid-paths",
+  "id": "user-test-cases",
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 64395,
+  "duration": 41481,
   "status": "passed"
 });
 formatter.before({
-  "duration": 4302217,
+  "duration": 4148936,
   "status": "passed"
 });
 formatter.background({
@@ -4644,14 +10467,14 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 2903700,
+  "duration": 2892641,
   "status": "passed"
 });
 formatter.scenario({
   "line": 6,
   "name": "Tv1 Add User",
   "description": "",
-  "id": "valid-paths;tv1-add-user",
+  "id": "user-test-cases;tv1-add-user",
   "type": "scenario",
   "keyword": "Scenario"
 });
@@ -4675,7 +10498,7 @@ formatter.match({
   "location": "StepDefinitions.addUser(String)"
 });
 formatter.result({
-  "duration": 2021134,
+  "duration": 1608691,
   "status": "passed"
 });
 formatter.match({
@@ -4688,23 +10511,23 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedUser(String)"
 });
 formatter.result({
-  "duration": 54913,
+  "duration": 35160,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3015108,
+  "duration": 3106764,
   "status": "passed"
 });
 formatter.after({
-  "duration": 32000,
+  "duration": 25284,
   "status": "passed"
 });
 formatter.before({
-  "duration": 32395,
+  "duration": 28049,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3823798,
+  "duration": 4803159,
   "status": "passed"
 });
 formatter.background({
@@ -4723,14 +10546,14 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 2996144,
+  "duration": 2888295,
   "status": "passed"
 });
 formatter.scenario({
   "line": 10,
   "name": "Tv2 Add User",
   "description": "",
-  "id": "valid-paths;tv2-add-user",
+  "id": "user-test-cases;tv2-add-user",
   "type": "scenario",
   "keyword": "Scenario"
 });
@@ -4769,7 +10592,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 1566813,
+  "duration": 1982814,
   "status": "passed"
 });
 formatter.match({
@@ -4782,7 +10605,7 @@ formatter.match({
   "location": "StepDefinitions.removeUser(String)"
 });
 formatter.result({
-  "duration": 6643350,
+  "duration": 6053529,
   "status": "passed"
 });
 formatter.match({
@@ -4795,7 +10618,7 @@ formatter.match({
   "location": "StepDefinitions.successfullyRemovedUser(String)"
 });
 formatter.result({
-  "duration": 55703,
+  "duration": 32790,
   "status": "passed"
 });
 formatter.match({
@@ -4808,7 +10631,7 @@ formatter.match({
   "location": "StepDefinitions.addUser(String)"
 });
 formatter.result({
-  "duration": 5079698,
+  "duration": 1363753,
   "status": "passed"
 });
 formatter.match({
@@ -4821,23 +10644,23 @@ formatter.match({
   "location": "StepDefinitions.successfullyAddedUser(String)"
 });
 formatter.result({
-  "duration": 55308,
+  "duration": 26074,
   "status": "passed"
 });
 formatter.after({
-  "duration": 2994959,
+  "duration": 2931357,
   "status": "passed"
 });
 formatter.after({
-  "duration": 31605,
+  "duration": 40692,
   "status": "passed"
 });
 formatter.before({
-  "duration": 118914,
+  "duration": 25679,
   "status": "passed"
 });
 formatter.before({
-  "duration": 4028440,
+  "duration": 3452048,
   "status": "passed"
 });
 formatter.background({
@@ -4856,1859 +10679,29 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 8276138,
+  "duration": 2603851,
   "status": "passed"
 });
 formatter.scenario({
   "line": 19,
-  "name": "Tv3 Add Title",
+  "name": "Tv11 Remove User",
   "description": "",
-  "id": "valid-paths;tv3-add-title",
+  "id": "user-test-cases;tv11-remove-user",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
   "line": 20,
-  "name": "Attempting to add book \"title\" with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 21,
-  "name": "System successfully added book: 12345678",
-  "keyword": "Then "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "title",
-      "offset": 24
-    },
-    {
-      "val": "12345678",
-      "offset": 42
-    }
-  ],
-  "location": "StepDefinitions.addBook(String,int)"
-});
-formatter.result({
-  "duration": 9460137,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "12345678",
-      "offset": 32
-    }
-  ],
-  "location": "StepDefinitions.successfullyAddedBook(int)"
-});
-formatter.result({
-  "duration": 156840,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 2857873,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 90074,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 111012,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 18905657,
-  "status": "passed"
-});
-formatter.background({
-  "line": 3,
-  "name": "",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 4,
-  "name": "that each test should be independent from one another",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "StepDefinitions.background()"
-});
-formatter.result({
-  "duration": 9295001,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 23,
-  "name": "Tv4 Add Title",
-  "description": "",
-  "id": "valid-paths;tv4-add-title",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 24,
-  "name": "Book \"title\" with ISBN 12345678 exists",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 26,
-  "name": "Attempting to remove book \"title\" with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 27,
-  "name": "System successfully removed book: 12345678",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 29,
-  "name": "Attempting to add book \"title\" with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 30,
-  "name": "System successfully added book: 12345678",
-  "keyword": "Then "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "title",
-      "offset": 6
-    },
-    {
-      "val": "12345678",
-      "offset": 23
-    }
-  ],
-  "location": "StepDefinitions.bookExists(String,int)"
-});
-formatter.result({
-  "duration": 9909717,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "title",
-      "offset": 27
-    },
-    {
-      "val": "12345678",
-      "offset": 45
-    }
-  ],
-  "location": "StepDefinitions.removeBook(String,int)"
-});
-formatter.result({
-  "duration": 1002270,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "12345678",
-      "offset": 34
-    }
-  ],
-  "location": "StepDefinitions.successfullyRemovedBook(int)"
-});
-formatter.result({
-  "duration": 107852,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "title",
-      "offset": 24
-    },
-    {
-      "val": "12345678",
-      "offset": 42
-    }
-  ],
-  "location": "StepDefinitions.addBook(String,int)"
-});
-formatter.result({
-  "duration": 9711791,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "12345678",
-      "offset": 32
-    }
-  ],
-  "location": "StepDefinitions.successfullyAddedBook(int)"
-});
-formatter.result({
-  "duration": 77432,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 3093725,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 62420,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 41481,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 5776586,
-  "status": "passed"
-});
-formatter.background({
-  "line": 3,
-  "name": "",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 4,
-  "name": "that each test should be independent from one another",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "StepDefinitions.background()"
-});
-formatter.result({
-  "duration": 3090564,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 32,
-  "name": "Tv5 Add Item",
-  "description": "",
-  "id": "valid-paths;tv5-add-item",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 33,
-  "name": "Book \"title\" with ISBN 12345678 exists",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 35,
-  "name": "Attempting to add copy 1 to book with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 36,
-  "name": "System successfully added copy 1 to book with ISBN: 12345678",
-  "keyword": "Then "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "title",
-      "offset": 6
-    },
-    {
-      "val": "12345678",
-      "offset": 23
-    }
-  ],
-  "location": "StepDefinitions.bookExists(String,int)"
-});
-formatter.result({
-  "duration": 14330847,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 23
-    },
-    {
-      "val": "12345678",
-      "offset": 44
-    }
-  ],
-  "location": "StepDefinitions.addCopy(int,int)"
-});
-formatter.result({
-  "duration": 5714167,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 31
-    },
-    {
-      "val": "12345678",
-      "offset": 52
-    }
-  ],
-  "location": "StepDefinitions.successfullyAddedCopy(int,int)"
-});
-formatter.result({
-  "duration": 85333,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 3548441,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 33185,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 227160,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 8787743,
-  "status": "passed"
-});
-formatter.background({
-  "line": 3,
-  "name": "",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 4,
-  "name": "that each test should be independent from one another",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "StepDefinitions.background()"
-});
-formatter.result({
-  "duration": 3479700,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 38,
-  "name": "Tv6 Add Item",
-  "description": "",
-  "id": "valid-paths;tv6-add-item",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 39,
-  "name": "Book \"title\" with ISBN 12345678 exists",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 41,
-  "name": "Attempting to add copy 1 to book with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 42,
-  "name": "System successfully added copy 1 to book with ISBN: 12345678",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 44,
-  "name": "Attempting to add copy 2 to book with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 45,
-  "name": "System successfully added copy 2 to book with ISBN: 12345678",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 47,
-  "name": "Attempting to add copy 3 to book with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 48,
-  "name": "System successfully added copy 3 to book with ISBN: 12345678",
-  "keyword": "Then "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "title",
-      "offset": 6
-    },
-    {
-      "val": "12345678",
-      "offset": 23
-    }
-  ],
-  "location": "StepDefinitions.bookExists(String,int)"
-});
-formatter.result({
-  "duration": 2090665,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 23
-    },
-    {
-      "val": "12345678",
-      "offset": 44
-    }
-  ],
-  "location": "StepDefinitions.addCopy(int,int)"
-});
-formatter.result({
-  "duration": 1624097,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 31
-    },
-    {
-      "val": "12345678",
-      "offset": 52
-    }
-  ],
-  "location": "StepDefinitions.successfullyAddedCopy(int,int)"
-});
-formatter.result({
-  "duration": 90864,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 23
-    },
-    {
-      "val": "12345678",
-      "offset": 44
-    }
-  ],
-  "location": "StepDefinitions.addCopy(int,int)"
-});
-formatter.result({
-  "duration": 1565232,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 31
-    },
-    {
-      "val": "12345678",
-      "offset": 52
-    }
-  ],
-  "location": "StepDefinitions.successfullyAddedCopy(int,int)"
-});
-formatter.result({
-  "duration": 67555,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "3",
-      "offset": 23
-    },
-    {
-      "val": "12345678",
-      "offset": 44
-    }
-  ],
-  "location": "StepDefinitions.addCopy(int,int)"
-});
-formatter.result({
-  "duration": 6095400,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "3",
-      "offset": 31
-    },
-    {
-      "val": "12345678",
-      "offset": 52
-    }
-  ],
-  "location": "StepDefinitions.successfullyAddedCopy(int,int)"
-});
-formatter.result({
-  "duration": 67556,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 2413430,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 32000,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 177382,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 3557526,
-  "status": "passed"
-});
-formatter.background({
-  "line": 3,
-  "name": "",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 4,
-  "name": "that each test should be independent from one another",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "StepDefinitions.background()"
-});
-formatter.result({
-  "duration": 2769775,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 50,
-  "name": "Tv7 Add Item",
-  "description": "",
-  "id": "valid-paths;tv7-add-item",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 51,
-  "name": "Book \"title\" with ISBN 12345678 exists",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 53,
-  "name": "Attempting to add copy 1 to book with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 54,
-  "name": "System successfully added copy 1 to book with ISBN: 12345678",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 55,
-  "name": "Attempting to add copy 2 to book with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 56,
-  "name": "System successfully added copy 2 to book with ISBN: 12345678",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 57,
-  "name": "Attempting to add copy 3 to book with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 58,
-  "name": "System successfully added copy 3 to book with ISBN: 12345678",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 60,
-  "name": "Attempting to remove copy 2 of book with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 61,
-  "name": "System successfully removed copy 2 of book with ISBN: 12345678",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 63,
-  "name": "Attempting to add copy 2 to book with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 64,
-  "name": "System successfully added copy 2 to book with ISBN: 12345678",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 65,
-  "name": "Attempting to add copy 4 to book with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 66,
-  "name": "System successfully added copy 4 to book with ISBN: 12345678",
-  "keyword": "Then "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "title",
-      "offset": 6
-    },
-    {
-      "val": "12345678",
-      "offset": 23
-    }
-  ],
-  "location": "StepDefinitions.bookExists(String,int)"
-});
-formatter.result({
-  "duration": 1419850,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 23
-    },
-    {
-      "val": "12345678",
-      "offset": 44
-    }
-  ],
-  "location": "StepDefinitions.addCopy(int,int)"
-});
-formatter.result({
-  "duration": 1501233,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 31
-    },
-    {
-      "val": "12345678",
-      "offset": 52
-    }
-  ],
-  "location": "StepDefinitions.successfullyAddedCopy(int,int)"
-});
-formatter.result({
-  "duration": 85334,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 23
-    },
-    {
-      "val": "12345678",
-      "offset": 44
-    }
-  ],
-  "location": "StepDefinitions.addCopy(int,int)"
-});
-formatter.result({
-  "duration": 2000985,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 31
-    },
-    {
-      "val": "12345678",
-      "offset": 52
-    }
-  ],
-  "location": "StepDefinitions.successfullyAddedCopy(int,int)"
-});
-formatter.result({
-  "duration": 88493,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "3",
-      "offset": 23
-    },
-    {
-      "val": "12345678",
-      "offset": 44
-    }
-  ],
-  "location": "StepDefinitions.addCopy(int,int)"
-});
-formatter.result({
-  "duration": 1751702,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "3",
-      "offset": 31
-    },
-    {
-      "val": "12345678",
-      "offset": 52
-    }
-  ],
-  "location": "StepDefinitions.successfullyAddedCopy(int,int)"
-});
-formatter.result({
-  "duration": 91654,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 26
-    },
-    {
-      "val": "12345678",
-      "offset": 47
-    }
-  ],
-  "location": "StepDefinitions.removeCopy(int,int)"
-});
-formatter.result({
-  "duration": 4065576,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 33
-    },
-    {
-      "val": "12345678",
-      "offset": 54
-    }
-  ],
-  "location": "StepDefinitions.successfullyRemovedCopy(int,int)"
-});
-formatter.result({
-  "duration": 96790,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 23
-    },
-    {
-      "val": "12345678",
-      "offset": 44
-    }
-  ],
-  "location": "StepDefinitions.addCopy(int,int)"
-});
-formatter.result({
-  "duration": 2606219,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 31
-    },
-    {
-      "val": "12345678",
-      "offset": 52
-    }
-  ],
-  "location": "StepDefinitions.successfullyAddedCopy(int,int)"
-});
-formatter.result({
-  "duration": 64790,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "4",
-      "offset": 23
-    },
-    {
-      "val": "12345678",
-      "offset": 44
-    }
-  ],
-  "location": "StepDefinitions.addCopy(int,int)"
-});
-formatter.result({
-  "duration": 5206512,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "4",
-      "offset": 31
-    },
-    {
-      "val": "12345678",
-      "offset": 52
-    }
-  ],
-  "location": "StepDefinitions.successfullyAddedCopy(int,int)"
-});
-formatter.result({
-  "duration": 68346,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 2661923,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 24889,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 1152394,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 3743205,
-  "status": "passed"
-});
-formatter.background({
-  "line": 3,
-  "name": "",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 4,
-  "name": "that each test should be independent from one another",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "StepDefinitions.background()"
-});
-formatter.result({
-  "duration": 2646121,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 68,
-  "name": "Tv8 Borrow",
-  "description": "",
-  "id": "valid-paths;tv8-borrow",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 69,
   "name": "User \"user1\" exists",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 70,
-  "name": "User \"user2\" exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 71,
-  "name": "Book \"title1\" with ISBN 12345678 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 72,
-  "name": "Book \"title2\" with ISBN 87654321 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 73,
-  "name": "Copy 1 of book \"title1\" with ISBN 12345678 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 74,
-  "name": "Copy 2 of book \"title1\" with ISBN 12345678 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 75,
-  "name": "Copy 3 of book \"title1\" with ISBN 12345678 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 76,
-  "name": "Copy 1 of book \"title2\" with ISBN 87654321 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 77,
-  "name": "Copy 2 of book \"title2\" with ISBN 87654321 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 78,
-  "name": "Copy 3 of book \"title2\" with ISBN 87654321 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 80,
-  "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 81,
-  "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user1\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 82,
-  "name": "User \"user1\" attempts to borrow copy 3 of book with ISBN: 87654321",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 83,
-  "name": "System successfully borrowed copy 3 of book with ISBN 87654321 to user \"user1\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 85,
-  "name": "User \"user2\" attempts to borrow copy 2 of book with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 86,
-  "name": "System successfully borrowed copy 2 of book with ISBN 12345678 to user \"user2\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 87,
-  "name": "User \"user2\" attempts to borrow copy 2 of book with ISBN: 87654321",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 88,
-  "name": "System successfully borrowed copy 2 of book with ISBN 87654321 to user \"user2\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user1",
-      "offset": 6
-    }
-  ],
-  "location": "StepDefinitions.userExists(String)"
-});
-formatter.result({
-  "duration": 2212343,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user2",
-      "offset": 6
-    }
-  ],
-  "location": "StepDefinitions.userExists(String)"
-});
-formatter.result({
-  "duration": 1594863,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "title1",
-      "offset": 6
-    },
-    {
-      "val": "12345678",
-      "offset": 24
-    }
-  ],
-  "location": "StepDefinitions.bookExists(String,int)"
-});
-formatter.result({
-  "duration": 1400097,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "title2",
-      "offset": 6
-    },
-    {
-      "val": "87654321",
-      "offset": 24
-    }
-  ],
-  "location": "StepDefinitions.bookExists(String,int)"
-});
-formatter.result({
-  "duration": 5999795,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 5
-    },
-    {
-      "val": "title1",
-      "offset": 16
-    },
-    {
-      "val": "12345678",
-      "offset": 34
-    }
-  ],
-  "location": "StepDefinitions.copyExists(int,String,int)"
-});
-formatter.result({
-  "duration": 3966415,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 5
-    },
-    {
-      "val": "title1",
-      "offset": 16
-    },
-    {
-      "val": "12345678",
-      "offset": 34
-    }
-  ],
-  "location": "StepDefinitions.copyExists(int,String,int)"
-});
-formatter.result({
-  "duration": 4372933,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "3",
-      "offset": 5
-    },
-    {
-      "val": "title1",
-      "offset": 16
-    },
-    {
-      "val": "12345678",
-      "offset": 34
-    }
-  ],
-  "location": "StepDefinitions.copyExists(int,String,int)"
-});
-formatter.result({
-  "duration": 3987749,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 5
-    },
-    {
-      "val": "title2",
-      "offset": 16
-    },
-    {
-      "val": "87654321",
-      "offset": 34
-    }
-  ],
-  "location": "StepDefinitions.copyExists(int,String,int)"
-});
-formatter.result({
-  "duration": 4113378,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 5
-    },
-    {
-      "val": "title2",
-      "offset": 16
-    },
-    {
-      "val": "87654321",
-      "offset": 34
-    }
-  ],
-  "location": "StepDefinitions.copyExists(int,String,int)"
-});
-formatter.result({
-  "duration": 4712685,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "3",
-      "offset": 5
-    },
-    {
-      "val": "title2",
-      "offset": 16
-    },
-    {
-      "val": "87654321",
-      "offset": 34
-    }
-  ],
-  "location": "StepDefinitions.copyExists(int,String,int)"
-});
-formatter.result({
-  "duration": 4128786,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user1",
-      "offset": 6
-    },
-    {
-      "val": "1",
-      "offset": 37
-    },
-    {
-      "val": "12345678",
-      "offset": 58
-    }
-  ],
-  "location": "StepDefinitions.borrow(String,int,int)"
-});
-formatter.result({
-  "duration": 3948637,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 34
-    },
-    {
-      "val": "12345678",
-      "offset": 54
-    },
-    {
-      "val": "user1",
-      "offset": 72
-    }
-  ],
-  "location": "StepDefinitions.successfulBorrow(int,int,String)"
-});
-formatter.result({
-  "duration": 331852,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user1",
-      "offset": 6
-    },
-    {
-      "val": "3",
-      "offset": 37
-    },
-    {
-      "val": "87654321",
-      "offset": 58
-    }
-  ],
-  "location": "StepDefinitions.borrow(String,int,int)"
-});
-formatter.result({
-  "duration": 4100735,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "3",
-      "offset": 34
-    },
-    {
-      "val": "87654321",
-      "offset": 54
-    },
-    {
-      "val": "user1",
-      "offset": 72
-    }
-  ],
-  "location": "StepDefinitions.successfulBorrow(int,int,String)"
-});
-formatter.result({
-  "duration": 92049,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user2",
-      "offset": 6
-    },
-    {
-      "val": "2",
-      "offset": 37
-    },
-    {
-      "val": "12345678",
-      "offset": 58
-    }
-  ],
-  "location": "StepDefinitions.borrow(String,int,int)"
-});
-formatter.result({
-  "duration": 4711500,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 34
-    },
-    {
-      "val": "12345678",
-      "offset": 54
-    },
-    {
-      "val": "user2",
-      "offset": 72
-    }
-  ],
-  "location": "StepDefinitions.successfulBorrow(int,int,String)"
-});
-formatter.result({
-  "duration": 70716,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user2",
-      "offset": 6
-    },
-    {
-      "val": "2",
-      "offset": 37
-    },
-    {
-      "val": "87654321",
-      "offset": 58
-    }
-  ],
-  "location": "StepDefinitions.borrow(String,int,int)"
-});
-formatter.result({
-  "duration": 3914662,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 34
-    },
-    {
-      "val": "87654321",
-      "offset": 54
-    },
-    {
-      "val": "user2",
-      "offset": 72
-    }
-  ],
-  "location": "StepDefinitions.successfulBorrow(int,int,String)"
-});
-formatter.result({
-  "duration": 200691,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 2383010,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 22123,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 36346,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 5127895,
-  "status": "passed"
-});
-formatter.background({
-  "line": 3,
-  "name": "",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 4,
-  "name": "that each test should be independent from one another",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "StepDefinitions.background()"
-});
-formatter.result({
-  "duration": 3544489,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 90,
-  "name": "Tv9 Remove Item",
-  "description": "",
-  "id": "valid-paths;tv9-remove-item",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 91,
-  "name": "Book \"title1\" with ISBN 12345678 exists",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 92,
-  "name": "Book \"title2\" with ISBN 87654321 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 93,
-  "name": "Copy 1 of book \"title1\" with ISBN 12345678 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 94,
-  "name": "Copy 2 of book \"title1\" with ISBN 12345678 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 95,
-  "name": "Copy 3 of book \"title1\" with ISBN 12345678 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 96,
-  "name": "Copy 1 of book \"title2\" with ISBN 87654321 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 97,
-  "name": "Copy 2 of book \"title2\" with ISBN 87654321 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 98,
-  "name": "Copy 3 of book \"title2\" with ISBN 87654321 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 100,
-  "name": "Attempting to remove copy 2 of book with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 101,
-  "name": "System successfully removed copy 2 of book with ISBN: 12345678",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 103,
-  "name": "Attempting to remove copy 1 of book with ISBN: 87654321",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 104,
-  "name": "System successfully removed copy 1 of book with ISBN: 87654321",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 105,
-  "name": "Attempting to remove copy 3 of book with ISBN: 87654321",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 106,
-  "name": "System successfully removed copy 3 of book with ISBN: 87654321",
-  "keyword": "Then "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "title1",
-      "offset": 6
-    },
-    {
-      "val": "12345678",
-      "offset": 24
-    }
-  ],
-  "location": "StepDefinitions.bookExists(String,int)"
-});
-formatter.result({
-  "duration": 12143393,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "title2",
-      "offset": 6
-    },
-    {
-      "val": "87654321",
-      "offset": 24
-    }
-  ],
-  "location": "StepDefinitions.bookExists(String,int)"
-});
-formatter.result({
-  "duration": 1773430,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 5
-    },
-    {
-      "val": "title1",
-      "offset": 16
-    },
-    {
-      "val": "12345678",
-      "offset": 34
-    }
-  ],
-  "location": "StepDefinitions.copyExists(int,String,int)"
-});
-formatter.result({
-  "duration": 4250069,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 5
-    },
-    {
-      "val": "title1",
-      "offset": 16
-    },
-    {
-      "val": "12345678",
-      "offset": 34
-    }
-  ],
-  "location": "StepDefinitions.copyExists(int,String,int)"
-});
-formatter.result({
-  "duration": 5628833,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "3",
-      "offset": 5
-    },
-    {
-      "val": "title1",
-      "offset": 16
-    },
-    {
-      "val": "12345678",
-      "offset": 34
-    }
-  ],
-  "location": "StepDefinitions.copyExists(int,String,int)"
-});
-formatter.result({
-  "duration": 1815306,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 5
-    },
-    {
-      "val": "title2",
-      "offset": 16
-    },
-    {
-      "val": "87654321",
-      "offset": 34
-    }
-  ],
-  "location": "StepDefinitions.copyExists(int,String,int)"
-});
-formatter.result({
-  "duration": 2207997,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 5
-    },
-    {
-      "val": "title2",
-      "offset": 16
-    },
-    {
-      "val": "87654321",
-      "offset": 34
-    }
-  ],
-  "location": "StepDefinitions.copyExists(int,String,int)"
-});
-formatter.result({
-  "duration": 1554961,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "3",
-      "offset": 5
-    },
-    {
-      "val": "title2",
-      "offset": 16
-    },
-    {
-      "val": "87654321",
-      "offset": 34
-    }
-  ],
-  "location": "StepDefinitions.copyExists(int,String,int)"
-});
-formatter.result({
-  "duration": 1555751,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 26
-    },
-    {
-      "val": "12345678",
-      "offset": 47
-    }
-  ],
-  "location": "StepDefinitions.removeCopy(int,int)"
-});
-formatter.result({
-  "duration": 8264682,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 33
-    },
-    {
-      "val": "12345678",
-      "offset": 54
-    }
-  ],
-  "location": "StepDefinitions.successfullyRemovedCopy(int,int)"
-});
-formatter.result({
-  "duration": 78223,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 26
-    },
-    {
-      "val": "87654321",
-      "offset": 47
-    }
-  ],
-  "location": "StepDefinitions.removeCopy(int,int)"
-});
-formatter.result({
-  "duration": 6135301,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 33
-    },
-    {
-      "val": "87654321",
-      "offset": 54
-    }
-  ],
-  "location": "StepDefinitions.successfullyRemovedCopy(int,int)"
-});
-formatter.result({
-  "duration": 164346,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "3",
-      "offset": 26
-    },
-    {
-      "val": "87654321",
-      "offset": 47
-    }
-  ],
-  "location": "StepDefinitions.removeCopy(int,int)"
-});
-formatter.result({
-  "duration": 5403648,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "3",
-      "offset": 33
-    },
-    {
-      "val": "87654321",
-      "offset": 54
-    }
-  ],
-  "location": "StepDefinitions.successfullyRemovedCopy(int,int)"
-});
-formatter.result({
-  "duration": 74272,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 3139947,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 23704,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 128000,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 3942711,
-  "status": "passed"
-});
-formatter.background({
-  "line": 3,
-  "name": "",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 4,
-  "name": "that each test should be independent from one another",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "StepDefinitions.background()"
-});
-formatter.result({
-  "duration": 3201576,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 108,
-  "name": "Tv10 Remove title. No copies involved",
-  "description": "",
-  "id": "valid-paths;tv10-remove-title.-no-copies-involved",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 109,
-  "name": "Book \"title1\" with ISBN 12345678 exists",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 111,
-  "name": "Attempting to remove book \"title1\" with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 112,
-  "name": "System successfully removed book: 12345678",
-  "keyword": "Then "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "title1",
-      "offset": 6
-    },
-    {
-      "val": "12345678",
-      "offset": 24
-    }
-  ],
-  "location": "StepDefinitions.bookExists(String,int)"
-});
-formatter.result({
-  "duration": 2216689,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "title1",
-      "offset": 27
-    },
-    {
-      "val": "12345678",
-      "offset": 46
-    }
-  ],
-  "location": "StepDefinitions.removeBook(String,int)"
-});
-formatter.result({
-  "duration": 673184,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "12345678",
-      "offset": 34
-    }
-  ],
-  "location": "StepDefinitions.successfullyRemovedBook(int)"
-});
-formatter.result({
-  "duration": 59259,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 3068441,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 43062,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 96000,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 4491452,
-  "status": "passed"
-});
-formatter.background({
-  "line": 3,
-  "name": "",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 4,
-  "name": "that each test should be independent from one another",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "StepDefinitions.background()"
-});
-formatter.result({
-  "duration": 3079503,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 114,
-  "name": "Tv11 Remove User",
-  "description": "",
-  "id": "valid-paths;tv11-remove-user",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 115,
-  "name": "User \"user1\" exists",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 117,
+  "line": 22,
   "name": "Attempting to remove user: \"user1\"",
   "keyword": "When "
 });
 formatter.step({
-  "line": 118,
+  "line": 23,
   "name": "System successfully removed user: \"user1\"",
   "keyword": "Then "
 });
@@ -6722,7 +10715,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 4471698,
+  "duration": 5755257,
   "status": "passed"
 });
 formatter.match({
@@ -6735,7 +10728,7 @@ formatter.match({
   "location": "StepDefinitions.removeUser(String)"
 });
 formatter.result({
-  "duration": 3202367,
+  "duration": 1788444,
   "status": "passed"
 });
 formatter.match({
@@ -6748,23 +10741,23 @@ formatter.match({
   "location": "StepDefinitions.successfullyRemovedUser(String)"
 });
 formatter.result({
-  "duration": 43062,
+  "duration": 36346,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3191305,
+  "duration": 4564541,
   "status": "passed"
 });
 formatter.after({
-  "duration": 48592,
+  "duration": 25679,
   "status": "passed"
 });
 formatter.before({
-  "duration": 30025,
+  "duration": 31605,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3866465,
+  "duration": 3708048,
   "status": "passed"
 });
 formatter.background({
@@ -6783,70 +10776,30 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 6716437,
+  "duration": 3172739,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 120,
-  "name": "Tv12 Remove Title",
+  "line": 25,
+  "name": "Ti1 Add Redundant User",
   "description": "",
-  "id": "valid-paths;tv12-remove-title",
+  "id": "user-test-cases;ti1-add-redundant-user",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
-  "line": 121,
+  "line": 26,
   "name": "User \"user1\" exists",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 122,
-  "name": "Book \"title1\" with ISBN 12345678 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 123,
-  "name": "Copy 1 of book \"title1\" with ISBN 12345678 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 125,
-  "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
+  "line": 28,
+  "name": "Attempting to create user: \"user1\"",
   "keyword": "When "
 });
 formatter.step({
-  "line": 126,
-  "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user1\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 128,
-  "name": "User \"user1\" attempts to return copy 1 of book with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 129,
-  "name": "System successfully returned copy 1 of book with ISBN 12345678 from user \"user1\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 131,
-  "name": "Attempting to remove copy 1 of book with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 132,
-  "name": "System successfully removed copy 1 of book with ISBN: 12345678",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 134,
-  "name": "Attempting to remove book \"title1\" with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 135,
-  "name": "System successfully removed book: 12345678",
+  "line": 29,
+  "name": "System failed to add user: \"user1\" because it already exists",
   "keyword": "Then "
 });
 formatter.match({
@@ -6859,84 +10812,96 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 1771454,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "title1",
-      "offset": 6
-    },
-    {
-      "val": "12345678",
-      "offset": 24
-    }
-  ],
-  "location": "StepDefinitions.bookExists(String,int)"
-});
-formatter.result({
-  "duration": 1193480,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 5
-    },
-    {
-      "val": "title1",
-      "offset": 16
-    },
-    {
-      "val": "12345678",
-      "offset": 34
-    }
-  ],
-  "location": "StepDefinitions.copyExists(int,String,int)"
-});
-formatter.result({
-  "duration": 10287395,
+  "duration": 2144394,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
       "val": "user1",
-      "offset": 6
-    },
-    {
-      "val": "1",
-      "offset": 37
-    },
-    {
-      "val": "12345678",
-      "offset": 58
+      "offset": 28
     }
   ],
-  "location": "StepDefinitions.borrow(String,int,int)"
+  "location": "StepDefinitions.addUser(String)"
 });
 formatter.result({
-  "duration": 4358711,
+  "duration": 75457,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "1",
-      "offset": 34
-    },
-    {
-      "val": "12345678",
-      "offset": 54
-    },
-    {
       "val": "user1",
-      "offset": 72
+      "offset": 28
     }
   ],
-  "location": "StepDefinitions.successfulBorrow(int,int,String)"
+  "location": "StepDefinitions.failedToAddUser(String)"
+});
+formatter.result({
+  "duration": 74667,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 5771060,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 228346,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 57679,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 6611751,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "that each test should be independent from one another",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefinitions.background()"
+});
+formatter.result({
+  "duration": 3396739,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 31,
+  "name": "Ti15 Remove Non-existent User",
+  "description": "",
+  "id": "user-test-cases;ti15-remove-non-existent-user",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 32,
+  "name": "Attempting to remove user: \"user1\"",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 33,
+  "name": "System failed to remove user: \"user1\" that does not exist",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 28
+    }
+  ],
+  "location": "StepDefinitions.removeUser(String)"
 });
 formatter.result({
   "duration": 56099,
@@ -6946,600 +10911,29 @@ formatter.match({
   "arguments": [
     {
       "val": "user1",
-      "offset": 6
-    },
-    {
-      "val": "1",
-      "offset": 37
-    },
-    {
-      "val": "12345678",
-      "offset": 58
+      "offset": 31
     }
   ],
-  "location": "StepDefinitions.returnBook(String,int,int)"
+  "location": "StepDefinitions.failedToRemoveUser(String)"
 });
 formatter.result({
-  "duration": 511604,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 34
-    },
-    {
-      "val": "12345678",
-      "offset": 54
-    },
-    {
-      "val": "user1",
-      "offset": 74
-    }
-  ],
-  "location": "StepDefinitions.successfulReturn(int,int,String)"
-});
-formatter.result({
-  "duration": 60049,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 26
-    },
-    {
-      "val": "12345678",
-      "offset": 47
-    }
-  ],
-  "location": "StepDefinitions.removeCopy(int,int)"
-});
-formatter.result({
-  "duration": 1099851,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 33
-    },
-    {
-      "val": "12345678",
-      "offset": 54
-    }
-  ],
-  "location": "StepDefinitions.successfullyRemovedCopy(int,int)"
-});
-formatter.result({
-  "duration": 48987,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "title1",
-      "offset": 27
-    },
-    {
-      "val": "12345678",
-      "offset": 46
-    }
-  ],
-  "location": "StepDefinitions.removeBook(String,int)"
-});
-formatter.result({
-  "duration": 803555,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "12345678",
-      "offset": 34
-    }
-  ],
-  "location": "StepDefinitions.successfullyRemovedBook(int)"
-});
-formatter.result({
-  "duration": 80593,
+  "duration": 32790,
   "status": "passed"
 });
 formatter.after({
-  "duration": 2851157,
+  "duration": 2874073,
   "status": "passed"
 });
 formatter.after({
-  "duration": 21333,
+  "duration": 24889,
   "status": "passed"
 });
 formatter.before({
-  "duration": 28050,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 3970760,
-  "status": "passed"
-});
-formatter.background({
-  "line": 3,
-  "name": "",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 4,
-  "name": "that each test should be independent from one another",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "StepDefinitions.background()"
-});
-formatter.result({
-  "duration": 3804439,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 137,
-  "name": "Tv13 Renew Loan",
-  "description": "",
-  "id": "valid-paths;tv13-renew-loan",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 138,
-  "name": "User \"user1\" exists",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 139,
-  "name": "Book \"title1\" with ISBN 12345678 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 140,
-  "name": "Copy 1 of book \"title1\" with ISBN 12345678 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 142,
-  "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 143,
-  "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user1\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 145,
-  "name": "User \"user1\" attempts to renew copy 1 of book with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 146,
-  "name": "System successfully renewed copy 1 of book with ISBN 12345678 for user \"user1\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user1",
-      "offset": 6
-    }
-  ],
-  "location": "StepDefinitions.userExists(String)"
-});
-formatter.result({
-  "duration": 1508739,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "title1",
-      "offset": 6
-    },
-    {
-      "val": "12345678",
-      "offset": 24
-    }
-  ],
-  "location": "StepDefinitions.bookExists(String,int)"
-});
-formatter.result({
-  "duration": 1613035,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 5
-    },
-    {
-      "val": "title1",
-      "offset": 16
-    },
-    {
-      "val": "12345678",
-      "offset": 34
-    }
-  ],
-  "location": "StepDefinitions.copyExists(int,String,int)"
-});
-formatter.result({
-  "duration": 1131455,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user1",
-      "offset": 6
-    },
-    {
-      "val": "1",
-      "offset": 37
-    },
-    {
-      "val": "12345678",
-      "offset": 58
-    }
-  ],
-  "location": "StepDefinitions.borrow(String,int,int)"
-});
-formatter.result({
-  "duration": 4167501,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 34
-    },
-    {
-      "val": "12345678",
-      "offset": 54
-    },
-    {
-      "val": "user1",
-      "offset": 72
-    }
-  ],
-  "location": "StepDefinitions.successfulBorrow(int,int,String)"
-});
-formatter.result({
-  "duration": 77432,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user1",
-      "offset": 6
-    },
-    {
-      "val": "1",
-      "offset": 36
-    },
-    {
-      "val": "12345678",
-      "offset": 57
-    }
-  ],
-  "location": "StepDefinitions.renew(String,int,int)"
-});
-formatter.result({
-  "duration": 5551006,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 33
-    },
-    {
-      "val": "12345678",
-      "offset": 53
-    },
-    {
-      "val": "user1",
-      "offset": 72
-    }
-  ],
-  "location": "StepDefinitions.successfulRenewal(int,int,String)"
-});
-formatter.result({
-  "duration": 188444,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 3198811,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 24098,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 33975,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 3877921,
-  "status": "passed"
-});
-formatter.background({
-  "line": 3,
-  "name": "",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 4,
-  "name": "that each test should be independent from one another",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "StepDefinitions.background()"
-});
-formatter.result({
-  "duration": 3297181,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 148,
-  "name": "Tv14 Renew Loan valid max times",
-  "description": "",
-  "id": "valid-paths;tv14-renew-loan-valid-max-times",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 149,
-  "name": "User \"user1\" exists",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 150,
-  "name": "Book \"title1\" with ISBN 12345678 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 151,
-  "name": "Copy 1 of book \"title1\" with ISBN 12345678 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 153,
-  "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 154,
-  "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user1\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 156,
-  "name": "User \"user1\" attempts to renew copy 1 of book with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 157,
-  "name": "System successfully renewed copy 1 of book with ISBN 12345678 for user \"user1\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 159,
-  "name": "User \"user1\" attempts to return copy 1 of book with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 160,
-  "name": "System successfully returned copy 1 of book with ISBN 12345678 from user \"user1\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user1",
-      "offset": 6
-    }
-  ],
-  "location": "StepDefinitions.userExists(String)"
-});
-formatter.result({
-  "duration": 1477530,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "title1",
-      "offset": 6
-    },
-    {
-      "val": "12345678",
-      "offset": 24
-    }
-  ],
-  "location": "StepDefinitions.bookExists(String,int)"
-});
-formatter.result({
-  "duration": 1176887,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 5
-    },
-    {
-      "val": "title1",
-      "offset": 16
-    },
-    {
-      "val": "12345678",
-      "offset": 34
-    }
-  ],
-  "location": "StepDefinitions.copyExists(int,String,int)"
-});
-formatter.result({
-  "duration": 1655702,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user1",
-      "offset": 6
-    },
-    {
-      "val": "1",
-      "offset": 37
-    },
-    {
-      "val": "12345678",
-      "offset": 58
-    }
-  ],
-  "location": "StepDefinitions.borrow(String,int,int)"
-});
-formatter.result({
-  "duration": 4851352,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 34
-    },
-    {
-      "val": "12345678",
-      "offset": 54
-    },
-    {
-      "val": "user1",
-      "offset": 72
-    }
-  ],
-  "location": "StepDefinitions.successfulBorrow(int,int,String)"
-});
-formatter.result({
-  "duration": 47408,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user1",
-      "offset": 6
-    },
-    {
-      "val": "1",
-      "offset": 36
-    },
-    {
-      "val": "12345678",
-      "offset": 57
-    }
-  ],
-  "location": "StepDefinitions.renew(String,int,int)"
-});
-formatter.result({
-  "duration": 3902416,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 33
-    },
-    {
-      "val": "12345678",
-      "offset": 53
-    },
-    {
-      "val": "user1",
-      "offset": 72
-    }
-  ],
-  "location": "StepDefinitions.successfulRenewal(int,int,String)"
-});
-formatter.result({
-  "duration": 59259,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user1",
-      "offset": 6
-    },
-    {
-      "val": "1",
-      "offset": 37
-    },
-    {
-      "val": "12345678",
-      "offset": 58
-    }
-  ],
-  "location": "StepDefinitions.returnBook(String,int,int)"
-});
-formatter.result({
-  "duration": 494222,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 34
-    },
-    {
-      "val": "12345678",
-      "offset": 54
-    },
-    {
-      "val": "user1",
-      "offset": 74
-    }
-  ],
-  "location": "StepDefinitions.successfulReturn(int,int,String)"
-});
-formatter.result({
-  "duration": 45432,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 2752392,
-  "status": "passed"
-});
-formatter.after({
   "duration": 25679,
   "status": "passed"
 });
 formatter.before({
-  "duration": 1793578,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 5116834,
+  "duration": 4693727,
   "status": "passed"
 });
 formatter.background({
@@ -7558,165 +10952,35 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 2726318,
+  "duration": 2773728,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 162,
-  "name": "Tv15 Borrow",
+  "line": 35,
+  "name": "Ti18 Remove user whose privileges are revoked",
   "description": "",
-  "id": "valid-paths;tv15-borrow",
+  "id": "user-test-cases;ti18-remove-user-whose-privileges-are-revoked",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
-  "line": 163,
+  "line": 36,
   "name": "User \"user1\" exists",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 164,
-  "name": "User \"user2\" exists",
+  "line": 37,
+  "name": "User \"user1\" has their privileges are revoked",
   "keyword": "And "
 });
 formatter.step({
-  "line": 165,
-  "name": "Book \"title1\" with ISBN 12345678 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 166,
-  "name": "Book \"title2\" with ISBN 87654321 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 167,
-  "name": "Copy 1 of book \"title1\" with ISBN 12345678 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 168,
-  "name": "Copy 2 of book \"title1\" with ISBN 12345678 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 169,
-  "name": "Copy 3 of book \"title1\" with ISBN 12345678 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 170,
-  "name": "Copy 1 of book \"title2\" with ISBN 87654321 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 171,
-  "name": "Copy 2 of book \"title2\" with ISBN 87654321 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 172,
-  "name": "Copy 3 of book \"title2\" with ISBN 87654321 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 174,
-  "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
+  "line": 39,
+  "name": "Attempting to remove user: \"user1\"",
   "keyword": "When "
 });
 formatter.step({
-  "line": 175,
-  "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user1\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 176,
-  "name": "User \"user1\" attempts to borrow copy 3 of book with ISBN: 87654321",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 177,
-  "name": "System successfully borrowed copy 3 of book with ISBN 87654321 to user \"user1\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 179,
-  "name": "User \"user2\" attempts to borrow copy 2 of book with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 180,
-  "name": "System successfully borrowed copy 2 of book with ISBN 12345678 to user \"user2\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 181,
-  "name": "User \"user2\" attempts to borrow copy 2 of book with ISBN: 87654321",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 182,
-  "name": "System successfully borrowed copy 2 of book with ISBN 87654321 to user \"user2\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 184,
-  "name": "User \"user1\" attempts to return copy 1 of book with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 185,
-  "name": "System successfully returned copy 1 of book with ISBN 12345678 from user \"user1\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 186,
-  "name": "User \"user1\" attempts to return copy 3 of book with ISBN: 87654321",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 187,
-  "name": "System successfully returned copy 3 of book with ISBN 87654321 from user \"user1\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 189,
-  "name": "User \"user2\" attempts to return copy 2 of book with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 190,
-  "name": "System successfully returned copy 2 of book with ISBN 12345678 from user \"user2\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 191,
-  "name": "User \"user2\" attempts to return copy 2 of book with ISBN: 87654321",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 192,
-  "name": "System successfully returned copy 2 of book with ISBN 87654321 from user \"user2\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 194,
-  "name": "User \"user2\" attempts to borrow copy 1 of book with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 195,
-  "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user2\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 196,
-  "name": "User \"user2\" attempts to borrow copy 3 of book with ISBN: 87654321",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 197,
-  "name": "System successfully borrowed copy 3 of book with ISBN 87654321 to user \"user2\"",
+  "line": 40,
+  "name": "System failed to remove user: \"user1\" because their privileges are revoked",
   "keyword": "Then "
 });
 formatter.match({
@@ -7729,180 +10993,7 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 1460541,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user2",
-      "offset": 6
-    }
-  ],
-  "location": "StepDefinitions.userExists(String)"
-});
-formatter.result({
-  "duration": 1563653,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "title1",
-      "offset": 6
-    },
-    {
-      "val": "12345678",
-      "offset": 24
-    }
-  ],
-  "location": "StepDefinitions.bookExists(String,int)"
-});
-formatter.result({
-  "duration": 1927899,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "title2",
-      "offset": 6
-    },
-    {
-      "val": "87654321",
-      "offset": 24
-    }
-  ],
-  "location": "StepDefinitions.bookExists(String,int)"
-});
-formatter.result({
-  "duration": 3572934,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 5
-    },
-    {
-      "val": "title1",
-      "offset": 16
-    },
-    {
-      "val": "12345678",
-      "offset": 34
-    }
-  ],
-  "location": "StepDefinitions.copyExists(int,String,int)"
-});
-formatter.result({
-  "duration": 4380834,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 5
-    },
-    {
-      "val": "title1",
-      "offset": 16
-    },
-    {
-      "val": "12345678",
-      "offset": 34
-    }
-  ],
-  "location": "StepDefinitions.copyExists(int,String,int)"
-});
-formatter.result({
-  "duration": 1870615,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "3",
-      "offset": 5
-    },
-    {
-      "val": "title1",
-      "offset": 16
-    },
-    {
-      "val": "12345678",
-      "offset": 34
-    }
-  ],
-  "location": "StepDefinitions.copyExists(int,String,int)"
-});
-formatter.result({
-  "duration": 1457381,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 5
-    },
-    {
-      "val": "title2",
-      "offset": 16
-    },
-    {
-      "val": "87654321",
-      "offset": 34
-    }
-  ],
-  "location": "StepDefinitions.copyExists(int,String,int)"
-});
-formatter.result({
-  "duration": 1663603,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 5
-    },
-    {
-      "val": "title2",
-      "offset": 16
-    },
-    {
-      "val": "87654321",
-      "offset": 34
-    }
-  ],
-  "location": "StepDefinitions.copyExists(int,String,int)"
-});
-formatter.result({
-  "duration": 1198221,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "3",
-      "offset": 5
-    },
-    {
-      "val": "title2",
-      "offset": 16
-    },
-    {
-      "val": "87654321",
-      "offset": 34
-    }
-  ],
-  "location": "StepDefinitions.copyExists(int,String,int)"
-});
-formatter.result({
-  "duration": 1394171,
+  "duration": 3223308,
   "status": "passed"
 });
 formatter.match({
@@ -7910,435 +11001,54 @@ formatter.match({
     {
       "val": "user1",
       "offset": 6
-    },
-    {
-      "val": "1",
-      "offset": 37
-    },
-    {
-      "val": "12345678",
-      "offset": 58
     }
   ],
-  "location": "StepDefinitions.borrow(String,int,int)"
+  "location": "StepDefinitions.privilegeRevoked(String)"
 });
 formatter.result({
-  "duration": 5026760,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 34
-    },
-    {
-      "val": "12345678",
-      "offset": 54
-    },
-    {
-      "val": "user1",
-      "offset": 72
-    }
-  ],
-  "location": "StepDefinitions.successfulBorrow(int,int,String)"
-});
-formatter.result({
-  "duration": 80592,
+  "duration": 4009479,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
       "val": "user1",
-      "offset": 6
-    },
-    {
-      "val": "3",
-      "offset": 37
-    },
-    {
-      "val": "87654321",
-      "offset": 58
+      "offset": 28
     }
   ],
-  "location": "StepDefinitions.borrow(String,int,int)"
+  "location": "StepDefinitions.removeUser(String)"
 });
 formatter.result({
-  "duration": 4952883,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "3",
-      "offset": 34
-    },
-    {
-      "val": "87654321",
-      "offset": 54
-    },
-    {
-      "val": "user1",
-      "offset": 72
-    }
-  ],
-  "location": "StepDefinitions.successfulBorrow(int,int,String)"
-});
-formatter.result({
-  "duration": 49383,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user2",
-      "offset": 6
-    },
-    {
-      "val": "2",
-      "offset": 37
-    },
-    {
-      "val": "12345678",
-      "offset": 58
-    }
-  ],
-  "location": "StepDefinitions.borrow(String,int,int)"
-});
-formatter.result({
-  "duration": 4940241,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 34
-    },
-    {
-      "val": "12345678",
-      "offset": 54
-    },
-    {
-      "val": "user2",
-      "offset": 72
-    }
-  ],
-  "location": "StepDefinitions.successfulBorrow(int,int,String)"
-});
-formatter.result({
-  "duration": 105086,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user2",
-      "offset": 6
-    },
-    {
-      "val": "2",
-      "offset": 37
-    },
-    {
-      "val": "87654321",
-      "offset": 58
-    }
-  ],
-  "location": "StepDefinitions.borrow(String,int,int)"
-});
-formatter.result({
-  "duration": 4903895,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 34
-    },
-    {
-      "val": "87654321",
-      "offset": 54
-    },
-    {
-      "val": "user2",
-      "offset": 72
-    }
-  ],
-  "location": "StepDefinitions.successfulBorrow(int,int,String)"
-});
-formatter.result({
-  "duration": 88493,
+  "duration": 78222,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
       "val": "user1",
-      "offset": 6
-    },
-    {
-      "val": "1",
-      "offset": 37
-    },
-    {
-      "val": "12345678",
-      "offset": 58
+      "offset": 31
     }
   ],
-  "location": "StepDefinitions.returnBook(String,int,int)"
+  "location": "StepDefinitions.failedToRemoveUserRevoke(String)"
 });
 formatter.result({
-  "duration": 5520191,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 34
-    },
-    {
-      "val": "12345678",
-      "offset": 54
-    },
-    {
-      "val": "user1",
-      "offset": 74
-    }
-  ],
-  "location": "StepDefinitions.successfulReturn(int,int,String)"
-});
-formatter.result({
-  "duration": 67556,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user1",
-      "offset": 6
-    },
-    {
-      "val": "3",
-      "offset": 37
-    },
-    {
-      "val": "87654321",
-      "offset": 58
-    }
-  ],
-  "location": "StepDefinitions.returnBook(String,int,int)"
-});
-formatter.result({
-  "duration": 4114958,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "3",
-      "offset": 34
-    },
-    {
-      "val": "87654321",
-      "offset": 54
-    },
-    {
-      "val": "user1",
-      "offset": 74
-    }
-  ],
-  "location": "StepDefinitions.successfulReturn(int,int,String)"
-});
-formatter.result({
-  "duration": 54124,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user2",
-      "offset": 6
-    },
-    {
-      "val": "2",
-      "offset": 37
-    },
-    {
-      "val": "12345678",
-      "offset": 58
-    }
-  ],
-  "location": "StepDefinitions.returnBook(String,int,int)"
-});
-formatter.result({
-  "duration": 3831304,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 34
-    },
-    {
-      "val": "12345678",
-      "offset": 54
-    },
-    {
-      "val": "user2",
-      "offset": 74
-    }
-  ],
-  "location": "StepDefinitions.successfulReturn(int,int,String)"
-});
-formatter.result({
-  "duration": 53729,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user2",
-      "offset": 6
-    },
-    {
-      "val": "2",
-      "offset": 37
-    },
-    {
-      "val": "87654321",
-      "offset": 58
-    }
-  ],
-  "location": "StepDefinitions.returnBook(String,int,int)"
-});
-formatter.result({
-  "duration": 486320,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 34
-    },
-    {
-      "val": "87654321",
-      "offset": 54
-    },
-    {
-      "val": "user2",
-      "offset": 74
-    }
-  ],
-  "location": "StepDefinitions.successfulReturn(int,int,String)"
-});
-formatter.result({
-  "duration": 37531,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user2",
-      "offset": 6
-    },
-    {
-      "val": "1",
-      "offset": 37
-    },
-    {
-      "val": "12345678",
-      "offset": 58
-    }
-  ],
-  "location": "StepDefinitions.borrow(String,int,int)"
-});
-formatter.result({
-  "duration": 4045032,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 34
-    },
-    {
-      "val": "12345678",
-      "offset": 54
-    },
-    {
-      "val": "user2",
-      "offset": 72
-    }
-  ],
-  "location": "StepDefinitions.successfulBorrow(int,int,String)"
-});
-formatter.result({
-  "duration": 48592,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user2",
-      "offset": 6
-    },
-    {
-      "val": "3",
-      "offset": 37
-    },
-    {
-      "val": "87654321",
-      "offset": 58
-    }
-  ],
-  "location": "StepDefinitions.borrow(String,int,int)"
-});
-formatter.result({
-  "duration": 4856488,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "3",
-      "offset": 34
-    },
-    {
-      "val": "87654321",
-      "offset": 54
-    },
-    {
-      "val": "user2",
-      "offset": 72
-    }
-  ],
-  "location": "StepDefinitions.successfulBorrow(int,int,String)"
-});
-formatter.result({
-  "duration": 50173,
+  "duration": 36346,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3619156,
+  "duration": 3353677,
   "status": "passed"
 });
 formatter.after({
-  "duration": 43851,
+  "duration": 133926,
   "status": "passed"
 });
 formatter.before({
-  "duration": 37531,
+  "duration": 93630,
   "status": "passed"
 });
 formatter.before({
-  "duration": 4153675,
+  "duration": 5280788,
   "status": "passed"
 });
 formatter.background({
@@ -8357,90 +11067,50 @@ formatter.match({
   "location": "StepDefinitions.background()"
 });
 formatter.result({
-  "duration": 6200881,
+  "duration": 5866269,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 199,
-  "name": "Tv16 Renew when full",
+  "line": 42,
+  "name": "Ti19 Remove user whose has loans",
   "description": "",
-  "id": "valid-paths;tv16-renew-when-full",
+  "id": "user-test-cases;ti19-remove-user-whose-has-loans",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
-  "line": 200,
+  "line": 43,
   "name": "User \"user1\" exists",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 201,
-  "name": "Book \"title1\" with ISBN 12345678 exists",
+  "line": 44,
+  "name": "Book \"title\" with ISBN 12345678 exists",
   "keyword": "And "
 });
 formatter.step({
-  "line": 202,
-  "name": "Book \"title2\" with ISBN 87654321 exists",
+  "line": 45,
+  "name": "Copy 1 of book \"title\" with ISBN 12345678 exists",
   "keyword": "And "
 });
 formatter.step({
-  "line": 203,
-  "name": "Copy 1 of book \"title1\" with ISBN 12345678 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 204,
-  "name": "Copy 2 of book \"title1\" with ISBN 12345678 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 205,
-  "name": "Copy 1 of book \"title2\" with ISBN 87654321 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 206,
-  "name": "Copy 2 of book \"title2\" with ISBN 87654321 exists",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 208,
+  "line": 47,
   "name": "User \"user1\" attempts to borrow copy 1 of book with ISBN: 12345678",
   "keyword": "When "
 });
 formatter.step({
-  "line": 209,
+  "line": 48,
   "name": "System successfully borrowed copy 1 of book with ISBN 12345678 to user \"user1\"",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 210,
-  "name": "User \"user1\" attempts to borrow copy 2 of book with ISBN: 87654321",
+  "line": 50,
+  "name": "Attempting to remove user: \"user1\"",
   "keyword": "When "
 });
 formatter.step({
-  "line": 211,
-  "name": "System successfully borrowed copy 2 of book with ISBN 87654321 to user \"user1\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 213,
-  "name": "User \"user1\" attempts to renew copy 1 of book with ISBN: 12345678",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 214,
-  "name": "System successfully renewed copy 1 of book with ISBN 12345678 for user \"user1\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 216,
-  "name": "User \"user1\" attempts to renew copy 2 of book with ISBN: 87654321",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 217,
-  "name": "System successfully renewed copy 2 of book with ISBN 87654321 for user \"user1\"",
+  "line": 51,
+  "name": "System failed to remove user: \"user1\" because they have existing loans",
   "keyword": "Then "
 });
 formatter.match({
@@ -8453,41 +11123,24 @@ formatter.match({
   "location": "StepDefinitions.userExists(String)"
 });
 formatter.result({
-  "duration": 1727998,
+  "duration": 6540639,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "title1",
+      "val": "title",
       "offset": 6
     },
     {
       "val": "12345678",
-      "offset": 24
+      "offset": 23
     }
   ],
   "location": "StepDefinitions.bookExists(String,int)"
 });
 formatter.result({
-  "duration": 1567603,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "title2",
-      "offset": 6
-    },
-    {
-      "val": "87654321",
-      "offset": 24
-    }
-  ],
-  "location": "StepDefinitions.bookExists(String,int)"
-});
-formatter.result({
-  "duration": 15674451,
+  "duration": 1711802,
   "status": "passed"
 });
 formatter.match({
@@ -8497,81 +11150,18 @@ formatter.match({
       "offset": 5
     },
     {
-      "val": "title1",
+      "val": "title",
       "offset": 16
     },
     {
       "val": "12345678",
-      "offset": 34
+      "offset": 33
     }
   ],
   "location": "StepDefinitions.copyExists(int,String,int)"
 });
 formatter.result({
-  "duration": 4199106,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 5
-    },
-    {
-      "val": "title1",
-      "offset": 16
-    },
-    {
-      "val": "12345678",
-      "offset": 34
-    }
-  ],
-  "location": "StepDefinitions.copyExists(int,String,int)"
-});
-formatter.result({
-  "duration": 2495207,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 5
-    },
-    {
-      "val": "title2",
-      "offset": 16
-    },
-    {
-      "val": "87654321",
-      "offset": 34
-    }
-  ],
-  "location": "StepDefinitions.copyExists(int,String,int)"
-});
-formatter.result({
-  "duration": 6309128,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 5
-    },
-    {
-      "val": "title2",
-      "offset": 16
-    },
-    {
-      "val": "87654321",
-      "offset": 34
-    }
-  ],
-  "location": "StepDefinitions.copyExists(int,String,int)"
-});
-formatter.result({
-  "duration": 5195451,
+  "duration": 6120294,
   "status": "passed"
 });
 formatter.match({
@@ -8592,7 +11182,7 @@ formatter.match({
   "location": "StepDefinitions.borrow(String,int,int)"
 });
 formatter.result({
-  "duration": 6494017,
+  "duration": 9031502,
   "status": "passed"
 });
 formatter.match({
@@ -8611,143 +11201,43 @@ formatter.match({
     }
   ],
   "location": "StepDefinitions.successfulBorrow(int,int,String)"
-});
-formatter.result({
-  "duration": 77037,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user1",
-      "offset": 6
-    },
-    {
-      "val": "2",
-      "offset": 37
-    },
-    {
-      "val": "87654321",
-      "offset": 58
-    }
-  ],
-  "location": "StepDefinitions.borrow(String,int,int)"
-});
-formatter.result({
-  "duration": 4204242,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 34
-    },
-    {
-      "val": "87654321",
-      "offset": 54
-    },
-    {
-      "val": "user1",
-      "offset": 72
-    }
-  ],
-  "location": "StepDefinitions.successfulBorrow(int,int,String)"
-});
-formatter.result({
-  "duration": 47407,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user1",
-      "offset": 6
-    },
-    {
-      "val": "1",
-      "offset": 36
-    },
-    {
-      "val": "12345678",
-      "offset": 57
-    }
-  ],
-  "location": "StepDefinitions.renew(String,int,int)"
-});
-formatter.result({
-  "duration": 23316911,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 33
-    },
-    {
-      "val": "12345678",
-      "offset": 53
-    },
-    {
-      "val": "user1",
-      "offset": 72
-    }
-  ],
-  "location": "StepDefinitions.successfulRenewal(int,int,String)"
-});
-formatter.result({
-  "duration": 66370,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "user1",
-      "offset": 6
-    },
-    {
-      "val": "2",
-      "offset": 36
-    },
-    {
-      "val": "87654321",
-      "offset": 57
-    }
-  ],
-  "location": "StepDefinitions.renew(String,int,int)"
-});
-formatter.result({
-  "duration": 5902216,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 33
-    },
-    {
-      "val": "87654321",
-      "offset": 53
-    },
-    {
-      "val": "user1",
-      "offset": 72
-    }
-  ],
-  "location": "StepDefinitions.successfulRenewal(int,int,String)"
 });
 formatter.result({
   "duration": 55309,
   "status": "passed"
 });
-formatter.after({
-  "duration": 2896984,
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 28
+    }
+  ],
+  "location": "StepDefinitions.removeUser(String)"
+});
+formatter.result({
+  "duration": 80198,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "user1",
+      "offset": 31
+    }
+  ],
+  "location": "StepDefinitions.failedToRemoveUserLoan(String)"
+});
+formatter.result({
+  "duration": 32395,
   "status": "passed"
 });
 formatter.after({
-  "duration": 24494,
+  "duration": 3394369,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 32395,
   "status": "passed"
 });
 });
